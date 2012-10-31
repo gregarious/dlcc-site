@@ -837,59 +837,90 @@ a {
   color: #819578;
 }
 
+/* line 22, ../sass/_base.scss */
+.mailto {
+  color: #fbaf3f;
+}
+
 /*** Layout rules ***/
-/* line 25, ../sass/_base.scss */
+/* line 29, ../sass/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 29, ../sass/_base.scss */
+/* line 33, ../sass/_base.scss */
 .container {
-  width: 300px;
+  width: 320px;
   margin: 0 auto;
 }
 
-/* line 35, ../sass/_base.scss */
+/* line 39, ../sass/_base.scss */
 #main-wrap {
   border-left: 2px solid white;
   border-right: 2px solid white;
 }
 
-/* line 44, ../sass/_base.scss */
+/* line 48, ../sass/_base.scss */
 #main-content {
   padding: 5px 8px;
 }
 
-/* line 53, ../sass/_base.scss */
+/* line 57, ../sass/_base.scss */
 #main-aside {
   width: 100%;
 }
 
 /* temp styles for debug */
-/* line 68, ../sass/_base.scss */
+/* line 72, ../sass/_base.scss */
 #contain-wrap {
   background-color: #7f0;
 }
 
-/* line 72, ../sass/_base.scss */
+/* line 76, ../sass/_base.scss */
 #main-content {
   background-color: white;
 }
 
-/* line 76, ../sass/_base.scss */
+/* line 80, ../sass/_base.scss */
 #main-aside > nav {
   background-color: #819578;
 }
 
-/* line 80, ../sass/_base.scss */
+/* line 84, ../sass/_base.scss */
 #page-footer {
   background-color: #819578;
 }
 
-/* Header */
-/* line 9, ../sass/_modules.scss */
+/* Header footer */
+/* line 9, ../sass/_common.scss */
 .logo {
   max-width: 100%;
+}
+
+/* Page footer */
+/* line 15, ../sass/_common.scss */
+#page-footer p {
+  margin: 0 0 5px 0;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+/* Main site nav */
+/* line 25, ../sass/_common.scss */
+#site-nav {
+  background-color: #819578;
+  padding: 20px 0 20px 12px;
+}
+/* line 30, ../sass/_common.scss */
+#site-nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 35, ../sass/_common.scss */
+#site-nav li {
+  float: left;
+  margin: 0 8px 6px 0;
 }

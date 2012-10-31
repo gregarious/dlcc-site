@@ -40,9 +40,26 @@
                     Main content
                 </div>
                 <aside id="main-aside">
-                    <nav id="site-nav">Nav section</nav>
+                    <nav id="site-nav">
+                        <ul class="clearfix">
+                            <li><a href="#" title="Our Building"><img src="/img/nav/Nav_Building.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="Our Services"><img src="/img/nav/Nav_Services.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="Explore Pittsburgh"><img src="/img/nav/Nav_ExplorePGH.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="The DLCC Neighborhood"><img src="/img/nav/Nav_DLCCneighborhood.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="Directions &amp; Parking"><img src="/img/nav/Nav_DirectionsParking.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="Events"><img src="/img/nav/Nav_Events.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="About Us"><img src="/img/nav/Nav_Contact.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="Contact Us"><img src="/img/nav/Nav_Contact.png" width="91" height="79"></a></li>
+                            <li><a href="#" title="Home"><img src="/img/nav/Nav_Contact.png" width="91" height="79"></a></li>
+                        </ul>
+                        
+                    </nav>
                 </aside>
-                <footer id="page-footer">Footer</footer>
+                <footer id="page-footer">
+                    <p>&copy; Copyright David L. Lawrence Convention Center <br />
+                    1000 Ft. Duquesne Blvd., Pittsburgh, PA 15222 <br />
+                    (412) 565-6000 | <a href="mailto:info@pittsburghcc.com" title="Contact us" class="mailto">info@pittsburghcc.com</p>
+                </footer>
             </div>
         </div>
         </div>

@@ -1,11 +1,40 @@
 @import "compass/css3";
 
 
-/* Header */
+/* Header footer */
 #page-header {
-    // Background image is dynamically injected inline on element
+    // background-image is dynamically injected inline on element
 }
 
 .logo {
     max-width: 100%;    // keep inside parent container
 }
+
+/* Page footer */
+#page-footer {
+    p {
+        margin: 0 0 5px 0;
+        text-align: center;
+        font-size: 12px;
+        color: white;
+    }
+}
+
+/* Main site nav */
+
+#site-nav {
+    // padding used in here is ad hoc based on 320px width. revisit when finalizing mobile container width
+    background-color: $green;
+    padding: 20px 0 20px 12px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        float: left;
+        margin: 0 8px 6px 0;
+    }
+}
+
