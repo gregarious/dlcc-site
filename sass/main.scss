@@ -12,7 +12,7 @@ $light-green4: #f2f3ef;
 $w-wide: 1000px;
 $w-standard: 800px;
 $w-narrow: 600px;
-$w-mobile: 300px;
+$w-mobile: 320px;
 
 $button-width: 91px;
 $button-height: 79px;
@@ -22,7 +22,10 @@ $button-padding: 8px;
     @return ($button-width * $num-cols) + ($button-padding * ($num-cols - 1));
 }
 
+// foundational styles
 @import "normalize.scss";
 @import "h5bp.scss";
 @import "base.scss";
-@import "modules.scss";
+
+// common modules
+@import "common.scss";
