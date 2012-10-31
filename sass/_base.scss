@@ -1,0 +1,82 @@
+/* Handles base styles and layout */
+
+@import "compass/css3";
+
+/*** Base styles ***/
+html {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: $grey;
+    
+    background: $light-green3 image-url("BG_repeat.png") repeat-x;
+}
+
+a {
+    color: $green;
+}
+
+/*** Layout rules ***/
+
+// border box all the things!
+* {
+    @include box-sizing(border-box);
+}
+
+.container {
+    // keeps everything but header in a fixed width container
+    width: $w-mobile;
+    margin: 0 auto;
+}
+
+#main-wrap {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+
+    // @media (min-width: $w-narrow) { width: $w-narrow; }
+    // @media (min-width: $w-standard) { width: $w-standard; }
+    // @media (min-width: $w-wide) { width: $w-wide; }
+}
+
+#main-content {
+ //   width: 100%;
+    padding: 5px 8px;
+
+    // @media (min-width: $w-narrow) {
+    //     float: left;
+    // }
+}   
+
+#main-aside {
+    width: 100%;
+
+    // @media (min-width: $w-narrow) {
+    //     float: right;
+    //     width: w-nav(1);
+    // }   
+    // @media (min-width: $w-standard) {
+    //     width: w-nav(2);
+    // }
+}
+
+
+/* temp styles for debug */
+
+#contain-wrap {
+    background-color: #7f0;
+}
+
+#main-content {
+    background-color: white;
+}
+
+#main-aside > nav {
+    background-color: $green;
+}
+
+#page-footer {
+    background-color: $green;
+}

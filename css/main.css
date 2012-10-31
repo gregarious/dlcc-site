@@ -817,3 +817,79 @@ textarea {
     page-break-after: avoid;
   }
 }
+/* Handles base styles and layout */
+/*** Base styles ***/
+/* line 6, ../sass/_base.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 11, ../sass/_base.scss */
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: #58585b;
+  background: #e6ebe4 url('/img/BG_repeat.png?1347295559') repeat-x;
+}
+
+/* line 18, ../sass/_base.scss */
+a {
+  color: #819578;
+}
+
+/*** Layout rules ***/
+/* line 25, ../sass/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 29, ../sass/_base.scss */
+.container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* line 35, ../sass/_base.scss */
+#main-wrap {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+/* line 44, ../sass/_base.scss */
+#main-content {
+  padding: 5px 8px;
+}
+
+/* line 53, ../sass/_base.scss */
+#main-aside {
+  width: 100%;
+}
+
+/* temp styles for debug */
+/* line 68, ../sass/_base.scss */
+#contain-wrap {
+  background-color: #7f0;
+}
+
+/* line 72, ../sass/_base.scss */
+#main-content {
+  background-color: white;
+}
+
+/* line 76, ../sass/_base.scss */
+#main-aside > nav {
+  background-color: #819578;
+}
+
+/* line 80, ../sass/_base.scss */
+#page-footer {
+  background-color: #819578;
+}
+
+/* Header */
+/* line 9, ../sass/_modules.scss */
+.logo {
+  max-width: 100%;
+}

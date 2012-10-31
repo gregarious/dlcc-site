@@ -1,3 +1,28 @@
+$yellow: #f1e597;
+$grey: #58585b;
+$orange: #fbaf3f;
+
+$green: #819578;
+$light-green1: #bec8b9;
+$light-green2: #d8ddd4;
+$light-green3: #e6ebe4;
+$light-green4: #f2f3ef;
+
+// TODO: revisit these breakpoint values
+$w-wide: 1000px;
+$w-standard: 800px;
+$w-narrow: 600px;
+$w-mobile: 300px;
+
+$button-width: 91px;
+$button-height: 79px;
+$button-padding: 8px;
+
+@function w-nav($num-cols) {
+    @return ($button-width * $num-cols) + ($button-padding * ($num-cols - 1));
+}
+
 @import "normalize.scss";
 @import "h5bp.scss";
-
+@import "base.scss";
+@import "modules.scss";
