@@ -1,4 +1,4 @@
-<div class="page-content-home">
+<div class="main-content main-content-home">
     <div class="expanded-content">
         <img class="standout-img" src="/img/placeholders/skyline-night.png" />
         <p class="standout-text">

@@ -37,9 +37,7 @@
         </header>
         <div class="container clearfix">
             <div id="main-wrap">
-                <div id="main-content">
-                    <?php include "partials/home.inc.php"; ?>
-                </div>
+                <?php include "partials/home.inc.php"; ?>
                 <aside id="main-aside">
                     <nav id="site-nav">
                         <ul class="clearfix">
@@ -71,12 +69,13 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- TODO: reenable
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            var _gaq=[['_setAccount','UA-9185606-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+    -->
     </body>
 </html>

@@ -1,0 +1,47 @@
+.main-content-building,
+.main-content-services,
+.main-content-directions,
+.main-content-explorepgh,
+.main-content-neighborhood,
+.main-content-aboutus,
+.main-content-contactus {
+    h1 {
+        font-size: 1.75em;
+    }
+    h2 {
+        font-size: 1.33em;
+    }
+    h3 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 0;
+    }
+}
+
+.main-content-contactus {
+    h2 {
+        margin-bottom: 0;
+    }
+    dd {
+        margin-bottom: 1em;
+    }
+}
+
+.office-hours {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.daddr {
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Explore Pgh */
+
+// TODO: need to add a simple two column grid for images
+
+.image-link {
+    display: none;  // TODO: display at higher widths
+}

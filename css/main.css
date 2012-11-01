@@ -842,48 +842,56 @@ a {
   color: #fbaf3f;
 }
 
+/* line 27, ../sass/_base.scss */
+.tel-link,
+.fax-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 /*** Layout rules ***/
-/* line 29, ../sass/_base.scss */
+/* line 35, ../sass/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 33, ../sass/_base.scss */
+/* line 39, ../sass/_base.scss */
 .container {
   width: 320px;
   margin: 0 auto;
 }
 
-/* line 39, ../sass/_base.scss */
+/* line 45, ../sass/_base.scss */
 #main-wrap {
   border-left: 2px solid white;
   border-right: 2px solid white;
 }
 
-/* line 48, ../sass/_base.scss */
-#main-content {
+/* line 54, ../sass/_base.scss */
+.main-content {
   padding: 8px;
+  background-color: white;
 }
 
-/* line 57, ../sass/_base.scss */
+/* line 64, ../sass/_base.scss */
 #main-aside {
   width: 100%;
 }
 
-/* line 69, ../sass/_base.scss */
+/* line 76, ../sass/_base.scss */
 #page-footer {
   padding-bottom: 1em;
 }
 
 /* temp styles for debug */
-/* line 74, ../sass/_base.scss */
+/* line 81, ../sass/_base.scss */
 #contain-wrap {
   background-color: #7f0;
 }
 
-/* line 78, ../sass/_base.scss */
+/* line 85, ../sass/_base.scss */
 #main-content {
   min-height: 400px;
 }
@@ -1038,4 +1046,72 @@ section.highlight h2 {
 /* line 90, ../sass/_home.scss */
 .highlight-fact a {
   font-size: 11px;
+}
+
+/* line 8, ../sass/_subpages.scss */
+.main-content-building h1,
+.main-content-services h1,
+.main-content-directions h1,
+.main-content-explorepgh h1,
+.main-content-neighborhood h1,
+.main-content-aboutus h1,
+.main-content-contactus h1 {
+  font-size: 1.75em;
+}
+/* line 11, ../sass/_subpages.scss */
+.main-content-building h2,
+.main-content-services h2,
+.main-content-directions h2,
+.main-content-explorepgh h2,
+.main-content-neighborhood h2,
+.main-content-aboutus h2,
+.main-content-contactus h2 {
+  font-size: 1.33em;
+}
+/* line 14, ../sass/_subpages.scss */
+.main-content-building h3,
+.main-content-services h3,
+.main-content-directions h3,
+.main-content-explorepgh h3,
+.main-content-neighborhood h3,
+.main-content-aboutus h3,
+.main-content-contactus h3 {
+  margin-bottom: 0;
+}
+/* line 17, ../sass/_subpages.scss */
+.main-content-building p,
+.main-content-services p,
+.main-content-directions p,
+.main-content-explorepgh p,
+.main-content-neighborhood p,
+.main-content-aboutus p,
+.main-content-contactus p {
+  margin-top: 0;
+}
+
+/* line 23, ../sass/_subpages.scss */
+.main-content-contactus h2 {
+  margin-bottom: 0;
+}
+/* line 26, ../sass/_subpages.scss */
+.main-content-contactus dd {
+  margin-bottom: 1em;
+}
+
+/* line 31, ../sass/_subpages.scss */
+.office-hours {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* line 36, ../sass/_subpages.scss */
+.daddr {
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Explore Pgh */
+/* line 45, ../sass/_subpages.scss */
+.image-link {
+  display: none;
 }

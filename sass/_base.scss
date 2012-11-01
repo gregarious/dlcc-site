@@ -23,6 +23,12 @@ a {
     color: $orange;
 }
 
+.tel-link,
+.fax-link {
+    color: inherit;
+    text-decoration: none;
+}
+
 /*** Layout rules ***/
 
 // border box all the things!
@@ -45,9 +51,10 @@ a {
     // @media (min-width: $w-wide) { width: $w-wide; }
 }
 
-#main-content {
+.main-content {
  //   width: 100%;
     padding: 8px;
+    background-color: white;
 
     // @media (min-width: $w-narrow) {
     //     float: left;
