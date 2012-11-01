@@ -6,12 +6,28 @@
     // background-image is dynamically injected inline on element
 }
 
+.site-nav-shortcut {
+    margin-top: 4px;
+
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
 .logo {
     max-width: 100%;    // keep inside parent container
 }
 
+/* Main content */
+#main-content {
+    background-color: white;
+}
+
 /* Page footer */
 #page-footer {
+    background-color: $green;
     p {
         margin: 0 0 5px 0;
         text-align: center;

@@ -28,6 +28,7 @@
 
         <header id="page-header" style="background-image: url('/img/headers/header_1.jpg');">
             <div class="container">
+                <a href="#site-nav" title="Shortcut to Menu" class="site-nav-shortcut">Full Menu</a>
                 <a href="/" title="David L. Lawrence Convention Center">
                     <!-- TODO: get screen-size appropriate res image for this? -->
                     <img class="logo" src="/img/DLCC_Logo_Full.png" alt="David L. Lawrence Convention Center" />
