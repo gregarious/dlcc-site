@@ -821,7 +821,7 @@ textarea {
 /*** Base styles ***/
 /* line 6, ../sass/_base.scss */
 html {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.5em;
 }
 
@@ -864,7 +864,7 @@ a {
 
 /* line 48, ../sass/_base.scss */
 #main-content {
-  padding: 5px 8px;
+  padding: 8px;
 }
 
 /* line 57, ../sass/_base.scss */
@@ -938,4 +938,104 @@ a {
 #site-nav li {
   float: left;
   margin: 0 8px 6px 0;
+}
+
+/* line 3, ../sass/_home.scss */
+.expanded-content {
+  margin-left: -8px;
+  width: 316px;
+}
+
+/* line 10, ../sass/_home.scss */
+.standout-img {
+  width: 316px;
+  height: 148px;
+}
+
+/* line 15, ../sass/_home.scss */
+.standout-text {
+  margin: 0 -15px 10px -15px;
+  padding: 4px 10px;
+  background-color: #f1e597;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  color: black;
+  font-size: 11px;
+}
+
+/* line 26, ../sass/_home.scss */
+.quick-links {
+  text-align: center;
+  font-size: 14px;
+}
+
+/*** Highlight sections ***/
+/* line 33, ../sass/_home.scss */
+section.highlight {
+  width: 100%;
+  margin-bottom: 1em;
+}
+/* line 35, ../sass/_home.scss */
+section.highlight h2 {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* line 42, ../sass/_home.scss */
+.highlight-map {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 48, ../sass/_home.scss */
+.highlight-app p {
+  margin: 0;
+}
+
+/* line 52, ../sass/_home.scss */
+.app-phone-img {
+  float: right;
+}
+
+/* line 56, ../sass/_home.scss */
+.app-links {
+  display: block-inline;
+  margin: 4px auto;
+}
+/* line 60, ../sass/_home.scss */
+.app-links img {
+  margin: 2px 2px;
+}
+
+/* line 65, ../sass/_home.scss */
+.highlight-video {
+  overflow: hidden;
+}
+
+/* line 69, ../sass/_home.scss */
+.more-videos-link {
+  float: right;
+}
+
+/* line 73, ../sass/_home.scss */
+.highlight-fact {
+  min-height: 157px;
+  background: url('/img/placeholders/recycling_bg_300.png?1351799886') no-repeat;
+  padding: 30px;
+}
+/* line 79, ../sass/_home.scss */
+.highlight-fact p {
+  margin: 0 0 10px 0;
+  line-height: 1.2em;
+  font-size: 20px;
+}
+/* line 84, ../sass/_home.scss */
+.highlight-fact p > strong {
+  display: block;
+  font-size: 30px;
+}
+/* line 90, ../sass/_home.scss */
+.highlight-fact a {
+  font-size: 11px;
 }

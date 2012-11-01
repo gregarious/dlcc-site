@@ -38,7 +38,7 @@
         <div class="container clearfix">
             <div id="main-wrap">
                 <div id="main-content">
-                    Main content
+                    <?php include "partials/home.inc.php"; ?>
                 </div>
                 <aside id="main-aside">
                     <nav id="site-nav">

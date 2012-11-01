@@ -18,10 +18,6 @@ $button-width: 91px;
 $button-height: 79px;
 $button-padding: 8px;
 
-@function w-nav($num-cols) {
-    @return ($button-width * $num-cols) + ($button-padding * ($num-cols - 1));
-}
-
 // foundational styles
 @import "normalize.scss";
 @import "h5bp.scss";

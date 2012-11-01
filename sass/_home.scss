@@ -1,0 +1,93 @@
+@import "compass/css3";
+
+.expanded-content {
+    margin-left: -8px;  // cancel the #main-content padding
+
+    width: 316px;       // acct for 2 pixel wrap border on both sides
+}
+
+// TODO: decide on responsive image scheme and adjust accordingly
+.standout-img {
+    width: 316px;
+    height: 148px;
+}
+
+.standout-text {
+    margin: 0 -15px 10px -15px;
+    padding: 4px 10px;
+    
+    background-color: $yellow;
+    @include single-box-shadow;
+
+    color: black;
+    font-size: 11px;
+}
+
+.quick-links {
+    text-align: center;
+    font-size: 14px;
+}
+
+/*** Highlight sections ***/
+
+section.highlight {
+    width: 100%;
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+    margin-bottom: 1em;
+}
+
+.highlight-map {
+    width: 100%;
+    // TODO: fix width of map image. after responsive decision made
+    overflow: hidden;
+}
+
+.highlight-app p {
+    margin: 0;
+}
+
+.app-phone-img {
+    float: right;
+}
+
+.app-links {
+    display: block-inline;
+    // TODO: why isn't margin auto centering?
+    margin: 4px auto;
+    img {
+        margin: 2px 2px;
+    }
+}
+
+.highlight-video {
+    // TODO: fix width of vimeo image -- if even an image?
+    overflow: hidden;
+}
+.more-videos-link {
+    float: right;
+}
+
+.highlight-fact {
+    // TODO: 
+    min-height: 157px;
+    background: image-url('placeholders/recycling_bg_300.png') no-repeat;
+    padding: 30px;
+
+    p {
+        margin: 0 0 10px 0;
+        line-height: 1.2em;
+        font-size: 20px;
+        
+        > strong {
+            display: block; // surround emphasized line with newlines
+            font-size: 30px;
+        }
+    }
+
+    a {
+        font-size: 11px;
+    }
+}
