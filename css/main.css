@@ -889,7 +889,12 @@ a {
 /* Header footer */
 /* line 9, ../sass/_common.scss */
 .site-nav-shortcut {
-  margin-top: 4px;
+  position: absolute;
+  top: 4px;
+  z-index: 999;
+  display: block;
+  width: 100px;
+  height: 44px;
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
@@ -897,23 +902,23 @@ a {
   color: white;
 }
 
-/* line 19, ../sass/_common.scss */
+/* line 26, ../sass/_common.scss */
 .logo {
   max-width: 100%;
 }
 
 /* Main content */
-/* line 24, ../sass/_common.scss */
+/* line 31, ../sass/_common.scss */
 #main-content {
   background-color: white;
 }
 
 /* Page footer */
-/* line 29, ../sass/_common.scss */
+/* line 36, ../sass/_common.scss */
 #page-footer {
   background-color: #819578;
 }
-/* line 31, ../sass/_common.scss */
+/* line 38, ../sass/_common.scss */
 #page-footer p {
   margin: 0 0 5px 0;
   text-align: center;
@@ -922,17 +927,17 @@ a {
 }
 
 /* Main site nav */
-/* line 41, ../sass/_common.scss */
+/* line 48, ../sass/_common.scss */
 #site-nav {
   background-color: #819578;
   padding: 20px 0 20px 12px;
 }
-/* line 46, ../sass/_common.scss */
+/* line 53, ../sass/_common.scss */
 #site-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 51, ../sass/_common.scss */
+/* line 58, ../sass/_common.scss */
 #site-nav li {
   float: left;
   margin: 0 8px 6px 0;

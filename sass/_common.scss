@@ -7,7 +7,14 @@
 }
 
 .site-nav-shortcut {
-    margin-top: 4px;
+    position: absolute;
+    top: 4px;
+
+    // inflate clickable area of button so logo link doesn't dominate
+    z-index: 999;
+    display: block;
+    width: 100px;
+    height: 44px;
 
     font-size: 14px;
     text-decoration: none;
