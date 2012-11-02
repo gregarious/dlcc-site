@@ -1,4 +1,4 @@
-<div class="main-content main-content-services">
+<div id="main-content" class="container-bordered main-content-services">
     <h1>Directions and Parking</h1>
     <p>Pittsburgh is a well connected city. It’s location in Western Pennsylvania makes it convenient to get to by air and ground transportation -- and once you’re here, getting around is easy.</p>
 

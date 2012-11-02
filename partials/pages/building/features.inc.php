@@ -1,4 +1,4 @@
-<div class="main-content main-content-building main-content-building-features">
+<div id="main-content" class="container-bordered main-content-building main-content-building-features">
     <h1>Building Features Overview</h1>
     <p>Pittsburgh is a city known for its diverse architectural styles such as the “Romanesque” Allegheny County Courthouse (H.H. Richardson 1888), Phillip Johnson’s glass castle PPG Place (1988) and the city’s most recent addition to the downtown skyline and riverscape, the David L. Lawrence Convention Center, designed by Rafael Vinoly Architects (2003). Pittsburgh also enjoys an international reputation for its world-class art collections at The Carnegie Museum of Art, the Andy Warhol Museum and the Frick Art Museum. While at the David L. Lawrence Convention Center, enjoy the twenty-five works of art which celebrates the City’s diversity - <a href="artwithinart.html">Art within Art</a>.</p>
     <dl>

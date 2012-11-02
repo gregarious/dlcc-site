@@ -859,29 +859,25 @@ a {
 }
 
 /* line 39, ../sass/_base.scss */
-.container {
+.container, .container-bordered {
   width: 320px;
   margin: 0 auto;
 }
 
 /* line 45, ../sass/_base.scss */
-#main-wrap {
+.container-bordered {
   border-left: 2px solid white;
   border-right: 2px solid white;
 }
 
-/* line 54, ../sass/_base.scss */
-.main-content {
+/* line 52, ../sass/_base.scss */
+#main-content {
   padding: 8px;
   background-color: white;
+  border-top: 2px solid white;
 }
 
-/* line 64, ../sass/_base.scss */
-#main-aside {
-  width: 100%;
-}
-
-/* line 76, ../sass/_base.scss */
+/* line 63, ../sass/_base.scss */
 #page-footer {
   padding-bottom: 1em;
 }
@@ -907,18 +903,12 @@ a {
   max-width: 100%;
 }
 
-/* Main content */
-/* line 31, ../sass/_common.scss */
-#main-content {
-  background-color: white;
-}
-
 /* Page footer */
-/* line 36, ../sass/_common.scss */
+/* line 31, ../sass/_common.scss */
 #page-footer {
   background-color: #819578;
 }
-/* line 38, ../sass/_common.scss */
+/* line 33, ../sass/_common.scss */
 #page-footer p {
   margin: 0 0 5px 0;
   text-align: center;
@@ -927,17 +917,17 @@ a {
 }
 
 /* Main site nav */
-/* line 48, ../sass/_common.scss */
+/* line 43, ../sass/_common.scss */
 #site-nav {
   background-color: #819578;
   padding: 20px 0 20px 12px;
 }
-/* line 53, ../sass/_common.scss */
+/* line 48, ../sass/_common.scss */
 #site-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 58, ../sass/_common.scss */
+/* line 53, ../sass/_common.scss */
 #site-nav li {
   float: left;
   margin: 0 8px 6px 0;
@@ -945,17 +935,18 @@ a {
 
 /* line 3, ../sass/_home.scss */
 .expanded-content {
+  margin-top: -8px;
   margin-left: -8px;
   width: 316px;
 }
 
-/* line 10, ../sass/_home.scss */
+/* line 12, ../sass/_home.scss */
 .standout-img {
   width: 316px;
   height: 148px;
 }
 
-/* line 15, ../sass/_home.scss */
+/* line 17, ../sass/_home.scss */
 .standout-text {
   margin: 0 -15px 10px -15px;
   padding: 4px 10px;
@@ -967,152 +958,155 @@ a {
   font-size: 11px;
 }
 
-/* line 26, ../sass/_home.scss */
+/* line 28, ../sass/_home.scss */
 .quick-links {
   text-align: center;
   font-size: 14px;
 }
 
 /*** Highlight sections ***/
-/* line 33, ../sass/_home.scss */
+/* line 35, ../sass/_home.scss */
 section.highlight {
   width: 100%;
   margin-bottom: 1em;
 }
-/* line 35, ../sass/_home.scss */
+/* line 37, ../sass/_home.scss */
 section.highlight h2 {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
 
-/* line 42, ../sass/_home.scss */
+/* line 44, ../sass/_home.scss */
 .highlight-map {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 48, ../sass/_home.scss */
+/* line 50, ../sass/_home.scss */
 .highlight-app p {
   margin: 0;
 }
 
-/* line 52, ../sass/_home.scss */
+/* line 54, ../sass/_home.scss */
 .app-phone-img {
   float: right;
 }
 
-/* line 56, ../sass/_home.scss */
+/* line 58, ../sass/_home.scss */
 .app-links {
   display: block-inline;
   margin: 4px auto;
 }
-/* line 60, ../sass/_home.scss */
+/* line 62, ../sass/_home.scss */
 .app-links img {
   margin: 2px 2px;
 }
 
-/* line 65, ../sass/_home.scss */
+/* line 67, ../sass/_home.scss */
 .highlight-video {
   overflow: hidden;
 }
 
-/* line 69, ../sass/_home.scss */
+/* line 71, ../sass/_home.scss */
 .more-videos-link {
   float: right;
 }
 
-/* line 73, ../sass/_home.scss */
+/* line 75, ../sass/_home.scss */
 .highlight-fact {
   min-height: 157px;
   background: url('/img/placeholders/recycling_bg_300.png?1351799886') no-repeat;
   padding: 30px;
 }
-/* line 79, ../sass/_home.scss */
+/* line 81, ../sass/_home.scss */
 .highlight-fact p {
   margin: 0 0 10px 0;
   line-height: 1.2em;
   font-size: 20px;
 }
-/* line 84, ../sass/_home.scss */
+/* line 86, ../sass/_home.scss */
 .highlight-fact p > strong {
   display: block;
   font-size: 30px;
 }
-/* line 90, ../sass/_home.scss */
+/* line 92, ../sass/_home.scss */
 .highlight-fact a {
   font-size: 11px;
 }
 
-/* line 8, ../sass/_subpages.scss */
-.main-content-building h1,
-.main-content-services h1,
-.main-content-directions h1,
-.main-content-explorepgh h1,
-.main-content-neighborhood h1,
-.main-content-aboutus h1,
-.main-content-contactus h1 {
+/* Base rules for subpage elements */
+/* line 9, ../sass/_subpages.scss */
+.content-building h1,
+.content-services h1,
+.content-directions h1,
+.content-explorepgh h1,
+.content-neighborhood h1,
+.content-aboutus h1,
+.content-contactus h1 {
   font-size: 1.75em;
 }
-/* line 11, ../sass/_subpages.scss */
-.main-content-building h2,
-.main-content-services h2,
-.main-content-directions h2,
-.main-content-explorepgh h2,
-.main-content-neighborhood h2,
-.main-content-aboutus h2,
-.main-content-contactus h2 {
+/* line 12, ../sass/_subpages.scss */
+.content-building h2,
+.content-services h2,
+.content-directions h2,
+.content-explorepgh h2,
+.content-neighborhood h2,
+.content-aboutus h2,
+.content-contactus h2 {
   font-size: 1.33em;
 }
-/* line 14, ../sass/_subpages.scss */
-.main-content-building h3,
-.main-content-services h3,
-.main-content-directions h3,
-.main-content-explorepgh h3,
-.main-content-neighborhood h3,
-.main-content-aboutus h3,
-.main-content-contactus h3 {
+/* line 15, ../sass/_subpages.scss */
+.content-building h3,
+.content-services h3,
+.content-directions h3,
+.content-explorepgh h3,
+.content-neighborhood h3,
+.content-aboutus h3,
+.content-contactus h3 {
   margin-bottom: 0;
 }
-/* line 17, ../sass/_subpages.scss */
-.main-content-building p,
-.main-content-services p,
-.main-content-directions p,
-.main-content-explorepgh p,
-.main-content-neighborhood p,
-.main-content-aboutus p,
-.main-content-contactus p {
+/* line 18, ../sass/_subpages.scss */
+.content-building p,
+.content-services p,
+.content-directions p,
+.content-explorepgh p,
+.content-neighborhood p,
+.content-aboutus p,
+.content-contactus p {
   margin-top: 0;
 }
-/* line 20, ../sass/_subpages.scss */
-.main-content-building dd,
-.main-content-services dd,
-.main-content-directions dd,
-.main-content-explorepgh dd,
-.main-content-neighborhood dd,
-.main-content-aboutus dd,
-.main-content-contactus dd {
+/* line 21, ../sass/_subpages.scss */
+.content-building dd,
+.content-services dd,
+.content-directions dd,
+.content-explorepgh dd,
+.content-neighborhood dd,
+.content-aboutus dd,
+.content-contactus dd {
   margin-bottom: 1em;
 }
 
-/* line 25, ../sass/_subpages.scss */
+/* Classes in Contact page */
+/* line 27, ../sass/_subpages.scss */
 .admin-office-label {
   margin-bottom: 0;
 }
 
-/* line 29, ../sass/_subpages.scss */
+/* line 31, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
-/* line 34, ../sass/_subpages.scss */
+/* Classes in Directions page */
+/* line 37, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
 }
 
-/* Explore Pgh */
-/* line 43, ../sass/_subpages.scss */
+/* Classes in Explore Pgh page */
+/* line 46, ../sass/_subpages.scss */
 .image-link {
   display: none;
 }

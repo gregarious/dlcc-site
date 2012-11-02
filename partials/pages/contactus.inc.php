@@ -1,4 +1,4 @@
-<div class="main-content main-content-contactus">
+<div id="main-content" class="container-bordered main-content-contactus">
 
 <h1>Contact Us</h1>
 <dd>David L. Lawrence Convention Center<br />

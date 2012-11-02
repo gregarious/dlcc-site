@@ -1,10 +1,11 @@
-.main-content-building,
-.main-content-services,
-.main-content-directions,
-.main-content-explorepgh,
-.main-content-neighborhood,
-.main-content-aboutus,
-.main-content-contactus {
+/* Base rules for subpage elements */
+.content-building,
+.content-services,
+.content-directions,
+.content-explorepgh,
+.content-neighborhood,
+.content-aboutus,
+.content-contactus {
     h1 {
         font-size: 1.75em;
     }
@@ -22,6 +23,7 @@
     }
 }
 
+/* Classes in Contact page */
 .admin-office-label {
     margin-bottom: 0;
 }
@@ -31,12 +33,13 @@
     font-size: 0.9em;
 }
 
+/* Classes in Directions page */
 .daddr {
     font-style: italic;
     font-size: 14px;
 }
 
-/* Explore Pgh */
+/* Classes in Explore Pgh page */
 
 // TODO: need to add a simple two column grid for images
 

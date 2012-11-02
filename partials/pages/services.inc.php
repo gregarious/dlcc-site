@@ -1,4 +1,4 @@
-<div class="main-content main-content-services">
+<div id="main-content" class="container-bordered main-content-services">
 
 <h1>Our Services</h1>
 <p>The David L. Lawrence Convention Center's service partners are committed to providing meeting planners, exhibitors and attendees with quality, value and an unmatched experience.</p>

@@ -1,4 +1,4 @@
-<div class="main-content main-content-explorepgh">
+<div id="main-content" class="container-bordered main-content-explorepgh">
 <h1>Explore Pittsburgh</h1>
     <a class="image-link" href="http://www.visitpittsburgh.com/" target="_blank"><img src="images/visit_pittsburgh.jpg" alt="Visit Pittsburgh Logo" /></a>
     <h2><a href="http://www.visitpittsburgh.com/" target="_blank">Visit Pittsburgh</a></h2>

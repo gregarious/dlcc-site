@@ -1,5 +1,5 @@
 <!-- TODO: include Photo Gallery? -->
-<div class="main-content main-content-building main-content-building-floorplans">
+<div id="main-content" class="container-bordered main-content-building main-content-building-floorplans">
     <h1>Building Floor Plans</h1>
     <p>Situated on nearly eight acres, the David L. Lawrence Convention Center offers 1.5 million square feet facility. Four floors house 53 meeting rooms (including two 250-seat lecture halls) and the 31,610 square-foot Spirit of Pittsburgh Ballroom as well as providing 313,400 square feet of exhibit space (236,900 sq. ft. column free). Take a look at each floor’s unique flexible layout.</p>
 

@@ -2,7 +2,7 @@
 include "../partials/head.inc.php";
 # TODO: complete this simple index
 ?>
-<div class="main-content main-content-building main-content-building-index">
+<div id="main-content" class="container-bordered main-content-building main-content-building-index">
     <h1>Our Building</h1>
     <ul>
         <li><a href="history.php">History</a></li>

@@ -35,5 +35,3 @@
                 </a>
             </div>
         </header>
-        <div class="container clearfix">
-            <div id="main-wrap">
