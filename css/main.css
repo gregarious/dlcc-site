@@ -1083,30 +1083,36 @@ section.highlight h2 {
 .main-content-contactus p {
   margin-top: 0;
 }
-
-/* line 23, ../sass/_subpages.scss */
-.main-content-contactus h2 {
-  margin-bottom: 0;
-}
-/* line 26, ../sass/_subpages.scss */
+/* line 20, ../sass/_subpages.scss */
+.main-content-building dd,
+.main-content-services dd,
+.main-content-directions dd,
+.main-content-explorepgh dd,
+.main-content-neighborhood dd,
+.main-content-aboutus dd,
 .main-content-contactus dd {
   margin-bottom: 1em;
 }
 
-/* line 31, ../sass/_subpages.scss */
+/* line 25, ../sass/_subpages.scss */
+.admin-office-label {
+  margin-bottom: 0;
+}
+
+/* line 29, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
-/* line 36, ../sass/_subpages.scss */
+/* line 34, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
 }
 
 /* Explore Pgh */
-/* line 45, ../sass/_subpages.scss */
+/* line 43, ../sass/_subpages.scss */
 .image-link {
   display: none;
 }

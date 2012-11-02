@@ -16,7 +16,7 @@ Pittsburgh, PA 15222</dd>
     <dd><a class="mailto" href="mailto:info@pittsburghcc.com">info@pittsburghcc.com</a></dd>
 </dl>
 
-<h2>Administrative Offices</h2>
+<h2 class="admin-office-label">Administrative Offices</h2>
 <p class="office-hours">Monday &ndash; Friday: 8:30 AM &ndash; 5:00 PM</p>
 
 <dl>

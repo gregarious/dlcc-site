@@ -8,8 +8,8 @@
         </p>
         <div class="quick-links">
             <a href="#">Floor Plans</a> | 
-            <a href="#">Directions &amp; Parking</a> | 
-            <a href="#">Contact</a>
+            <a href="directions.php">Directions &amp; Parking</a> | 
+            <a href="contactus.php">Contact</a>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-<div class="main-content main-content-building">
+<div class="main-content main-content-building main-content-building-history">
     <h1>Building History</h1>
 
     <p>What began as a vision by a group of determined government, corporate and non-profit foundation leaders became a reality in September 2003 with the official dedication ceremony of the David L. Lawrence Convention Center. The opening of the 1.5 million square foot building was so anxiously anticipated by the convention and exposition industry that the building hosted many large trade shows while still under construction.</p>

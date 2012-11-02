@@ -1,7 +1,7 @@
                 <aside id="main-aside">
                     <nav id="site-nav">
                         <ul class="clearfix">
-                            <li><a href="/building.php" title="Our Building"><img src="/img/nav/Nav_Building.png" width="91" height="79"></a></li>
+                            <li><a href="/building/" title="Our Building"><img src="/img/nav/Nav_Building.png" width="91" height="79"></a></li>
                             <li><a href="/services.php" title="Our Services"><img src="/img/nav/Nav_Services.png" width="91" height="79"></a></li>
                             <li><a href="/explore_pgh.php" title="Explore Pittsburgh"><img src="/img/nav/Nav_ExplorePGH.png" width="91" height="79"></a></li>
                             <li><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/img/nav/Nav_DLCCneighborhood.png" width="91" height="79"></a></li>
