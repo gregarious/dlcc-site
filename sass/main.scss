@@ -11,8 +11,14 @@ $light-green4: #f2f3ef;
 
 // TODO: revisit these breakpoint values
 $w-wide: 1000px;
+
 $w-standard: 800px;
-$w-narrow: 600px;
+
+// TODO: move these into stylesheet setting up layout
+$w-narrow: 768px;
+$w-narrow-sidebar: 115px;
+$w-narrow-main: $w-narrow - $w-narrow-sidebar;
+
 $w-mobile: 320px;
 
 $button-width: 91px;

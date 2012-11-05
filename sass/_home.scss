@@ -2,19 +2,27 @@
 
 .expanded-content {
     // cancel the #main-content padding
-    margin-top: -8px;
-    margin-left: -8px;
+    margin-left: -16px;
 
-    width: 316px;       // acct for 2 pixel wrap border on both sides
+    width: $w-mobile - 4;       // acct for 2 pixel wrap border on both sides
+    @media only screen and (min-width: $w-narrow) {
+        width: $w-narrow-main - 2;
+    }
 }
 
 // TODO: decide on responsive image scheme and adjust accordingly
 .standout-img {
-    width: 316px;   // This *should* be 100% and cropping
+    width: $w-mobile;   // TODO: This *should* be 100% and cropping. percent will scale. revisit after image stuff
     height: 148px;
+    @media only screen and (min-width: $w-narrow) {
+        width: $w-narrow-main;
+        height: 220px;
+    }
 }
 
 .standout-text {
+    position: relative;
+    top: -1em;  // overlay on top of standout-image
     margin: 0 -15px 10px -15px;
     padding: 4px 10px;
     
@@ -23,27 +31,40 @@
 
     color: black;
     font-size: 11px;
+
+    @media only screen and (min-width: $w-narrow) {
+        width: 70%;
+    }
 }
 
 .quick-links {
-    text-align: center;
     font-size: 14px;
+
+    text-align: center;
+    @media only screen and (min-width: $w-narrow) {
+        text-align: left;
+    }
+}
+
+.quick-find-label {
+    font-weight: bold;
+
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        display: inline;
+        margin-right: 0.5em;
+    }
 }
 
 /*** Highlight sections ***/
 
-section.highlight {
-    width: 100%;
-    h2 {
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
-    }
-    margin-bottom: 1em;
+.highlight h2 {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
 
 .highlight-map {
-    width: 100%;
-    // TODO: fix width of map image. after responsive decision made
+    // TODO: fix width of map image to col-1-2 width
     overflow: hidden;
 }
 
@@ -56,7 +77,7 @@ section.highlight {
 }
 
 .app-links {
-    display: block-inline;
+    display: inline-block;
     // TODO: why isn't margin auto centering?
     margin: 4px auto;
     img {
@@ -69,11 +90,12 @@ section.highlight {
     overflow: hidden;
 }
 .more-videos-link {
+    margin-top: 0.5em;
     float: right;
 }
 
 .highlight-fact {
-    // TODO: 
+    // TODO: background sizes
     min-height: 157px;
     background: image-url('placeholders/recycling_bg_300.png') no-repeat;
     padding: 30px;
@@ -92,4 +114,34 @@ section.highlight {
     a {
         font-size: 11px;
     }
+}
+
+.upcoming-events {
+    display: none;
+    
+    @media only screen and (min-width: $w-narrow) {
+        margin: 12px 0;
+        padding: 16px;
+        background-color: $light-green3;
+
+        > h2 {
+            margin-top: 0;
+        }
+    }
+}
+
+.upcoming-event {
+    // TODO: reconsider selectors after finalizing markup for event items
+    p {
+        margin: 0;
+    }
+    a {
+        font-weight: bold;
+        color: $grey;
+    }
+    margin-bottom: 1em;
+}
+
+.upcoming-event:last-of-type {
+    margin-bottom: 0;
 }

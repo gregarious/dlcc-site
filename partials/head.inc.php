@@ -35,3 +35,4 @@
                 </a>
             </div>
         </header>
+        <div class="container-bordered clearfix">

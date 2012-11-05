@@ -30,11 +30,19 @@
 /* Page footer */
 #page-footer {
     background-color: $green;
+    padding-top: 12px;
     p {
-        margin: 0 0 5px 0;
+        margin: 0;
         text-align: center;
         font-size: 12px;
         color: white;
+    }
+
+    @media only screen and (min-width: $w-narrow) {
+        background-color: white;
+        p {
+            color: $grey;
+        }
     }
 }
 
@@ -43,7 +51,7 @@
 #site-nav {
     // padding used in here is ad hoc based on 320px width. revisit when finalizing mobile container width
     background-color: $green;
-    padding: 20px 0 20px 12px;
+    padding: 20px 0 8px 14px;
 
     ul {
         margin: 0;
@@ -54,5 +62,19 @@
         float: left;
         margin: 0 8px 6px 0;
     }
+
+    @media only screen and (min-width: $w-narrow) {
+        padding-left: 10px;     // TODO: lots of issues with centering. this is just another
+    }
 }
 
+/* aside items */
+.flickr-container {
+    display: none;
+    background-color: $light-green1;
+    @media only screen and (min-width: $w-narrow) {
+        // TODO: why margin doens't work. don't want to center with of padding-left
+        padding: 10px 0 0 9px;
+        display: inherit;
+    }
+}
