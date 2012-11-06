@@ -9,15 +9,15 @@ $light-green2: #d8ddd4;
 $light-green3: #e6ebe4;
 $light-green4: #f2f3ef;
 
-// TODO: revisit these breakpoint values
-$w-wide: 1000px;
+$nav-button-padding: 8px;
 
-$w-standard: 800px;
+// TODO: revisit these breakpoint values
+$w-wide: 1080px;
+
+$w-standard: 960px;
 
 // TODO: move these into stylesheet setting up layout
 $w-narrow: 768px;
-$w-narrow-sidebar: 115px;
-$w-narrow-main: $w-narrow - $w-narrow-sidebar;
 
 $w-mobile: 320px;
 
@@ -29,6 +29,7 @@ $button-padding: 8px;
 @import "normalize.scss";
 @import "h5bp.scss";
 @import "base.scss";
+@import "layout.scss";
 
 // common modules
 @import "common.scss";

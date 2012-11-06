@@ -2,11 +2,10 @@
 
 .expanded-content {
     // cancel the #main-content padding
-    margin-left: -16px;
+    margin-left: -1 * $w-mobile-main-padding;
 
-    width: $w-mobile - 4;       // acct for 2 pixel wrap border on both sides
     @media only screen and (min-width: $w-narrow) {
-        width: $w-narrow-main - 2;
+        margin-left: -1 * $w-narrow-main-padding;
     }
 }
 
@@ -18,6 +17,11 @@
         width: $w-narrow-main;
         height: 220px;
     }
+    @media only screen and (min-width: $w-narrow) {
+        width: $w-standard-main;
+        height: 220px;
+    }
+
 }
 
 .standout-text {
@@ -33,7 +37,7 @@
     font-size: 11px;
 
     @media only screen and (min-width: $w-narrow) {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -74,6 +78,7 @@
 
 .app-phone-img {
     float: right;
+    margin: 4px;
 }
 
 .app-links {
@@ -116,32 +121,19 @@
     }
 }
 
-.upcoming-events {
+.upcoming-events-home {
     display: none;
-    
+
     @media only screen and (min-width: $w-narrow) {
+        display: inherit;
         margin: 12px 0;
         padding: 16px;
         background-color: $light-green3;
-
-        > h2 {
-            margin-top: 0;
-        }
     }
-}
 
-.upcoming-event {
-    // TODO: reconsider selectors after finalizing markup for event items
-    p {
-        margin: 0;
+    // TODO: combine mobile and over narrow MQs
+    @media only screen and (min-width: $w-standard) {
+        display: none;
     }
-    a {
-        font-weight: bold;
-        color: $grey;
-    }
-    margin-bottom: 1em;
-}
 
-.upcoming-event:last-of-type {
-    margin-bottom: 0;
 }

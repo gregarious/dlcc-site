@@ -1,0 +1,131 @@
+// precalculated pixel widths for site sections
+$main-col-margin: 12px;
+
+$w-mobile-main-padding: 8px;
+
+$w-narrow-sidebar: 91px + (2 * 12px);
+$w-narrow-main: $w-narrow - $w-narrow-sidebar;
+$w-narrow-main-padding: 16px;
+$w-narrow-main-column: (($w-narrow-main - (2 * $w-narrow-main-padding)) / 2) - $main-col-margin;
+
+$w-standard-sidebar: (2 * 91px) + (2 * 12px) + $nav-button-padding;
+$w-standard-main: $w-standard - $w-standard-sidebar;
+$w-standard-main-padding: 16px;
+$w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 2) - $main-col-margin;
+
+
+// border box all the things!
+* {
+    @include box-sizing(border-box);
+}
+
+.site-container {
+    // keeps everything but header in a fixed width container
+    width: $w-mobile;
+    @media only screen and (min-width: $w-narrow) {
+        width: $w-narrow;
+    }
+    @media only screen and (min-width: $w-standard) {
+        width: $w-standard;
+    }
+
+    margin: 0 auto;
+}
+
+#main-content {
+    float: left;
+    padding: 0 $w-mobile-main-padding;
+
+    width: 100%;
+    @media only screen and (min-width: $w-narrow) {
+        width: $w-narrow-main;
+        padding: 0 $w-narrow-main-padding;
+    }
+    @media only screen and (min-width: $w-standard) {
+        width: $w-standard-main;
+        padding: 0 $w-standard-main-padding;
+    }
+
+}
+
+#main-aside {
+    float: left;
+    @media only screen and (min-width: $w-narrow) {
+        width: $w-narrow-sidebar;
+        
+        // applied to all non-mobile sizes
+        border-left: 2px solid white;
+    }
+    @media only screen and (min-width: $w-standard) {
+        width: $w-standard-sidebar;
+    }
+}
+
+.page-footer {
+    padding-bottom: 1em;
+}
+
+.page-footer-wide {
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        // applied to all non-mobile sizes
+        display: inherit;
+    }    
+}
+
+.page-footer-mobile {
+    display: inherit;
+    @media only screen and (min-width: $w-narrow) {
+        // applied to all non-mobile sizes
+        display: none;
+    }
+}
+
+// grid within #main-content
+.content-grid-row {
+    width: 100%;
+
+    @extend .clearfix;
+
+    .col-first {
+        margin: 0 0 16px 0;
+        width: 100%;
+        float: left;
+
+        @media only screen and (min-width: $w-narrow) {
+            width: $w-narrow-main-column;
+            margin-right: $main-col-margin;
+        }
+
+        @media only screen and (min-width: $w-standard) {
+            width: $w-standard-main-column;
+            margin-right: $main-col-margin;
+        }
+    }
+
+    .col-last {
+        margin: 0 0 16px 0;
+        width: 100%;
+        float: left;
+
+        // TODO: combine this and above settings into a generic col class
+        @media only screen and (min-width: $w-narrow) {
+            width: $w-narrow-main-column;
+            margin-left: $main-col-margin;
+        }
+
+        @media only screen and (min-width: $w-standard) {
+            width: $w-standard-main-column;
+            margin-left: $main-col-margin;
+        }
+    }
+
+
+}
+
+.bordered-content {
+    @include box-sizing(content-box);
+    width: 100%;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}

@@ -4,6 +4,8 @@
 /* Header footer */
 #page-header {
     // background-image is dynamically injected inline on element
+    border-bottom: 2px solid white;
+    @include box-sizing(content-box);
 }
 
 .site-nav-shortcut {
@@ -21,14 +23,23 @@
     text-transform: uppercase;
     font-weight: bold;
     color: white;
+
+    @media only screen and (min-width: $w-narrow) {
+        display: none;
+    }
 }
 
 .logo {
     max-width: 100%;    // keep inside parent container
+    width: 320px;   // TODO: placeholder
+    @media only screen and (min-width: $w-standard) {
+        width: auto;
+    }
+
 }
 
 /* Page footer */
-#page-footer {
+.page-footer {
     background-color: $green;
     padding-top: 12px;
     p {
@@ -60,7 +71,7 @@
 
     li {
         float: left;
-        margin: 0 8px 6px 0;
+        margin: 0 $nav-button-padding 6px 0;
     }
 
     @media only screen and (min-width: $w-narrow) {
@@ -68,13 +79,108 @@
     }
 }
 
+// only show the home nav button on mobile devices
+.nav-btn-home {
+    @media only screen and (min-width: $w-narrow) {
+        display: none;
+    }
+}
+
 /* aside items */
 .flickr-container {
+    border-top: 2px solid white;
+
+    // TODO: need to get the background color of this to bleed to the bottom
     display: none;
-    background-color: $light-green1;
+    
     @media only screen and (min-width: $w-narrow) {
-        // TODO: why margin doens't work. don't want to center with of padding-left
+        // TODO: why margin doesn't work. don't want to center with of padding-left
         padding: 10px 0 0 9px;
         display: inherit;
+        background-color: $light-green1;
+    }
+    @media only screen and (min-width: $w-standard) {
+        // TODO: why margin doesn't work. don't want to center with of padding-left
+        padding-left: 60px;
+        background-color: $light-green2;
+    }
+}
+
+.flickr-badge {
+    display: none;
+    @media only screen and (min-width: $w-standard) {
+        display: inherit;
+        // TODO: temporary hack till new badge is made
+        margin-left: -35px;
+    }
+}
+
+
+.upcoming-events {
+    > h2 {
+        margin-top: 0;
+    }
+}
+
+// TODO: these were some ad hco additions. revisit later.
+aside > .upcoming-events {
+    display: none;
+    font-size: 13px;
+
+    @media only screen and (min-width: $w-standard) {
+        display: inherit;
+        padding: 12px;
+        background-color: $light-green1;
+        border-top: 2px solid white;
+    }
+
+    > h2 {
+        color: white;
+        font-size: 1.25em;
+    }
+
+    > .more-link {
+        margin: 1em 0;
+        display: block;
+        color: white;
+        text-decoration: underline;
+        text-align: right;
+    }
+}
+
+.upcoming-event {
+    // TODO: reconsider selectors after finalizing markup for event items
+    p {
+        margin: 0;
+    }
+    a {
+        font-weight: bold;
+        color: $grey;
+    }
+    margin-bottom: 1em;
+}
+
+.upcoming-event:last-of-type {
+    margin-bottom: 0;
+}
+
+.tagline {
+    text-align: right;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.33);
+    float: right;
+    line-height: 0.9em;
+    margin: 0;
+
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        margin: 6px 0;
+        font-size: 36px;
+        // applies to all sizes here and larger
+        display: inherit;
+    }
+    @media only screen and (min-width: $w-standard) {
+        margin: 0;
+        font-size: 42px;
     }
 }
