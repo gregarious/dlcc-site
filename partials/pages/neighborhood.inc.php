@@ -1,4 +1,4 @@
-<div id="main-content" class="container-bordered main-content-neighborhood">
+<div id="main-content" class="content-neighborhood">    <!-- will be closed in foot.inc.php -->
     <h1>Our Neighborhood</h1>
     <p>Where should you stay? Where will you dine? What type of entertainment is available? When the David L. Lawrence Convention Center is the site for your meeting or trade show, you will find practically everything you want from bagels to Bach right in the area. Located in a sophisticated urban setting, the Convention Center is only minutes from cuisine that satisfies every appetite and comfortable accommodations.</p>
 
@@ -16,4 +16,3 @@
 
     <h2>Parking</h2>
     <p>Visit our <a href="directions.html">Directions and Parking</a> page for more information. For real time parking availability, go to <a href="http://www.parkpgh.org" target="_blank">ParkPGH.org</a>.</p>
-</div>

@@ -88,7 +88,7 @@ $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 
     @extend .clearfix;
 
     .col-first {
-        margin: 0 0 16px 0;
+        // margin: 0 0 16px 0;
         width: 100%;
         float: left;
 
@@ -104,7 +104,7 @@ $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 
     }
 
     .col-last {
-        margin: 0 0 16px 0;
+        // margin: 0 0 16px 0;
         width: 100%;
         float: left;
 

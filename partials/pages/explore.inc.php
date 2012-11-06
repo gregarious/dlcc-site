@@ -1,4 +1,4 @@
-<div id="main-content" class="container-bordered main-content-explorepgh">
+<div id="main-content" class="content-explorepgh">    <!-- will be closed in foot.inc.php -->
 <h1>Explore Pittsburgh</h1>
     <a class="image-link" href="http://www.visitpittsburgh.com/" target="_blank"><img src="images/visit_pittsburgh.jpg" alt="Visit Pittsburgh Logo" /></a>
     <h2><a href="http://www.visitpittsburgh.com/" target="_blank">Visit Pittsburgh</a></h2>
@@ -35,4 +35,3 @@
     <a class="image-link" href="http://www.pittsburghbuzz.com/eventlisting/index.asp" target="_blank"><img src="images/pittsburghbuzz.jpg" alt="Pittsburgh Buzz Logo" /></a>
     <h2><a href="http://www.pittsburghbuzz.com/eventlisting/index.asp" target="_blank">Upcoming Entertainment and Events</a></h2>
     <p>Your source for current and upcoming Pittsburgh events and entertainment listings.</p>
-</div>

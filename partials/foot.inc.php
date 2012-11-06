@@ -1,10 +1,16 @@
+                    <footer class="page-footer page-footer-wide">
+                        <p>&copy; Copyright David L. Lawrence Convention Center</p>
+                        <p>1000 Ft. Duquesne Blvd., Pittsburgh, PA 15222 <br/>
+                               (412) 565-6000 | <a href="mailto:info@pittsburghcc.com" title="Contact us" class="mailto">info@pittsburghcc.com</p>
+                    </footer>
+                </div>
                 <aside id="main-aside">
                     <nav id="site-nav">
                         <ul class="clearfix">
                             <!-- TODO: fix links when in building subdir -->
                             <li><a href="building/" title="Our Building"><img src="img/nav/Nav_Building.png" width="91" height="79"></a></li>
                             <li><a href="services.php" title="Our Services"><img src="img/nav/Nav_Services.png" width="91" height="79"></a></li>
-                            <li><a href="explore_pgh.php" title="Explore Pittsburgh"><img src="img/nav/Nav_ExplorePGH.png" width="91" height="79"></a></li>
+                            <li><a href="explore.php" title="Explore Pittsburgh"><img src="img/nav/Nav_ExplorePGH.png" width="91" height="79"></a></li>
                             <li><a href="neighborhood.php" title="The DLCC Neighborhood"><img src="img/nav/Nav_DLCCneighborhood.png" width="91" height="79"></a></li>
                             <li><a href="directions.php" title="Directions &amp; Parking"><img src="img/nav/Nav_DirectionsParking.png" width="91" height="79"></a></li>
                             <li><a href="events.php" title="Events"><img src="img/nav/Nav_Events.png" width="91" height="79"></a></li>

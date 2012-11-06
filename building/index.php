@@ -2,7 +2,7 @@
 include "../partials/head.inc.php";
 # TODO: complete this simple index
 ?>
-<div id="main-content" class="container-bordered main-content-building main-content-building-index">
+<div id="main-content" class="content-building content-building-index">    <!-- will be closed in foot.inc.php -->
     <h1>Our Building</h1>
     <ul>
         <li><a href="history.php">History</a></li>
@@ -10,7 +10,7 @@ include "../partials/head.inc.php";
         <li><a href="floorplans.php">Floor Plans</a></li>
         <li><a href="features.php">Building Features</a></li>
     </ul>
-</div>
+
 
 <?php
 include "../partials/foot.inc.php";

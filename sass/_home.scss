@@ -62,6 +62,13 @@
 
 /*** Highlight sections ***/
 
+.highlight {
+    margin-bottom: 12px;
+    @media only screen and (min-width: $w-narrow) {
+        margin-bottom: 16px;
+    }
+}
+
 .highlight h2 {
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -78,15 +85,15 @@
 
 .app-phone-img {
     float: right;
-    margin: 4px;
+    margin: 4px 0 4px 8px;
 }
 
 .app-links {
     display: inline-block;
     // TODO: why isn't margin auto centering?
-    margin: 4px auto;
+    margin-top: 4px;
     img {
-        margin: 2px 2px;
+        margin: 2px;
     }
 }
 
@@ -123,12 +130,11 @@
 
 .upcoming-events-home {
     display: none;
+    padding: 16px;
+    background-color: $light-green3;
 
     @media only screen and (min-width: $w-narrow) {
         display: inherit;
-        margin: 12px 0;
-        padding: 16px;
-        background-color: $light-green3;
     }
 
     // TODO: combine mobile and over narrow MQs

@@ -1,4 +1,4 @@
-<div id="main-content" class="container-bordered main-content-contactus">
+<div id="main-content" class="content-contactus">    <!-- will be closed in foot.inc.php -->
 
 <h1>Contact Us</h1>
 <dd>David L. Lawrence Convention Center<br />
@@ -56,5 +56,3 @@ Pittsburgh, PA 15222</dd>
 <p>All future openings will be posted to the Department of Labor website at: the PA CareerLink 
     job board at <a href="http://www.cwds.state.pa.us" target="_blank">www.cwds.state.pa.us</a>.</p> 
 <p><strong>SMG is an Equal Opportunity Employer M/F/V/D</strong></p>
-
-</div>

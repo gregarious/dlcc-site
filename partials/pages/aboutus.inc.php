@@ -1,4 +1,4 @@
-<div id="main-content" class="container-bordered main-content-aboutus">
+<div id="main-content" class="content-aboutus"> <!-- will be closed in foot.inc.php -->
 <h1>About Us</h1>
 
 <p><a href="http://www.pgh-sea.com/" target="_blank">The Sports &amp; Exhibition Authority of Pittsburgh and Allegheny County (SEA)</a> owns the David L. Lawrence Convention Center as well as Heinz Field, PNC Park, the Mellon Arena, the North Shore Riverfront Park and the North Shore Parking Garage. The SEA partners with the Commonwealth of Pennsylvania, the City of Pittsburgh and Allegheny County, and VisitPittsburgh to make Pittsburgh a premier destination.</p>
@@ -9,5 +9,3 @@
 <a href="http://www.radworkshere.org/" target="_blank">RAD Works Here</a>
  
 <p>RAD Supports finances and regional assets in the areas of libraries, parks &amp; recreation, cultural, sports and civic facilities and programs</p>
-
-</div>
