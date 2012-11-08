@@ -11,14 +11,10 @@ $light-green4: #f2f3ef;
 
 $nav-button-padding: 8px;
 
-// TODO: revisit these breakpoint values
-$w-wide: 1080px;
-
+// Master content width breakpoints
+$w-wide: 1200px;        // TODO: revisit this size, and rest of them
 $w-standard: 960px;
-
-// TODO: move these into stylesheet setting up layout
 $w-narrow: 768px;
-
 $w-mobile: 320px;
 
 $button-width: 91px;

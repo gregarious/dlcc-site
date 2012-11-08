@@ -13,6 +13,12 @@ $w-standard-main: $w-standard - $w-standard-sidebar;
 $w-standard-main-padding: 16px;
 $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 2) - $main-col-margin;
 
+$w-wide-sidebar: $w-standard-sidebar;
+$w-wide-main: $w-wide - $w-wide-sidebar;
+$w-wide-main-padding: 16px;
+$w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-col-margin;
+
+
 
 // border box all the things!
 * {
@@ -27,6 +33,9 @@ $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 
     }
     @media only screen and (min-width: $w-standard) {
         width: $w-standard;
+    }
+    @media only screen and (min-width: $w-wide) {
+        width: $w-wide;
     }
 
     margin: 0 auto;
@@ -45,7 +54,10 @@ $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 
         width: $w-standard-main;
         padding: 0 $w-standard-main-padding;
     }
-
+    @media only screen and (min-width: $w-wide) {
+        width: $w-wide-main;
+        padding: 0 $w-wide-main-padding;
+    }
 }
 
 #main-aside {
@@ -59,6 +71,7 @@ $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 
     @media only screen and (min-width: $w-standard) {
         width: $w-standard-sidebar;
     }
+    // no need for wide setting: same width as standard
 }
 
 .page-footer {
@@ -87,39 +100,23 @@ $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 
 
     @extend .clearfix;
 
-    .col-first {
-        // margin: 0 0 16px 0;
+    .col {
         width: 100%;
         float: left;
 
         @media only screen and (min-width: $w-narrow) {
             width: $w-narrow-main-column;
-            margin-right: $main-col-margin;
+            margin-right: $main-col-margin; // margin is used by all non-mobile sizes
         }
 
         @media only screen and (min-width: $w-standard) {
             width: $w-standard-main-column;
-            margin-right: $main-col-margin;
+        }
+
+        @media only screen and (min-width: $w-wide) {
+            width: $w-wide-main-column;
         }
     }
-
-    .col-last {
-        // margin: 0 0 16px 0;
-        width: 100%;
-        float: left;
-
-        // TODO: combine this and above settings into a generic col class
-        @media only screen and (min-width: $w-narrow) {
-            width: $w-narrow-main-column;
-            margin-left: $main-col-margin;
-        }
-
-        @media only screen and (min-width: $w-standard) {
-            width: $w-standard-main-column;
-            margin-left: $main-col-margin;
-        }
-    }
-
 
 }
 

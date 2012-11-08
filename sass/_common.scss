@@ -122,16 +122,16 @@
     }
 }
 
-// TODO: these were some ad hco additions. revisit later.
 aside > .upcoming-events {
-    display: none;
-    font-size: 13px;
+    font-size: 0.95em;   // slightly smaller
+    padding: 12px;
+    background-color: $light-green1;
+    border-top: 2px solid white;
 
+    // only visible on standard and larger sizes
+    display: none;
     @media only screen and (min-width: $w-standard) {
         display: inherit;
-        padding: 12px;
-        background-color: $light-green1;
-        border-top: 2px solid white;
     }
 
     > h2 {
@@ -172,7 +172,7 @@ aside > .upcoming-events {
     line-height: 0.9em;
     margin: 0;
 
-    display: none;
+    display: none;  // home page will include tag line with mobile
     @media only screen and (min-width: $w-narrow) {
         margin: 6px 0;
         font-size: 36px;

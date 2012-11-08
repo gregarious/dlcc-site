@@ -41,8 +41,27 @@
 
 /* Classes in Explore Pgh page */
 
-// TODO: need to add a simple two column grid for images
-
 .image-link {
-    display: none;  // TODO: display at higher widths
+    display: none;
+    margin-bottom: 2em;
+    width: 25%;
+    text-align: right;
+    @media only screen and (min-width: $w-narrow) {
+        display: inherit;
+        float: left;
+    }
+}
+
+.explore-item {
+    margin-bottom: 1em;
+}
+.explore-description {
+    > h2 {
+        margin-top: 0;
+    }
+    @media only screen and (min-width: $w-narrow) {
+        float: left;
+        width: 75%;
+        padding-left: 16px;
+    }
 }
