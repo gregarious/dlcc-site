@@ -1369,35 +1369,40 @@ aside > .upcoming-events > .more-link {
   overflow: hidden;
 }
 
-/* line 128, ../sass/_home.scss */
+/* line 129, ../sass/_home.scss */
+.vimeo-image {
+  display: block;
+}
+
+/* line 133, ../sass/_home.scss */
 .more-videos-link {
   margin-top: 0.5em;
   float: right;
 }
 
-/* line 133, ../sass/_home.scss */
+/* line 138, ../sass/_home.scss */
 .highlight-fact {
   min-height: 157px;
   background: url('/img/placeholders/recycling_bg_300.png?1351799886') no-repeat;
   padding: 30px;
 }
-/* line 139, ../sass/_home.scss */
+/* line 144, ../sass/_home.scss */
 .highlight-fact p {
   margin: 0 0 10px 0;
   line-height: 1.2em;
   font-size: 20px;
 }
-/* line 144, ../sass/_home.scss */
+/* line 149, ../sass/_home.scss */
 .highlight-fact p > strong {
   display: block;
   font-size: 30px;
 }
-/* line 150, ../sass/_home.scss */
+/* line 155, ../sass/_home.scss */
 .highlight-fact a {
   font-size: 11px;
 }
 
-/* line 155, ../sass/_home.scss */
+/* line 160, ../sass/_home.scss */
 .upcoming-events-home {
   display: none;
   padding: 16px;
@@ -1405,13 +1410,13 @@ aside > .upcoming-events > .more-link {
   margin-bottom: 24px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 155, ../sass/_home.scss */
+  /* line 160, ../sass/_home.scss */
   .upcoming-events-home {
     display: inherit;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 155, ../sass/_home.scss */
+  /* line 160, ../sass/_home.scss */
   .upcoming-events-home {
     display: none;
   }

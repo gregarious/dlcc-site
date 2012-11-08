@@ -125,6 +125,11 @@
     // TODO: fix width of vimeo image -- if even an image?
     overflow: hidden;
 }
+
+.vimeo-image {
+    display: block;
+}
+
 .more-videos-link {
     margin-top: 0.5em;
     float: right;

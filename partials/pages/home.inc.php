@@ -58,7 +58,7 @@
     <div class="content-grid-row">
         <section class="col col-first highlight highlight-video clearfix">
             <!-- TODO: insert relevant title here -->
-            <img src="img/placeholders/vimeo.png" />
+            <img class="vimeo-image" src="img/placeholders/vimeo.png" />
             <a class="more-videos-link" href="#">View More Videos &raquo;</a>
         </section>
         <section class="col col-last highlight highlight-fact">
