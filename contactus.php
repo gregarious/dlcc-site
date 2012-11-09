@@ -16,7 +16,7 @@ include "partials/head.inc.php"; ?>
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000</a></dd>
 
         <dt>Fax</dt>
-        <dd><a class="fax-link" href="fax:+14125656008;ext=1">412-565-6008</a></dd>
+        <dd><a class="fax-link" href="fax:+14125656008">412-565-6008</a></dd>
 
         <dt>Email</dt>
         <dd><a class="mailto" href="mailto:info@pittsburghcc.com">info@pittsburghcc.com</a></dd>
