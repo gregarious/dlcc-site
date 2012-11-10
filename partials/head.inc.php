@@ -26,8 +26,9 @@
         <!-- No need for modernizr at the moment -->
         <!-- TODO: reenable external hosting link to shiv and jQuery
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
+        <!-- TODO: link to minimized scripts -->
         <!-- TODO: if not including modernizr, get rid of no-js class manually -->
-        <script>window.html5 || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
     </head>
     <body>
 

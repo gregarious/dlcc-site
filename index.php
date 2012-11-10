@@ -7,7 +7,18 @@ include "partials/head.inc.php"; ?>
 
 <div id="main-content" class="content-home">    <!-- will be closed in foot.inc.php -->
     <div class="expanded-content">
-        <img class="standout-img" src="/img/placeholders/skyline-night.png" />
+
+        <!-- picturefill.js style responsive image for skyline -->
+        <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
+            <div data-src="http://placehold.it/320x148/114CAB"></div>
+            <div data-src="http://placehold.it/653x220/114CAB" data-media="(min-width: 768px)"></div>
+            <div data-src="http://placehold.it/746x220/114CAB" data-media="(min-width: 960px)"></div>
+            <div data-src="http://placehold.it/986x220/114CAB" data-media="(min-width: 1200px)"></div>
+            <noscript>
+                <img src="http://placehold.it/653x220/114CAB" alt="Skyline view of The David L. Lawrence Convention Center">
+            </noscript>
+        </div>
+
         <h1 class="tagline tagline-home">
             Built Green,<br />
             Working Green,<br />

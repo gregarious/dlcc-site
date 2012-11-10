@@ -74,7 +74,12 @@
 
         <!-- TODO: reenable external hosting link to shiv and jQuery
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+        <!-- TODO: remove jQuery if not using it -->
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="/js/vendor/matchmedia.js"></script>
+        <script src="/js/vendor/picturefill.js"></script>
+
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
 
