@@ -17,7 +17,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><?php print $siteTitle; ?></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1.0">
 
         <!-- TODO: favicon, apple-touch-icon -->
 

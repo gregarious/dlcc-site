@@ -1271,52 +1271,60 @@ aside > .upcoming-events > .more-link {
 .standout-text {
   position: relative;
   z-index: 2;
-  margin: -1em -15px 0 -15px;
-  padding: 4px 10px;
+  margin-top: -1em;
+  width: 320px;
+  padding: 4px 8px;
   background-color: #f1e597;
   -webkit-box-shadow: 0px 0px 5px #333333;
   -moz-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
   color: black;
-  font-size: 0.85em;
+  font-size: 0.8em;
 }
 @media only screen and (min-width: 768px) {
   /* line 42, ../sass/_home.scss */
   .standout-text {
     width: 420px;
     font-size: 0.9em;
+    margin-left: -6px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 42, ../sass/_home.scss */
+  .standout-text {
+    margin-left: -16px;
   }
 }
 
-/* line 60, ../sass/_home.scss */
+/* line 65, ../sass/_home.scss */
 .quick-links {
   font-size: 14px;
   margin: 10px 0 12px 0;
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
-  /* line 60, ../sass/_home.scss */
+  /* line 65, ../sass/_home.scss */
   .quick-links {
     text-align: left;
     margin-top: 14px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 60, ../sass/_home.scss */
+  /* line 65, ../sass/_home.scss */
   .quick-links {
     text-align: right;
     margin: -20px 0 20px 0;
   }
 }
 
-/* line 76, ../sass/_home.scss */
+/* line 81, ../sass/_home.scss */
 .quick-find-label {
   margin: 0;
   font-weight: bold;
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 76, ../sass/_home.scss */
+  /* line 81, ../sass/_home.scss */
   .quick-find-label {
     display: inline;
     margin-right: 0.5em;
@@ -1324,85 +1332,85 @@ aside > .upcoming-events > .more-link {
 }
 
 /*** Highlight sections ***/
-/* line 89, ../sass/_home.scss */
+/* line 94, ../sass/_home.scss */
 .highlight {
   margin-bottom: 16px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 89, ../sass/_home.scss */
+  /* line 94, ../sass/_home.scss */
   .highlight {
     margin-bottom: 24px;
   }
 }
 
-/* line 96, ../sass/_home.scss */
+/* line 101, ../sass/_home.scss */
 .highlight h2 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-/* line 103, ../sass/_home.scss */
+/* line 108, ../sass/_home.scss */
 .highlight-map > img {
   width: 100%;
   height: 275px;
 }
 
-/* line 110, ../sass/_home.scss */
+/* line 115, ../sass/_home.scss */
 .app-phone-img {
   float: right;
   margin: 4px 0 4px 8px;
 }
 
-/* line 115, ../sass/_home.scss */
+/* line 120, ../sass/_home.scss */
 .app-links {
   display: inline-block;
   margin-top: 4px;
 }
-/* line 119, ../sass/_home.scss */
+/* line 124, ../sass/_home.scss */
 .app-links img {
   margin: 2px;
 }
 
-/* line 124, ../sass/_home.scss */
+/* line 129, ../sass/_home.scss */
 .highlight-video {
   overflow: hidden;
 }
 
-/* line 129, ../sass/_home.scss */
+/* line 134, ../sass/_home.scss */
 .vimeo-image {
   display: block;
 }
 
-/* line 133, ../sass/_home.scss */
+/* line 138, ../sass/_home.scss */
 .more-videos-link {
   margin-top: 0.5em;
   float: right;
 }
 
-/* line 138, ../sass/_home.scss */
+/* line 143, ../sass/_home.scss */
 .highlight-fact {
   min-height: 157px;
   background: url('/img/placeholders/recycling_bg_300.png?1351799886') no-repeat;
   padding: 30px;
 }
-/* line 144, ../sass/_home.scss */
+/* line 149, ../sass/_home.scss */
 .highlight-fact p {
   margin: 0 0 10px 0;
   line-height: 1.2em;
   font-size: 20px;
 }
-/* line 149, ../sass/_home.scss */
+/* line 154, ../sass/_home.scss */
 .highlight-fact p > strong {
   display: block;
   font-size: 30px;
 }
-/* line 155, ../sass/_home.scss */
+/* line 160, ../sass/_home.scss */
 .highlight-fact a {
   font-size: 11px;
 }
 
-/* line 160, ../sass/_home.scss */
+/* line 165, ../sass/_home.scss */
 .upcoming-events-home {
   display: none;
   padding: 16px;
@@ -1410,13 +1418,13 @@ aside > .upcoming-events > .more-link {
   margin-bottom: 24px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 160, ../sass/_home.scss */
+  /* line 165, ../sass/_home.scss */
   .upcoming-events-home {
     display: inherit;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 160, ../sass/_home.scss */
+  /* line 165, ../sass/_home.scss */
   .upcoming-events-home {
     display: none;
   }
