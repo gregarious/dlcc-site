@@ -39,7 +39,6 @@
     @media only screen and (min-width: $w-standard) {
         width: auto;
     }
-
 }
 
 /* Page footer */
@@ -90,68 +89,25 @@
     }
 }
 
-/* aside items */
-.flickr-container {
+.widget-sidebar {
+    padding: 16px 12px;
     border-top: 2px solid white;
 
-    // TODO: need to get the background color of this to bleed to the bottom
-    display: none;
-    
-    @media only screen and (min-width: $w-narrow) {
-        // TODO: why margin doesn't work. don't want to center with of padding-left
-        padding: 10px 0 0 9px;
-        display: inherit;
-        background-color: $light-green1;
-    }
-    @media only screen and (min-width: $w-standard) {
-        // TODO: why margin doesn't work. don't want to center with of padding-left
-        padding-left: 60px;
-        background-color: $light-green2;
-    }
-}
-
-.flickr-badge {
-    display: none;
-    @media only screen and (min-width: $w-standard) {
-        display: inherit;
-        // TODO: temporary hack till new badge is made
-        margin-left: -35px;
-    }
-}
-
-
-.upcoming-events {
     > h2 {
         margin-top: 0;
     }
 }
 
-aside > .upcoming-events {
-    font-size: 0.95em;   // slightly smaller
-    padding: 12px;
+.widget-first {
     background-color: $light-green1;
-    border-top: 2px solid white;
-
-    // only visible on standard and larger sizes
-    display: none;
-    @media only screen and (min-width: $w-standard) {
-        display: inherit;
-    }
-
-    > h2 {
-        color: white;
-        font-size: 1.25em;
-    }
-
-    > .more-link {
-        margin: 1em 0;
-        display: block;
-        color: white;
-        text-decoration: underline;
-        text-align: right;
-    }
 }
 
+.widget-second {
+    background-color: $light-green2;
+}
+
+
+// Occurs in both home page upcoming events and sidebar widget
 .upcoming-event {
     // TODO: reconsider selectors after finalizing markup for event items
     p {

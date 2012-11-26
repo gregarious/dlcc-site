@@ -1069,12 +1069,12 @@ a {
 }
 
 /* Page footer */
-/* line 46, ../sass/_common.scss */
+/* line 45, ../sass/_common.scss */
 #page-footer {
   background-color: #819578;
   padding-top: 12px;
 }
-/* line 49, ../sass/_common.scss */
+/* line 48, ../sass/_common.scss */
 #page-footer p {
   margin: 0;
   text-align: center;
@@ -1082,133 +1082,86 @@ a {
   color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 46, ../sass/_common.scss */
+  /* line 45, ../sass/_common.scss */
   #page-footer {
     background-color: white;
   }
-  /* line 58, ../sass/_common.scss */
+  /* line 57, ../sass/_common.scss */
   #page-footer p {
     color: #58585b;
   }
 }
 
 /* Main site nav */
-/* line 66, ../sass/_common.scss */
+/* line 65, ../sass/_common.scss */
 #site-nav {
   background-color: #819578;
   padding: 20px 0 8px 14px;
 }
-/* line 71, ../sass/_common.scss */
+/* line 70, ../sass/_common.scss */
 #site-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 76, ../sass/_common.scss */
+/* line 75, ../sass/_common.scss */
 #site-nav li {
   float: left;
   margin: 0 8px 6px 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 66, ../sass/_common.scss */
+  /* line 65, ../sass/_common.scss */
   #site-nav {
     padding-left: 10px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 87, ../sass/_common.scss */
+  /* line 86, ../sass/_common.scss */
   .nav-btn-home {
     display: none;
   }
 }
 
-/* aside items */
-/* line 94, ../sass/_common.scss */
-.flickr-container {
+/* line 92, ../sass/_common.scss */
+.widget-sidebar {
+  padding: 16px 12px;
   border-top: 2px solid white;
-  display: none;
 }
-@media only screen and (min-width: 768px) {
-  /* line 94, ../sass/_common.scss */
-  .flickr-container {
-    padding: 10px 0 0 9px;
-    display: inherit;
-    background-color: #bec8b9;
-  }
-}
-@media only screen and (min-width: 960px) {
-  /* line 94, ../sass/_common.scss */
-  .flickr-container {
-    padding-left: 60px;
-    background-color: #d8ddd4;
-  }
-}
-
-/* line 113, ../sass/_common.scss */
-.flickr-badge {
-  display: none;
-}
-@media only screen and (min-width: 960px) {
-  /* line 113, ../sass/_common.scss */
-  .flickr-badge {
-    display: inherit;
-    margin-left: -35px;
-  }
-}
-
-/* line 124, ../sass/_common.scss */
-.upcoming-events > h2 {
+/* line 96, ../sass/_common.scss */
+.widget-sidebar > h2 {
   margin-top: 0;
 }
 
-/* line 129, ../sass/_common.scss */
-aside > .upcoming-events {
-  font-size: 0.95em;
-  padding: 12px;
+/* line 101, ../sass/_common.scss */
+.widget-first {
   background-color: #bec8b9;
-  border-top: 2px solid white;
-  display: none;
-}
-@media only screen and (min-width: 960px) {
-  /* line 129, ../sass/_common.scss */
-  aside > .upcoming-events {
-    display: inherit;
-  }
-}
-/* line 141, ../sass/_common.scss */
-aside > .upcoming-events > h2 {
-  color: white;
-  font-size: 1.25em;
-}
-/* line 146, ../sass/_common.scss */
-aside > .upcoming-events > .more-link {
-  margin: 1em 0;
-  display: block;
-  color: white;
-  text-decoration: underline;
-  text-align: right;
 }
 
-/* line 155, ../sass/_common.scss */
+/* line 105, ../sass/_common.scss */
+.widget-second {
+  background-color: #d8ddd4;
+}
+
+/* line 111, ../sass/_common.scss */
 .upcoming-event {
   margin-bottom: 1em;
 }
-/* line 157, ../sass/_common.scss */
+/* line 113, ../sass/_common.scss */
 .upcoming-event p {
   margin: 0;
 }
-/* line 160, ../sass/_common.scss */
+/* line 116, ../sass/_common.scss */
 .upcoming-event a {
   font-weight: bold;
   color: #58585b;
 }
 
-/* line 167, ../sass/_common.scss */
+/* line 123, ../sass/_common.scss */
 .upcoming-event:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 171, ../sass/_common.scss */
+/* line 127, ../sass/_common.scss */
 .tagline {
   text-align: right;
   text-transform: uppercase;
@@ -1220,7 +1173,7 @@ aside > .upcoming-events > .more-link {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 171, ../sass/_common.scss */
+  /* line 127, ../sass/_common.scss */
   .tagline {
     margin: 6px 0;
     font-size: 36px;
@@ -1228,14 +1181,14 @@ aside > .upcoming-events > .more-link {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 171, ../sass/_common.scss */
+  /* line 127, ../sass/_common.scss */
   .tagline {
     margin: 0;
     font-size: 42px;
   }
 }
 
-/* line 193, ../sass/_common.scss */
+/* line 149, ../sass/_common.scss */
 .content-heading {
   background-color: #f1e597;
   -webkit-box-shadow: 0px 0px 5px #333333;
@@ -1247,7 +1200,7 @@ aside > .upcoming-events > .more-link {
   margin-bottom: 0.8em;
 }
 
-/* line 203, ../sass/_common.scss */
+/* line 159, ../sass/_common.scss */
 .content-home .content-heading {
   font-size: 0.9em;
 }
@@ -1424,8 +1377,12 @@ aside > .upcoming-events > .more-link {
 .upcoming-events-home {
   display: none;
   padding: 16px;
-  background-color: #e6ebe4;
   margin-bottom: 24px;
+  background-color: #e6ebe4;
+}
+/* line 143, ../sass/_home.scss */
+.upcoming-events-home > h2 {
+  margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
   /* line 142, ../sass/_home.scss */
@@ -1437,6 +1394,65 @@ aside > .upcoming-events > .more-link {
   /* line 142, ../sass/_home.scss */
   .upcoming-events-home {
     display: none;
+  }
+}
+
+/* line 164, ../sass/_home.scss */
+.widget-upcoming-events {
+  font-size: 0.95em;
+  background-color: #bec8b9;
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  /* line 164, ../sass/_home.scss */
+  .widget-upcoming-events {
+    display: inherit;
+  }
+}
+/* line 174, ../sass/_home.scss */
+.widget-upcoming-events > h2 {
+  color: white;
+  font-size: 1.25em;
+}
+/* line 179, ../sass/_home.scss */
+.widget-upcoming-events > .more-link {
+  margin: 1em 0;
+  display: block;
+  color: white;
+  text-decoration: underline;
+  text-align: right;
+}
+
+/* line 188, ../sass/_home.scss */
+.widget-flickr {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 188, ../sass/_home.scss */
+  .widget-flickr {
+    padding: 10px 0 0 9px;
+    display: inherit;
+    background-color: #bec8b9;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 188, ../sass/_home.scss */
+  .widget-flickr {
+    padding-left: 60px;
+    background-color: #d8ddd4;
+  }
+}
+
+/* line 205, ../sass/_home.scss */
+.flickr-badge {
+  height: 100%;
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  /* line 205, ../sass/_home.scss */
+  .flickr-badge {
+    display: inherit;
+    margin-left: -35px;
   }
 }
 
@@ -1547,4 +1563,16 @@ aside > .upcoming-events > .more-link {
   display: inline-block;
   background-color: #e6ebe4;
   padding: 8px;
+}
+
+/* line 80, ../sass/_subpages.scss */
+.widget-interactive-map,
+.widget-floorplans {
+  text-align: center;
+}
+/* line 81, ../sass/_subpages.scss */
+.widget-interactive-map h2,
+.widget-floorplans h2 {
+  text-transform: uppercase;
+  font-size: 1.25em;
 }

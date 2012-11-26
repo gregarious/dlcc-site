@@ -75,3 +75,12 @@
     background-color: $light-green3;
     padding: 8px;
 }
+
+.widget-interactive-map,
+.widget-floorplans {
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.25em;
+    }
+    text-align: center;
+}

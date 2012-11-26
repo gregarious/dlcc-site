@@ -1,6 +1,7 @@
 <?php 
 include_once "partials/settings.inc.php";
 
+$isIndexPage = true;
 if (function_exists('getSiteTitle')) {
     $siteTitle = getSiteTitle();
 }
@@ -41,7 +42,7 @@ include "partials/head.inc.php"; ?>
         </section>
     </div>
     <div class="content-grid-row">
-        <div class="upcoming-events upcoming-events-home highlight">
+        <div class="upcoming-events-home highlight">
             <h2>Upcoming Events</h2>
             <div class="upcoming-event">
                 <a href="#">ISAAC Bienniel Conference</a>

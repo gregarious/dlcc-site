@@ -140,10 +140,15 @@
 }
 
 .upcoming-events-home {
+    > h2 {
+        margin-top: 0;
+    }
+    
     display: none;
     padding: 16px;
-    background-color: $light-green3;
     margin-bottom: 2 * $main-col-margin;    // match grid column spacing
+
+    background-color: $light-green3;
 
     @media only screen and (min-width: $w-narrow) {
         display: inherit;
@@ -154,4 +159,55 @@
         display: none;
     }
 
+}
+
+.widget-upcoming-events {
+    font-size: 0.95em;   // slightly smaller
+    background-color: $light-green1;
+
+    // only visible on standard and larger sizes
+    display: none;
+    @media only screen and (min-width: $w-standard) {
+        display: inherit;
+    }
+
+    > h2 {
+        color: white;
+        font-size: 1.25em;
+    }
+
+    > .more-link {
+        margin: 1em 0;
+        display: block;
+        color: white;
+        text-decoration: underline;
+        text-align: right;
+    }
+}
+
+.widget-flickr {
+    // TODO: need to get the background color of this to bleed to the bottom
+    display: none;
+    
+    @media only screen and (min-width: $w-narrow) {
+        // TODO: why margin doesn't work. don't want to center with of padding-left
+        padding: 10px 0 0 9px;
+        display: inherit;
+        background-color: $light-green1;
+    }
+    @media only screen and (min-width: $w-standard) {
+        // TODO: why margin doesn't work. don't want to center with of padding-left
+        padding-left: 60px;
+        background-color: $light-green2;
+    }
+}
+
+.flickr-badge {
+    height: 100%;
+    display: none;
+    @media only screen and (min-width: $w-standard) {
+        display: inherit;
+        // TODO: temporary hack till new badge is made
+        margin-left: -35px;
+    }
 }
