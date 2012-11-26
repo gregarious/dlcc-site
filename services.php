@@ -7,7 +7,7 @@ include "partials/head.inc.php"; ?>
 
 <div id="main-content" class="content-services">    <!-- will be closed in foot.inc.php -->
 
-    <h1>Our Services</h1>
+    <h1 class="content-heading">Our Services</h1>
     <p>The David L. Lawrence Convention Center's service partners are committed to providing meeting planners, exhibitors and attendees with quality, value and an unmatched experience.</p>
 
     <h2>Food Services</h2>
@@ -44,6 +44,6 @@ include "partials/head.inc.php"; ?>
         <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_Security_InteractiveE.pdf">Security Services</a> (PDF)</li> 
         <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_Steel_InteractiveE.pdf">Steel Plate Request</a> (PDF)</li>
     </ul>
-<!-- ending div is in foot.inc.php -->
+</div>
 
 <?php include "partials/foot.inc.php";

@@ -1,4 +1,5 @@
 /* Base rules for subpage elements */
+
 .content-building,
 .content-services,
 .content-directions,
@@ -6,9 +7,6 @@
 .content-neighborhood,
 .content-aboutus,
 .content-contactus {
-    h1 {
-        font-size: 1.75em;
-    }
     h2 {
         font-size: 1.33em;
     }
@@ -69,4 +67,11 @@
 .events-iframe {
     width: 100%;
     height: 100%;
+}
+
+.contact-address {
+    font-size: 1.2em;
+    display: inline-block;
+    background-color: $light-green3;
+    padding: 8px;
 }

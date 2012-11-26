@@ -6,7 +6,7 @@ if (function_exists('getSiteTitle')) {
 include "partials/head.inc.php"; ?>
 
 <div id="main-content" class="content-explorepgh">    <!-- will be closed in foot.inc.php -->
-<h1>Explore Pittsburgh</h1>
+<h1 class="content-heading">Explore Pittsburgh</h1>
     
     <div class="explore-item clearfix">
         <a class="image-link" href="http://www.visitpittsburgh.com/" target="_blank"><img src="/img/visit_pittsburgh.jpg" alt="Visit Pittsburgh Logo" /></a>
@@ -79,5 +79,5 @@ include "partials/head.inc.php"; ?>
             <p>Your source for current and upcoming Pittsburgh events and entertainment listings.</p>
         </div>
     </div>
-<!-- ending div is in foot.inc.php -->
+</div>
 <?php include "partials/foot.inc.php";

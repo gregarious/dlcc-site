@@ -6,7 +6,7 @@ if (function_exists('getSiteTitle')) {
 include "partials/head.inc.php"; ?>
 
 <div id="main-content" class="content-aboutus"> <!-- will be closed in foot.inc.php -->
-    <h1>About Us</h1>
+    <h1 class="content-heading">About Us</h1>
 
     <p><a href="http://www.pgh-sea.com/" target="_blank">The Sports &amp; Exhibition Authority of Pittsburgh and Allegheny County (SEA)</a> owns the David L. Lawrence Convention Center as well as Heinz Field, PNC Park, the Mellon Arena, the North Shore Riverfront Park and the North Shore Parking Garage. The SEA partners with the Commonwealth of Pennsylvania, the City of Pittsburgh and Allegheny County, and VisitPittsburgh to make Pittsburgh a premier destination.</p>
 
@@ -16,6 +16,6 @@ include "partials/head.inc.php"; ?>
     <a href="http://www.radworkshere.org/" target="_blank">RAD Works Here</a>
      
     <p>RAD Supports finances and regional assets in the areas of libraries, parks &amp; recreation, cultural, sports and civic facilities and programs</p>
-<!-- ending div is in foot.inc.php -->
+</div>
 
 <?php include "partials/foot.inc.php";

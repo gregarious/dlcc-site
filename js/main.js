@@ -32,18 +32,17 @@ $(function(){
         });
     })();
 
-    // various responsive adjustments
+    /*** Responsive adjustments ***/
+
     var footer = $('#page-footer');
     $(window).on('breakpoint', function(){
         if ($(window).width() >= 768) {
             footer.remove();
-            footer.appendTo('#main-content');
-            console.log('appending to main content');
+            footer.appendTo('#main-content-container');
         }
         else {
             footer.remove();
             footer.insertAfter('#main-aside');
-            console.log('inserting after main aside');
         }
     });
 

@@ -6,7 +6,7 @@ if (function_exists('getSiteTitle')) {
 include "partials/head.inc.php"; ?>
 
 <div id="main-content" class="content-directions">    <!-- will be closed in foot.inc.php -->
-    <h1>Directions and Parking</h1>
+    <h1 class="content-heading">Directions and Parking</h1>
     <p>Pittsburgh is a well connected city. It’s location in Western Pennsylvania makes it convenient to get to by air and ground transportation -- and once you’re here, getting around is easy.</p>
 
     <h2>Public Transportation</h2>
@@ -42,6 +42,6 @@ include "partials/head.inc.php"; ?>
     <p><a href="images/PDFs/ParkingMap.pdf" target="_blank">Click here</a> to download a parking map, or go to <a href="http://www.parkpgh.org" target="_blank">ParkPGH.org</a> for realtime parking availability.</p>
 
     <p>For more information on the Pittsburgh Parking Authority Garages, including the new Grant Street Transportation Center Garage, <a href="images/PDFs/Rate_Schedule.pdf" target="_blank">click here.</a></p>
-<!-- ending div is in foot.inc.php -->
+</div>
 
 <?php include "partials/foot.inc.php";

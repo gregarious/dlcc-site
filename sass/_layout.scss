@@ -1,21 +1,16 @@
 // precalculated pixel widths for site sections
 $main-col-margin: 12px;
 
-$w-mobile-main-padding: 8px;
-
 $w-narrow-sidebar: 91px + (2 * 12px);
 $w-narrow-main: $w-narrow - $w-narrow-sidebar;
-$w-narrow-main-padding: 16px;
 $w-narrow-main-column: (($w-narrow-main - (2 * $w-narrow-main-padding)) / 2) - $main-col-margin;
 
 $w-standard-sidebar: (2 * 91px) + (2 * 12px) + $nav-button-padding;
 $w-standard-main: $w-standard - $w-standard-sidebar;
-$w-standard-main-padding: 16px;
 $w-standard-main-column: (($w-standard-main - (2 * $w-standard-main-padding)) / 2) - $main-col-margin;
 
 $w-wide-sidebar: $w-standard-sidebar;
 $w-wide-main: $w-wide - $w-wide-sidebar;
-$w-wide-main-padding: 16px;
 $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-col-margin;
 
 
@@ -41,7 +36,7 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
     margin: 0 auto;
 }
 
-#main-content {
+#main-content-container {
     float: left;
     padding: 0 $w-mobile-main-padding;
 
@@ -74,11 +69,44 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
     // no need for wide setting: same width as standard
 }
 
+#main-content {
+    // scoot all of the content up so heading goes overtop of image
+    margin-top: -24px;
+}
+
+.content-heading {
+    position: relative;
+    z-index: 2;  // overlay on top of standout-image
+    
+    display: inline-block;
+
+    margin-top: 0;
+    padding: 4px 8px;
+    
+    margin-left: -$w-mobile-main-padding;
+
+    @media only screen and (min-width: $w-narrow) {
+        margin-left: -$w-narrow-main-padding;
+    }
+
+    @media only screen and (min-width: $w-standard) {
+        margin-left: -($w-standard-main-padding + 12px);
+    }
+}
+
+// width of standout heading text needs to be fixed on home page
+.content-home .content-heading {
+    width: $w-mobile;
+    @media only screen and (min-width: $w-narrow) {
+        width: 420px;
+    }
+}
+
 #page-footer {
     padding-bottom: 1em;
 }
 
-// grid within #main-content
+// grid within #main-content-container
 .content-grid-row {
     width: 100%;
 
@@ -101,12 +129,11 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
             width: $w-wide-main-column;
         }
     }
-
 }
 
-.bordered-content {
+.bordered {
     @include box-sizing(content-box);
-    width: 100%;
     border-left: 2px solid white;
     border-right: 2px solid white;
 }
+

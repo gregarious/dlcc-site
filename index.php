@@ -1,36 +1,16 @@
 <?php 
-include "partials/settings.inc.php";
+include_once "partials/settings.inc.php";
+
 if (function_exists('getSiteTitle')) {
     $siteTitle = getSiteTitle();
 }
 include "partials/head.inc.php"; ?>
 
-<div id="main-content" class="content-home">    <!-- will be closed in foot.inc.php -->
-    <div class="expanded-content">
-
-        <!-- picturefill.js style responsive image for skyline -->
-        <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
-            <div data-src="/img/headers/home_320x148.jpg"></div>
-            <div data-src="/img/headers/home_653x220.jpg" data-media="(min-width: 768px)"></div>
-            <div data-src="/img/headers/home_746x220.jpg" data-media="(min-width: 960px)"></div>
-            <div data-src="/img/headers/home_986x220.jpg" data-media="(min-width: 1200px)"></div>
-            <noscript>
-                <img src="/img/headers/home_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
-            </noscript>
-        </div>
-
-        <h1 class="tagline tagline-home">
-            Built Green,<br />
-            Working Green,<br />
-            Everyday!
-        </h1>
-        <p class="standout-text">
-            The only convention center in the world with LEED&reg; certifications:
-            <strong>GOLD in new construction</strong> and 
-            <strong>PLATINUM in existing building.</strong>
-        </p>
-    </div>
-
+<div id="main-content" class="content-home">
+    <p class="content-heading">The only convention center in the world with LEED&reg; certifications:
+        <strong>GOLD in new construction</strong> and <strong>PLATINUM in existing building.</strong>
+    </p>
+    
     <div class="quick-links content-grid-row">
         <p class="quick-find-label">Quick find:</p>
         <a href="/building/floorplans.php">Floor Plans</a> | 
@@ -84,6 +64,6 @@ include "partials/head.inc.php"; ?>
             <a href="http://www.greenfirst.us/" title="Our green practices">Learn more about our green practices &raquo;</a>
         </section>
     </div>
-
+</div>
 <!-- ending div is in foot.inc.php -->
 <?php include "partials/foot.inc.php";

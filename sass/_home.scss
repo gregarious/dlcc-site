@@ -1,6 +1,6 @@
 @import "compass/css3";
 
-.expanded-content {
+.main-content-header {
     // cancel the #main-content padding
     margin-left: -1 * $w-mobile-main-padding;
 
@@ -36,29 +36,6 @@
     text-align: left;
     @media only screen and (min-width: $w-narrow) {
         display: none;
-    }
-}
-
-.standout-text {
-    position: relative;
-    z-index: 2;  // overlay on top of standout-image
-    margin-top: -1em;
-    width: $w-mobile;
-    padding: 4px 8px;
-    
-    background-color: $yellow;
-    @include single-box-shadow;
-
-    color: black;
-    font-size: 0.8em;
-
-    @media only screen and (min-width: $w-narrow) {
-        width: 420px;       // this width is used for all non-mobile sizes
-        font-size: 0.9em;
-        margin-left: -6px;
-    }
-    @media only screen and (min-width: $w-standard) {
-        margin-left: -16px;
     }
 }
 
