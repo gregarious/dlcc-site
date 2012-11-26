@@ -940,62 +940,40 @@ a {
 }
 
 /* line 77, ../sass/_layout.scss */
-.page-footer {
+#page-footer {
   padding-bottom: 1em;
 }
 
-/* line 81, ../sass/_layout.scss */
-.page-footer-wide {
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  /* line 81, ../sass/_layout.scss */
-  .page-footer-wide {
-    display: inherit;
-  }
-}
-
-/* line 89, ../sass/_layout.scss */
-.page-footer-mobile {
-  display: inherit;
-}
-@media only screen and (min-width: 768px) {
-  /* line 89, ../sass/_layout.scss */
-  .page-footer-mobile {
-    display: none;
-  }
-}
-
-/* line 98, ../sass/_layout.scss */
+/* line 82, ../sass/_layout.scss */
 .content-grid-row {
   width: 100%;
 }
-/* line 103, ../sass/_layout.scss */
+/* line 87, ../sass/_layout.scss */
 .content-grid-row .col {
   width: 100%;
   float: left;
 }
 @media only screen and (min-width: 768px) {
-  /* line 103, ../sass/_layout.scss */
+  /* line 87, ../sass/_layout.scss */
   .content-grid-row .col {
     width: 298.5px;
     margin-right: 12px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 103, ../sass/_layout.scss */
+  /* line 87, ../sass/_layout.scss */
   .content-grid-row .col {
     width: 345px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 103, ../sass/_layout.scss */
+  /* line 87, ../sass/_layout.scss */
   .content-grid-row .col {
     width: 465px;
   }
 }
 
-/* line 123, ../sass/_layout.scss */
+/* line 107, ../sass/_layout.scss */
 .bordered-content {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1040,6 +1018,12 @@ a {
   max-width: 100%;
   width: 320px;
 }
+@media only screen and (min-width: 768px) {
+  /* line 32, ../sass/_common.scss */
+  .logo {
+    margin-top: 8px;
+  }
+}
 @media only screen and (min-width: 960px) {
   /* line 32, ../sass/_common.scss */
   .logo {
@@ -1048,67 +1032,67 @@ a {
 }
 
 /* Page footer */
-/* line 42, ../sass/_common.scss */
-.page-footer {
+/* line 46, ../sass/_common.scss */
+#page-footer {
   background-color: #819578;
   padding-top: 12px;
 }
-/* line 45, ../sass/_common.scss */
-.page-footer p {
+/* line 49, ../sass/_common.scss */
+#page-footer p {
   margin: 0;
   text-align: center;
   font-size: 12px;
   color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 42, ../sass/_common.scss */
-  .page-footer {
+  /* line 46, ../sass/_common.scss */
+  #page-footer {
     background-color: white;
   }
-  /* line 54, ../sass/_common.scss */
-  .page-footer p {
+  /* line 58, ../sass/_common.scss */
+  #page-footer p {
     color: #58585b;
   }
 }
 
 /* Main site nav */
-/* line 62, ../sass/_common.scss */
+/* line 66, ../sass/_common.scss */
 #site-nav {
   background-color: #819578;
   padding: 20px 0 8px 14px;
 }
-/* line 67, ../sass/_common.scss */
+/* line 71, ../sass/_common.scss */
 #site-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 72, ../sass/_common.scss */
+/* line 76, ../sass/_common.scss */
 #site-nav li {
   float: left;
   margin: 0 8px 6px 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 62, ../sass/_common.scss */
+  /* line 66, ../sass/_common.scss */
   #site-nav {
     padding-left: 10px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 83, ../sass/_common.scss */
+  /* line 87, ../sass/_common.scss */
   .nav-btn-home {
     display: none;
   }
 }
 
 /* aside items */
-/* line 90, ../sass/_common.scss */
+/* line 94, ../sass/_common.scss */
 .flickr-container {
   border-top: 2px solid white;
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 90, ../sass/_common.scss */
+  /* line 94, ../sass/_common.scss */
   .flickr-container {
     padding: 10px 0 0 9px;
     display: inherit;
@@ -1116,31 +1100,31 @@ a {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 90, ../sass/_common.scss */
+  /* line 94, ../sass/_common.scss */
   .flickr-container {
     padding-left: 60px;
     background-color: #d8ddd4;
   }
 }
 
-/* line 109, ../sass/_common.scss */
+/* line 113, ../sass/_common.scss */
 .flickr-badge {
   display: none;
 }
 @media only screen and (min-width: 960px) {
-  /* line 109, ../sass/_common.scss */
+  /* line 113, ../sass/_common.scss */
   .flickr-badge {
     display: inherit;
     margin-left: -35px;
   }
 }
 
-/* line 120, ../sass/_common.scss */
+/* line 124, ../sass/_common.scss */
 .upcoming-events > h2 {
   margin-top: 0;
 }
 
-/* line 125, ../sass/_common.scss */
+/* line 129, ../sass/_common.scss */
 aside > .upcoming-events {
   font-size: 0.95em;
   padding: 12px;
@@ -1149,17 +1133,17 @@ aside > .upcoming-events {
   display: none;
 }
 @media only screen and (min-width: 960px) {
-  /* line 125, ../sass/_common.scss */
+  /* line 129, ../sass/_common.scss */
   aside > .upcoming-events {
     display: inherit;
   }
 }
-/* line 137, ../sass/_common.scss */
+/* line 141, ../sass/_common.scss */
 aside > .upcoming-events > h2 {
   color: white;
   font-size: 1.25em;
 }
-/* line 142, ../sass/_common.scss */
+/* line 146, ../sass/_common.scss */
 aside > .upcoming-events > .more-link {
   margin: 1em 0;
   display: block;
@@ -1168,26 +1152,26 @@ aside > .upcoming-events > .more-link {
   text-align: right;
 }
 
-/* line 151, ../sass/_common.scss */
+/* line 155, ../sass/_common.scss */
 .upcoming-event {
   margin-bottom: 1em;
 }
-/* line 153, ../sass/_common.scss */
+/* line 157, ../sass/_common.scss */
 .upcoming-event p {
   margin: 0;
 }
-/* line 156, ../sass/_common.scss */
+/* line 160, ../sass/_common.scss */
 .upcoming-event a {
   font-weight: bold;
   color: #58585b;
 }
 
-/* line 163, ../sass/_common.scss */
+/* line 167, ../sass/_common.scss */
 .upcoming-event:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 167, ../sass/_common.scss */
+/* line 171, ../sass/_common.scss */
 .tagline {
   text-align: right;
   text-transform: uppercase;
@@ -1199,7 +1183,7 @@ aside > .upcoming-events > .more-link {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 167, ../sass/_common.scss */
+  /* line 171, ../sass/_common.scss */
   .tagline {
     margin: 6px 0;
     font-size: 36px;
@@ -1207,7 +1191,7 @@ aside > .upcoming-events > .more-link {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 167, ../sass/_common.scss */
+  /* line 171, ../sass/_common.scss */
   .tagline {
     margin: 0;
     font-size: 42px;
@@ -1534,4 +1518,10 @@ aside > .upcoming-events > .more-link {
     width: 75%;
     padding-left: 16px;
   }
+}
+
+/* line 69, ../sass/_subpages.scss */
+.events-iframe {
+  width: 100%;
+  height: 100%;
 }

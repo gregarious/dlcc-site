@@ -32,6 +32,10 @@
 .logo {
     max-width: 100%;    // keep inside parent container
     width: 320px;   // TODO: placeholder
+    
+    @media only screen and (min-width: $w-narrow) {
+        margin-top: 8px;
+    }
     @media only screen and (min-width: $w-standard) {
         width: auto;
     }
@@ -39,7 +43,7 @@
 }
 
 /* Page footer */
-.page-footer {
+#page-footer {
     background-color: $green;
     padding-top: 12px;
     p {

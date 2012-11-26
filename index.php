@@ -10,12 +10,12 @@ include "partials/head.inc.php"; ?>
 
         <!-- picturefill.js style responsive image for skyline -->
         <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
-            <div data-src="http://placehold.it/320x148/114CAB"></div>
-            <div data-src="http://placehold.it/653x220/114CAB" data-media="(min-width: 768px)"></div>
-            <div data-src="http://placehold.it/746x220/114CAB" data-media="(min-width: 960px)"></div>
-            <div data-src="http://placehold.it/986x220/114CAB" data-media="(min-width: 1200px)"></div>
+            <div data-src="/img/headers/home_320x148.jpg"></div>
+            <div data-src="/img/headers/home_653x220.jpg" data-media="(min-width: 768px)"></div>
+            <div data-src="/img/headers/home_746x220.jpg" data-media="(min-width: 960px)"></div>
+            <div data-src="/img/headers/home_986x220.jpg" data-media="(min-width: 1200px)"></div>
             <noscript>
-                <img src="http://placehold.it/653x220/114CAB" alt="Skyline view of The David L. Lawrence Convention Center">
+                <img src="/img/headers/home_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
             </noscript>
         </div>
 

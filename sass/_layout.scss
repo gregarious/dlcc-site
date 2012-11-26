@@ -74,24 +74,8 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
     // no need for wide setting: same width as standard
 }
 
-.page-footer {
+#page-footer {
     padding-bottom: 1em;
-}
-
-.page-footer-wide {
-    display: none;
-    @media only screen and (min-width: $w-narrow) {
-        // applied to all non-mobile sizes
-        display: inherit;
-    }    
-}
-
-.page-footer-mobile {
-    display: inherit;
-    @media only screen and (min-width: $w-narrow) {
-        // applied to all non-mobile sizes
-        display: none;
-    }
 }
 
 // grid within #main-content
