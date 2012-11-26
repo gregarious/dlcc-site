@@ -13,3 +13,4 @@ if (!function_exists('getSiteTitle')) {
 }
 
 $isIndexPage = false;
+$isBuildingSubpage = false;

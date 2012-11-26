@@ -12,7 +12,7 @@ include "partials/head.inc.php"; ?>
         <strong>GOLD in new construction</strong> and <strong>PLATINUM in existing building.</strong>
     </p>
     
-    <div class="quick-links content-grid-row">
+    <div class="subnav quick-links">
         <p class="quick-find-label">Quick find:</p>
         <a href="/building/floorplans.php">Floor Plans</a> | 
         <a href="/directions.php">Directions &amp; Parking</a> | 

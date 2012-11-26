@@ -3,11 +3,19 @@ include "../partials/settings.inc.php";
 if (function_exists('getSiteTitle')) {
     $siteTitle = getSiteTitle('Building History');
 }
+$isBuildingSubpage = true;
 include "../partials/head.inc.php"; 
 ?>
 
 <div id="main-content" class="content-building content-building-history">    <!-- will be closed in foot.inc.php -->
     <h1 class="content-heading">Our Building: <strong>Building History</strong></h1>
+
+    <nav class="subnav building-links">
+        <a class="current" href="history.php">History</a> | 
+        <a href="http://www.greenfirst.us/">Greenfirst</a> |
+        <a href="floorplans.php">Floor Plans</a> |
+        <a href="features.php">Building Features</a>
+    </nav>
 
     <p>What began as a vision by a group of determined government, corporate and non-profit foundation leaders became a reality in September 2003 with the official dedication ceremony of the David L. Lawrence Convention Center. The opening of the 1.5 million square foot building was so anxiously anticipated by the convention and exposition industry that the building hosted many large trade shows while still under construction.</p>
 

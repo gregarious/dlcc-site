@@ -3,11 +3,20 @@ include "../partials/settings.inc.php";
 if (function_exists('getSiteTitle')) {
     $siteTitle = getSiteTitle('Building Floor Plans');
 }
+$isBuildingSubpage = true;
 include "../partials/head.inc.php"; ?>
 
 <!-- TODO: include Photo Gallery? -->
 <div id="main-content" class="content-building content-building-floorplans">    <!-- will be closed in foot.inc.php -->
     <h1 class="content-heading">Our Building: <strong>Floor Plans</strong></h1>
+    
+    <nav class="subnav building-links">
+        <a href="history.php">History</a> | 
+        <a href="http://www.greenfirst.us/">Greenfirst</a> |
+        <a class="current" href="floorplans.php">Floor Plans</a> |
+        <a href="features.php">Building Features</a>
+    </nav>
+
     <p>Situated on nearly eight acres, the David L. Lawrence Convention Center offers 1.5 million square feet facility. Four floors house 53 meeting rooms (including two 250-seat lecture halls) and the 31,610 square-foot Spirit of Pittsburgh Ballroom as well as providing 313,400 square feet of exhibit space (236,900 sq. ft. column free). Take a look at each floor’s unique flexible layout.</p>
 
     <p><a href="javascript:;" onClick="window.open('_flash/floor_1.swf','myWin','scrollbars=no,width=518,height=400');">Floor 1:</a> The easily accessible first floor offers a total of 76,500 square feet of exhibit space in two halls that is serviced by 8 covered loading docks and 2 drive-in ramps. A 710-space parking garage is adjacent. Also, on the first floor are the West Lobby, East Lobby, Administration Office and the entrance to the Water Feature leading to the Convention Center Riverfront Plaza.</p>

@@ -72,6 +72,7 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
 #main-content {
     // scoot all of the content up so heading goes overtop of image
     margin-top: -24px;
+    position: relative;
 }
 
 .content-heading {

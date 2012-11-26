@@ -3,10 +3,19 @@ include "../partials/settings.inc.php";
 if (function_exists('getSiteTitle')) {
     $siteTitle = getSiteTitle('Building Features');
 }
+$isBuildingSubpage = true;
 include "../partials/head.inc.php"; ?>
 
 <div id="main-content" class="content-building content-building-features">    <!-- will be closed in foot.inc.php -->
     <h1 class="content-heading">Our Building: <strong>Building Features</strong></h1>
+    
+    <nav class="subnav building-links">
+        <a href="history.php">History</a> | 
+        <a href="http://www.greenfirst.us/">Greenfirst</a> |
+        <a href="floorplans.php">Floor Plans</a> |
+        <a class="current" href="features.php">Building Features</a>
+    </nav>
+
     <p>Pittsburgh is a city known for its diverse architectural styles such as the “Romanesque” Allegheny County Courthouse (H.H. Richardson 1888), Phillip Johnson’s glass castle PPG Place (1988) and the city’s most recent addition to the downtown skyline and riverscape, the David L. Lawrence Convention Center, designed by Rafael Vinoly Architects (2003). Pittsburgh also enjoys an international reputation for its world-class art collections at The Carnegie Museum of Art, the Andy Warhol Museum and the Frick Art Museum. While at the David L. Lawrence Convention Center, enjoy the twenty-five works of art which celebrates the City’s diversity - <a href="artwithinart.html">Art within Art</a>.</p>
     <dl>
         <dt>Owner</dt>

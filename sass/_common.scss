@@ -89,6 +89,38 @@
     }
 }
 
+.content-heading {    
+    background-color: $yellow;
+    @include single-box-shadow;
+
+    color: black;
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.content-home .content-heading {
+    font-size: 0.9em;    
+}
+
+.subnav {
+    font-size: 1em;
+    margin-bottom: 1em;
+
+    text-align: center;
+    @media only screen and (min-width: $w-narrow) {
+        text-align: left;
+    }
+
+    @media only screen and (min-width: $w-wide) {
+        position: absolute;
+        top: 1.5em;
+        right: 0;
+        text-align: right;
+    }
+}
+
+
 .widget-sidebar {
     padding: 16px 12px;
     border-top: 2px solid white;
@@ -144,18 +176,4 @@
         margin: 0;
         font-size: 42px;
     }
-}
-
-.content-heading {    
-    background-color: $yellow;
-    @include single-box-shadow;
-
-    color: black;
-    font-weight: normal;
-    font-size: 1.5em;
-    margin-bottom: 0.8em;
-}
-
-.content-home .content-heading {
-    font-size: 0.9em;    
 }

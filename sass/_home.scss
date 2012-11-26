@@ -39,22 +39,6 @@
     }
 }
 
-.quick-links {
-    font-size: 14px;
-    margin: 10px 0 12px 0;
-
-    text-align: center;
-    @media only screen and (min-width: $w-narrow) {
-        text-align: left;
-        margin-top: 14px;
-    }
-
-    @media only screen and (min-width: $w-wide) {
-        text-align: right;
-        margin: -20px 0 20px 0; // move the quick links up into the standout-text box
-    }
-}
-
 .quick-find-label {
     margin: 0;
     font-weight: bold;
