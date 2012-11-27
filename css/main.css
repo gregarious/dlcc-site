@@ -858,7 +858,7 @@ a {
 }
 
 /* line 35, ../sass/_base.scss */
-#main-content-container {
+#main-content-column {
   background-color: white;
 }
 
@@ -894,58 +894,59 @@ a {
 }
 
 /* line 39, ../sass/_layout.scss */
-#main-content-container {
+.site-column {
+  position: relative;
   float: left;
+}
+
+/* line 44, ../sass/_layout.scss */
+#main-content-column {
   padding: 0 8px;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 39, ../sass/_layout.scss */
-  #main-content-container {
+  /* line 44, ../sass/_layout.scss */
+  #main-content-column {
     width: 653px;
     padding: 0 16px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 39, ../sass/_layout.scss */
-  #main-content-container {
+  /* line 44, ../sass/_layout.scss */
+  #main-content-column {
     width: 746px;
     padding: 0 16px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 39, ../sass/_layout.scss */
-  #main-content-container {
+  /* line 44, ../sass/_layout.scss */
+  #main-content-column {
     width: 986px;
     padding: 0 16px;
   }
 }
 
-/* line 58, ../sass/_layout.scss */
-#main-aside {
-  float: left;
-}
 @media only screen and (min-width: 768px) {
-  /* line 58, ../sass/_layout.scss */
-  #main-aside {
+  /* line 62, ../sass/_layout.scss */
+  #main-aside-column {
     width: 115px;
     border-left: 2px solid white;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 58, ../sass/_layout.scss */
-  #main-aside {
+  /* line 62, ../sass/_layout.scss */
+  #main-aside-column {
     width: 214px;
   }
 }
 
-/* line 72, ../sass/_layout.scss */
+/* line 75, ../sass/_layout.scss */
 #main-content {
   margin-top: -24px;
   position: relative;
 }
 
-/* line 78, ../sass/_layout.scss */
+/* line 81, ../sass/_layout.scss */
 .content-heading {
   position: relative;
   z-index: 2;
@@ -955,70 +956,76 @@ a {
   margin-left: -8px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 78, ../sass/_layout.scss */
+  /* line 81, ../sass/_layout.scss */
   .content-heading {
     margin-left: -16px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 78, ../sass/_layout.scss */
+  /* line 81, ../sass/_layout.scss */
   .content-heading {
     margin-left: -28px;
   }
 }
 
-/* line 99, ../sass/_layout.scss */
+/* line 102, ../sass/_layout.scss */
 .content-home .content-heading {
   width: 320px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 99, ../sass/_layout.scss */
+  /* line 102, ../sass/_layout.scss */
   .content-home .content-heading {
     width: 420px;
   }
 }
 
-/* line 106, ../sass/_layout.scss */
+/* line 109, ../sass/_layout.scss */
 #page-footer {
   padding-bottom: 1em;
 }
 
-/* line 111, ../sass/_layout.scss */
+/* line 114, ../sass/_layout.scss */
 .content-grid-row {
   width: 100%;
 }
-/* line 116, ../sass/_layout.scss */
+/* line 119, ../sass/_layout.scss */
 .content-grid-row .col {
   width: 100%;
   float: left;
 }
 @media only screen and (min-width: 768px) {
-  /* line 116, ../sass/_layout.scss */
+  /* line 119, ../sass/_layout.scss */
   .content-grid-row .col {
     width: 298.5px;
     margin-right: 12px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 116, ../sass/_layout.scss */
+  /* line 119, ../sass/_layout.scss */
   .content-grid-row .col {
     width: 345px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 116, ../sass/_layout.scss */
+  /* line 119, ../sass/_layout.scss */
   .content-grid-row .col {
     width: 465px;
   }
 }
 
-/* line 135, ../sass/_layout.scss */
+/* line 138, ../sass/_layout.scss */
 .bordered {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   border-left: 2px solid white;
   border-right: 2px solid white;
+}
+
+/* line 144, ../sass/_layout.scss */
+#site-nav {
+  position: relative;
+  z-index: 2;
 }
 
 /* Header footer */
@@ -1097,7 +1104,7 @@ a {
 /* line 65, ../sass/_common.scss */
 #site-nav {
   background-color: #819578;
-  padding: 20px 0 8px 14px;
+  padding: 12px 0 12px 7px;
 }
 /* line 70, ../sass/_common.scss */
 #site-nav ul {
@@ -1107,12 +1114,12 @@ a {
 /* line 75, ../sass/_common.scss */
 #site-nav li {
   float: left;
-  margin: 0 8px 6px 0;
+  margin: 0 0 8px 8px;
 }
 @media only screen and (min-width: 768px) {
   /* line 65, ../sass/_common.scss */
   #site-nav {
-    padding-left: 10px;
+    padding: 10px 0 8px 2px;
   }
 }
 

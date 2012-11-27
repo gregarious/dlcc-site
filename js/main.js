@@ -38,14 +38,13 @@ $(function(){
     $(window).on('breakpoint', function(){
         if ($(window).width() >= 768) {
             footer.remove();
-            footer.appendTo('#main-content-container');
+            footer.appendTo('#main-content-column');
         }
         else {
             footer.remove();
-            footer.insertAfter('#main-aside');
+            footer.insertAfter('#main-aside-column');
         }
     });
-
 
     $(window).trigger('resize');
 });

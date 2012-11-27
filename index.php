@@ -35,8 +35,8 @@ include "partials/head.inc.php"; ?>
             <div class="app-links">
                 <!-- TODO: ensure this is correct link. need to check scenable app url in itunesconnect once it's up to verify -->
                 <!-- OK for this to be an SVG: no need for Android 2.3 to see App Store link -->
-                <a href="https://itunes.apple.com/us/app/pittsburgh-convention-center/id519070355?ls=1&mt=8" "DLCC App in App Store"><img alt="Download on the App Store" src="/img/app-store.svg" /></a>
-                <a href="http://play.google.com/store/apps/details?id=com.imswift.pittsburgh" title="DLCC App in Google Play"><img alt="Android app on Google Play" src="http://developer.android.com/images/brand/en_app_rgb_wo_45.png" /></a>
+                <a href="https://itunes.apple.com/us/app/pittsburgh-convention-center/id519070355?ls=1&mt=8" title="DLCC App in App Store" target="_blank"><img alt="Download on the App Store" src="/img/app-store.svg" /></a>
+                <a href="http://play.google.com/store/apps/details?id=com.imswift.pittsburgh" title="DLCC App in Google Play" target="_blank"><img alt="Android app on Google Play" src="http://developer.android.com/images/brand/en_app_rgb_wo_45.png" /></a>
             </div>
         
         </section>

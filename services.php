@@ -28,8 +28,8 @@ include "partials/head.inc.php"; ?>
     <ul>
         <li>Telephone Services ranging from basic dial tone to needs such   as voicemail, call forwarding, conference phones, and handsets</li>
         <li>Wired/Wireless Networks</li>
-        <li>-Internet broadcasting so your event can reach a global audience using the World Wide Web</li>
-        <li>-Special circuits such as DSL, ISDN, T-1, T-3 and more</li>
+        <li>Internet broadcasting so your event can reach a global audience using the World Wide Web</li>
+        <li>Special circuits such as DSL, ISDN, T-1, T-3 and more</li>
         <li>To place an online order, click <a href="https://www.smartcity.com/order/center.asp?center=028" target="_blank">here</a> or to complete an order form click <a href="images/PDFs/services_telecom_smartcityR3-12-23-09.pdf" target="_blank">here</a>.</li>
     </ul>
 

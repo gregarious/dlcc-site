@@ -36,8 +36,12 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
     margin: 0 auto;
 }
 
-#main-content-container {
-    float: left;
+.site-column {
+    position: relative; 
+    float: left; 
+}
+
+#main-content-column {
     padding: 0 $w-mobile-main-padding;
 
     width: 100%;
@@ -55,8 +59,7 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
     }
 }
 
-#main-aside {
-    float: left;
+#main-aside-column {
     @media only screen and (min-width: $w-narrow) {
         width: $w-narrow-sidebar;
         
@@ -107,7 +110,7 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
     padding-bottom: 1em;
 }
 
-// grid within #main-content-container
+// grid within #main-content-column
 .content-grid-row {
     width: 100%;
 
@@ -138,3 +141,7 @@ $w-wide-main-column: (($w-wide-main - (2 * $w-wide-main-padding)) / 2) - $main-c
     border-right: 2px solid white;
 }
 
+#site-nav {
+    position: relative;
+    z-index: 2; // ensure always displayed over standout image
+}
