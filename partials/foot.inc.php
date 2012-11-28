@@ -1,6 +1,8 @@
-                </div> <!-- ends main-content-column -->    
-                <aside id="main-aside-column" class="site-column">
-                    <nav id="site-nav">
+                    </div> <!-- end .primary-content -->
+                </div>  <!-- end .primary-column -->
+                
+                <aside class="sidebar-column">
+                    <nav class="site-nav">
                         <ul class="clearfix">
                             <!-- TODO: fix links when in building subdir -->
                             <li><a href="/building/" title="Our Building"><img src="/img/nav/Nav_Building.png" width="91" height="79"></a></li>
@@ -23,14 +25,17 @@
                     }
                     ?>
                 </aside>
-            </div>  <!-- end .site-column-container -->
+                
+            </div>  <!-- end .page-columns -->
+            
             <footer id="page-footer">
                 <p>&copy; Copyright David L. Lawrence Convention Center</p>
                 <p>1000 Ft. Duquesne Blvd., Pittsburgh, PA 15222 <br/>
                        (412) 565-6000 | <a href="mailto:info@pittsburghcc.com" title="Contact us" class="mailto">info@pittsburghcc.com</a></p>
             </footer>
-        </div>  <!-- end .site-container -->
-
+            
+        </div>  <!-- end .page-wrap -->
+        
         <!-- TODO: reenable external hosting link to shiv and jQuery
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
         <!-- TODO: remove jQuery if not using it -->
@@ -49,6 +54,7 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-    -->
+        -->
+
     </body>
 </html>

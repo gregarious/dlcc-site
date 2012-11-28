@@ -19,8 +19,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="initial-scale=1.0">
 
-        <!-- TODO: favicon, apple-touch-icon -->
-
         <link rel="stylesheet" href="/css/main.css">
 
         <!-- No need for modernizr at the moment -->
@@ -31,41 +29,39 @@
         <script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
     </head>
     <body>
-
-        <header id="page-header" class="clearfix" style="background-image: url('<?php print $headerImage; ?>');">
-            <div class="site-container">
+        <header class="page-header" style="background-image: url('<?php print $headerImage; ?>');">
+            <div class="page-wrap"> <!-- keep header content constrained to page width -->
                 <a href="#site-nav" title="Shortcut to Menu" class="site-nav-shortcut">Full Menu</a>
                 <a href="/index.php" title="David L. Lawrence Convention Center">
                     <!-- TODO: get screen-size appropriate res image for this? -->
                     <img class="logo" src="/img/DLCC_Logo_Full.png" alt="David L. Lawrence Convention Center" />
                 </a>
-                <h1 class="tagline">Built Green,<br />
+                <p class="tagline tagline-header">Built Green,<br />
                    Working Green,<br />
                    Everyday!
-                </h1>
-            </div>
+                </p>
+            </div> <!-- end .page-wrap -->
         </header>
-
-        <div class="site-container bordered">
-            <div class="site-column-container clearfix">
-                <div id="main-content-column" class="site-column">
-                    <div class="main-content-header">
-                    <?php
+        <div class="page-wrap">
+            <div class="page-columns">
+                <div class="primary-column">
+                    <div class="primary-content-header">
+                        <?php
                         if ($isBuildingSubpage) {
-                    ?>
-                        <!-- picturefill.js style responsive image for interior -->
-                        <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
-                            <div data-src="/img/headers/interior_320x148.jpg"></div>
-                            <div data-src="/img/headers/interior_653x220.jpg" data-media="(min-width: 768px)"></div>
-                            <div data-src="/img/headers/interior_746x220.jpg" data-media="(min-width: 960px)"></div>
-                            <div data-src="/img/headers/interior_986x220.jpg" data-media="(min-width: 1200px)"></div>
-                            <noscript>
-                                <img src="/img/headers/interior_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
-                            </noscript>
-                        </div>
-                    <?php
+                        ?>
+                            <!-- picturefill.js style responsive image for interior -->
+                            <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
+                                <div data-src="/img/headers/interior_320x148.jpg"></div>
+                                <div data-src="/img/headers/interior_653x220.jpg" data-media="(min-width: 768px)"></div>
+                                <div data-src="/img/headers/interior_746x220.jpg" data-media="(min-width: 960px)"></div>
+                                <div data-src="/img/headers/interior_986x220.jpg" data-media="(min-width: 1200px)"></div>
+                                <noscript>
+                                    <img src="/img/headers/interior_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
+                                </noscript>
+                            </div>
+                        <?php
                         } else {
-                    ?>
+                        ?>
                             <!-- picturefill.js style responsive image for skyline -->
                             <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
                                 <div data-src="/img/headers/home_320x148.jpg"></div>
@@ -82,8 +78,8 @@
                                 Working Green,<br />
                                 Everyday!
                             </p>
-                    <?php
+                        <?php
                         }
-                    ?>
-                        </p>
-                    </div>
+                        ?>
+                    </div>  <!-- end .primary-content-header -->
+                    <div class=".primary-content">

@@ -1,40 +1,40 @@
 /* Color varaibles */
-$yellow: #f1e597;
-$grey: #58585b;
-$orange: #fbaf3f;
+// $yellow: #f1e597;
+// $grey: #58585b;
+// $orange: #fbaf3f;
 
-$green: #819578;
-$light-green1: #bec8b9;
-$light-green2: #d8ddd4;
-$light-green3: #e6ebe4;
-$light-green4: #f2f3ef;
+// $green: #819578;
+// $light-green1: #bec8b9;
+// $light-green2: #d8ddd4;
+// $light-green3: #e6ebe4;
+// $light-green4: #f2f3ef;
 
-$nav-button-padding: 8px;
+// $nav-button-padding: 8px;
 
-$w-mobile-main-padding: 8px;
-$w-narrow-main-padding: 16px;
-$w-standard-main-padding: 16px;
-$w-wide-main-padding: 16px;
+// $w-mobile-main-padding: 8px;
+// $w-narrow-main-padding: 16px;
+// $w-standard-main-padding: 16px;
+// $w-wide-main-padding: 16px;
 
-// Master content width breakpoints
-$w-wide: 1200px;        // TODO: revisit this size, and rest of them
-$w-standard: 960px;
-$w-narrow: 768px;
-$w-mobile: 320px;
+// // Master content width breakpoints
+// $w-wide: 1200px;        // TODO: revisit this size, and rest of them
+// $w-standard: 960px;
+// $w-narrow: 768px;
+// $w-mobile: 320px;
 
-$button-width: 91px;
-$button-height: 79px;
-$button-padding: 8px;
+// $button-width: 91px;
+// $button-height: 79px;
+// $button-padding: 8px;
 
 // foundational styles
 @import "normalize.scss";
 @import "h5bp.scss";
-@import "base.scss";
-@import "layout.scss";
+// @import "base.scss";
+// @import "layout.scss";
 
-// common modules
-@import "common.scss";
+// // common modules
+// @import "common.scss";
 
-// inidividual modules
-@import "home.scss";
-@import "subpages.scss";
+// // inidividual modules
+// @import "home.scss";
+// @import "subpages.scss";
