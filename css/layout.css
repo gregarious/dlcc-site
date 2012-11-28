@@ -1,0 +1,75 @@
+/* line 17, ../sass/layout.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../sass/layout.scss */
+.page-wrap {
+  margin: 0 auto;
+  width: 320px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 22, ../sass/layout.scss */
+  .page-wrap {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 22, ../sass/layout.scss */
+  .page-wrap {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 22, ../sass/layout.scss */
+  .page-wrap {
+    width: 1200px;
+  }
+}
+
+/* line 41, ../sass/layout.scss */
+.page-column {
+  float: left;
+}
+
+/* line 45, ../sass/layout.scss */
+.page-column-primary {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  /* line 45, ../sass/layout.scss */
+  .page-column-primary {
+    width: 657px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 45, ../sass/layout.scss */
+  .page-column-primary {
+    width: 849px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 45, ../sass/layout.scss */
+  .page-column-primary {
+    width: 1089px;
+  }
+}
+
+/* line 60, ../sass/layout.scss */
+.page-column-secondary {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  /* line 60, ../sass/layout.scss */
+  .page-column-secondary {
+    width: 111px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 60, ../sass/layout.scss */
+  .page-column-secondary {
+    width: 111px;
+  }
+}

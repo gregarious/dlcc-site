@@ -1,14 +1,11 @@
 /* Handles base styles and layout */
-
+@import "constants.scss";
 @import "compass/css3";
 
 /*** Base styles ***/
 html {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5em;
-    @media only screen and (min-width: $w-narrow) {
-        font-size: 14px;
-    }
 }
 
 body {
@@ -32,6 +29,6 @@ a {
     text-decoration: none;
 }
 
-#main-content-column {
+.primary-column {
     background-color: white;
 }

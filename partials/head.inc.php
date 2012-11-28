@@ -43,43 +43,44 @@
             </div> <!-- end .page-wrap -->
         </header>
         <div class="page-wrap">
-            <div class="page-columns">
-                <div class="primary-column">
-                    <div class="primary-content-header">
-                        <?php
-                        if ($isBuildingSubpage) {
-                        ?>
-                            <!-- picturefill.js style responsive image for interior -->
-                            <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
-                                <div data-src="/img/headers/interior_320x148.jpg"></div>
-                                <div data-src="/img/headers/interior_653x220.jpg" data-media="(min-width: 768px)"></div>
-                                <div data-src="/img/headers/interior_746x220.jpg" data-media="(min-width: 960px)"></div>
-                                <div data-src="/img/headers/interior_986x220.jpg" data-media="(min-width: 1200px)"></div>
-                                <noscript>
-                                    <img src="/img/headers/interior_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
-                                </noscript>
-                            </div>
-                        <?php
-                        } else {
-                        ?>
-                            <!-- picturefill.js style responsive image for skyline -->
-                            <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
-                                <div data-src="/img/headers/home_320x148.jpg"></div>
-                                <div data-src="/img/headers/home_653x220.jpg" data-media="(min-width: 768px)"></div>
-                                <div data-src="/img/headers/home_746x220.jpg" data-media="(min-width: 960px)"></div>
-                                <div data-src="/img/headers/home_986x220.jpg" data-media="(min-width: 1200px)"></div>
-                                <noscript>
-                                    <img src="/img/headers/home_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
-                                </noscript>
-                            </div>
+            <div class="page-columns-wrap page-column-background page-column-background-secondary">
+                <div class="page-column-background page-column-background-primary">
+                    <div class="page-column page-column-primary">
+                        <div class="primary-header">
+                            <?php
+                            if ($isBuildingSubpage) {
+                            ?>
+                                <!-- picturefill.js style responsive image for interior -->
+                                <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
+                                    <div data-src="/img/headers/interior_320x148.jpg"></div>
+                                    <div data-src="/img/headers/interior_653x220.jpg" data-media="(min-width: 768px)"></div>
+                                    <div data-src="/img/headers/interior_746x220.jpg" data-media="(min-width: 960px)"></div>
+                                    <div data-src="/img/headers/interior_986x220.jpg" data-media="(min-width: 1200px)"></div>
+                                    <noscript>
+                                        <img src="/img/headers/interior_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
+                                    </noscript>
+                                </div>
+                            <?php
+                            } else {
+                            ?>
+                                <!-- picturefill.js style responsive image for skyline -->
+                                <div data-picture data-alt="Skyline view of The David L. Lawrence Convention Center">
+                                    <div data-src="/img/headers/home_320x148.jpg"></div>
+                                    <div data-src="/img/headers/home_653x220.jpg" data-media="(min-width: 768px)"></div>
+                                    <div data-src="/img/headers/home_746x220.jpg" data-media="(min-width: 960px)"></div>
+                                    <div data-src="/img/headers/home_986x220.jpg" data-media="(min-width: 1200px)"></div>
+                                    <noscript>
+                                        <img src="/img/headers/home_320x148.jpg" alt="Skyline view of The David L. Lawrence Convention Center">
+                                    </noscript>
+                                </div>
 
-                            <p class="tagline tagline-home">
-                                Built Green,<br />
-                                Working Green,<br />
-                                Everyday!
-                            </p>
-                        <?php
-                        }
-                        ?>
-                    </div>  <!-- end .primary-content-header -->
-                    <div class=".primary-content">
+                                <p class="tagline tagline-home">
+                                    Built Green,<br />
+                                    Working Green,<br />
+                                    Everyday!
+                                </p>
+                            <?php
+                            }
+                            ?>
+                        </div>  <!-- end .primary-content-header -->
+                        <div class=".primary-content">

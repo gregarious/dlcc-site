@@ -1,4 +1,3 @@
-/* Color varaibles */
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -703,8 +702,9 @@ textarea {
  *    `:before` to contain the top-margins of child elements.
  */
 /* line 195, ../sass/_h5bp.scss */
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .page-columns-wrap:before,
+.clearfix:after,
+.page-columns-wrap:after {
   content: " ";
   /* 1 */
   display: table;
@@ -712,7 +712,7 @@ textarea {
 }
 
 /* line 200, ../sass/_h5bp.scss */
-.clearfix:after {
+.clearfix:after, .page-columns-wrap:after {
   clear: both;
 }
 
@@ -721,7 +721,7 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 /* line 209, ../sass/_h5bp.scss */
-.clearfix {
+.clearfix, .page-columns-wrap {
   *zoom: 1;
 }
 
@@ -817,4 +817,180 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
+}
+/* Handles base styles and layout */
+/*** Base styles ***/
+/* line 6, ../sass/_base.scss */
+html {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* line 11, ../sass/_base.scss */
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: #58585b;
+  background: #e6ebe4 url('/img/BG_repeat.png?1354067851') repeat-x;
+}
+
+/* line 18, ../sass/_base.scss */
+a {
+  color: #819578;
+}
+
+/* line 22, ../sass/_base.scss */
+.mailto {
+  color: #fbaf3f;
+}
+
+/* line 27, ../sass/_base.scss */
+.tel-link,
+.fax-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 32, ../sass/_base.scss */
+.primary-column {
+  background-color: white;
+}
+
+/* line 17, ../sass/_layout.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../sass/_layout.scss */
+.page-wrap {
+  margin: 0 auto;
+  width: 320px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 22, ../sass/_layout.scss */
+  .page-wrap {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 22, ../sass/_layout.scss */
+  .page-wrap {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 22, ../sass/_layout.scss */
+  .page-wrap {
+    width: 1200px;
+  }
+}
+
+/*  Styles for the page's two main columns. A lot of this is to keep keep
+    the column heights equal. See 
+    http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
+    for more details on the technique used for equal heights here */
+/* line 41, ../sass/_layout.scss */
+.page-columns-wrap {
+  width: 100%;
+}
+
+/* line 46, ../sass/_layout.scss */
+.page-column {
+  float: left;
+  overflow: hidden;
+}
+
+/* line 52, ../sass/_layout.scss */
+.page-column-primary {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  /* line 52, ../sass/_layout.scss */
+  .page-column-primary {
+    width: 657px;
+    position: relative;
+    left: 111px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 52, ../sass/_layout.scss */
+  .page-column-primary {
+    width: 750px;
+    left: 210px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 52, ../sass/_layout.scss */
+  .page-column-primary {
+    width: 990px;
+  }
+}
+
+/* line 75, ../sass/_layout.scss */
+.page-column-secondary {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  /* line 75, ../sass/_layout.scss */
+  .page-column-secondary {
+    width: 111px;
+    position: relative;
+    left: 111px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 75, ../sass/_layout.scss */
+  .page-column-secondary {
+    width: 210px;
+    left: 210px;
+  }
+}
+
+/* each page column needs to be surrounded by a div as wide as the page
+    to hold it's background color */
+/* line 96, ../sass/_layout.scss */
+.page-column-background {
+  float: left;
+  width: 100%;
+}
+
+/* line 102, ../sass/_layout.scss */
+.page-column-background-secondary {
+  background-color: #d8ddd4;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  /* line 102, ../sass/_layout.scss */
+  .page-column-background-secondary {
+    overflow: hidden;
+  }
+}
+
+/* line 112, ../sass/_layout.scss */
+.page-column-background-primary {
+  background-color: white;
+}
+@media only screen and (min-width: 768px) {
+  /* line 112, ../sass/_layout.scss */
+  .page-column-background-primary {
+    right: 111px;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 112, ../sass/_layout.scss */
+  .page-column-background-primary {
+    right: 210px;
+  }
+}
+
+/* line 126, ../sass/_layout.scss */
+.primary-header {
+  position: relative;
+}
+/* line 129, ../sass/_layout.scss */
+.primary-header > .tagline-home {
+  top: 0;
+  position: absolute;
 }
