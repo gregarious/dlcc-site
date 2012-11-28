@@ -1,11 +1,17 @@
-
-@import "constants.scss";
+/* 
+ * main.scss
+ * 
+ * Main SASS file to combine all components
+ */
 
 // foundational styles
 @import "normalize.scss";
 @import "h5bp.scss";
 @import "base.scss";
 @import "layout.scss";
+
+@import "sidebar.scss";
+@import "common.scss";
 
 // // common modules
 // @import "common.scss";

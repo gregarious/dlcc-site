@@ -1,13 +1,71 @@
+/* 
+ * common.scss
+ * 
+ * Mostly header and footer styles
+ */
+
+@import "constants.scss";
 @import "compass/css3";
 
+/*********************
+ * Header styles 
+ *********************/
+.logo {
+    width: $w-mobile;
+    left: 0;
 
-/* Header footer */
-#page-header {
-    // background-image is dynamically injected inline on element
-    border-bottom: 2px solid white;
-    @include box-sizing(content-box);
+    @media only screen and (min-width: $w-narrow) {
+        // vertically center the logo in the header
+        height: $logo-height;
+        margin-top: -$logo-height/2;
+        position: absolute;
+        top: 50%;
+        width: auto;
+    }
 }
 
+.tagline {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    color: rgba(255,255,255,0.33);
+    float: right;
+    line-height: 0.9em;
+    font-size: 14px;
+    margin: 0;
+
+    @media only screen and (min-width: $w-narrow) {
+        margin: 6px 0;
+        font-size: 36px;
+    }
+    @media only screen and (min-width: $w-standard) {
+        margin: 0;
+        font-size: 42px;
+    }
+}
+
+// tagline shows in header for all non-mobile styles 
+.page-header .tagline {
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        display: inherit;
+    }
+}
+
+// tagline shows on top of primary header image on mobile
+.primary-header .tagline {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    @media only screen and (min-width: $w-narrow) {
+        display: none;
+    }
+}
+
+// clickable "Full menu" anchor link
 .site-nav-shortcut {
     position: absolute;
     top: 4px;
@@ -18,7 +76,6 @@
     width: 100px;
     height: 44px;
 
-    font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -29,151 +86,22 @@
     }
 }
 
-.logo {
-    max-width: 100%;    // keep inside parent container
-    width: 320px;   // TODO: placeholder
-    
-    @media only screen and (min-width: $w-narrow) {
-        margin-top: 8px;
-    }
-    @media only screen and (min-width: $w-standard) {
-        width: auto;
-    }
-}
+/*******************************
+ * Primary column header styles
+ *******************************/
 
-/* Page footer */
-#page-footer {
+
+
+/*********************
+ * Footer styles
+ *********************/
+.page-footer {
     background-color: $green;
-    padding-top: 12px;
-    p {
-        margin: 0;
-        text-align: center;
-        font-size: 12px;
-        color: white;
-    }
+    color: white;
 
     @media only screen and (min-width: $w-narrow) {
-        background-color: white;
-        p {
-            color: $grey;
-        }
-    }
-}
-
-/* Main site nav */
-
-#site-nav {
-    // padding used in here is ad hoc based on 320px width. revisit when finalizing mobile container width
-    background-color: $green;
-    padding: 12px 0 12px 7px;   // some magic numbers to center 3 buttons in a row
-
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        float: left;
-        margin: 0 0 $nav-button-padding $nav-button-padding;
-    }
-
-    @media only screen and (min-width: $w-narrow) {    
-        padding: $nav-button-padding+2px 0 $nav-button-padding 2px;
-    }
-}
-
-// only show the home nav button on mobile devices
-.nav-btn-home {
-    @media only screen and (min-width: $w-narrow) {
-        display: none;
-    }
-}
-
-.content-heading {    
-    background-color: $yellow;
-    @include single-box-shadow;
-
-    color: black;
-    font-weight: normal;
-    font-size: 1.5em;
-    margin-bottom: 1em;
-}
-
-.content-home .content-heading {
-    font-size: 0.9em;    
-}
-
-.subnav {
-    font-size: 1em;
-    margin-bottom: 1em;
-
-    text-align: center;
-    @media only screen and (min-width: $w-narrow) {
-        text-align: left;
-    }
-
-    @media only screen and (min-width: $w-wide) {
-        position: absolute;
-        top: 1.5em;
-        right: 0;
-        text-align: right;
-    }
-}
-
-
-.widget-sidebar {
-    padding: 16px 12px;
-    border-top: 2px solid white;
-
-    > h2 {
-        margin-top: 0;
-    }
-}
-
-.widget-first {
-    background-color: $light-green1;
-}
-
-.widget-second {
-    background-color: $light-green2;
-}
-
-
-// Occurs in both home page upcoming events and sidebar widget
-.upcoming-event {
-    // TODO: reconsider selectors after finalizing markup for event items
-    p {
-        margin: 0;
-    }
-    a {
-        font-weight: bold;
+        background-color: inherit;
         color: $grey;
     }
-    margin-bottom: 1em;
 }
 
-.upcoming-event:last-of-type {
-    margin-bottom: 0;
-}
-
-.tagline {
-    text-align: right;
-    text-transform: uppercase;
-    color: white;
-    color: rgba(255,255,255,0.33);
-    float: right;
-    line-height: 0.9em;
-    margin: 0;
-
-    display: none;  // home page will include tag line with mobile
-    @media only screen and (min-width: $w-narrow) {
-        margin: 6px 0;
-        font-size: 36px;
-        // applies to all sizes here and larger
-        display: inherit;
-    }
-    @media only screen and (min-width: $w-standard) {
-        margin: 0;
-        font-size: 42px;
-    }
-}

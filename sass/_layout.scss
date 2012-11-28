@@ -1,6 +1,14 @@
+/* 
+ * layout.scss
+ * 
+ * Styles for main page layout. Layout specific to a module (e.g. home page
+ * content) lives in a file specific to that module. 
+ */
+
 @import "constants.scss";
 @import "compass/css3";
 
+// used to calculate width of sidebar at different media widths
 $nav-button-padding: 12px;
 
 // precalculated pixel widths for site sections
@@ -18,9 +26,17 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
     @include box-sizing(border-box);
 }
 
+// keep header the same height as the top header images (at most)
+.page-header {
+    max-height: $top-header-image-height;
+    overflow: hidden;
+}
+
 // keeps everything but header in a fixed width container
 .page-wrap {
     margin: 0 auto;
+    position: relative;
+    height: 100%;
 
     width: $w-mobile;
     @media only screen and (min-width: $w-narrow) {
@@ -130,4 +146,15 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
         top: 0;
         position: absolute;
     }
+}
+
+// scoot primary content up so it overlaps with primary-header image a bit
+.primary-content {
+    margin-top: -1.75em;
+    position: relative;
+}
+
+// add a bit of a margin around primary content
+.primary-content {
+    margin: inherit 2%;
 }

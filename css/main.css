@@ -1,3 +1,8 @@
+/* 
+ * main.scss
+ * 
+ * Main SASS file to combine all components
+ */
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -818,69 +823,97 @@ textarea {
     page-break-after: avoid;
   }
 }
-/* Handles base styles and layout */
+/* 
+ * base.scss: 
+ * 
+ * Handles the most basic gloabl style rules
+ */
+/* 
+ * constants.scss
+ * 
+ * Constants for DLCC site 
+ */
 /*** Base styles ***/
-/* line 6, ../sass/_base.scss */
+/* line 11, ../sass/_base.scss */
 html {
   font-size: 14px;
   line-height: 1.5em;
 }
 
-/* line 11, ../sass/_base.scss */
+/* line 16, ../sass/_base.scss */
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #58585b;
   background: #e6ebe4 url('/img/BG_repeat.png?1354067851') repeat-x;
 }
 
-/* line 18, ../sass/_base.scss */
+/* line 23, ../sass/_base.scss */
 a {
   color: #819578;
 }
 
-/* line 22, ../sass/_base.scss */
+/* line 27, ../sass/_base.scss */
 .mailto {
   color: #fbaf3f;
 }
 
-/* line 27, ../sass/_base.scss */
+/* line 32, ../sass/_base.scss */
 .tel-link,
 .fax-link {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 32, ../sass/_base.scss */
+/* line 37, ../sass/_base.scss */
 .primary-column {
   background-color: white;
 }
 
-/* line 17, ../sass/_layout.scss */
+/* 
+ * layout.scss
+ * 
+ * Styles for main page layout. Layout specific to a module (e.g. home page
+ * content) lives in a file specific to that module. 
+ */
+/* 
+ * constants.scss
+ * 
+ * Constants for DLCC site 
+ */
+/* line 25, ../sass/_layout.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 22, ../sass/_layout.scss */
+/* line 30, ../sass/_layout.scss */
+.page-header {
+  max-height: 133px;
+  overflow: hidden;
+}
+
+/* line 36, ../sass/_layout.scss */
 .page-wrap {
   margin: 0 auto;
+  position: relative;
+  height: 100%;
   width: 320px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 22, ../sass/_layout.scss */
+  /* line 36, ../sass/_layout.scss */
   .page-wrap {
     width: 768px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 22, ../sass/_layout.scss */
+  /* line 36, ../sass/_layout.scss */
   .page-wrap {
     width: 960px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 22, ../sass/_layout.scss */
+  /* line 36, ../sass/_layout.scss */
   .page-wrap {
     width: 1200px;
   }
@@ -890,23 +923,23 @@ a {
     the column heights equal. See 
     http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
     for more details on the technique used for equal heights here */
-/* line 41, ../sass/_layout.scss */
+/* line 57, ../sass/_layout.scss */
 .page-columns-wrap {
   width: 100%;
 }
 
-/* line 46, ../sass/_layout.scss */
+/* line 62, ../sass/_layout.scss */
 .page-column {
   float: left;
   overflow: hidden;
 }
 
-/* line 52, ../sass/_layout.scss */
+/* line 68, ../sass/_layout.scss */
 .page-column-primary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 52, ../sass/_layout.scss */
+  /* line 68, ../sass/_layout.scss */
   .page-column-primary {
     width: 657px;
     position: relative;
@@ -914,25 +947,25 @@ a {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 52, ../sass/_layout.scss */
+  /* line 68, ../sass/_layout.scss */
   .page-column-primary {
     width: 750px;
     left: 210px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 52, ../sass/_layout.scss */
+  /* line 68, ../sass/_layout.scss */
   .page-column-primary {
     width: 990px;
   }
 }
 
-/* line 75, ../sass/_layout.scss */
+/* line 91, ../sass/_layout.scss */
 .page-column-secondary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 75, ../sass/_layout.scss */
+  /* line 91, ../sass/_layout.scss */
   .page-column-secondary {
     width: 111px;
     position: relative;
@@ -940,7 +973,7 @@ a {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 75, ../sass/_layout.scss */
+  /* line 91, ../sass/_layout.scss */
   .page-column-secondary {
     width: 210px;
     left: 210px;
@@ -949,48 +982,184 @@ a {
 
 /* each page column needs to be surrounded by a div as wide as the page
     to hold it's background color */
-/* line 96, ../sass/_layout.scss */
+/* line 112, ../sass/_layout.scss */
 .page-column-background {
   float: left;
   width: 100%;
 }
 
-/* line 102, ../sass/_layout.scss */
+/* line 118, ../sass/_layout.scss */
 .page-column-background-secondary {
   background-color: #d8ddd4;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 102, ../sass/_layout.scss */
+  /* line 118, ../sass/_layout.scss */
   .page-column-background-secondary {
     overflow: hidden;
   }
 }
 
-/* line 112, ../sass/_layout.scss */
+/* line 128, ../sass/_layout.scss */
 .page-column-background-primary {
   background-color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 112, ../sass/_layout.scss */
+  /* line 128, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 111px;
     position: relative;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 112, ../sass/_layout.scss */
+  /* line 128, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 210px;
   }
 }
 
-/* line 126, ../sass/_layout.scss */
+/* line 142, ../sass/_layout.scss */
 .primary-header {
   position: relative;
 }
-/* line 129, ../sass/_layout.scss */
+/* line 145, ../sass/_layout.scss */
 .primary-header > .tagline-home {
   top: 0;
   position: absolute;
+}
+
+/* line 152, ../sass/_layout.scss */
+.primary-content {
+  margin-top: -1.75em;
+  position: relative;
+}
+
+/* line 158, ../sass/_layout.scss */
+.primary-content {
+  margin: inherit 2%;
+}
+
+/* 
+ * sidebar.scss
+ *
+ * Styles for sidebar (including nav & widgets) 
+ */
+/* 
+ * common.scss
+ * 
+ * Mostly header and footer styles
+ */
+/* 
+ * constants.scss
+ * 
+ * Constants for DLCC site 
+ */
+/*********************
+ * Header styles 
+ *********************/
+/* line 13, ../sass/_common.scss */
+.logo {
+  width: 320px;
+  left: 0;
+}
+@media only screen and (min-width: 768px) {
+  /* line 13, ../sass/_common.scss */
+  .logo {
+    height: 92px;
+    margin-top: -46px;
+    position: absolute;
+    top: 50%;
+    width: auto;
+  }
+}
+
+/* line 27, ../sass/_common.scss */
+.tagline {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  color: rgba(255, 255, 255, 0.33);
+  float: right;
+  line-height: 0.9em;
+  font-size: 14px;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  /* line 27, ../sass/_common.scss */
+  .tagline {
+    margin: 6px 0;
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 27, ../sass/_common.scss */
+  .tagline {
+    margin: 0;
+    font-size: 42px;
+  }
+}
+
+/* line 49, ../sass/_common.scss */
+.page-header .tagline {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 49, ../sass/_common.scss */
+  .page-header .tagline {
+    display: inherit;
+  }
+}
+
+/* line 57, ../sass/_common.scss */
+.primary-header .tagline {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  /* line 57, ../sass/_common.scss */
+  .primary-header .tagline {
+    display: none;
+  }
+}
+
+/* line 69, ../sass/_common.scss */
+.site-nav-shortcut {
+  position: absolute;
+  top: 4px;
+  z-index: 999;
+  display: block;
+  width: 100px;
+  height: 44px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  /* line 69, ../sass/_common.scss */
+  .site-nav-shortcut {
+    display: none;
+  }
+}
+
+/*******************************
+ * Primary column header styles
+ *******************************/
+/*********************
+ * Footer styles
+ *********************/
+/* line 98, ../sass/_common.scss */
+.page-footer {
+  background-color: #819578;
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  /* line 98, ../sass/_common.scss */
+  .page-footer {
+    background-color: inherit;
+    color: #58585b;
+  }
 }

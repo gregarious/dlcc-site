@@ -30,13 +30,13 @@
     </head>
     <body>
         <header class="page-header" style="background-image: url('<?php print $headerImage; ?>');">
-            <div class="page-wrap"> <!-- keep header content constrained to page width -->
+            <div class="page-wrap clearfix"> <!-- keep header content constrained to page width -->
                 <a href="#site-nav" title="Shortcut to Menu" class="site-nav-shortcut">Full Menu</a>
                 <a href="/index.php" title="David L. Lawrence Convention Center">
                     <!-- TODO: get screen-size appropriate res image for this? -->
                     <img class="logo" src="/img/DLCC_Logo_Full.png" alt="David L. Lawrence Convention Center" />
                 </a>
-                <p class="tagline tagline-header">Built Green,<br />
+                <p class="tagline">Built Green,<br />
                    Working Green,<br />
                    Everyday!
                 </p>
@@ -74,7 +74,7 @@
                                     </noscript>
                                 </div>
 
-                                <p class="tagline tagline-home">
+                                <p class="tagline">
                                     Built Green,<br />
                                     Working Green,<br />
                                     Everyday!
@@ -83,4 +83,4 @@
                             }
                             ?>
                         </div>  <!-- end .primary-content-header -->
-                        <div class=".primary-content">
+                        <div class="primary-content">
