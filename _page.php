@@ -1,12 +1,15 @@
 <?php
-    if(!isset($siteTitle)) {
-        $siteTitle = 'The David L. Lawrence Convention Center';
-    }
+// this file will set all of the varaibles used below
+require "_settings.php";
 
-    // determine the header image randomly
-    $headerImage = '/img/headers/' . 'header_' . rand(1,14) . '.jpg';
+// determine the header image randomly
+$headerImage = '/img/headers/' . 'header_' . rand(1,14) . '.jpg';
 
+// find out if $page variable starts with building. if so, use an alternative primary content header image
+$isBuildingSubpage = !strncmp($page, "building", 8);
+$isHomepage = ($page == "home");
 ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -15,7 +18,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php print $siteTitle; ?></title>
+        <title><?php print $pageTitle; ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="initial-scale=1.0">
 
@@ -28,12 +31,11 @@
         <!-- TODO: if not including modernizr, get rid of no-js class manually -->
         <script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
     </head>
-    <body>
+    <body class="<?php print $pageClass; ?>">
         <header class="page-header" style="background-image: url('<?php print $headerImage; ?>');">
             <div class="page-wrap clearfix"> <!-- keep header content constrained to page width -->
                 <a href="#site-nav" title="Shortcut to Menu" class="site-nav-shortcut">Full Menu</a>
                 <a href="/index.php" title="David L. Lawrence Convention Center">
-                    <!-- TODO: get screen-size appropriate res image for this? -->
                     <img class="logo" src="/img/DLCC_Logo_Full.png" alt="David L. Lawrence Convention Center" />
                 </a>
                 <p class="tagline">Built Green,<br />
@@ -43,7 +45,7 @@
             </div> <!-- end .page-wrap -->
         </header>
         <div class="page-wrap">
-            <h1 class="page-heading"><?php echo $headingText; ?></h1>
+            <h1 class="page-heading"><?php print $headingText; ?></h1>
             <div class="page-columns-wrap page-column-background page-column-background-secondary">
                 <div class="page-column-background page-column-background-primary">
                     <div class="page-column page-column-primary">
@@ -85,3 +87,64 @@
                             ?>
                         </div>  <!-- end .primary-content-header -->
                         <div class="primary-content">
+                            <?php include $includeFile; ?>
+                        </div> <!-- end .primary-content -->
+                    </div>  <!-- end .page-column-primary -->
+                    
+                    <aside class="page-column page-column-secondary">
+                        <nav class="site-nav">
+                            <ul class="clearfix">
+                                <!-- TODO: fix links when in building subdir -->
+                                <li class="item-1"><a href="/building/" title="Our Building"><img src="/img/nav/Nav_Building.png"></a></li>
+                                <li class="item-2"><a href="/services.php" title="Our Services"><img src="/img/nav/Nav_Services.png"></a></li>
+                                <li class="item-3"><a href="/explore.php" title="Explore Pittsburgh"><img src="/img/nav/Nav_ExplorePGH.png"></a></li>
+                                <li class="item-4"><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/img/nav/Nav_DLCCneighborhood.png"></a></li>
+                                <li class="item-5"><a href="/directions.php" title="Directions &amp; Parking"><img src="/img/nav/Nav_DirectionsParking.png"></a></li>
+                                <li class="item-6"><a href="/events.php" title="Events"><img src="/img/nav/Nav_Events.png"></a></li>
+                                <li class="item-7"><a href="/aboutus.php" title="About Us"><img src="/img/nav/Nav_About.png"></a></li>
+                                <li class="item-8"><a href="/contactus.php" title="Contact Us"><img src="/img/nav/Nav_Contact.png"></a></li>
+                                <li class="item-9"><a href="/index.php" class="nav-btn-home" title="Home"><img src="/img/nav/Nav_Home.png"></a></li>
+                            </ul>
+                        </nav>
+                        <?php
+                        if($isHomepage) {
+                            include "includes/widgets-home.inc.php";
+                        }
+                        else {
+                            include "includes/widgets-subpage.inc.php";
+                        }
+                        ?>
+                    </aside>
+                    
+                </div>  <!-- end .page-column-background-primary -->
+            </div>  <!-- end .page-column-background-secondary -->
+            
+            <footer class="page-footer">
+                <p>&copy; Copyright David L. Lawrence Convention Center</p>
+                <p>1000 Ft. Duquesne Blvd., Pittsburgh, PA 15222 <br/>
+                       (412) 565-6000 | <a href="mailto:info@pittsburghcc.com" title="Contact us" class="mailto">info@pittsburghcc.com</a></p>
+            </footer>
+        </div>  <!-- end .page-wrap -->
+        
+        <!-- TODO: reenable external hosting link to shiv and jQuery
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+        <!-- TODO: remove jQuery if not using it -->
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="/js/vendor/matchmedia.js"></script>
+        <script src="/js/vendor/picturefill.js"></script>
+
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+
+        <!-- TODO: reenable
+        <script>
+            var _gaq=[['_setAccount','UA-9185606-2'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        -->
+
+    </body>
+</html>

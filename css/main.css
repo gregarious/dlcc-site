@@ -1362,10 +1362,40 @@ dd {
   }
 }
 
-/*******************************
- * Primary column header styles
- *******************************/
-/* line 93, ../sass/_common.scss */
+/*********************
+ * Footer styles
+ *********************/
+/* line 92, ../sass/_common.scss */
+.page-footer {
+  background-color: #819578;
+  color: white;
+  padding: 12px 0;
+}
+/* line 97, ../sass/_common.scss */
+.page-footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 92, ../sass/_common.scss */
+  .page-footer {
+    background-color: inherit;
+    color: #58585b;
+  }
+}
+
+/*
+ * home.scss
+ *
+ * Styles related to any primary content on the homepage
+ */
+/*
+ * primary_content.scss
+ *
+ * Styles for the layout and design of the main content column on each page
+ */
+/* line 8, ../sass/primary_content.scss */
 .page-heading {
   color: black;
   font-weight: normal;
@@ -1381,60 +1411,32 @@ dd {
   padding: 4px 8px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 93, ../sass/_common.scss */
+  /* line 8, ../sass/primary_content.scss */
   .page-heading {
     top: 220px;
-    margin-left: -0.5em;
+    margin-left: -0.25em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 93, ../sass/_common.scss */
+  /* line 8, ../sass/primary_content.scss */
   .page-heading {
-    margin-left: -1em;
+    margin-left: -0.75em;
   }
 }
 
-/* line 120, ../sass/_common.scss */
-.home-heading {
+/* line 35, ../sass/primary_content.scss */
+.page-home .page-heading {
   display: block;
   font-size: 13px;
   width: 304px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 120, ../sass/_common.scss */
-  .home-heading {
+  /* line 35, ../sass/primary_content.scss */
+  .page-home .page-heading {
     width: 420px;
   }
 }
 
-/*********************
- * Footer styles
- *********************/
-/* line 132, ../sass/_common.scss */
-.page-footer {
-  background-color: #819578;
-  color: white;
-  padding: 12px 0;
-}
-/* line 137, ../sass/_common.scss */
-.page-footer p {
-  margin: 0;
-  text-align: center;
-  font-size: 12px;
-}
-@media only screen and (min-width: 768px) {
-  /* line 132, ../sass/_common.scss */
-  .page-footer {
-    background-color: inherit;
-    color: #58585b;
-  }
-}
-
-/*
- * home.scss
- *
- * Styles related to any primary content on the homepage
- */
 /* 
  * subpages.scss
  *

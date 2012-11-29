@@ -1,0 +1,42 @@
+/*
+ * primary_content.scss
+ *
+ * Styles for the layout and design of the main content column on each page
+ */
+
+// this actually lives outside the column structure so it can overflow to the left
+.page-heading {
+    color: black;
+    font-weight: normal;
+    font-size: 1.5em;
+
+    background-color: $yellow;
+    @include single-box-shadow;
+
+    // positioning to make heading overlap over primary header image
+    position: absolute;
+    top: $primary-header-image-height-mobile;
+    z-index: 9999;
+    margin-top: -10px;
+
+    padding: 4px 8px;
+
+    @media only screen and (min-width: $w-narrow) {
+        top: $primary-header-image-height-nonmobile;
+        margin-left: -0.25em;
+    }
+
+    @media only screen and (min-width: $w-standard) {
+        margin-left: -0.75em;
+    }
+}
+
+// special formatting when page heading is on the homepage
+.page-home .page-heading {
+    display: block;
+    font-size: 13px;
+    width: $w-mobile - 16px;     // -16 to account for the padding
+    @media only screen and (min-width: $w-narrow) {
+        width: 420px;
+    }
+}
