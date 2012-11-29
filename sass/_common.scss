@@ -89,8 +89,42 @@
 /*******************************
  * Primary column header styles
  *******************************/
+// this actually lives outside the column structure so it can overflow to the left
+.page-heading {
+    color: black;
+    font-weight: normal;
+    font-size: 1.5em;
+
+    background-color: $yellow;
+    @include single-box-shadow;
 
 
+    position: absolute;
+    top: $primary-header-image-height-mobile;
+    z-index: 9999;
+    margin-top: -10px;  // makes heading overlap over primary header image
+
+    padding: 4px 8px;
+
+    @media only screen and (min-width: $w-narrow) {
+        top: $primary-header-image-height-nonmobile;
+        margin-left: -0.5em;
+    }
+
+    @media only screen and (min-width: $w-standard) {
+        margin-left: -1em;
+    }
+}
+
+// special formatting when page heading is on the homepage
+.home-heading {
+    display: block;
+    font-size: 13px;
+    width: $w-mobile;
+    @media only screen and (min-width: $w-narrow) {
+        width: 420px;
+    }
+}
 
 /*********************
  * Footer styles
@@ -98,6 +132,13 @@
 .page-footer {
     background-color: $green;
     color: white;
+    padding: 12px 0;
+
+    p {
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+    }
 
     @media only screen and (min-width: $w-narrow) {
         background-color: inherit;

@@ -20,9 +20,21 @@ body {
     background: $light-green3 image-url("BG_repeat.png") repeat-x;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+
 a {
     color: $green;
 }
+
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-bottom: 1em;
+}
+
 
 .mailto {
     color: $orange;

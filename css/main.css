@@ -848,23 +848,38 @@ body {
 }
 
 /* line 23, ../sass/_base.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+/* line 27, ../sass/_base.scss */
 a {
   color: #819578;
 }
 
-/* line 27, ../sass/_base.scss */
+/* line 31, ../sass/_base.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 34, ../sass/_base.scss */
+dd {
+  margin-bottom: 1em;
+}
+
+/* line 39, ../sass/_base.scss */
 .mailto {
   color: #fbaf3f;
 }
 
-/* line 32, ../sass/_base.scss */
+/* line 44, ../sass/_base.scss */
 .tel-link,
 .fax-link {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 37, ../sass/_base.scss */
+/* line 49, ../sass/_base.scss */
 .primary-column {
   background-color: white;
 }
@@ -880,20 +895,20 @@ a {
  * 
  * Constants for DLCC site 
  */
-/* line 25, ../sass/_layout.scss */
+/* line 22, ../sass/_layout.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 30, ../sass/_layout.scss */
+/* line 27, ../sass/_layout.scss */
 .page-header {
   max-height: 133px;
   overflow: hidden;
 }
 
-/* line 36, ../sass/_layout.scss */
+/* line 33, ../sass/_layout.scss */
 .page-wrap {
   margin: 0 auto;
   position: relative;
@@ -901,19 +916,19 @@ a {
   width: 320px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 36, ../sass/_layout.scss */
+  /* line 33, ../sass/_layout.scss */
   .page-wrap {
     width: 768px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 36, ../sass/_layout.scss */
+  /* line 33, ../sass/_layout.scss */
   .page-wrap {
     width: 960px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 36, ../sass/_layout.scss */
+  /* line 33, ../sass/_layout.scss */
   .page-wrap {
     width: 1200px;
   }
@@ -923,23 +938,23 @@ a {
     the column heights equal. See 
     http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
     for more details on the technique used for equal heights here */
-/* line 57, ../sass/_layout.scss */
+/* line 54, ../sass/_layout.scss */
 .page-columns-wrap {
   width: 100%;
 }
 
-/* line 62, ../sass/_layout.scss */
+/* line 59, ../sass/_layout.scss */
 .page-column {
   float: left;
   overflow: hidden;
 }
 
-/* line 68, ../sass/_layout.scss */
+/* line 65, ../sass/_layout.scss */
 .page-column-primary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 68, ../sass/_layout.scss */
+  /* line 65, ../sass/_layout.scss */
   .page-column-primary {
     width: 657px;
     position: relative;
@@ -947,25 +962,25 @@ a {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 68, ../sass/_layout.scss */
+  /* line 65, ../sass/_layout.scss */
   .page-column-primary {
     width: 750px;
     left: 210px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 68, ../sass/_layout.scss */
+  /* line 65, ../sass/_layout.scss */
   .page-column-primary {
     width: 990px;
   }
 }
 
-/* line 91, ../sass/_layout.scss */
+/* line 88, ../sass/_layout.scss */
 .page-column-secondary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 91, ../sass/_layout.scss */
+  /* line 88, ../sass/_layout.scss */
   .page-column-secondary {
     width: 111px;
     position: relative;
@@ -973,7 +988,7 @@ a {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 91, ../sass/_layout.scss */
+  /* line 88, ../sass/_layout.scss */
   .page-column-secondary {
     width: 210px;
     left: 210px;
@@ -982,68 +997,264 @@ a {
 
 /* each page column needs to be surrounded by a div as wide as the page
     to hold it's background color */
-/* line 112, ../sass/_layout.scss */
+/* line 109, ../sass/_layout.scss */
 .page-column-background {
   float: left;
   width: 100%;
 }
 
-/* line 118, ../sass/_layout.scss */
+/* line 115, ../sass/_layout.scss */
 .page-column-background-secondary {
   background-color: #d8ddd4;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 118, ../sass/_layout.scss */
+  /* line 115, ../sass/_layout.scss */
   .page-column-background-secondary {
     overflow: hidden;
   }
 }
 
-/* line 128, ../sass/_layout.scss */
+/* line 125, ../sass/_layout.scss */
 .page-column-background-primary {
   background-color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 128, ../sass/_layout.scss */
+  /* line 125, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 111px;
     position: relative;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 128, ../sass/_layout.scss */
+  /* line 125, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 210px;
   }
 }
 
-/* line 142, ../sass/_layout.scss */
+/* line 139, ../sass/_layout.scss */
 .primary-header {
   position: relative;
 }
-/* line 145, ../sass/_layout.scss */
+/* line 142, ../sass/_layout.scss */
 .primary-header > .tagline-home {
   top: 0;
   position: absolute;
 }
 
-/* line 152, ../sass/_layout.scss */
+/* line 149, ../sass/_layout.scss */
 .primary-content {
-  margin-top: -1.75em;
+  margin-top: 30px;
+  padding: 1em 1.25em;
   position: relative;
 }
 
-/* line 158, ../sass/_layout.scss */
+/* line 156, ../sass/_layout.scss */
 .primary-content {
   margin: inherit 2%;
 }
 
 /* 
- * sidebar.scss
+ * sidebar_nav.scss
  *
- * Styles for sidebar (including nav & widgets) 
+ * Styles for sidebar navigation area
  */
+/* 
+ * constants.scss
+ * 
+ * Constants for DLCC site 
+ */
+/* line 9, ../sass/_sidebar_nav.scss */
+.site-nav {
+  background-color: #819578;
+}
+/* line 13, ../sass/_sidebar_nav.scss */
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 18, ../sass/_sidebar_nav.scss */
+.site-nav li {
+  float: left;
+}
+
+/*  Below is lots of fun calculations to figure out the margins around nav buttons.
+    This is what happens when a programmer writes CSS
+*/
+/*** mobile size ***/
+/* line 28, ../sass/_sidebar_nav.scss */
+.site-nav {
+  padding: 12px 17.5px;
+}
+
+/* line 34, ../sass/_sidebar_nav.scss */
+.item-1, .item-2, .item-3,
+.item-4, .item-5, .item-6 {
+  margin-bottom: 12px;
+}
+
+/* line 40, ../sass/_sidebar_nav.scss */
+.item-1, .item-4, .item-7,
+.item-2, .item-5, .item-8 {
+  margin-right: 12px;
+}
+
+/*** narrow size ***/
+@media only screen and (min-width: 768px) {
+  /* line 46, ../sass/_sidebar_nav.scss */
+  .site-nav {
+    padding: 12px;
+  }
+
+  /* line 53, ../sass/_sidebar_nav.scss */
+  .item-1, .item-2, .item-3,
+  .item-4, .item-5, .item-6,
+  .item-7, .item-8, .item-9 {
+    margin-bottom: 8px;
+  }
+
+  /* line 58, ../sass/_sidebar_nav.scss */
+  .item-9 {
+    display: none;
+  }
+}
+/*** standard and wide sizes ***/
+@media only screen and (min-width: 960px) {
+  /* line 65, ../sass/_sidebar_nav.scss */
+  .site-nav {
+    padding: 12px;
+  }
+
+  /* line 72, ../sass/_sidebar_nav.scss */
+  .item-1, .item-2, .item-3,
+  .item-4, .item-5, .item-6,
+  .item-7, .item-8, .item-9 {
+    margin: 0;
+  }
+
+  /* line 78, ../sass/_sidebar_nav.scss */
+  .item-1, .item-2, .item-3,
+  .item-4, .item-5, .item-6 {
+    margin-bottom: 8px;
+  }
+
+  /* line 83, ../sass/_sidebar_nav.scss */
+  .item-1, .item-3, .item-5, .item-7 {
+    margin-right: 12px;
+  }
+
+  /* line 88, ../sass/_sidebar_nav.scss */
+  .item-9 {
+    display: none;
+  }
+}
+/* 
+ * sidebar_widgets.scss
+ *
+ * Styles for sidebar widgets
+ */
+/* 
+ * constants.scss
+ * 
+ * Constants for DLCC site 
+ */
+/* line 9, ../sass/_sidebar_widgets.scss */
+.widget {
+  padding: 16px 12px;
+  border-top: 2px solid white;
+  text-align: center;
+}
+
+/* Widgets are not displayed by default. Only at the narrow widths and up
+    do they begin becoming visible */
+/* line 18, ../sass/_sidebar_widgets.scss */
+.widget-upcoming-events {
+  font-size: 0.95em;
+  display: none;
+}
+/* line 21, ../sass/_sidebar_widgets.scss */
+.widget-upcoming-events > h2 {
+  color: white;
+  font-size: 1.25em;
+}
+/* line 26, ../sass/_sidebar_widgets.scss */
+.widget-upcoming-events .more-link {
+  margin-top: 1em;
+  color: white;
+  text-decoration: underline;
+  display: block;
+  text-align: right;
+}
+@media only screen and (min-width: 960px) {
+  /* line 18, ../sass/_sidebar_widgets.scss */
+  .widget-upcoming-events {
+    display: inherit;
+    background-color: #bec8b9;
+  }
+}
+
+/* line 42, ../sass/_sidebar_widgets.scss */
+.upcoming-event {
+  text-align: left;
+  margin-bottom: 1em;
+}
+/* line 44, ../sass/_sidebar_widgets.scss */
+.upcoming-event a {
+  font-weight: bold;
+  color: #58585b;
+}
+
+/* line 51, ../sass/_sidebar_widgets.scss */
+.widget-flickr {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 51, ../sass/_sidebar_widgets.scss */
+  .widget-flickr {
+    display: inherit;
+    background-color: #bec8b9;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 51, ../sass/_sidebar_widgets.scss */
+  .widget-flickr {
+    background-color: #d8ddd4;
+  }
+}
+
+/* line 63, ../sass/_sidebar_widgets.scss */
+.widget-interactive-map {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 63, ../sass/_sidebar_widgets.scss */
+  .widget-interactive-map {
+    display: inherit;
+    background-color: #bec8b9;
+  }
+}
+
+/* line 71, ../sass/_sidebar_widgets.scss */
+.widget-floorplans {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 71, ../sass/_sidebar_widgets.scss */
+  .widget-floorplans {
+    display: inherit;
+    background-color: #d8ddd4;
+  }
+}
+
+/* line 81, ../sass/_sidebar_widgets.scss */
+.widget-interactive-map > h2,
+.widget-floorplans > h2 {
+  color: inherit;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
 /* 
  * common.scss
  * 
@@ -1148,18 +1359,209 @@ a {
 /*******************************
  * Primary column header styles
  *******************************/
+/* line 93, ../sass/_common.scss */
+.page-heading {
+  color: black;
+  font-weight: normal;
+  font-size: 1.5em;
+  background-color: #f1e597;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  position: absolute;
+  top: 148px;
+  z-index: 9999;
+  margin-top: -10px;
+  padding: 4px 8px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 93, ../sass/_common.scss */
+  .page-heading {
+    top: 220px;
+    margin-left: -0.5em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 93, ../sass/_common.scss */
+  .page-heading {
+    margin-left: -1em;
+  }
+}
+
+/* line 120, ../sass/_common.scss */
+.home-heading {
+  display: block;
+  font-size: 13px;
+  width: 320px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 120, ../sass/_common.scss */
+  .home-heading {
+    width: 420px;
+  }
+}
+
 /*********************
  * Footer styles
  *********************/
-/* line 98, ../sass/_common.scss */
+/* line 132, ../sass/_common.scss */
 .page-footer {
   background-color: #819578;
   color: white;
+  padding: 12px 0;
+}
+/* line 137, ../sass/_common.scss */
+.page-footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 98, ../sass/_common.scss */
+  /* line 132, ../sass/_common.scss */
   .page-footer {
     background-color: inherit;
     color: #58585b;
   }
+}
+
+/*
+ * home.scss
+ *
+ * Styles related to any primary content on the homepage
+ */
+/* 
+ * subpages.scss
+ *
+ * Miscellaneous styles for primary content area on any subpage
+ */
+/* sub-navigation link styles. both homepage and building page subnavs
+ * have a lot in common, but their media-query positions are set at different
+ * breakpoints */
+/* line 10, ../sass/_subpages.scss */
+.subnav {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+/* line 14, ../sass/_subpages.scss */
+.subnav .current {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media only screen and (min-width: 1200px) {
+  /* line 20, ../sass/_subpages.scss */
+  .quick-links {
+    position: absolute;
+    top: -1.25em;
+    right: 1em;
+    text-align: right;
+  }
+}
+
+/* line 29, ../sass/_subpages.scss */
+.quick-find-label {
+  margin: 0;
+  font-weight: bold;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 29, ../sass/_subpages.scss */
+  .quick-find-label {
+    display: inherit;
+    display: inline;
+  }
+}
+
+/* line 40, ../sass/_subpages.scss */
+.building-links {
+  text-align: center;
+}
+@media only screen and (min-width: 960px) {
+  /* line 40, ../sass/_subpages.scss */
+  .building-links {
+    position: absolute;
+    top: -1.25em;
+    right: 1em;
+    text-align: right;
+  }
+}
+
+/* Classes in Contact page */
+/* line 52, ../sass/_subpages.scss */
+.admin-office-label {
+  margin-bottom: 0;
+}
+
+/* line 56, ../sass/_subpages.scss */
+.office-hours {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Classes in Directions page */
+/* line 62, ../sass/_subpages.scss */
+.daddr {
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Classes in Explore Pgh page */
+/* line 69, ../sass/_subpages.scss */
+.image-link {
+  display: none;
+  margin-bottom: 2em;
+  width: 25%;
+  text-align: right;
+}
+@media only screen and (min-width: 768px) {
+  /* line 69, ../sass/_subpages.scss */
+  .image-link {
+    display: inherit;
+    float: left;
+  }
+}
+
+/* line 80, ../sass/_subpages.scss */
+.explore-item {
+  margin-bottom: 1em;
+}
+
+/* line 84, ../sass/_subpages.scss */
+.explore-description > h2 {
+  margin-top: 0;
+}
+@media only screen and (min-width: 768px) {
+  /* line 83, ../sass/_subpages.scss */
+  .explore-description {
+    float: left;
+    width: 75%;
+    padding-left: 16px;
+  }
+}
+
+/* line 94, ../sass/_subpages.scss */
+.events-iframe {
+  width: 100%;
+  height: 100%;
+  margin: -1em -1.25em;
+}
+
+/* line 104, ../sass/_subpages.scss */
+.contact-address {
+  font-size: 1.2em;
+  display: inline-block;
+  background-color: #e6ebe4;
+  padding: 8px;
+}
+
+/* line 112, ../sass/_subpages.scss */
+.widget-interactive-map,
+.widget-floorplans {
+  text-align: center;
+}
+/* line 113, ../sass/_subpages.scss */
+.widget-interactive-map h2,
+.widget-floorplans h2 {
+  text-transform: uppercase;
+  font-size: 1.25em;
 }

@@ -1,0 +1,86 @@
+/* 
+ * sidebar_widgets.scss
+ *
+ * Styles for sidebar widgets
+ */
+
+@import "constants.scss";
+
+.widget {
+    padding: 16px 12px;
+    border-top: 2px solid white;
+    text-align: center;
+}
+
+/* Widgets are not displayed by default. Only at the narrow widths and up
+    do they begin becoming visible */
+
+.widget-upcoming-events {
+    font-size: 0.95em;
+
+    > h2 {
+        color: white;
+        font-size: 1.25em;
+    }
+
+    .more-link {
+        margin-top: 1em;
+        color: white;
+        text-decoration: underline;
+
+        display: block;
+        text-align: right;
+    }
+
+    display: none;
+    @media only screen and (min-width: $w-standard) {
+        display: inherit;
+        background-color: $light-green1;
+    }
+}
+
+.upcoming-event {
+    text-align: left;
+    a {
+        font-weight: bold;
+        color: $grey;
+    }
+    margin-bottom: 1em;
+}
+
+.widget-flickr {
+    display: none;
+
+    @media only screen and (min-width: $w-narrow) {
+        display: inherit;
+        background-color: $light-green1;
+    }
+    @media only screen and (min-width: $w-standard) {
+        background-color: $light-green2;
+    }
+}
+
+.widget-interactive-map {
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        display: inherit;
+        background-color: $light-green1;
+    }
+}
+
+.widget-floorplans {
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        display: inherit;
+        background-color: $light-green2;
+    }
+}
+
+.widget-interactive-map,
+.widget-floorplans {
+    > h2 {
+        color: inherit;
+        font-size: 1.25em;
+        text-transform: uppercase;
+    }
+}

@@ -4,36 +4,47 @@
  * Miscellaneous styles for primary content area on any subpage
  */
 
-.content-building,
-.content-services,
-.content-directions,
-.content-explorepgh,
-.content-neighborhood,
-.content-aboutus,
-.content-contactus {
-    dt {
-        font-weight: bold;
-    }
-    dd {
-        margin-bottom: 1em;
-    }
-}
-
-/* Building page */
-.building-links {
+/* sub-navigation link styles. both homepage and building page subnavs
+ * have a lot in common, but their media-query positions are set at different
+ * breakpoints */
+.subnav {
     font-size: 1.1em;
-
-    // move to the top right on standard widths, not just wide like .subnav
-    @media only screen and (min-width: $w-standard) {
-        position: absolute;
-        top: 1.25em;
-        right: 0;
-        text-align: right;
-    }
+    margin-bottom: 1em;
 
     .current {
         text-decoration: none;
         color: inherit;
+    }
+}
+
+.quick-links {
+    @media only screen and (min-width: $w-wide) {
+        position: absolute;
+        top: -1.25em;
+        right: 1em;
+        text-align: right;
+    }
+}
+
+.quick-find-label {
+    margin: 0;
+    font-weight: bold;
+
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        display: inherit;
+        display: inline;
+    }
+}
+
+.building-links {
+    text-align: center;
+    // move to the top right on standard/wide widths
+    @media only screen and (min-width: $w-standard) {
+        position: absolute;
+        top: -1.25em;
+        right: 1em;
+        text-align: right;
     }
 }
 
@@ -83,6 +94,11 @@
 .events-iframe {
     width: 100%;
     height: 100%;
+
+    // reverse the padding standard on all primary column content 
+    // (this is done since iframe has the blue border that looks better 
+    //  if it's flush with the whole primary content area)
+    margin: -1em -1.25em;
 }
 
 .contact-address {

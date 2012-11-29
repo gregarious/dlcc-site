@@ -29,7 +29,14 @@ $w-mobile: 320px;
 
 $nav-button-width: 87px;
 $nav-button-height: 76px;
+$nav-button-padding: 8px;
 
+// used to calculate width of sidebar at different media widths
+$nav-button-padding: 12px;
+
+// image dimensions
 $top-header-image-height: 133px;
 $logo-height: 92px;
-// $button-padding: 8px;
+$primary-header-image-height-mobile: 148px;
+$primary-header-image-height-nonmobile: 220px;
+

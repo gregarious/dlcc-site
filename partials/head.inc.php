@@ -43,6 +43,7 @@
             </div> <!-- end .page-wrap -->
         </header>
         <div class="page-wrap">
+            <h1 class="page-heading"><?php echo $headingText; ?></h1>
             <div class="page-columns-wrap page-column-background page-column-background-secondary">
                 <div class="page-column-background page-column-background-primary">
                     <div class="page-column page-column-primary">

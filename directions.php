@@ -3,10 +3,10 @@ include "partials/settings.inc.php";
 if (function_exists('getSiteTitle')) {
     $siteTitle = getSiteTitle('Directions &amp; Parking');
 }
+$headingText = "Directions and Parking";
 include "partials/head.inc.php"; ?>
 
 <div id="main-content" class="content-directions">    <!-- will be closed in foot.inc.php -->
-    <h1 class="content-heading">Directions and Parking</h1>
     <p>Pittsburgh is a well connected city. It’s location in Western Pennsylvania makes it convenient to get to by air and ground transportation -- and once you’re here, getting around is easy.</p>
 
     <h2>Public Transportation</h2>

@@ -1,0 +1,91 @@
+/* 
+ * sidebar_nav.scss
+ *
+ * Styles for sidebar navigation area
+ */
+
+@import "constants.scss";
+
+.site-nav {
+    // padding used in here is ad hoc based on 320px width. revisit when finalizing mobile container width
+    background-color: $green;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        float: left;
+    }
+}
+
+/*  Below is lots of fun calculations to figure out the margins around nav buttons.
+    This is what happens when a programmer writes CSS
+*/
+
+/*** mobile size ***/
+.site-nav {
+    padding: 12px ($w-mobile - (($nav-button-width * 3) + ($nav-button-padding * 2))) / 2.0;
+}
+
+// margin between the rows
+.item-1, .item-2, .item-3,
+.item-4, .item-5, .item-6 {
+    margin-bottom: $nav-button-padding;
+}
+
+// margin between the columns
+.item-1, .item-4, .item-7,
+.item-2, .item-5, .item-8 {
+    margin-right: $nav-button-padding;
+}
+
+/*** narrow size ***/
+@media only screen and (min-width: $w-narrow) {    
+    .site-nav {
+        padding: ($w-narrow-sidebar - $nav-button-width) / 2.0;
+    }
+            
+    // margin below each button
+    .item-1, .item-2, .item-3,
+    .item-4, .item-5, .item-6,
+    .item-7, .item-8, .item-9 {
+        margin-bottom: 8px;
+    }
+
+    // hide the nav on non-mobile devices
+    .item-9 {
+        display: none;
+    }
+}
+
+/*** standard and wide sizes ***/
+@media only screen and (min-width: $w-standard) {
+    .site-nav {
+        padding: ($w-standard-sidebar - (($nav-button-width * 2) + $nav-button-padding)) / 2.0;
+    }
+
+    // reset all margins to 0
+    .item-1, .item-2, .item-3,
+    .item-4, .item-5, .item-6,
+    .item-7, .item-8, .item-9 {
+        margin: 0;
+    }
+
+    // margin between each row
+    .item-1, .item-2, .item-3,
+    .item-4, .item-5, .item-6 {
+        margin-bottom: 8px;
+    }
+
+    // margin between each column
+    .item-1, .item-3, .item-5, .item-7 {
+        margin-right: $nav-button-padding;
+    }
+
+    // hide the nav on non-mobile devices
+    .item-9 {
+        display: none;
+    }
+}

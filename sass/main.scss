@@ -10,12 +10,10 @@
 @import "base.scss";
 @import "layout.scss";
 
-@import "sidebar.scss";
+@import "sidebar_nav.scss";
+@import "sidebar_widgets.scss";
 @import "common.scss";
 
-// // common modules
-// @import "common.scss";
-
 // // inidividual modules
-// @import "home.scss";
-// @import "subpages.scss";
+@import "home.scss";
+@import "subpages.scss";

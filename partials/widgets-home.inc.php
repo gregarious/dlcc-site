@@ -1,4 +1,4 @@
-<div class="widget-sidebar widget-upcoming-events widget-first">
+<div class="widget widget-upcoming-events">
     <h2>Upcoming Events</h2>
     <div class="upcoming-event">
         <a href="#">ISAAC Bienniel Conference</a>
@@ -10,7 +10,7 @@
     </div>
     <a href="/events.php" class="more-link">MORE &raquo;</a>
 </div>
-<div class="widget-sidebar widget-flickr widget-second">
+<div class="widget widget-flickr">
     <img src="img/placeholders/flickr.png" />
     <!-- TODO: badge placeholder. generate new one for colro scheme -->
     <!-- Start of Flickr Badge -->
@@ -36,8 +36,7 @@
         <div class="zg_div"><div class="zg_div_inner"><a href="http://www.flickr.com">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a><br>
             <script type="text/javascript">zg_insert_badge();</script>
             <div id="zg_whatdiv">This is a Flickr badge showing public photos and videos from <a href="http://www.flickr.com/photos/47556247@N05">David L. Lawrence Convention Center</a>. Make your own badge <a href="http://www.flickr.com/badge.gne">here</a>.</div>
-                <script type="text/javascript">if (document.getElementById) document.getElementById('zg_whatdiv').style.display = 'none';</script>
-            </div>
+            <script type="text/javascript">if (document.getElementById) document.getElementById('zg_whatdiv').style.display = 'none';</script>
         </div>
     </div>
     <!-- End of Flickr Badge -->

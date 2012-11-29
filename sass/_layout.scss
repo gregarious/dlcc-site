@@ -8,9 +8,6 @@
 @import "constants.scss";
 @import "compass/css3";
 
-// used to calculate width of sidebar at different media widths
-$nav-button-padding: 12px;
-
 // precalculated pixel widths for site sections
 $w-narrow-sidebar: $nav-button-width + (2 * $nav-button-padding);
 $w-narrow-main: $w-narrow - $w-narrow-sidebar;
@@ -148,9 +145,10 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
     }
 }
 
-// scoot primary content up so it overlaps with primary-header image a bit
+// scoot primary content down to leave room for absolutely positioned page heading
 .primary-content {
-    margin-top: -1.75em;
+    margin-top: 30px;   // enough space to push content below absolutely position heading
+    padding: 1em 1.25em;
     position: relative;
 }
 
