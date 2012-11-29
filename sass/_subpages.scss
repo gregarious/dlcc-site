@@ -8,7 +8,10 @@
  * have a lot in common, but their media-query positions are set at different
  * breakpoints */
 .subnav {
-    font-size: 1.1em;
+    @media only screen and (min-width: $w-narrow) {
+        font-size: 1.1em;
+    }
+
     margin-bottom: 1em;
 
     .current {

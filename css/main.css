@@ -1045,12 +1045,18 @@ dd {
 
 /* line 149, ../sass/_layout.scss */
 .primary-content {
-  margin-top: 30px;
+  margin-top: 46px;
   padding: 1em 1.25em;
   position: relative;
 }
+@media only screen and (min-width: 768px) {
+  /* line 149, ../sass/_layout.scss */
+  .primary-content {
+    margin-top: 30px;
+  }
+}
 
-/* line 156, ../sass/_layout.scss */
+/* line 160, ../sass/_layout.scss */
 .primary-content {
   margin: inherit 2%;
 }
@@ -1392,7 +1398,7 @@ dd {
 .home-heading {
   display: block;
   font-size: 13px;
-  width: 320px;
+  width: 304px;
 }
 @media only screen and (min-width: 768px) {
   /* line 120, ../sass/_common.scss */
@@ -1439,17 +1445,22 @@ dd {
  * breakpoints */
 /* line 10, ../sass/_subpages.scss */
 .subnav {
-  font-size: 1.1em;
   margin-bottom: 1em;
 }
-/* line 14, ../sass/_subpages.scss */
+@media only screen and (min-width: 768px) {
+  /* line 10, ../sass/_subpages.scss */
+  .subnav {
+    font-size: 1.1em;
+  }
+}
+/* line 17, ../sass/_subpages.scss */
 .subnav .current {
   text-decoration: none;
   color: inherit;
 }
 
 @media only screen and (min-width: 1200px) {
-  /* line 20, ../sass/_subpages.scss */
+  /* line 23, ../sass/_subpages.scss */
   .quick-links {
     position: absolute;
     top: -1.25em;
@@ -1458,26 +1469,26 @@ dd {
   }
 }
 
-/* line 29, ../sass/_subpages.scss */
+/* line 32, ../sass/_subpages.scss */
 .quick-find-label {
   margin: 0;
   font-weight: bold;
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 29, ../sass/_subpages.scss */
+  /* line 32, ../sass/_subpages.scss */
   .quick-find-label {
     display: inherit;
     display: inline;
   }
 }
 
-/* line 40, ../sass/_subpages.scss */
+/* line 43, ../sass/_subpages.scss */
 .building-links {
   text-align: center;
 }
 @media only screen and (min-width: 960px) {
-  /* line 40, ../sass/_subpages.scss */
+  /* line 43, ../sass/_subpages.scss */
   .building-links {
     position: absolute;
     top: -1.25em;
@@ -1487,26 +1498,26 @@ dd {
 }
 
 /* Classes in Contact page */
-/* line 52, ../sass/_subpages.scss */
+/* line 55, ../sass/_subpages.scss */
 .admin-office-label {
   margin-bottom: 0;
 }
 
-/* line 56, ../sass/_subpages.scss */
+/* line 59, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
 /* Classes in Directions page */
-/* line 62, ../sass/_subpages.scss */
+/* line 65, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
 }
 
 /* Classes in Explore Pgh page */
-/* line 69, ../sass/_subpages.scss */
+/* line 72, ../sass/_subpages.scss */
 .image-link {
   display: none;
   margin-bottom: 2em;
@@ -1514,24 +1525,24 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 768px) {
-  /* line 69, ../sass/_subpages.scss */
+  /* line 72, ../sass/_subpages.scss */
   .image-link {
     display: inherit;
     float: left;
   }
 }
 
-/* line 80, ../sass/_subpages.scss */
+/* line 83, ../sass/_subpages.scss */
 .explore-item {
   margin-bottom: 1em;
 }
 
-/* line 84, ../sass/_subpages.scss */
+/* line 87, ../sass/_subpages.scss */
 .explore-description > h2 {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 83, ../sass/_subpages.scss */
+  /* line 86, ../sass/_subpages.scss */
   .explore-description {
     float: left;
     width: 75%;
@@ -1539,14 +1550,14 @@ dd {
   }
 }
 
-/* line 94, ../sass/_subpages.scss */
+/* line 97, ../sass/_subpages.scss */
 .events-iframe {
   width: 100%;
   height: 100%;
   margin: -1em -1.25em;
 }
 
-/* line 104, ../sass/_subpages.scss */
+/* line 107, ../sass/_subpages.scss */
 .contact-address {
   font-size: 1.2em;
   display: inline-block;
@@ -1554,12 +1565,12 @@ dd {
   padding: 8px;
 }
 
-/* line 112, ../sass/_subpages.scss */
+/* line 115, ../sass/_subpages.scss */
 .widget-interactive-map,
 .widget-floorplans {
   text-align: center;
 }
-/* line 113, ../sass/_subpages.scss */
+/* line 116, ../sass/_subpages.scss */
 .widget-interactive-map h2,
 .widget-floorplans h2 {
   text-transform: uppercase;

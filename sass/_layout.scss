@@ -147,9 +147,13 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
 
 // scoot primary content down to leave room for absolutely positioned page heading
 .primary-content {
-    margin-top: 30px;   // enough space to push content below absolutely position heading
+    margin-top: 46px;   // enough space to push content below heading
     padding: 1em 1.25em;
     position: relative;
+
+    @media only screen and (min-width: $w-narrow) {
+        margin-top: 30px;   // page heading is shorter for non-mobile sizes
+    }
 }
 
 // add a bit of a margin around primary content

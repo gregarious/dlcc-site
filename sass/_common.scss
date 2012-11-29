@@ -98,11 +98,11 @@
     background-color: $yellow;
     @include single-box-shadow;
 
-
+    // positioning to make heading overlap over primary header image
     position: absolute;
     top: $primary-header-image-height-mobile;
     z-index: 9999;
-    margin-top: -10px;  // makes heading overlap over primary header image
+    margin-top: -10px;
 
     padding: 4px 8px;
 
@@ -120,7 +120,7 @@
 .home-heading {
     display: block;
     font-size: 13px;
-    width: $w-mobile;
+    width: $w-mobile - 16px;     // -16 to account for the padding
     @media only screen and (min-width: $w-narrow) {
         width: 420px;
     }
