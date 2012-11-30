@@ -95,10 +95,12 @@
 
 // green stats section
 .home-section-green {
-    min-height: 157px;
-    background: image-url('placeholders/recycling_bg_300.png') no-repeat center;
+    min-height: 180px;  // height of the background image
+    background: image-url('placeholders/recycling_bg_290.png') no-repeat center;
     text-align: center;
-    padding: 30px;
+    padding-top: 36px;
+    padding-left: 14px;
+    padding-right: 14px;
 
     // custom font-related styles to acheive standout look to text
     p {
@@ -108,7 +110,7 @@
 
         > strong {
             display: block; // surround emphasized line with newlines
-            font-size: 30px;
+            font-size: 28px;
         }
     }
 

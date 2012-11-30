@@ -44,7 +44,8 @@ $isHomepage = ($page == "home");
                 </p>
             </div> <!-- end .page-wrap -->
         </header>
-        <div class="page-wrap bordered">
+
+        <div class="page-wrap">
             <h1 class="page-heading"><?php print $headingText; ?></h1>
             <div class="page-columns-wrap page-column-background page-column-background-secondary">
                 <div class="page-column-background page-column-background-primary">
@@ -90,7 +91,7 @@ $isHomepage = ($page == "home");
                             <?php include $includeFile; ?>
                         </div> <!-- end .primary-content -->
                     </div>  <!-- end .page-column-primary -->
-                    
+
                     <aside class="page-column page-column-secondary">
                         <nav class="site-nav">
                             <ul class="clearfix">
@@ -115,17 +116,17 @@ $isHomepage = ($page == "home");
                         }
                         ?>
                     </aside>
-                    
+
                 </div>  <!-- end .page-column-background-primary -->
             </div>  <!-- end .page-column-background-secondary -->
-            
+
             <footer class="page-footer">
                 <p>&copy; Copyright David L. Lawrence Convention Center</p>
                 <p>1000 Ft. Duquesne Blvd., Pittsburgh, PA 15222 <br/>
                        (412) 565-6000 | <a href="mailto:info@pittsburghcc.com" title="Contact us" class="mailto">info@pittsburghcc.com</a></p>
             </footer>
         </div>  <!-- end .page-wrap -->
-        
+
         <!-- TODO: reenable external hosting link to shiv and jQuery
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
         <!-- TODO: remove jQuery if not using it -->

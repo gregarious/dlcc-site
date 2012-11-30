@@ -1,8 +1,8 @@
-/* 
+/*
  * layout.scss
- * 
+ *
  * Styles for main page layout. Layout specific to a module (e.g. home page
- * content) lives in a file specific to that module. 
+ * content) lives in a file specific to that module.
  */
 
 @import "constants.scss";
@@ -27,6 +27,7 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
 .page-header {
     max-height: $top-header-image-height;
     overflow: hidden;
+    border-bottom: 2px solid white;
 }
 
 // keeps everything but header in a fixed width container
@@ -44,11 +45,11 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
     }
     @media only screen and (min-width: $w-wide) {
         width: $w-wide;
-    }   
+    }
 }
 
 /*  Styles for the page's two main columns. A lot of this is to keep keep
-    the column heights equal. See 
+    the column heights equal. See
     http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
     for more details on the technique used for equal heights here */
 .page-columns-wrap {
@@ -67,14 +68,14 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
 
     @media only screen and (min-width: $w-narrow) {
         width: $w-narrow-main;
-        position: relative;        
-        
+        position: relative;
+
         // counteracts the equal-column background hackery
         left: $w-narrow-sidebar;
     }
     @media only screen and (min-width: $w-standard) {
         width: $w-standard-main;
-        
+
         // counteract the equal-column background hackery
         left: $w-standard-sidebar;
     }
@@ -115,7 +116,7 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
 .page-column-background-secondary {
     background-color: $light-green1;
     position: relative;
-    
+
     @media only screen and (min-width: $w-narrow) {
         overflow: hidden;
     }
@@ -137,11 +138,4 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
     @media only screen and (min-width: $w-standard) {
         right: $w-standard-sidebar;
     }
-}
-
-.bordered {
-    @include box-sizing(content-box);
-    border-left: 2px solid white;
-    border-top: 2px solid white; 
-    border-right: 2px solid white; 
 }

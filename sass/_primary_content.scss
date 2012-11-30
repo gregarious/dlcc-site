@@ -44,6 +44,7 @@
 // absolutely position the tagline within the primary column header
 .primary-header {
     position: relative;
+    border-left: 2px solid white;
 
     > .tagline-home {
         top: 0;

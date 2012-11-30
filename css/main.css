@@ -885,11 +885,11 @@ dd {
   background-color: white;
 }
 
-/* 
+/*
  * layout.scss
- * 
+ *
  * Styles for main page layout. Layout specific to a module (e.g. home page
- * content) lives in a file specific to that module. 
+ * content) lives in a file specific to that module.
  */
 /* 
  * constants.scss
@@ -907,9 +907,10 @@ dd {
 .page-header {
   max-height: 133px;
   overflow: hidden;
+  border-bottom: 2px solid white;
 }
 
-/* line 33, ../sass/_layout.scss */
+/* line 34, ../sass/_layout.scss */
 .page-wrap {
   margin: 0 auto;
   position: relative;
@@ -917,45 +918,45 @@ dd {
   width: 320px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 33, ../sass/_layout.scss */
+  /* line 34, ../sass/_layout.scss */
   .page-wrap {
     width: 768px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 33, ../sass/_layout.scss */
+  /* line 34, ../sass/_layout.scss */
   .page-wrap {
     width: 960px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 33, ../sass/_layout.scss */
+  /* line 34, ../sass/_layout.scss */
   .page-wrap {
     width: 1200px;
   }
 }
 
 /*  Styles for the page's two main columns. A lot of this is to keep keep
-    the column heights equal. See 
+    the column heights equal. See
     http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
     for more details on the technique used for equal heights here */
-/* line 54, ../sass/_layout.scss */
+/* line 55, ../sass/_layout.scss */
 .page-columns-wrap {
   width: 100%;
 }
 
-/* line 59, ../sass/_layout.scss */
+/* line 60, ../sass/_layout.scss */
 .page-column {
   float: left;
   overflow: hidden;
 }
 
-/* line 65, ../sass/_layout.scss */
+/* line 66, ../sass/_layout.scss */
 .page-column-primary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 65, ../sass/_layout.scss */
+  /* line 66, ../sass/_layout.scss */
   .page-column-primary {
     width: 657px;
     position: relative;
@@ -963,25 +964,25 @@ dd {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 65, ../sass/_layout.scss */
+  /* line 66, ../sass/_layout.scss */
   .page-column-primary {
     width: 750px;
     left: 210px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 65, ../sass/_layout.scss */
+  /* line 66, ../sass/_layout.scss */
   .page-column-primary {
     width: 990px;
   }
 }
 
-/* line 88, ../sass/_layout.scss */
+/* line 89, ../sass/_layout.scss */
 .page-column-secondary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 88, ../sass/_layout.scss */
+  /* line 89, ../sass/_layout.scss */
   .page-column-secondary {
     width: 111px;
     position: relative;
@@ -989,7 +990,7 @@ dd {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 88, ../sass/_layout.scss */
+  /* line 89, ../sass/_layout.scss */
   .page-column-secondary {
     width: 210px;
     left: 210px;
@@ -998,56 +999,46 @@ dd {
 
 /* each page column needs to be surrounded by a div as wide as the page
     to hold it's background color */
-/* line 109, ../sass/_layout.scss */
+/* line 110, ../sass/_layout.scss */
 .page-column-background {
   float: left;
   width: 100%;
 }
 
-/* line 115, ../sass/_layout.scss */
+/* line 116, ../sass/_layout.scss */
 .page-column-background-secondary {
   background-color: #bec8b9;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 115, ../sass/_layout.scss */
+  /* line 116, ../sass/_layout.scss */
   .page-column-background-secondary {
     overflow: hidden;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 115, ../sass/_layout.scss */
+  /* line 116, ../sass/_layout.scss */
   .page-column-background-secondary {
     background-color: #d8ddd4;
   }
 }
 
-/* line 129, ../sass/_layout.scss */
+/* line 130, ../sass/_layout.scss */
 .page-column-background-primary {
   background-color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 129, ../sass/_layout.scss */
+  /* line 130, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 111px;
     position: relative;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 129, ../sass/_layout.scss */
+  /* line 130, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 210px;
   }
-}
-
-/* line 142, ../sass/_layout.scss */
-.bordered {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
 }
 
 /* 
@@ -1158,22 +1149,21 @@ dd {
 .widget {
   padding: 16px 12px;
   border-top: 2px solid white;
-  text-align: center;
 }
 
 /* Widgets are not displayed by default. Only at the narrow widths and up
     do they begin becoming visible */
-/* line 18, ../sass/_sidebar_widgets.scss */
+/* line 17, ../sass/_sidebar_widgets.scss */
 .widget-upcoming-events {
   font-size: 0.95em;
   display: none;
 }
-/* line 21, ../sass/_sidebar_widgets.scss */
+/* line 20, ../sass/_sidebar_widgets.scss */
 .widget-upcoming-events > h2 {
   color: white;
   font-size: 1.25em;
 }
-/* line 26, ../sass/_sidebar_widgets.scss */
+/* line 25, ../sass/_sidebar_widgets.scss */
 .widget-upcoming-events .more-link {
   margin-top: 1em;
   color: white;
@@ -1182,37 +1172,38 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 960px) {
-  /* line 18, ../sass/_sidebar_widgets.scss */
+  /* line 17, ../sass/_sidebar_widgets.scss */
   .widget-upcoming-events {
     display: inherit;
     background-color: #bec8b9;
   }
 }
 
-/* line 42, ../sass/_sidebar_widgets.scss */
+/* line 41, ../sass/_sidebar_widgets.scss */
 .upcoming-event {
   text-align: left;
   margin-bottom: 1em;
 }
-/* line 44, ../sass/_sidebar_widgets.scss */
+/* line 43, ../sass/_sidebar_widgets.scss */
 .upcoming-event a {
   font-weight: bold;
   color: #58585b;
 }
 
-/* line 51, ../sass/_sidebar_widgets.scss */
+/* line 50, ../sass/_sidebar_widgets.scss */
 .widget-flickr {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 51, ../sass/_sidebar_widgets.scss */
+  /* line 50, ../sass/_sidebar_widgets.scss */
   .widget-flickr {
     display: inherit;
+    text-align: center;
     background-color: #bec8b9;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 51, ../sass/_sidebar_widgets.scss */
+  /* line 50, ../sass/_sidebar_widgets.scss */
   .widget-flickr {
     background-color: #d8ddd4;
   }
@@ -1232,6 +1223,7 @@ dd {
 /* line 70, ../sass/_sidebar_widgets.scss */
 .widget-interactive-map {
   display: none;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   /* line 70, ../sass/_sidebar_widgets.scss */
@@ -1241,19 +1233,24 @@ dd {
   }
 }
 
-/* line 78, ../sass/_sidebar_widgets.scss */
+/* line 79, ../sass/_sidebar_widgets.scss */
 .widget-floorplans {
   display: none;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
-  /* line 78, ../sass/_sidebar_widgets.scss */
+  /* line 79, ../sass/_sidebar_widgets.scss */
   .widget-floorplans {
     display: inherit;
     background-color: #d8ddd4;
   }
 }
+/* line 86, ../sass/_sidebar_widgets.scss */
+.widget-floorplans > img {
+  margin-bottom: 1em;
+}
 
-/* line 88, ../sass/_sidebar_widgets.scss */
+/* line 93, ../sass/_sidebar_widgets.scss */
 .widget-interactive-map > h2,
 .widget-floorplans > h2 {
   color: inherit;
@@ -1488,23 +1485,25 @@ dd {
 
 /* line 97, ../sass/_home.scss */
 .home-section-green {
-  min-height: 157px;
-  background: url('/img/placeholders/recycling_bg_300.png?1354067851') no-repeat center;
+  min-height: 180px;
+  background: url('/img/placeholders/recycling_bg_290.png?1354238619') no-repeat center;
   text-align: center;
-  padding: 30px;
+  padding-top: 36px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
-/* line 104, ../sass/_home.scss */
+/* line 106, ../sass/_home.scss */
 .home-section-green p {
   margin: 0 0 10px 0;
   line-height: 1.2em;
   font-size: 20px;
 }
-/* line 109, ../sass/_home.scss */
+/* line 111, ../sass/_home.scss */
 .home-section-green p > strong {
   display: block;
-  font-size: 30px;
+  font-size: 28px;
 }
-/* line 115, ../sass/_home.scss */
+/* line 117, ../sass/_home.scss */
 .home-section-green a {
   font-size: 11px;
 }
@@ -1559,21 +1558,22 @@ dd {
 /* line 45, ../sass/_primary_content.scss */
 .primary-header {
   position: relative;
+  border-left: 2px solid white;
 }
-/* line 48, ../sass/_primary_content.scss */
+/* line 49, ../sass/_primary_content.scss */
 .primary-header > .tagline-home {
   top: 0;
   position: absolute;
 }
 
-/* line 55, ../sass/_primary_content.scss */
+/* line 56, ../sass/_primary_content.scss */
 .primary-content {
   margin-top: 46px;
   padding: 1em 1em;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 55, ../sass/_primary_content.scss */
+  /* line 56, ../sass/_primary_content.scss */
   .primary-content {
     padding: 1em 1.25em;
     margin-top: 30px;
