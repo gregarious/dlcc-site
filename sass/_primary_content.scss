@@ -35,8 +35,30 @@
 .page-home .page-heading {
     display: block;
     font-size: 13px;
-    width: $w-mobile - 16px;     // -16 to account for the padding
+    width: $w-mobile;
     @media only screen and (min-width: $w-narrow) {
         width: 420px;
+    }
+}
+
+// absolutely position the tagline within the primary column header
+.primary-header {
+    position: relative;
+
+    > .tagline-home {
+        top: 0;
+        position: absolute;
+    }
+}
+
+// scoot primary content down to leave room for absolutely positioned page heading
+.primary-content {
+    margin-top: 46px;   // enough space to push content below heading
+    padding: 1em 1em;
+    position: relative;
+
+    @media only screen and (min-width: $w-narrow) {
+        padding: 1em 1.25em;
+        margin-top: 30px;   // page heading is shorter for non-mobile sizes
     }
 }

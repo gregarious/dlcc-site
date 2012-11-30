@@ -1,6 +1,6 @@
-/* 
+/*
  * common.scss
- * 
+ *
  * Mostly header and footer styles
  */
 
@@ -8,7 +8,7 @@
 @import "compass/css3";
 
 /*********************
- * Header styles 
+ * Header styles
  *********************/
 .logo {
     width: $w-mobile;
@@ -33,7 +33,7 @@
     float: right;
     line-height: 0.9em;
     font-size: 14px;
-    margin: 0;
+    margin: 0.5em 0 0 0.5em;
 
     @media only screen and (min-width: $w-narrow) {
         margin: 6px 0;
@@ -45,7 +45,7 @@
     }
 }
 
-// tagline shows in header for all non-mobile styles 
+// tagline shows in header for all non-mobile styles
 .page-header .tagline {
     display: none;
     @media only screen and (min-width: $w-narrow) {
@@ -59,6 +59,7 @@
     left: 0;
     top: 0;
     z-index: 2;
+    text-align: left;
 
     @media only screen and (min-width: $w-narrow) {
         display: none;

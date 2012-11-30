@@ -1,4 +1,4 @@
-/* 
+/*
  * sidebar_widgets.scss
  *
  * Styles for sidebar widgets
@@ -57,6 +57,13 @@
     }
     @media only screen and (min-width: $w-standard) {
         background-color: $light-green2;
+    }
+}
+
+.flickr-badge {
+    display: none;
+    @media only screen and (min-width: $w-standard) {
+        display: inherit;
     }
 }
 

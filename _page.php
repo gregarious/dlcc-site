@@ -44,7 +44,7 @@ $isHomepage = ($page == "home");
                 </p>
             </div> <!-- end .page-wrap -->
         </header>
-        <div class="page-wrap">
+        <div class="page-wrap bordered">
             <h1 class="page-heading"><?php print $headingText; ?></h1>
             <div class="page-columns-wrap page-column-background page-column-background-secondary">
                 <div class="page-column-background page-column-background-primary">

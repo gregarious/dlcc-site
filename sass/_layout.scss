@@ -113,11 +113,15 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
 
 // styles for secondary colummn background
 .page-column-background-secondary {
-    background-color: $light-green2;
+    background-color: $light-green1;
     position: relative;
-
+    
     @media only screen and (min-width: $w-narrow) {
         overflow: hidden;
+    }
+
+    @media only screen and (min-width: $w-standard) {
+        background-color: $light-green2;
     }
 }
 
@@ -135,28 +139,9 @@ $w-wide-main: $w-wide - $w-wide-sidebar;
     }
 }
 
-// absolutely position the tagline within the primary column header
-.primary-header {
-    position: relative;
-    
-    > .tagline-home {
-        top: 0;
-        position: absolute;
-    }
-}
-
-// scoot primary content down to leave room for absolutely positioned page heading
-.primary-content {
-    margin-top: 46px;   // enough space to push content below heading
-    padding: 1em 1.25em;
-    position: relative;
-
-    @media only screen and (min-width: $w-narrow) {
-        margin-top: 30px;   // page heading is shorter for non-mobile sizes
-    }
-}
-
-// add a bit of a margin around primary content
-.primary-content {
-    margin: inherit 2%;
+.bordered {
+    @include box-sizing(content-box);
+    border-left: 2px solid white;
+    border-top: 2px solid white; 
+    border-right: 2px solid white; 
 }

@@ -4,5 +4,115 @@
  * Styles related to any primary content on the homepage
  */
 
+@import "constants.scss";
 @import "compass/css3";
 
+// next few styles set up simple grid for homepage sections
+
+.home-inner-grid {
+    width: 100%;
+}
+
+.home-inner-row {
+    width: 100%;
+    @extend .clearfix;
+}
+
+.home-inner-col {
+    float: left;
+    width: 100%;    // mobile-first: column is whole row
+
+    // column vertical margin acts as row margin for mobile size
+    margin: 1.5em inherit;
+
+    @media only screen and (min-width: $w-narrow) {
+        width: 47.5%;
+    }
+}
+
+@media only screen and (min-width: $w-narrow) {
+    .home-inner-col-1 {
+        margin-right: 2.5%;
+    }
+
+    .home-inner-col-2 {
+        margin-left: 2.5%
+    }
+}
+
+.home-section > h2 {
+    text-transform: uppercase;
+}
+
+// interactive map section
+.home-section-map {
+
+}
+
+.interactive-map-img {
+    width: 100%;
+}
+
+// app section
+.app-phone-img {
+    float: right;
+    margin: 0 0 0.5em 1em;
+}
+
+.app-links {
+    text-align: center;
+    > a {
+        display: inline;
+        margin-right: 4px;
+    }
+
+    clear: right;
+    @media only screen and (min-width: $w-wide) {
+        clear: none;
+    }
+}
+
+.home-section-events {
+    background-color: $light-green3;
+    display: none;
+    @media only screen and (min-width: $w-narrow)
+                       and (max-width: ($w-standard - 1)) {
+        display: inherit;
+    }
+    // bottom paragraph adds enough bottom padding
+    padding: 1em 1em 0 1em;
+
+    > h2 {
+        text-transform: none;
+    }
+}
+
+// Vimeo video section
+.vimeo-img {
+    width: 100%;
+    margin-bottom: 4px;    // just a tiny scoot down for link
+}
+
+// green stats section
+.home-section-green {
+    min-height: 157px;
+    background: image-url('placeholders/recycling_bg_300.png') no-repeat center;
+    text-align: center;
+    padding: 30px;
+
+    // custom font-related styles to acheive standout look to text
+    p {
+        margin: 0 0 10px 0;
+        line-height: 1.2em;
+        font-size: 20px;
+
+        > strong {
+            display: block; // surround emphasized line with newlines
+            font-size: 30px;
+        }
+    }
+
+    a {
+        font-size: 11px;
+    }
+}

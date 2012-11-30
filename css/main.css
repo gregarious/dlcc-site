@@ -707,9 +707,10 @@ textarea {
  *    `:before` to contain the top-margins of child elements.
  */
 /* line 195, ../sass/_h5bp.scss */
-.clearfix:before, .page-columns-wrap:before,
+.clearfix:before, .page-columns-wrap:before, .home-inner-row:before,
 .clearfix:after,
-.page-columns-wrap:after {
+.page-columns-wrap:after,
+.home-inner-row:after {
   content: " ";
   /* 1 */
   display: table;
@@ -717,7 +718,7 @@ textarea {
 }
 
 /* line 200, ../sass/_h5bp.scss */
-.clearfix:after, .page-columns-wrap:after {
+.clearfix:after, .page-columns-wrap:after, .home-inner-row:after {
   clear: both;
 }
 
@@ -726,7 +727,7 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 /* line 209, ../sass/_h5bp.scss */
-.clearfix, .page-columns-wrap {
+.clearfix, .page-columns-wrap, .home-inner-row {
   *zoom: 1;
 }
 
@@ -1005,7 +1006,7 @@ dd {
 
 /* line 115, ../sass/_layout.scss */
 .page-column-background-secondary {
-  background-color: #d8ddd4;
+  background-color: #bec8b9;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
@@ -1014,51 +1015,39 @@ dd {
     overflow: hidden;
   }
 }
+@media only screen and (min-width: 960px) {
+  /* line 115, ../sass/_layout.scss */
+  .page-column-background-secondary {
+    background-color: #d8ddd4;
+  }
+}
 
-/* line 125, ../sass/_layout.scss */
+/* line 129, ../sass/_layout.scss */
 .page-column-background-primary {
   background-color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 125, ../sass/_layout.scss */
+  /* line 129, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 111px;
     position: relative;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 125, ../sass/_layout.scss */
+  /* line 129, ../sass/_layout.scss */
   .page-column-background-primary {
     right: 210px;
   }
 }
 
-/* line 139, ../sass/_layout.scss */
-.primary-header {
-  position: relative;
-}
 /* line 142, ../sass/_layout.scss */
-.primary-header > .tagline-home {
-  top: 0;
-  position: absolute;
-}
-
-/* line 149, ../sass/_layout.scss */
-.primary-content {
-  margin-top: 46px;
-  padding: 1em 1.25em;
-  position: relative;
-}
-@media only screen and (min-width: 768px) {
-  /* line 149, ../sass/_layout.scss */
-  .primary-content {
-    margin-top: 30px;
-  }
-}
-
-/* line 160, ../sass/_layout.scss */
-.primary-content {
-  margin: inherit 2%;
+.bordered {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
 }
 
 /* 
@@ -1155,7 +1144,7 @@ dd {
     display: none;
   }
 }
-/* 
+/*
  * sidebar_widgets.scss
  *
  * Styles for sidebar widgets
@@ -1230,30 +1219,41 @@ dd {
 }
 
 /* line 63, ../sass/_sidebar_widgets.scss */
+.flickr-badge {
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  /* line 63, ../sass/_sidebar_widgets.scss */
+  .flickr-badge {
+    display: inherit;
+  }
+}
+
+/* line 70, ../sass/_sidebar_widgets.scss */
 .widget-interactive-map {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 63, ../sass/_sidebar_widgets.scss */
+  /* line 70, ../sass/_sidebar_widgets.scss */
   .widget-interactive-map {
     display: inherit;
     background-color: #bec8b9;
   }
 }
 
-/* line 71, ../sass/_sidebar_widgets.scss */
+/* line 78, ../sass/_sidebar_widgets.scss */
 .widget-floorplans {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 71, ../sass/_sidebar_widgets.scss */
+  /* line 78, ../sass/_sidebar_widgets.scss */
   .widget-floorplans {
     display: inherit;
     background-color: #d8ddd4;
   }
 }
 
-/* line 81, ../sass/_sidebar_widgets.scss */
+/* line 88, ../sass/_sidebar_widgets.scss */
 .widget-interactive-map > h2,
 .widget-floorplans > h2 {
   color: inherit;
@@ -1261,9 +1261,9 @@ dd {
   text-transform: uppercase;
 }
 
-/* 
+/*
  * common.scss
- * 
+ *
  * Mostly header and footer styles
  */
 /* 
@@ -1272,7 +1272,7 @@ dd {
  * Constants for DLCC site 
  */
 /*********************
- * Header styles 
+ * Header styles
  *********************/
 /* line 13, ../sass/_common.scss */
 .logo {
@@ -1300,7 +1300,7 @@ dd {
   float: right;
   line-height: 0.9em;
   font-size: 14px;
-  margin: 0;
+  margin: 0.5em 0 0 0.5em;
 }
 @media only screen and (min-width: 768px) {
   /* line 27, ../sass/_common.scss */
@@ -1334,6 +1334,7 @@ dd {
   left: 0;
   top: 0;
   z-index: 2;
+  text-align: left;
 }
 @media only screen and (min-width: 768px) {
   /* line 57, ../sass/_common.scss */
@@ -1342,7 +1343,7 @@ dd {
   }
 }
 
-/* line 69, ../sass/_common.scss */
+/* line 70, ../sass/_common.scss */
 .site-nav-shortcut {
   position: absolute;
   top: 4px;
@@ -1356,7 +1357,7 @@ dd {
   color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 69, ../sass/_common.scss */
+  /* line 70, ../sass/_common.scss */
   .site-nav-shortcut {
     display: none;
   }
@@ -1365,20 +1366,20 @@ dd {
 /*********************
  * Footer styles
  *********************/
-/* line 92, ../sass/_common.scss */
+/* line 93, ../sass/_common.scss */
 .page-footer {
   background-color: #819578;
   color: white;
   padding: 12px 0;
 }
-/* line 97, ../sass/_common.scss */
+/* line 98, ../sass/_common.scss */
 .page-footer p {
   margin: 0;
   text-align: center;
   font-size: 12px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 92, ../sass/_common.scss */
+  /* line 93, ../sass/_common.scss */
   .page-footer {
     background-color: inherit;
     color: #58585b;
@@ -1390,12 +1391,130 @@ dd {
  *
  * Styles related to any primary content on the homepage
  */
+/* 
+ * constants.scss
+ * 
+ * Constants for DLCC site 
+ */
+/* line 12, ../sass/_home.scss */
+.home-inner-grid {
+  width: 100%;
+}
+
+/* line 16, ../sass/_home.scss */
+.home-inner-row {
+  width: 100%;
+}
+
+/* line 21, ../sass/_home.scss */
+.home-inner-col {
+  float: left;
+  width: 100%;
+  margin: 1.5em inherit;
+}
+@media only screen and (min-width: 768px) {
+  /* line 21, ../sass/_home.scss */
+  .home-inner-col {
+    width: 47.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 34, ../sass/_home.scss */
+  .home-inner-col-1 {
+    margin-right: 2.5%;
+  }
+
+  /* line 38, ../sass/_home.scss */
+  .home-inner-col-2 {
+    margin-left: 2.5%;
+  }
+}
+/* line 43, ../sass/_home.scss */
+.home-section > h2 {
+  text-transform: uppercase;
+}
+
+/* line 52, ../sass/_home.scss */
+.interactive-map-img {
+  width: 100%;
+}
+
+/* line 57, ../sass/_home.scss */
+.app-phone-img {
+  float: right;
+  margin: 0 0 0.5em 1em;
+}
+
+/* line 62, ../sass/_home.scss */
+.app-links {
+  text-align: center;
+  clear: right;
+}
+/* line 64, ../sass/_home.scss */
+.app-links > a {
+  display: inline;
+  margin-right: 4px;
+}
+@media only screen and (min-width: 1200px) {
+  /* line 62, ../sass/_home.scss */
+  .app-links {
+    clear: none;
+  }
+}
+
+/* line 75, ../sass/_home.scss */
+.home-section-events {
+  background-color: #e6ebe4;
+  display: none;
+  padding: 1em 1em 0 1em;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 75, ../sass/_home.scss */
+  .home-section-events {
+    display: inherit;
+  }
+}
+/* line 85, ../sass/_home.scss */
+.home-section-events > h2 {
+  text-transform: none;
+}
+
+/* line 91, ../sass/_home.scss */
+.vimeo-img {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* line 97, ../sass/_home.scss */
+.home-section-green {
+  min-height: 157px;
+  background: url('/img/placeholders/recycling_bg_300.png?1354067851') no-repeat center;
+  text-align: center;
+  padding: 30px;
+}
+/* line 104, ../sass/_home.scss */
+.home-section-green p {
+  margin: 0 0 10px 0;
+  line-height: 1.2em;
+  font-size: 20px;
+}
+/* line 109, ../sass/_home.scss */
+.home-section-green p > strong {
+  display: block;
+  font-size: 30px;
+}
+/* line 115, ../sass/_home.scss */
+.home-section-green a {
+  font-size: 11px;
+}
+
 /*
  * primary_content.scss
  *
  * Styles for the layout and design of the main content column on each page
  */
-/* line 8, ../sass/primary_content.scss */
+/* line 8, ../sass/_primary_content.scss */
 .page-heading {
   color: black;
   font-weight: normal;
@@ -1411,33 +1530,57 @@ dd {
   padding: 4px 8px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 8, ../sass/primary_content.scss */
+  /* line 8, ../sass/_primary_content.scss */
   .page-heading {
     top: 220px;
     margin-left: -0.25em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 8, ../sass/primary_content.scss */
+  /* line 8, ../sass/_primary_content.scss */
   .page-heading {
     margin-left: -0.75em;
   }
 }
 
-/* line 35, ../sass/primary_content.scss */
+/* line 35, ../sass/_primary_content.scss */
 .page-home .page-heading {
   display: block;
   font-size: 13px;
-  width: 304px;
+  width: 320px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 35, ../sass/primary_content.scss */
+  /* line 35, ../sass/_primary_content.scss */
   .page-home .page-heading {
     width: 420px;
   }
 }
 
-/* 
+/* line 45, ../sass/_primary_content.scss */
+.primary-header {
+  position: relative;
+}
+/* line 48, ../sass/_primary_content.scss */
+.primary-header > .tagline-home {
+  top: 0;
+  position: absolute;
+}
+
+/* line 55, ../sass/_primary_content.scss */
+.primary-content {
+  margin-top: 46px;
+  padding: 1em 1em;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  /* line 55, ../sass/_primary_content.scss */
+  .primary-content {
+    padding: 1em 1.25em;
+    margin-top: 30px;
+  }
+}
+
+/*
  * subpages.scss
  *
  * Miscellaneous styles for primary content area on any subpage
@@ -1445,24 +1588,20 @@ dd {
 /* sub-navigation link styles. both homepage and building page subnavs
  * have a lot in common, but their media-query positions are set at different
  * breakpoints */
-/* line 10, ../sass/_subpages.scss */
-.subnav {
-  margin-bottom: 1em;
-}
 @media only screen and (min-width: 768px) {
   /* line 10, ../sass/_subpages.scss */
   .subnav {
     font-size: 1.1em;
   }
 }
-/* line 17, ../sass/_subpages.scss */
+/* line 15, ../sass/_subpages.scss */
 .subnav .current {
   text-decoration: none;
   color: inherit;
 }
 
 @media only screen and (min-width: 1200px) {
-  /* line 23, ../sass/_subpages.scss */
+  /* line 21, ../sass/_subpages.scss */
   .quick-links {
     position: absolute;
     top: -1.25em;
@@ -1471,26 +1610,26 @@ dd {
   }
 }
 
-/* line 32, ../sass/_subpages.scss */
+/* line 30, ../sass/_subpages.scss */
 .quick-find-label {
   margin: 0;
   font-weight: bold;
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 32, ../sass/_subpages.scss */
+  /* line 30, ../sass/_subpages.scss */
   .quick-find-label {
     display: inherit;
     display: inline;
   }
 }
 
-/* line 43, ../sass/_subpages.scss */
+/* line 41, ../sass/_subpages.scss */
 .building-links {
   text-align: center;
 }
 @media only screen and (min-width: 960px) {
-  /* line 43, ../sass/_subpages.scss */
+  /* line 41, ../sass/_subpages.scss */
   .building-links {
     position: absolute;
     top: -1.25em;
@@ -1500,26 +1639,26 @@ dd {
 }
 
 /* Classes in Contact page */
-/* line 55, ../sass/_subpages.scss */
+/* line 53, ../sass/_subpages.scss */
 .admin-office-label {
   margin-bottom: 0;
 }
 
-/* line 59, ../sass/_subpages.scss */
+/* line 57, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
 /* Classes in Directions page */
-/* line 65, ../sass/_subpages.scss */
+/* line 63, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
 }
 
 /* Classes in Explore Pgh page */
-/* line 72, ../sass/_subpages.scss */
+/* line 70, ../sass/_subpages.scss */
 .image-link {
   display: none;
   margin-bottom: 2em;
@@ -1527,24 +1666,24 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 768px) {
-  /* line 72, ../sass/_subpages.scss */
+  /* line 70, ../sass/_subpages.scss */
   .image-link {
     display: inherit;
     float: left;
   }
 }
 
-/* line 83, ../sass/_subpages.scss */
+/* line 81, ../sass/_subpages.scss */
 .explore-item {
   margin-bottom: 1em;
 }
 
-/* line 87, ../sass/_subpages.scss */
+/* line 85, ../sass/_subpages.scss */
 .explore-description > h2 {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 86, ../sass/_subpages.scss */
+  /* line 84, ../sass/_subpages.scss */
   .explore-description {
     float: left;
     width: 75%;
@@ -1552,29 +1691,17 @@ dd {
   }
 }
 
-/* line 97, ../sass/_subpages.scss */
+/* line 95, ../sass/_subpages.scss */
 .events-iframe {
   width: 100%;
   height: 100%;
   margin: -1em -1.25em;
 }
 
-/* line 107, ../sass/_subpages.scss */
+/* line 105, ../sass/_subpages.scss */
 .contact-address {
   font-size: 1.2em;
   display: inline-block;
   background-color: #e6ebe4;
   padding: 8px;
-}
-
-/* line 115, ../sass/_subpages.scss */
-.widget-interactive-map,
-.widget-floorplans {
-  text-align: center;
-}
-/* line 116, ../sass/_subpages.scss */
-.widget-interactive-map h2,
-.widget-floorplans h2 {
-  text-transform: uppercase;
-  font-size: 1.25em;
 }

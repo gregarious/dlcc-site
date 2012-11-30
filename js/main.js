@@ -21,7 +21,6 @@ $(function(){
                     currentBreakpoint = 'narrow';
                     $(window).trigger('breakpoint', 'narrow');
                 }
-
             }
             else {
                 if (currentBreakpoint !== 'mobile'){
@@ -34,15 +33,17 @@ $(function(){
 
     /*** Responsive adjustments ***/
 
-    var footer = $('#page-footer');
+    // footer should be below page columns on mobile size, within primary
+    // column on non-mobile
+    var footer = $('.page-footer');
     $(window).on('breakpoint', function(){
         if ($(window).width() >= 768) {
             footer.remove();
-            footer.appendTo('#main-content-column');
+            footer.appendTo('.page-column-primary');
         }
         else {
             footer.remove();
-            footer.insertAfter('#main-aside-column');
+            footer.insertAfter('.page-columns-wrap');
         }
     });
 
