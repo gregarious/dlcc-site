@@ -8,6 +8,7 @@ $headerImage = '/img/headers/' . 'header_' . rand(1,14) . '.jpg';
 // find out if $page variable starts with building. if so, use an alternative primary content header image
 $isBuildingSubpage = !strncmp($page, "building", 8);
 $isHomepage = ($page == "home");
+
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +88,15 @@ $isHomepage = ($page == "home");
                             }
                             ?>
                         </div>  <!-- end .primary-content-header -->
-                        <div class="primary-content">
+<?php
+    if ($isHomepage) {
+        $contentClass = "primary-content primary-content-home";
+    }
+    else {
+        $contentClass = "primary-content primary-content-subpage";
+    }
+?>
+                        <div class="<?php print $contentClass; ?>">
                             <?php include $includeFile; ?>
                         </div> <!-- end .primary-content -->
                     </div>  <!-- end .page-column-primary -->

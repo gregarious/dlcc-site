@@ -54,12 +54,43 @@
 
 // scoot primary content down to leave room for absolutely positioned page heading
 .primary-content {
-    margin-top: 46px;   // enough space to push content below heading
     padding: 1em 1em;
+
+    @media only screen and (min-width: $w-narrow) {
+        padding: 1em 1.67em;
+    }
+}
+
+.primary-content-home {
+    margin-top: 46px;   // enough space to push content below 3-line heading for mobile
     position: relative;
 
     @media only screen and (min-width: $w-narrow) {
-        padding: 1em 1.25em;
-        margin-top: 30px;   // page heading is shorter for non-mobile sizes
+        margin-top: 32px;   // enough space to push content below 2-line heading for non-mobile
+    }
+    @media only screen and (min-width: $w-wide) {
+        margin-top: 32px;   // enough space to push content below 2-line heading for non-mobile
+    }
+}
+
+.primary-content-subpage {
+    margin-top: 28px;   // heading is smaller on subpages, don't need to push down as much
+    @media only screen and (min-width: $w-narrow) {
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+
+    @media only screen and (min-width: $w-standard) {
+        font-size: 16px;
+
+        padding: 1.25em 2em;
+    }
+}
+
+// subnav is at the top of primary content for home and building pages
+.subnav {
+    .current {
+        text-decoration: none;
+        color: inherit;
     }
 }

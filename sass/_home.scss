@@ -7,6 +7,28 @@
 @import "constants.scss";
 @import "compass/css3";
 
+// quick links subnav
+.quick-links {
+    @media only screen and (min-width: $w-wide) {
+        position: absolute;
+        top: -1.25em;
+        right: 1em;
+        text-align: right;
+    }
+}
+
+.quick-find-label {
+    margin: 0;
+    font-weight: bold;
+
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        display: inherit;
+        display: inline;
+    }
+}
+
+
 // next few styles set up simple grid for homepage sections
 
 .home-inner-grid {
@@ -91,6 +113,10 @@
 .vimeo-img {
     width: 100%;
     margin-bottom: 4px;    // just a tiny scoot down for link
+}
+
+.vimeo-frame {
+    width: 100%;
 }
 
 // green stats section

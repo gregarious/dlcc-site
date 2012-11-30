@@ -824,9 +824,9 @@ textarea {
     page-break-after: avoid;
   }
 }
-/* 
- * base.scss: 
- * 
+/*
+ * base.scss:
+ *
  * Handles the most basic gloabl style rules
  */
 /* 
@@ -878,9 +878,10 @@ dd {
 .fax-link {
   color: inherit;
   text-decoration: none;
+  cursor: default;
 }
 
-/* line 49, ../sass/_base.scss */
+/* line 50, ../sass/_base.scss */
 .primary-column {
   background-color: white;
 }
@@ -1216,7 +1217,7 @@ dd {
 @media only screen and (min-width: 960px) {
   /* line 63, ../sass/_sidebar_widgets.scss */
   .flickr-badge {
-    display: inherit;
+    display: inline-block;
   }
 }
 
@@ -1393,97 +1394,126 @@ dd {
  * 
  * Constants for DLCC site 
  */
-/* line 12, ../sass/_home.scss */
+@media only screen and (min-width: 1200px) {
+  /* line 11, ../sass/_home.scss */
+  .quick-links {
+    position: absolute;
+    top: -1.25em;
+    right: 1em;
+    text-align: right;
+  }
+}
+
+/* line 20, ../sass/_home.scss */
+.quick-find-label {
+  margin: 0;
+  font-weight: bold;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 20, ../sass/_home.scss */
+  .quick-find-label {
+    display: inherit;
+    display: inline;
+  }
+}
+
+/* line 34, ../sass/_home.scss */
 .home-inner-grid {
   width: 100%;
 }
 
-/* line 16, ../sass/_home.scss */
+/* line 38, ../sass/_home.scss */
 .home-inner-row {
   width: 100%;
 }
 
-/* line 21, ../sass/_home.scss */
+/* line 43, ../sass/_home.scss */
 .home-inner-col {
   float: left;
   width: 100%;
   margin: 1.5em inherit;
 }
 @media only screen and (min-width: 768px) {
-  /* line 21, ../sass/_home.scss */
+  /* line 43, ../sass/_home.scss */
   .home-inner-col {
     width: 47.5%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 34, ../sass/_home.scss */
+  /* line 56, ../sass/_home.scss */
   .home-inner-col-1 {
     margin-right: 2.5%;
   }
 
-  /* line 38, ../sass/_home.scss */
+  /* line 60, ../sass/_home.scss */
   .home-inner-col-2 {
     margin-left: 2.5%;
   }
 }
-/* line 43, ../sass/_home.scss */
+/* line 65, ../sass/_home.scss */
 .home-section > h2 {
   text-transform: uppercase;
 }
 
-/* line 52, ../sass/_home.scss */
+/* line 74, ../sass/_home.scss */
 .interactive-map-img {
   width: 100%;
 }
 
-/* line 57, ../sass/_home.scss */
+/* line 79, ../sass/_home.scss */
 .app-phone-img {
   float: right;
   margin: 0 0 0.5em 1em;
 }
 
-/* line 62, ../sass/_home.scss */
+/* line 84, ../sass/_home.scss */
 .app-links {
   text-align: center;
   clear: right;
 }
-/* line 64, ../sass/_home.scss */
+/* line 86, ../sass/_home.scss */
 .app-links > a {
   display: inline;
   margin-right: 4px;
 }
 @media only screen and (min-width: 1200px) {
-  /* line 62, ../sass/_home.scss */
+  /* line 84, ../sass/_home.scss */
   .app-links {
     clear: none;
   }
 }
 
-/* line 75, ../sass/_home.scss */
+/* line 97, ../sass/_home.scss */
 .home-section-events {
   background-color: #e6ebe4;
   display: none;
   padding: 1em 1em 0 1em;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* line 75, ../sass/_home.scss */
+  /* line 97, ../sass/_home.scss */
   .home-section-events {
     display: inherit;
   }
 }
-/* line 85, ../sass/_home.scss */
+/* line 107, ../sass/_home.scss */
 .home-section-events > h2 {
   text-transform: none;
 }
 
-/* line 91, ../sass/_home.scss */
+/* line 113, ../sass/_home.scss */
 .vimeo-img {
   width: 100%;
   margin-bottom: 4px;
 }
 
-/* line 97, ../sass/_home.scss */
+/* line 118, ../sass/_home.scss */
+.vimeo-frame {
+  width: 100%;
+}
+
+/* line 123, ../sass/_home.scss */
 .home-section-green {
   min-height: 180px;
   background: url('/img/placeholders/recycling_bg_290.png?1354238619') no-repeat center;
@@ -1492,18 +1522,18 @@ dd {
   padding-left: 14px;
   padding-right: 14px;
 }
-/* line 106, ../sass/_home.scss */
+/* line 132, ../sass/_home.scss */
 .home-section-green p {
   margin: 0 0 10px 0;
   line-height: 1.2em;
   font-size: 20px;
 }
-/* line 111, ../sass/_home.scss */
+/* line 137, ../sass/_home.scss */
 .home-section-green p > strong {
   display: block;
   font-size: 28px;
 }
-/* line 117, ../sass/_home.scss */
+/* line 143, ../sass/_home.scss */
 .home-section-green a {
   font-size: 11px;
 }
@@ -1568,16 +1598,56 @@ dd {
 
 /* line 56, ../sass/_primary_content.scss */
 .primary-content {
-  margin-top: 46px;
   padding: 1em 1em;
-  position: relative;
 }
 @media only screen and (min-width: 768px) {
   /* line 56, ../sass/_primary_content.scss */
   .primary-content {
-    padding: 1em 1.25em;
-    margin-top: 30px;
+    padding: 1em 1.67em;
   }
+}
+
+/* line 64, ../sass/_primary_content.scss */
+.primary-content-home {
+  margin-top: 46px;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  /* line 64, ../sass/_primary_content.scss */
+  .primary-content-home {
+    margin-top: 32px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 64, ../sass/_primary_content.scss */
+  .primary-content-home {
+    margin-top: 32px;
+  }
+}
+
+/* line 76, ../sass/_primary_content.scss */
+.primary-content-subpage {
+  margin-top: 28px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 76, ../sass/_primary_content.scss */
+  .primary-content-subpage {
+    font-size: 15px;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  /* line 76, ../sass/_primary_content.scss */
+  .primary-content-subpage {
+    font-size: 16px;
+    padding: 1.25em 2em;
+  }
+}
+
+/* line 92, ../sass/_primary_content.scss */
+.subnav .current {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*
@@ -1588,48 +1658,13 @@ dd {
 /* sub-navigation link styles. both homepage and building page subnavs
  * have a lot in common, but their media-query positions are set at different
  * breakpoints */
-@media only screen and (min-width: 768px) {
-  /* line 10, ../sass/_subpages.scss */
-  .subnav {
-    font-size: 1.1em;
-  }
-}
-/* line 15, ../sass/_subpages.scss */
-.subnav .current {
-  text-decoration: none;
-  color: inherit;
-}
-
-@media only screen and (min-width: 1200px) {
-  /* line 21, ../sass/_subpages.scss */
-  .quick-links {
-    position: absolute;
-    top: -1.25em;
-    right: 1em;
-    text-align: right;
-  }
-}
-
-/* line 30, ../sass/_subpages.scss */
-.quick-find-label {
-  margin: 0;
-  font-weight: bold;
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  /* line 30, ../sass/_subpages.scss */
-  .quick-find-label {
-    display: inherit;
-    display: inline;
-  }
-}
-
-/* line 41, ../sass/_subpages.scss */
+/* line 11, ../sass/_subpages.scss */
 .building-links {
   text-align: center;
+  margin-bottom: 1em;
 }
 @media only screen and (min-width: 960px) {
-  /* line 41, ../sass/_subpages.scss */
+  /* line 11, ../sass/_subpages.scss */
   .building-links {
     position: absolute;
     top: -1.25em;
@@ -1639,26 +1674,26 @@ dd {
 }
 
 /* Classes in Contact page */
-/* line 53, ../sass/_subpages.scss */
+/* line 25, ../sass/_subpages.scss */
 .admin-office-label {
   margin-bottom: 0;
 }
 
-/* line 57, ../sass/_subpages.scss */
+/* line 29, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
 /* Classes in Directions page */
-/* line 63, ../sass/_subpages.scss */
+/* line 35, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
 }
 
 /* Classes in Explore Pgh page */
-/* line 70, ../sass/_subpages.scss */
+/* line 42, ../sass/_subpages.scss */
 .image-link {
   display: none;
   margin-bottom: 2em;
@@ -1666,24 +1701,24 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 768px) {
-  /* line 70, ../sass/_subpages.scss */
+  /* line 42, ../sass/_subpages.scss */
   .image-link {
     display: inherit;
     float: left;
   }
 }
 
-/* line 81, ../sass/_subpages.scss */
+/* line 53, ../sass/_subpages.scss */
 .explore-item {
   margin-bottom: 1em;
 }
 
-/* line 85, ../sass/_subpages.scss */
+/* line 57, ../sass/_subpages.scss */
 .explore-description > h2 {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 84, ../sass/_subpages.scss */
+  /* line 56, ../sass/_subpages.scss */
   .explore-description {
     float: left;
     width: 75%;
@@ -1691,17 +1726,30 @@ dd {
   }
 }
 
-/* line 95, ../sass/_subpages.scss */
+/* line 67, ../sass/_subpages.scss */
+.explore-link {
+  font-size: 1.25em;
+}
+
+/* line 71, ../sass/_subpages.scss */
 .events-iframe {
   width: 100%;
   height: 100%;
-  margin: -1em -1.25em;
+  margin: -1.25em -2em;
 }
 
-/* line 105, ../sass/_subpages.scss */
+/* line 81, ../sass/_subpages.scss */
 .contact-address {
-  font-size: 1.2em;
-  display: inline-block;
-  background-color: #e6ebe4;
-  padding: 8px;
+  font-size: 1.1em;
+}
+
+/* line 86, ../sass/_subpages.scss */
+.page-contactus dt {
+  float: left;
+  display: inline;
+  clear: both;
+}
+/* line 91, ../sass/_subpages.scss */
+.page-contactus dd {
+  margin-left: 15em;
 }

@@ -63,7 +63,7 @@
 .flickr-badge {
     display: none;
     @media only screen and (min-width: $w-standard) {
-        display: inherit;
+        display: inline-block;
     }
 }
 
