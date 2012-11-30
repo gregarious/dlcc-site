@@ -102,7 +102,7 @@ $isHomepage = ($page == "home");
                     </div>  <!-- end .page-column-primary -->
 
                     <aside class="page-column page-column-secondary">
-                        <nav class="site-nav">
+                        <nav id="site-nav" class="site-nav">
                             <ul class="clearfix">
                                 <!-- TODO: fix links when in building subdir -->
                                 <li class="item-1"><a href="/building/" title="Our Building"><img src="/img/nav/Nav_Building.png"></a></li>
