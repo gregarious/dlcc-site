@@ -55,6 +55,7 @@
 // scoot primary content down to leave room for absolutely positioned page heading
 .primary-content {
     padding: 1em 1em;
+    position: relative;     // anchor for subnav's absolute positioning
 
     @media only screen and (min-width: $w-narrow) {
         padding: 1em 1.67em;
@@ -63,12 +64,8 @@
 
 .primary-content-home {
     margin-top: 46px;   // enough space to push content below 3-line heading for mobile
-    position: relative;
 
     @media only screen and (min-width: $w-narrow) {
-        margin-top: 32px;   // enough space to push content below 2-line heading for non-mobile
-    }
-    @media only screen and (min-width: $w-wide) {
         margin-top: 32px;   // enough space to push content below 2-line heading for non-mobile
     }
 }
@@ -82,8 +79,7 @@
 
     @media only screen and (min-width: $w-standard) {
         font-size: 16px;
-
-        padding: 1.25em 2em;
+        padding: 1.25em 2.25em;
     }
 }
 
