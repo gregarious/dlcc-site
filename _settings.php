@@ -1,7 +1,7 @@
 <?php
 
 /* Sets up all the varaibles used by the various pages in the site.
-    
+
     A variable called $page should already exist before this file is
     included.
 */
@@ -11,44 +11,52 @@ switch($page) {
         $includeFile = "includes/home.inc.php";
         $pageTitle = "";
         $headingText = "The only convention center in the world with LEED&reg; certifications:
-                        <strong>GOLD in new construction</strong> and 
+                        <strong>GOLD in new construction</strong> and
                         <strong>PLATINUM in existing building.</strong>";
         $pageClass = "page-home";
+        $panoramaFileBase = "/img/headers/home";
         break;
     case "aboutus":
         $includeFile = "includes/aboutus.inc.php";
         $pageTitle = $headingText = "About Us";
         $pageClass = "page-aboutus";
+        $panoramaFileBase = "/img/headers/aboutus";
         break;
     case "contactus":
         $includeFile = "includes/contactus.inc.php";
         $pageTitle = $headingText = "Contact Us";
         $pageClass = "page-contactus";
+        $panoramaFileBase = "/img/headers/contactus";
         break;
     case "directions":
         $includeFile = "includes/directions.inc.php";
         $pageTitle = $headingText = "Directions &amp; Parking";
         $pageClass = "page-directions";
+        $panoramaFileBase = "/img/headers/directions";
         break;
     case "events":
         $includeFile = "includes/events.inc.php";
         $pageTitle = $headingText = "Upcoming Events";
         $pageClass = "page-events";
+        $panoramaFileBase = "/img/headers/events";
         break;
     case "explore":
         $includeFile = "includes/explore.inc.php";
         $pageTitle = $headingText = "Explore Pittsburgh";
         $pageClass = "page-explore";
+        $panoramaFileBase = "/img/headers/explorepittsburgh";
         break;
     case "neighborhood":
         $includeFile = "includes/neighborhood.inc.php";
         $pageTitle = $headingText = "Our Neighborhood";
         $pageClass = "page-neighborhood";
+        $panoramaFileBase = "/img/headers/neighborhood";
         break;
     case "services":
         $includeFile = "includes/services.inc.php";
         $pageTitle = $headingText = "Our Services";
         $pageClass = "page-services";
+        $panoramaFileBase = "/img/headers/services";
         break;
 
     case "building":
@@ -60,18 +68,21 @@ switch($page) {
         $pageTitle = "Building Features";
         $headingText = "Our Building: <strong>Building Features</strong>";
         $pageClass = "page-building page-building-features";
+        $panoramaFileBase = "/img/headers/buildingfeatures";
         break;
     case "building:floorplans":
         $includeFile = "includes/building-floorplans.inc.php";
         $pageTitle = "Building Floor Plans";
         $headingText = "Our Building: <strong>Floor Plans</strong>";
         $pageClass = "page-building page-building-floorplans";
+        $panoramaFileBase = "/img/headers/floorplans";
         break;
     case "building:history":
         $includeFile = "includes/building-history.inc.php";
         $pageTitle = "Building History";
         $headingText = "Our Building: <strong>Building History</strong>";
         $pageClass = "page-building page-building-history";
+        $panoramaFileBase = "/img/headers/history";
         break;
 }
 

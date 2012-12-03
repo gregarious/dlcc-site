@@ -5,6 +5,6 @@
 
 <div class="widget widget-floorplans">
     <h2>View Floor Plans</h2>
-    <img src="http://placehold.it/169x154" />
+    <img src="/img/floor_plan_thumb.jpg" />
     <p>Take a look at each floor's unique flexible layout in this downloadable PDF.</p>
 </div>

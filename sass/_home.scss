@@ -109,25 +109,30 @@
     }
 }
 
-// Vimeo video section
-.vimeo-img {
-    width: 100%;
-    margin-bottom: 4px;    // just a tiny scoot down for link
-}
-
 .vimeo-frame {
     width: 100%;
+
+    // match the height of the interactive map thumbnail at different sizes
+    @media only screen and (min-width: $w-narrow) {
+        height: 148px;
+    }
+    @media only screen and (min-width: $w-standard) {
+        height: 171px;
+    }
+    @media only screen and (min-width: $w-wide) {
+        height: 229px;
+    }
 }
 
 // green stats section
-.home-section-green {
-    min-height: 180px;  // height of the background image
-    background: image-url('placeholders/recycling_bg_290.png') no-repeat center;
-    text-align: center;
-    padding-top: 36px;
-    padding-left: 14px;
-    padding-right: 14px;
 
+// set the basic properties of the background image and overlay text
+.home-section-green {
+    padding-top: 2em;
+    background: image-url('/img/recycling_bg_290.png') no-repeat center;
+    min-height: 148px;  // height of the background image
+
+    text-align: center;
     // custom font-related styles to acheive standout look to text
     p {
         margin: 0 0 10px 0;
@@ -136,11 +141,35 @@
 
         > strong {
             display: block; // surround emphasized line with newlines
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 
     a {
         font-size: 11px;
+    }
+}
+
+// need to use a different background image for standard widths
+@media only screen and (min-width: $w-standard) {
+    .home-section-green {
+        background: image-url('/img/recycling_bg_320.png') no-repeat center;
+        min-height: 163px;  // height of the background image
+    }
+}
+
+// larger image and text for the widest breakpoint
+@media only screen and (min-width: $w-wide) {
+    .home-section-green {
+        background: image-url('/img/recycling_bg_450.png') no-repeat center;
+        min-height: 230px;  // height of the background image
+        padding-top: 3em;
+
+        p {
+            font-size: 30px;
+            > strong {
+                font-size: 42px;
+            }
+        }
     }
 }

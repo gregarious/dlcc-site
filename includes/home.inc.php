@@ -9,14 +9,11 @@
     <div class="home-inner-row">
         <div class="home-inner-col home-inner-col-1 home-section home-section-map">
             <h2>Interactive Map</h2>
-            <img class="interactive-map-img" src="/img/placeholders/interactive-map.png" />
+            <img class="interactive-map-img" src="/img/Map_home.jpg" />
         </div>
         <div class="home-inner-col home-inner-col-2 home-section home-section-videos">
             <h2>Video Highlights</h2>
             <iframe class="vimeo-frame" src="http://player.vimeo.com/hubnut/user/user14968871/uploaded_videos?color=58585b&amp;background=d8ddd4&amp;slideshow=1&amp;video_title=1&amp;video_byline=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        <!--
-            <img class="vimeo-img" src="/img/placeholders/vimeo.png" />
-            <a class="more-videos-link" href="#">View More Videos &raquo;</a> -->
         </div>
     </div>
     <div class="home-inner-row home-section-events">

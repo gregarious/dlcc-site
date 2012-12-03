@@ -854,26 +854,38 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* line 27, ../sass/_base.scss */
+h2 {
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+/* line 32, ../sass/_base.scss */
+h3 {
+  font-size: 1.05em;
+  margin-bottom: 0.5em;
+}
+
+/* line 37, ../sass/_base.scss */
 a {
   color: #819578;
 }
 
-/* line 31, ../sass/_base.scss */
+/* line 41, ../sass/_base.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 34, ../sass/_base.scss */
+/* line 44, ../sass/_base.scss */
 dd {
   margin-bottom: 1em;
 }
 
-/* line 39, ../sass/_base.scss */
+/* line 49, ../sass/_base.scss */
 .mailto {
   color: #fbaf3f;
 }
 
-/* line 44, ../sass/_base.scss */
+/* line 54, ../sass/_base.scss */
 .tel-link,
 .fax-link {
   color: inherit;
@@ -881,7 +893,7 @@ dd {
   cursor: default;
 }
 
-/* line 50, ../sass/_base.scss */
+/* line 60, ../sass/_base.scss */
 .primary-column {
   background-color: white;
 }
@@ -1502,42 +1514,75 @@ dd {
   text-transform: none;
 }
 
-/* line 113, ../sass/_home.scss */
-.vimeo-img {
-  width: 100%;
-  margin-bottom: 4px;
-}
-
-/* line 118, ../sass/_home.scss */
+/* line 112, ../sass/_home.scss */
 .vimeo-frame {
   width: 100%;
 }
-
-/* line 123, ../sass/_home.scss */
-.home-section-green {
-  min-height: 180px;
-  background: url('/img/placeholders/recycling_bg_290.png?1354238619') no-repeat center;
-  text-align: center;
-  padding-top: 36px;
-  padding-left: 14px;
-  padding-right: 14px;
+@media only screen and (min-width: 768px) {
+  /* line 112, ../sass/_home.scss */
+  .vimeo-frame {
+    height: 148px;
+  }
 }
-/* line 132, ../sass/_home.scss */
+@media only screen and (min-width: 960px) {
+  /* line 112, ../sass/_home.scss */
+  .vimeo-frame {
+    height: 171px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 112, ../sass/_home.scss */
+  .vimeo-frame {
+    height: 229px;
+  }
+}
+
+/* line 130, ../sass/_home.scss */
+.home-section-green {
+  padding-top: 2em;
+  background: url('/img/recycling_bg_290.png?1354570278') no-repeat center;
+  min-height: 148px;
+  text-align: center;
+}
+/* line 137, ../sass/_home.scss */
 .home-section-green p {
   margin: 0 0 10px 0;
   line-height: 1.2em;
   font-size: 20px;
 }
-/* line 137, ../sass/_home.scss */
+/* line 142, ../sass/_home.scss */
 .home-section-green p > strong {
   display: block;
-  font-size: 28px;
+  font-size: 24px;
 }
-/* line 143, ../sass/_home.scss */
+/* line 148, ../sass/_home.scss */
 .home-section-green a {
   font-size: 11px;
 }
 
+@media only screen and (min-width: 960px) {
+  /* line 155, ../sass/_home.scss */
+  .home-section-green {
+    background: url('/img/recycling_bg_320.png?1354570278') no-repeat center;
+    min-height: 163px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 163, ../sass/_home.scss */
+  .home-section-green {
+    background: url('/img/recycling_bg_450.png?1354570278') no-repeat center;
+    min-height: 230px;
+    padding-top: 3em;
+  }
+  /* line 168, ../sass/_home.scss */
+  .home-section-green p {
+    font-size: 30px;
+  }
+  /* line 170, ../sass/_home.scss */
+  .home-section-green p > strong {
+    font-size: 42px;
+  }
+}
 /*
  * primary_content.scss
  *
@@ -1634,7 +1679,7 @@ dd {
   /* line 73, ../sass/_primary_content.scss */
   .primary-content-subpage {
     font-size: 16px;
-    padding: 1.25em 2.25em;
+    padding: 1.25em 3em;
   }
 }
 
