@@ -36,7 +36,7 @@
 
 // don't show the outflow version on IE < 8 due to absolute positioning problems
 .lt-ie8 .page-heading-outflow {
-    display: none;
+    display: none !important;
 }
 
 // inflow version of the heading should only show up on IE

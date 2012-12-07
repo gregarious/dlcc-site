@@ -1623,7 +1623,7 @@ dd {
 
 /* line 38, ../sass/_primary_content.scss */
 .lt-ie8 .page-heading-outflow {
-  display: none;
+  display: none !important;
 }
 
 /* line 43, ../sass/_primary_content.scss */
