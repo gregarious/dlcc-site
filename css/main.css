@@ -1588,7 +1588,7 @@ dd {
  *
  * Styles for the layout and design of the main content column on each page
  */
-/* line 8, ../sass/_primary_content.scss */
+/* line 7, ../sass/_primary_content.scss */
 .page-heading {
   color: black;
   font-weight: normal;
@@ -1597,108 +1597,127 @@ dd {
   -webkit-box-shadow: 0px 0px 5px #333333;
   -moz-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
+  padding: 4px 8px;
+}
+
+/* line 20, ../sass/_primary_content.scss */
+.page-heading-outflow {
   position: absolute;
   top: 148px;
   z-index: 9999;
   margin-top: -10px;
-  padding: 4px 8px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 8, ../sass/_primary_content.scss */
-  .page-heading {
+  /* line 20, ../sass/_primary_content.scss */
+  .page-heading-outflow {
     top: 220px;
     margin-left: -0.25em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 8, ../sass/_primary_content.scss */
-  .page-heading {
+  /* line 20, ../sass/_primary_content.scss */
+  .page-heading-outflow {
     margin-left: -0.75em;
   }
 }
 
-/* line 35, ../sass/_primary_content.scss */
+/* line 38, ../sass/_primary_content.scss */
+.lt-ie8 .page-heading-outflow {
+  display: none;
+}
+
+/* line 43, ../sass/_primary_content.scss */
+.page-heading-inflow {
+  display: none !important;
+}
+
+/* line 46, ../sass/_primary_content.scss */
+.lt-ie8 .page-heading-inflow {
+  display: inherit !important;
+}
+
+/* line 51, ../sass/_primary_content.scss */
 .page-home .page-heading {
   display: block;
   font-size: 13px;
   width: 320px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 35, ../sass/_primary_content.scss */
+  /* line 51, ../sass/_primary_content.scss */
   .page-home .page-heading {
     width: 420px;
   }
 }
 
-/* line 45, ../sass/_primary_content.scss */
+/* line 61, ../sass/_primary_content.scss */
 .primary-header {
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 45, ../sass/_primary_content.scss */
+  /* line 61, ../sass/_primary_content.scss */
   .primary-header {
     border-left: 2px solid white;
   }
 }
-/* line 51, ../sass/_primary_content.scss */
+/* line 67, ../sass/_primary_content.scss */
 .primary-header > .tagline-home {
   top: 0;
   position: absolute;
 }
-/* line 57, ../sass/_primary_content.scss */
+/* line 73, ../sass/_primary_content.scss */
 .primary-header img {
   height: 148px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 57, ../sass/_primary_content.scss */
+  /* line 73, ../sass/_primary_content.scss */
   .primary-header img {
     height: 220px;
   }
 }
 
-/* line 66, ../sass/_primary_content.scss */
+/* line 82, ../sass/_primary_content.scss */
 .primary-content {
   padding: 1em 1em;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 66, ../sass/_primary_content.scss */
+  /* line 82, ../sass/_primary_content.scss */
   .primary-content {
     padding: 1em 1.67em;
   }
 }
 
-/* line 75, ../sass/_primary_content.scss */
+/* line 91, ../sass/_primary_content.scss */
 .primary-content-home {
   margin-top: 46px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 75, ../sass/_primary_content.scss */
+  /* line 91, ../sass/_primary_content.scss */
   .primary-content-home {
     margin-top: 32px;
   }
 }
 
-/* line 83, ../sass/_primary_content.scss */
+/* line 99, ../sass/_primary_content.scss */
 .primary-content-subpage {
   margin-top: 28px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 83, ../sass/_primary_content.scss */
+  /* line 99, ../sass/_primary_content.scss */
   .primary-content-subpage {
     font-size: 15px;
     line-height: 1.5em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 83, ../sass/_primary_content.scss */
+  /* line 99, ../sass/_primary_content.scss */
   .primary-content-subpage {
     font-size: 16px;
     padding: 1.25em 3em;
   }
 }
 
-/* line 98, ../sass/_primary_content.scss */
+/* line 114, ../sass/_primary_content.scss */
 .subnav .current {
   text-decoration: none;
   color: inherit;

@@ -4,7 +4,6 @@
  * Styles for the layout and design of the main content column on each page
  */
 
-// this actually lives outside the column structure so it can overflow to the left
 .page-heading {
     color: black;
     font-weight: normal;
@@ -13,13 +12,17 @@
     background-color: $yellow;
     @include single-box-shadow;
 
+    padding: 4px 8px;
+}
+
+// this version of the heading actually lives outside the column structure so
+// it can overflow to the left
+.page-heading-outflow {
     // positioning to make heading overlap over primary header image
     position: absolute;
     top: $primary-header-image-height-mobile;
     z-index: 9999;
     margin-top: -10px;
-
-    padding: 4px 8px;
 
     @media only screen and (min-width: $w-narrow) {
         top: $primary-header-image-height-nonmobile;
@@ -29,6 +32,19 @@
     @media only screen and (min-width: $w-standard) {
         margin-left: -0.75em;
     }
+}
+
+// don't show the outflow version on IE < 8 due to absolute positioning problems
+.lt-ie8 .page-heading-outflow {
+    display: none;
+}
+
+// inflow version of the heading should only show up on IE
+.page-heading-inflow {
+    display: none !important;
+}
+.lt-ie8 .page-heading-inflow {
+    display: inherit !important;
 }
 
 // special formatting when page heading is on the homepage

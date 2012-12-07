@@ -48,7 +48,7 @@ $isHomepage = ($page == "home");
         </header>
 
         <div class="page-wrap">
-            <h1 class="page-heading"><?php print $headingText; ?></h1>
+            <h1 class="page-heading page-heading-outflow"><?php print $headingText; ?></h1>
             <div class="page-columns-wrap page-column-background page-column-background-secondary">
                 <div class="page-column-background page-column-background-primary">
                     <div class="page-column page-column-primary">
@@ -89,6 +89,7 @@ $isHomepage = ($page == "home");
     }
 ?>
                         <div class="<?php print $contentClass; ?>">
+                            <h1 class="page-heading page-heading-inflow"><?php print $headingText; ?></h1>
                             <?php include $includeFile; ?>
                         </div> <!-- end .primary-content -->
                     </div>  <!-- end .page-column-primary -->
