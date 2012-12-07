@@ -31,6 +31,7 @@ $isHomepage = ($page == "home");
         <!-- TODO: link to minimized scripts -->
         <!-- TODO: if not including modernizr, get rid of no-js class manually -->
         <script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
+        <script src="/js/vendor/respond.min.js"></script>
     </head>
     <body class="<?php print $pageClass; ?>">
         <header class="page-header" style="background-image: url('<?php print $headerImage; ?>');">
