@@ -60,6 +60,9 @@ $isHomepage = ($page == "home");
                                 <div data-src="<?php print $panoramaFileBase; ?>_653x220.jpg" data-media="(min-width: 768px)"></div>
                                 <div data-src="<?php print $panoramaFileBase; ?>_746x220.jpg" data-media="(min-width: 960px)"></div>
                                 <div data-src="<?php print $panoramaFileBase; ?>_986x220.jpg" data-media="(min-width: 1200px)"></div>
+                                <!--[if (lt IE 9) & (!IEMobile)]>
+                                    <div data-src="<?php print $panoramaFileBase; ?>_986x220.jpg"></div>
+                                <![endif]-->
                                 <noscript>
                                     <img src="<?php print $panoramaFileBase; ?>_320x148.jpg" alt="Panoramic scene around The David L. Lawrence Convention Center">
                                 </noscript>
