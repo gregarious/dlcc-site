@@ -1633,7 +1633,7 @@ dd {
 
 /* line 46, ../sass/_primary_content.scss */
 .lt-ie8 .page-heading-inflow {
-  display: inherit !important;
+  display: block !important;
 }
 
 /* line 51, ../sass/_primary_content.scss */
