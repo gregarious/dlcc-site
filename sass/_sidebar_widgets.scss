@@ -70,7 +70,7 @@
 .widget-interactive-map {
     display: none;
     text-align: center;
-    @media only screen and (min-width: $w-narrow) {
+    @media only screen and (min-width: $w-standard) {
         display: inherit;
         background-color: $light-green1;
     }
@@ -79,7 +79,7 @@
 .widget-floorplans {
     display: none;
     text-align: center;
-    @media only screen and (min-width: $w-narrow) {
+    @media only screen and (min-width: $w-standard) {
         display: inherit;
         background-color: $light-green2;
     }

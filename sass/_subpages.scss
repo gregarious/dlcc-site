@@ -82,16 +82,16 @@
     font-size: 1.1em;
 }
 
-.page-contactus {
-    dt {
-        float: left;
-        display: inline;
-        clear: both;
+
+@media only screen and (min-width: $w-narrow) {
+    .page-contactus {
+        dt {
+            float: left;
+            display: inline;
+            clear: both;
+        }
+        dd {
+            margin-left: 15em;
+        }
     }
-    dd {
-        margin-left: 15em;
-    }
-    // dd {
-    //     display: inline-block;
-    // }
 }

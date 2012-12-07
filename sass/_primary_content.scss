@@ -44,11 +44,21 @@
 // absolutely position the tagline within the primary column header
 .primary-header {
     position: relative;
-    border-left: 2px solid white;
+    @media only screen and (min-width: $w-narrow) {
+        border-left: 2px solid white;
+    }
 
     > .tagline-home {
         top: 0;
         position: absolute;
+    }
+
+    // fix the image heights to avoid content jumping before image loads
+    img {
+        height: $primary-header-image-height-mobile;
+        @media only screen and (min-width: $w-narrow) {
+            height: $primary-header-image-height-nonmobile;
+        }
     }
 }
 
