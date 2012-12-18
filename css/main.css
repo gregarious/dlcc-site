@@ -1,13 +1,13 @@
-/* 
+/*
  * main.scss
- * 
+ *
  * Main SASS file to combine all components
  */
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
-/* 
+/*
  * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
 /* line 21, ../sass/_normalize.scss */
@@ -829,10 +829,10 @@ textarea {
  *
  * Handles the most basic gloabl style rules
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /*** Base styles ***/
 /* line 11, ../sass/_base.scss */
@@ -845,7 +845,7 @@ html {
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #58585b;
-  background: #e6ebe4 url('/img/BG_repeat.png?1354067851') repeat-x;
+  background: #e6ebe4 url('/images/BG_repeat.png?1354067851') repeat-x;
 }
 
 /* line 23, ../sass/_base.scss */
@@ -904,10 +904,10 @@ dd {
  * Styles for main page layout. Layout specific to a module (e.g. home page
  * content) lives in a file specific to that module.
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /* line 22, ../sass/_layout.scss */
 * {
@@ -1054,15 +1054,15 @@ dd {
   }
 }
 
-/* 
+/*
  * sidebar_nav.scss
  *
  * Styles for sidebar navigation area
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /* line 9, ../sass/_sidebar_nav.scss */
 .site-nav {
@@ -1153,10 +1153,10 @@ dd {
  *
  * Styles for sidebar widgets
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /* line 9, ../sass/_sidebar_widgets.scss */
 .widget {
@@ -1276,10 +1276,10 @@ dd {
  *
  * Mostly header and footer styles
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /*********************
  * Header styles
@@ -1401,10 +1401,10 @@ dd {
  *
  * Styles related to any primary content on the homepage
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 @media only screen and (min-width: 1200px) {
   /* line 11, ../sass/_home.scss */
@@ -1540,7 +1540,7 @@ dd {
 /* line 130, ../sass/_home.scss */
 .home-section-green {
   padding-top: 2em;
-  background: url('/img/recycling_bg_290.png?1354570278') no-repeat center;
+  background: url('/images/recycling_bg_290.png?1354570278') no-repeat center;
   min-height: 148px;
   text-align: center;
 }
@@ -1563,14 +1563,14 @@ dd {
 @media only screen and (min-width: 960px) {
   /* line 155, ../sass/_home.scss */
   .home-section-green {
-    background: url('/img/recycling_bg_320.png?1354570278') no-repeat center;
+    background: url('/images/recycling_bg_320.png?1354570278') no-repeat center;
     min-height: 163px;
   }
 }
 @media only screen and (min-width: 1200px) {
   /* line 163, ../sass/_home.scss */
   .home-section-green {
-    background: url('/img/recycling_bg_450.png?1354570278') no-repeat center;
+    background: url('/images/recycling_bg_450.png?1354570278') no-repeat center;
     min-height: 230px;
     padding-top: 3em;
   }

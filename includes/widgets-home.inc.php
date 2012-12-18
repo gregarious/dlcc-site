@@ -11,7 +11,7 @@
     <a href="/events.php" class="more-link">MORE &raquo;</a>
 </div>
 <div class="widget widget-flickr">
-    <h2 class="flickr-heading"><img title="DLCC Flickr Page" src="/img/placeholders/flickr.png" /></h2>
+    <h2 class="flickr-heading"><img title="DLCC Flickr Page" src="/images/placeholders/flickr.png" /></h2>
     <div class="flickr-badge">
         <!-- Start of Flickr Badge -->
         <style type="text/css">

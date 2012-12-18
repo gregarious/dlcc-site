@@ -20,17 +20,17 @@
     <li>Wired/Wireless Networks</li>
     <li>Internet broadcasting so your event can reach a global audience using the World Wide Web</li>
     <li>Special circuits such as DSL, ISDN, T-1, T-3 and more</li>
-    <li>To place an online order, click <a href="https://www.smartcity.com/order/center.asp?center=028" target="_blank">here</a> or to complete an order form click <a href="images/PDFs/services_telecom_smartcityR3-12-23-09.pdf" target="_blank">here</a>.</li>
+    <li>To place an online order, click <a href="https://www.smartcity.com/order/center.asp?center=028" target="_blank">here</a> or to complete an order form click <a href="/images/PDFs/services_telecom_smartcityR3-12-23-09.pdf" target="_blank">here</a>.</li>
 </ul>
 
 <h2>Other Services</h2>
 <p>To help insure your Pittsburgh event is successful, the David L. Lawrence Convention Center provides customized in-house exclusive services&mdash; cleaning, electrical, security and utilities. As an exhibitor or show organizer, you are able to custom order these services by downloading and filling out the appropriate forms:</p>
 
 <ul>
-    <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_PlumbingAir_InteractiveE.pdf">Compressed Air</a> (PDF)</li>
-    <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_Cleaning_InteractiveE.pdf">Custom Cleaning Services</a> (PDF)</li>  
-    <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_Electrical_InteractiveE.pdf">Electrical Services</a> (PDF)</li>
-    <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_PlumbingAir_InteractiveE.pdf">Plumbing</a> (PDF)</li>
-    <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_Security_InteractiveE.pdf">Security Services</a> (PDF)</li> 
-    <li><a href="images/PDFs/DLCC_ExhibitorForms_2012_Steel_InteractiveE.pdf">Steel Plate Request</a> (PDF)</li>
+    <li><a href="/images/PDFs/DLCC_ExhibitorForms_2013Plumbing_and_CompressedAirForm.pdf">Compressed Air</a> (PDF)</li>
+    <li><a href="/images/PDFs/DLCC_ExhibitorForms_2013CustomCleaningForm.pdf">Custom Cleaning Services</a> (PDF)</li>
+    <li><a href="/images/PDFs/DLCC_ExhibitorForms_2013ElectricalForm.pdf">Electrical Services</a> (PDF)</li>
+    <li><a href="/images/PDFs/DLCC_ExhibitorForms_2013Plumbing_and_CompressedAirForm.pdf">Plumbing</a> (PDF)</li>
+    <li><a href="/images/PDFs/DLCC_ExhibitorForms_2013SecurityForm.pdf">Security Services</a> (PDF)</li>
+    <li><a href="/images/PDFs/DLCC_ExhibitorForms_2013SteelPlatesForm.pdf">Steel Plate Request</a> (PDF)</li>
 </ul>

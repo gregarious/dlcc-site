@@ -9,7 +9,7 @@
     <div class="home-inner-row">
         <div class="home-inner-col home-inner-col-1 home-section home-section-map">
             <h2>Interactive Map</h2>
-            <img class="interactive-map-img" src="/img/Map_home.jpg" />
+            <img class="interactive-map-img" src="/images/Map_home.jpg" />
         </div>
         <div class="home-inner-col home-inner-col-2 home-section home-section-videos">
             <h2>Video Highlights</h2>
@@ -32,7 +32,7 @@
         <div class="home-inner-col home-inner-col-1 home-section home-section-app">
             <h2>Try Our Mobile App!</h2>
 
-            <img class="app-phone-img" src="/img/phone_full.png" alt="DLCC Mobile App" />
+            <img class="app-phone-img" src="/images/phone_full.png" alt="DLCC Mobile App" />
 
             <p class="app-summary">Get instant Pittsburgh information including DLCC events, floorplans, green features
                 plus local restaurants &amp; hotels and transportation options! Download today from
@@ -41,7 +41,7 @@
             <div class="app-links">
                 <!-- TODO: ensure this is correct link. need to check scenable app url in itunesconnect once it's up to verify -->
                 <!-- OK for this to be an SVG: no need for Android 2.3 to see App Store link -->
-                <a href="https://itunes.apple.com/us/app/pittsburgh-convention-center/id519070355?ls=1&mt=8" title="DLCC App in App Store" target="_blank"><img alt="Download on the App Store" src="/img/app-store.svg" /></a>
+                <a href="https://itunes.apple.com/us/app/pittsburgh-convention-center/id519070355?ls=1&mt=8" title="DLCC App in App Store" target="_blank"><img alt="Download on the App Store" src="/images/app-store.svg" /></a>
                 <a href="http://play.google.com/store/apps/details?id=com.imswift.pittsburgh" title="DLCC App in Google Play" target="_blank"><img alt="Android app on Google Play" src="http://developer.android.com/images/brand/en_app_rgb_wo_45.png" /></a>
             </div>
         </div>

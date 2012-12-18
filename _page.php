@@ -3,7 +3,7 @@
 require "_settings.php";
 
 // determine the header image randomly
-$headerImage = '/img/headers/' . 'header_' . rand(1,14) . '.jpg';
+$headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
 
 // find out if $page variable starts with building. if so, use an alternative primary content header image
 $isBuildingSubpage = !strncmp($page, "building", 8);
@@ -38,7 +38,7 @@ $isHomepage = ($page == "home");
             <div class="page-wrap clearfix"> <!-- keep header content constrained to page width -->
                 <a href="#site-nav" title="Shortcut to Menu" class="site-nav-shortcut">Full Menu</a>
                 <a href="/index.php" title="David L. Lawrence Convention Center">
-                    <img class="logo" src="/img/DLCC_Logo_Full.png" alt="David L. Lawrence Convention Center" />
+                    <img class="logo" src="/images/DLCC_Logo_Full.png" alt="David L. Lawrence Convention Center" />
                 </a>
                 <p class="tagline">Built Green,<br />
                    Working Green,<br />
@@ -98,15 +98,15 @@ $isHomepage = ($page == "home");
                         <nav id="site-nav" class="site-nav">
                             <ul class="clearfix">
                                 <!-- TODO: fix links when in building subdir -->
-                                <li class="item-1"><a href="/building/" title="Our Building"><img src="/img/nav/Nav_Building.png"></a></li>
-                                <li class="item-2"><a href="/services.php" title="Our Services"><img src="/img/nav/Nav_Services.png"></a></li>
-                                <li class="item-3"><a href="/explore.php" title="Explore Pittsburgh"><img src="/img/nav/Nav_ExplorePGH.png"></a></li>
-                                <li class="item-4"><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/img/nav/Nav_DLCCneighborhood.png"></a></li>
-                                <li class="item-5"><a href="/directions.php" title="Directions &amp; Parking"><img src="/img/nav/Nav_DirectionsParking.png"></a></li>
-                                <li class="item-6"><a href="/events.php" title="Events"><img src="/img/nav/Nav_Events.png"></a></li>
-                                <li class="item-7"><a href="/aboutus.php" title="About Us"><img src="/img/nav/Nav_About.png"></a></li>
-                                <li class="item-8"><a href="/contactus.php" title="Contact Us"><img src="/img/nav/Nav_Contact.png"></a></li>
-                                <li class="item-9"><a href="/index.php" class="nav-btn-home" title="Home"><img src="/img/nav/Nav_Home.png"></a></li>
+                                <li class="item-1"><a href="/building/" title="Our Building"><img src="/images/nav/Nav_Building.png"></a></li>
+                                <li class="item-2"><a href="/services.php" title="Our Services"><img src="/images/nav/Nav_Services.png"></a></li>
+                                <li class="item-3"><a href="/explore.php" title="Explore Pittsburgh"><img src="/images/nav/Nav_ExplorePGH.png"></a></li>
+                                <li class="item-4"><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/images/nav/Nav_DLCCneighborhood.png"></a></li>
+                                <li class="item-5"><a href="/directions.php" title="Directions &amp; Parking"><img src="/images/nav/Nav_DirectionsParking.png"></a></li>
+                                <li class="item-6"><a href="/events.php" title="Events"><img src="/images/nav/Nav_Events.png"></a></li>
+                                <li class="item-7"><a href="/aboutus.php" title="About Us"><img src="/images/nav/Nav_About.png"></a></li>
+                                <li class="item-8"><a href="/contactus.php" title="Contact Us"><img src="/images/nav/Nav_Contact.png"></a></li>
+                                <li class="item-9"><a href="/index.php" class="nav-btn-home" title="Home"><img src="/images/nav/Nav_Home.png"></a></li>
                             </ul>
                         </nav>
                         <?php
