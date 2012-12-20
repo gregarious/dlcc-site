@@ -18,7 +18,7 @@
     <p class="office-hours">Monday &ndash; Friday: 8:30 AM &ndash; 5:00 PM</p>
 
     <dl>
-        
+
         <dt>Audio/Visual</dt>
         <dd><a class="tel-link" href="tel:+14123256115">412-325-6115</a></dd>
 
@@ -51,7 +51,7 @@
 
     <p>Thank you for your interest in SMG/David L. Lawrence Convention Center.</p>
     <p>We accept applications and resumes for posted positions only.  Future openings will be posted as they become available.</p>
-    <p>All future openings will be posted to the Department of Labor website at: the PA CareerLink 
-        job board at <a href="http://www.cwds.state.pa.us" target="_blank">www.cwds.state.pa.us</a>.</p> 
+    <p>All future openings will be posted to the Department of Labor website at: the PA CareerLink
+        job board at <a href="http://www.cwds.state.pa.us" target="_blank">www.cwds.state.pa.us</a>.</p>
     <p><strong>SMG is an Equal Opportunity Employer M/F/V/D</strong></p>
 </div>

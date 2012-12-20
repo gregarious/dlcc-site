@@ -1,13 +1,13 @@
-/*
+/* 
  * main.scss
- *
+ * 
  * Main SASS file to combine all components
  */
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
-/*
+/* 
  * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
 /* line 21, ../sass/_normalize.scss */
@@ -829,10 +829,10 @@ textarea {
  *
  * Handles the most basic gloabl style rules
  */
-/*
+/* 
  * constants.scss
- *
- * Constants for DLCC site
+ * 
+ * Constants for DLCC site 
  */
 /*** Base styles ***/
 /* line 11, ../sass/_base.scss */
@@ -904,10 +904,10 @@ dd {
  * Styles for main page layout. Layout specific to a module (e.g. home page
  * content) lives in a file specific to that module.
  */
-/*
+/* 
  * constants.scss
- *
- * Constants for DLCC site
+ * 
+ * Constants for DLCC site 
  */
 /* line 22, ../sass/_layout.scss */
 * {
@@ -1054,15 +1054,15 @@ dd {
   }
 }
 
-/*
+/* 
  * sidebar_nav.scss
  *
  * Styles for sidebar navigation area
  */
-/*
+/* 
  * constants.scss
- *
- * Constants for DLCC site
+ * 
+ * Constants for DLCC site 
  */
 /* line 9, ../sass/_sidebar_nav.scss */
 .site-nav {
@@ -1153,10 +1153,10 @@ dd {
  *
  * Styles for sidebar widgets
  */
-/*
+/* 
  * constants.scss
- *
- * Constants for DLCC site
+ * 
+ * Constants for DLCC site 
  */
 /* line 9, ../sass/_sidebar_widgets.scss */
 .widget {
@@ -1276,10 +1276,10 @@ dd {
  *
  * Mostly header and footer styles
  */
-/*
+/* 
  * constants.scss
- *
- * Constants for DLCC site
+ * 
+ * Constants for DLCC site 
  */
 /*********************
  * Header styles
@@ -1401,10 +1401,10 @@ dd {
  *
  * Styles related to any primary content on the homepage
  */
-/*
+/* 
  * constants.scss
- *
- * Constants for DLCC site
+ * 
+ * Constants for DLCC site 
  */
 @media only screen and (min-width: 1200px) {
   /* line 11, ../sass/_home.scss */
@@ -1763,10 +1763,11 @@ dd {
 .daddr {
   font-style: italic;
   font-size: 14px;
+  margin-bottom: 0.5em;
 }
 
 /* Classes in Explore Pgh page */
-/* line 42, ../sass/_subpages.scss */
+/* line 43, ../sass/_subpages.scss */
 .image-link {
   display: none;
   margin-bottom: 2em;
@@ -1774,24 +1775,24 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 768px) {
-  /* line 42, ../sass/_subpages.scss */
+  /* line 43, ../sass/_subpages.scss */
   .image-link {
     display: inherit;
     float: left;
   }
 }
 
-/* line 53, ../sass/_subpages.scss */
+/* line 54, ../sass/_subpages.scss */
 .explore-item {
   margin-bottom: 1em;
 }
 
-/* line 57, ../sass/_subpages.scss */
+/* line 58, ../sass/_subpages.scss */
 .explore-description > h2 {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 56, ../sass/_subpages.scss */
+  /* line 57, ../sass/_subpages.scss */
   .explore-description {
     float: left;
     width: 75%;
@@ -1799,19 +1800,19 @@ dd {
   }
 }
 
-/* line 67, ../sass/_subpages.scss */
+/* line 68, ../sass/_subpages.scss */
 .explore-link {
   font-size: 1.25em;
 }
 
-/* line 71, ../sass/_subpages.scss */
+/* line 72, ../sass/_subpages.scss */
 .events-iframe {
   width: 100%;
   height: 100%;
   margin: -1.25em -2em;
 }
 
-/* line 81, ../sass/_subpages.scss */
+/* line 82, ../sass/_subpages.scss */
 .contact-address {
   font-size: 1.1em;
 }
