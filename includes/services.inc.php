@@ -17,11 +17,9 @@
 <p><a href="http://www.smartcity.com/default.asp" target="_blank">Smart City</a> is a planner’s one-stop source for their entire David L. Lawrence Convention Center’s telecommunications needs. As the exclusive telecommunications provider, Smart City offers a wide array of equipment and services to suit all of your requirements:</p>
 <ul>
     <li>Telephone Services ranging from basic dial tone to needs such   as voicemail, call forwarding, conference phones, and handsets</li>
-    <li>Wired/Wireless Networks</li>
+    <li>Wired/Wireless Networks with identified, complimentary Wi-Fi hotspots.</li>
     <li>Internet broadcasting so your event can reach a global audience using the World Wide Web</li>
-    <li>Special circuits such as DSL, ISDN, T-1, T-3 and more</li>
-    <li>To place an online order, click <a href="https://www.smartcity.com/order/center.asp?center=028" target="_blank">here</a> or to complete an order form click <a href="/images/PDFs/services_telecom_smartcityR3-12-23-09.pdf" target="_blank">here</a>.</li>
-</ul>
+    <li>1 Gbps circuit internet access with DS3 backup from 2 separate providers with a fiber optic backbone network</ul>
 
 <h2>Other Services</h2>
 <p>To help insure your Pittsburgh event is successful, the David L. Lawrence Convention Center provides customized in-house exclusive services&mdash; cleaning, electrical, security and utilities. As an exhibitor or show organizer, you are able to custom order these services by downloading and filling out the appropriate forms:</p>

@@ -1,6 +1,6 @@
-/* 
+/*
  * main.scss
- * 
+ *
  * Main SASS file to combine all components
  */
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
@@ -909,21 +909,21 @@ dd {
  * 
  * Constants for DLCC site 
  */
-/* line 22, ../sass/_layout.scss */
+/* line 22, ../sass/_page_layout.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 27, ../sass/_layout.scss */
+/* line 27, ../sass/_page_layout.scss */
 .page-header {
   max-height: 133px;
   overflow: hidden;
   border-bottom: 2px solid white;
 }
 
-/* line 34, ../sass/_layout.scss */
+/* line 34, ../sass/_page_layout.scss */
 .page-wrap {
   margin: 0 auto;
   position: relative;
@@ -931,19 +931,19 @@ dd {
   width: 320px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 34, ../sass/_layout.scss */
+  /* line 34, ../sass/_page_layout.scss */
   .page-wrap {
     width: 768px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 34, ../sass/_layout.scss */
+  /* line 34, ../sass/_page_layout.scss */
   .page-wrap {
     width: 960px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 34, ../sass/_layout.scss */
+  /* line 34, ../sass/_page_layout.scss */
   .page-wrap {
     width: 1200px;
   }
@@ -953,23 +953,23 @@ dd {
     the column heights equal. See
     http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
     for more details on the technique used for equal heights here */
-/* line 55, ../sass/_layout.scss */
+/* line 55, ../sass/_page_layout.scss */
 .page-columns-wrap {
   width: 100%;
 }
 
-/* line 60, ../sass/_layout.scss */
+/* line 60, ../sass/_page_layout.scss */
 .page-column {
   float: left;
   overflow: hidden;
 }
 
-/* line 66, ../sass/_layout.scss */
+/* line 66, ../sass/_page_layout.scss */
 .page-column-primary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 66, ../sass/_layout.scss */
+  /* line 66, ../sass/_page_layout.scss */
   .page-column-primary {
     width: 657px;
     position: relative;
@@ -977,25 +977,25 @@ dd {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 66, ../sass/_layout.scss */
+  /* line 66, ../sass/_page_layout.scss */
   .page-column-primary {
     width: 750px;
     left: 210px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 66, ../sass/_layout.scss */
+  /* line 66, ../sass/_page_layout.scss */
   .page-column-primary {
     width: 990px;
   }
 }
 
-/* line 89, ../sass/_layout.scss */
+/* line 89, ../sass/_page_layout.scss */
 .page-column-secondary {
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  /* line 89, ../sass/_layout.scss */
+  /* line 89, ../sass/_page_layout.scss */
   .page-column-secondary {
     width: 111px;
     position: relative;
@@ -1003,7 +1003,7 @@ dd {
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 89, ../sass/_layout.scss */
+  /* line 89, ../sass/_page_layout.scss */
   .page-column-secondary {
     width: 210px;
     left: 210px;
@@ -1012,43 +1012,43 @@ dd {
 
 /* each page column needs to be surrounded by a div as wide as the page
     to hold it's background color */
-/* line 110, ../sass/_layout.scss */
+/* line 110, ../sass/_page_layout.scss */
 .page-column-background {
   float: left;
   width: 100%;
 }
 
-/* line 116, ../sass/_layout.scss */
+/* line 116, ../sass/_page_layout.scss */
 .page-column-background-secondary {
   background-color: #bec8b9;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 116, ../sass/_layout.scss */
+  /* line 116, ../sass/_page_layout.scss */
   .page-column-background-secondary {
     overflow: hidden;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 116, ../sass/_layout.scss */
+  /* line 116, ../sass/_page_layout.scss */
   .page-column-background-secondary {
     background-color: #d8ddd4;
   }
 }
 
-/* line 130, ../sass/_layout.scss */
+/* line 130, ../sass/_page_layout.scss */
 .page-column-background-primary {
   background-color: white;
 }
 @media only screen and (min-width: 768px) {
-  /* line 130, ../sass/_layout.scss */
+  /* line 130, ../sass/_page_layout.scss */
   .page-column-background-primary {
     right: 111px;
     position: relative;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 130, ../sass/_layout.scss */
+  /* line 130, ../sass/_page_layout.scss */
   .page-column-background-primary {
     right: 210px;
   }
