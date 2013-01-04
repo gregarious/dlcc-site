@@ -24,29 +24,29 @@
 
         <!-- TODO: test/research extension format -->
         <dt>Billing/Accounting</dt>
-        <dd><a class="tel-link" href="tel:+14125656000;ext=5">412-565-6000 ext. 5</a></dd>
+        <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 5</a></dd>
 
         <!-- TODO: test/research extension format -->
         <dt>Events</dt>
-        <dd><a class="tel-link" href="tel:+14125656000;ext=1">412-565-6000 ext. 1</a></dd>
+        <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 1</a></dd>
 
         <dt>Food/Beverage</dt>
         <dd><a class="tel-link" href="tel:+14123256120">412-325-6120</a></dd>
 
         <!-- TODO: test/research extension format -->
         <dt>Operations</dt>
-        <dd><a class="tel-link" href="tel:+14125656000;ext=4">412-565-6000 ext. 4</a></dd>
+        <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 4</a></dd>
 
         <dt>Sales/Bookings</dt>
         <dd><a href="mailto:dsmucker@pittsburghcc.com">Email Our Sales Staff</a><br/>
-            <a class="tel-link" href="tel:+14125656000;ext=2">412-565-6000 ext. 2</a></dd>
+            <a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 2</a></dd>
 
         <dt>Telecommunications</dt>
         <dd><a class="tel-link" href="tel:+14123256142">412-325-6142</a></dd>
 
         <!-- TODO: test/research extension format -->
         <dt>Human Resources</dt>
-        <dd><a class="tel-link" href="tel:+14125656000;ext=3">412-565-6000 ext. 3</a></dd>
+        <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 3</a></dd>
     </dl>
 
     <p>Thank you for your interest in SMG/David L. Lawrence Convention Center.</p>
