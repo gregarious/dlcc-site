@@ -1,5 +1,6 @@
 <div class="widget widget-interactive-map">
     <h2>Interactive Map</h2>
+    <p>View Restaurants, Parking, Hotels, and Attractions within a 15-minute walk from the DLCC.</p>
     <img src="/images/Map_Sidebar.jpg" />
 </div>
 
