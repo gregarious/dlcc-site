@@ -7,10 +7,10 @@
 
 <p>Visit the Downtown Pittsburgh Partnership to find <a href="http://www.downtownpittsburgh.com/arts" target="_blank">entertainment</a> and <a href="http://www.downtownpittsburgh.com/dining" target="_blank">restaurants by cuisine</a>.</p>
 
-<p><a href="images/PDFs/HungryBrochure.pdf" target="_blank">Hungry?</a> Locate restaurants, eateries and coffee shops within a 10-minute walk of the Convention Center.</p>
+<p>Hungry? Locate restaurants, eateries and coffee shops within a 15-minute walk of the Convention Center with our <a href="/map/index.html" target="_blank">Interactive Map</a></p>
 
 <h2>Hotels</h2>
-<p>Need a place to stay? <a href="images/PDFs/Hotel_Map.pdf" target="_blank">Download (PDF)</a> our hotel guide to help get you started.</p>
+<p>Need a place to stay? Our<a href="/map/index.html" target="_blank">Interactive Map</a> will show you hotels within a 15-minute walk to the DLCC.</p>
 
 <h2>Parking</h2>
-<p>Visit our <a href="/directions.html">Directions and Parking</a> page for more information. For real time parking availability, go to <a href="http://www.parkpgh.org" target="_blank">ParkPGH.org</a>.</p>
+<p>Visit our <a href="/map/index.html">Directions and Parking</a> page for more information. Our<a href="/map/index.html" target="_blank">Interactive Map</a> will show you parking options within a 15-minute walk to the DLCC. For real-time parking availability, go to <a href="http://www.parkpgh.org" target="_blank">ParkPGH.org</a>.</p>

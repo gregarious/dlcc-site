@@ -9,7 +9,7 @@
     <div class="home-inner-row">
         <div class="home-inner-col home-inner-col-1 home-section home-section-map">
             <h2>Interactive Map</h2>
-            <img class="interactive-map-img" src="/images/Map_home.jpg" />
+            <a href="/map/index.html" target="_blank"><img class="interactive-map-img" src="/images/Map_home.jpg" /></a>
         </div>
         <div class="home-inner-col home-inner-col-2 home-section home-section-videos">
             <h2>Video Highlights</h2>

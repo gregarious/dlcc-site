@@ -31,7 +31,7 @@
 
     <h2>Parking</h2>
     <p>A 700-car parking garage with an 8' clearance is available in the Convention Center. The entrances and exists are located on 10th Street and 11st Street on the eastside of the David L. Lawrence Convention Center. For more information, click  to <a href="http://www.alcoparking.com/parking/DLCC.html" target="_blank">Alco Parking Corporation</a>.</p>
-    <p><a href="images/PDFs/ParkingMap.pdf" target="_blank">Click here</a> to download a parking map, or go to <a href="http://www.parkpgh.org" target="_blank">ParkPGH.org</a> for realtime parking availability.</p>
+    <p><a href="/map/index.html" target="_blank">Click here</a> to view parking options within a 15-minute walk of the DLCC, or go to <a href="http://www.parkpgh.org" target="_blank">ParkPGH.org</a> for realtime parking availability.</p>
 
     <p>For more information on the Pittsburgh Parking Authority Garages, including the new Grant Street Transportation Center Garage, <a href="images/PDFs/Rate_Schedule.pdf" target="_blank">click here.</a></p>
 </div>
