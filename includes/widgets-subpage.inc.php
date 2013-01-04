@@ -5,6 +5,6 @@
 
 <div class="widget widget-floorplans">
     <h2>View Floor Plans</h2>
-    <img src="/images/floor_plan_thumb.jpg" />
+    <a href="/images/PDFs/Remarkable_Brochure.pdf" target="_blank"><img src="/images/floor_plan_thumb.jpg" /></a>
     <p>Take a look at each floor's unique flexible layout in this downloadable PDF.</p>
 </div>

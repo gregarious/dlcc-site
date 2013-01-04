@@ -5,8 +5,7 @@ require "_settings.php";
 // determine the header image randomly
 $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
 
-// find out if $page variable starts with building. if so, use an alternative primary content header image
-$isBuildingSubpage = !strncmp($page, "building", 8);
+// find out if on homepage if so, we use different widgets below
 $isHomepage = ($page == "home");
 
 ?>
