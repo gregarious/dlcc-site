@@ -41,14 +41,12 @@ Pittsburgh and Allegheny County officials requested $150 million from the Common
 <h3>2003</h3>
 <p>Phase III is complete bringing the total number of exhibit halls to five, two lecture halls, 51 meeting rooms and a grand Ballroom.</p>
 
-<p>In September, the Grand Opening of the new David L. Lawrence Convention Center.</p>
-
-<p>The DLCC becomes the largest and first convention center to receive Gold LEED&reg; Certified, New Construction (NC) v2.0 rating system.</p>
+<p>In September, the Grand Opening of the new David L. Lawrence Convention Center becoming the largest and first convention center to receive Gold LEED® certification under New Construction(NC) v2.0 rating system.</p>
 
 <h3>2011</h3>
 <p>In May 2011, the $9.5 million Convention Center Riverfront Plaza opened. Creating a “delta” at the base of the Water Feature, the Plaza connects the Convention Center to Point State Park and The Strip District through the Three Rivers Heritage Trail along the Allegheny River. </p>
 
 <h3>2012</h3>
-<p>In April, the DLCC is the first convention center to acheive Platinum LEED&reg; certification under Existing Buildings: Operations &amp; Maintenance rating system and Gold NC.</p>
+<p>In April, the David L. Lawrence Convention Center was the first convention center to achieve Platinum LEED® certification under Existing Buildings: Operations &amp; Maintenance and Gold NC.</p>
 
-<p>In May, 20,000 square feet of programmable space opened on the South Terrace, and the Green Roof opened on the 3rd floor, cityside.</p>
+<p>In May, 20,000 sqft South terrace’s Green Roof opened on the 3rd floor, cityside.</p>
