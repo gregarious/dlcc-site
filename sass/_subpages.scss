@@ -95,3 +95,20 @@
         }
     }
 }
+
+.page-interactive-map > header {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.page-interactive-map > #main {
+    display: none;
+    @media only screen and (min-width: $w-narrow) {
+        display: block;
+    }
+}
+.page-interactive-map > #mobile-notice {
+    display: block;
+    @media only screen and (min-width: $w-narrow) {
+        display: none;
+    }
+}
