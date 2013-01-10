@@ -1,3 +1,7 @@
+<?php
+$headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -14,6 +18,7 @@
         <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.24.custom.css">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/map.css">
 
         <!--<script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>-->
         <!-- load this ASAP to avoid FLOC -->
@@ -30,7 +35,20 @@
             .active { background-color: #fffacd; }
         </style>
     </head>
-    <body>
+    <body class="page-interactive-map">
+        <header class="page-header" style="background-image: url('<?php print $headerImage; ?>');">
+            <div class="page-wrap clearfix"> <!-- keep header content constrained to page width -->
+                <a href="/index.php" title="David L. Lawrence Convention Center">
+                    <img class="logo" src="/images/DLCC_Logo_Full.png" alt="David L. Lawrence Convention Center" />
+                </a>
+                <p class="tagline">Built Green,<br />
+                   Working Green,<br />
+                   Everyday!
+                </p>
+            </div> <!-- end .page-wrap -->
+
+        </header>
+
         <!-- All structural page markup should be within this "main" div. Anything more
              dynamic is either handled by the templates below, or within the various
              Javascript view render calls. -->
@@ -50,6 +68,9 @@
 
             <div id="directory-list"></div>
         </div>
+        <div id="mobile-notice">
+            <p>We're sorry, but the interactive map is not supported for mobile devices.</p>
+        </div>
 
         <!-- Scripts to run app -->
         <script src="js/vendor/jquery-1.8.2.min.js"></script>
@@ -61,14 +82,15 @@
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC7INTXYluYDoz0yZRX89jLORKJEGeQeCY&sensor=false"></script>
         <script src="js/vendor/infobubble.min.js"></script>
 
-        <script src="js/init.js"></script>
-        <script src="js/settings.js"></script>
-        <script src="js/models.js"></script>
-        <script src="js/views.js"></script>
-        <script src="js/controller.js"></script>
+        <!-- TODO: minify and condense scripts -->
+        <script src="js/map/init.js"></script>
+        <script src="js/map/settings.js"></script>
+        <script src="js/map/models.js"></script>
+        <script src="js/map/views.js"></script>
+        <script src="js/map/controller.js"></script>
 
-        <script src="js/test-data.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/map/test-data.js"></script>
+        <script src="js/map/main.js"></script>
 
         <!--<script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

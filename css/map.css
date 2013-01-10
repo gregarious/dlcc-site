@@ -93,7 +93,7 @@ margin: .5em;
 }
 
 #category-filter ul li {
-	list-style:none;
+list-style:none;
 text-transform: uppercase;
 font-size: .8em;
 letter-spacing: .1em;
@@ -103,43 +103,39 @@ height: 80px;
 width: 93px;
 text-align:center;
 font-weight:bold;
-<<<<<<< HEAD
 cursor: pointer;
-=======
-list-style:none;
->>>>>>> Minor CSS changes
 }
 
 #category-filter ul li.restaurants{
-background: url(../images/restaurants-inactive.png) no-repeat center;
+background: url(../images/map/restaurants-inactive.png) no-repeat center;
 }
 
 #category-filter ul li.restaurants.active {
-background: url(../images/restaurants.png) no-repeat center;
+background: url(../images/map/restaurants.png) no-repeat center;
 }
 
 #category-filter ul li.parking {
-background: url(../images/parking-inactive.png) no-repeat center;
+background: url(../images/map/parking-inactive.png) no-repeat center;
 }
 
 #category-filter ul li.parking.active {
-background: url(../images/parking.png) no-repeat center;
+background: url(../images/map/parking.png) no-repeat center;
 }
 
 #category-filter ul li.attractions {
-background: url(../images/attractions-inactive.png) no-repeat center;
+background: url(../images/map/attractions-inactive.png) no-repeat center;
 }
 
 #category-filter ul li.attractions.active {
-background: url(../images/attractions.png) no-repeat center;
+background: url(../images/map/attractions.png) no-repeat center;
 }
 
 #category-filter ul li.hotels {
-background: url(../images/hotels-inactive.png) no-repeat center;
+background: url(../images/map/hotels-inactive.png) no-repeat center;
 }
 
 #category-filter ul li.hotels.active {
-background: url(../images/hotels.png) no-repeat center;
+background: url(../images/map/hotels.png) no-repeat center;
 }
 
 #directory-map {
@@ -170,7 +166,7 @@ margin: 0;
 padding: .75em 1em .75em 4em;
 font-size: 1em;
 line-height: 1.25em;
-background: #9a8478 url(../images/restaurants_transparent.png) no-repeat;
+background: #9a8478 url(../images/map/restaurants_transparent.png) no-repeat;
 background-position: 1em;
 color: white;
 font-weight: normal;
@@ -186,7 +182,7 @@ margin: 0;
 padding: .75em 1em .75em 4em;
 font-size: 1em;
 line-height: 1.25em;
-background: #cb6c4a url(../images/hotels_transparent.png) no-repeat;
+background: #cb6c4a url(../images/map/hotels_transparent.png) no-repeat;
 background-position: 1em;
 color: white;
 font-weight:normal;
@@ -201,7 +197,7 @@ border: .1em solid #cb6c4a;
 margin: 0;
 padding: .75em 1em .75em 4em;
 font-size: 1em;
-background: #2a6d93 url(../images/parking_transparent.png) no-repeat;
+background: #2a6d93 url(../images/map/parking_transparent.png) no-repeat;
 background-position: 1em;
 color: white;
 font-weight:normal;
@@ -216,7 +212,7 @@ border: .1em solid #2a6d93;
 margin: 0;
 padding: .75em 1em .75em 4em;
 font-size: 1em;
-background: #8dae61 url(../images/attractions_transparent.png) no-repeat;
+background: #8dae61 url(../images/map/attractions_transparent.png) no-repeat;
 background-position: 1em;
 color: white;
 font-weight:normal;

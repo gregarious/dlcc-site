@@ -3,22 +3,22 @@
         restaurant: {
             label: 'Restaurants',
             enabled: false,
-            mapMarkerImage: 'images/restaurant_marker.png'
+            mapMarkerImage: 'images/map/restaurant_marker.png'
         },
         hotel: {
             label: 'Hotels',
             enabled: false,
-            mapMarkerImage: 'images/hotel_marker.png'
+            mapMarkerImage: 'images/map/hotel_marker.png'
         },
         parking: {
             label: 'Parking',
             enabled: false,
-            mapMarkerImage: 'images/parking_marker.png'
+            mapMarkerImage: 'images/map/parking_marker.png'
         },
         attraction: {
             label: 'Attractions',
             enabled: false,
-            mapMarkerImage: 'images/attraction_marker.png'
+            mapMarkerImage: 'images/map/attraction_marker.png'
         }
     };
 
@@ -41,7 +41,7 @@
 
     app.hubSettings = {
         title: 'David L. Lawrence Convention Center',
-        markerImage: 'images/star.png',
+        markerImage: 'images/map/star.png',
         location: {      // location of the DLCC
             lat: 40.4453790,
             lng: -79.99593999999999
