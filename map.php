@@ -20,19 +20,18 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/map.css">
 
-        <!--<script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>-->
+        <!--
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        No need for modernizr at the moment, just html5shiv. Inline script here manually removes no-js.
+        -->
+        <script>
+        var docEl = document.documentElement;
+        docEl.className = docEl.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + 'js';
+        </script>
+
         <!-- load this ASAP to avoid FLOC -->
         <script src="js/vendor/respond.min.js"></script>
 
-        <!-- TODO: Move to map.css -->
-        <style type="text/css">
-            #directory-map { height: 375px; width: 60%; float: left }
-            #detail-container { height: 400px; width: 30%; float: right; }
-
-            #directory-list { clear: both; }
-            .selected { background-color: #EEDD82; }
-            .active { background-color: #fffacd; }
-        </style>
     </head>
     <body class="page-interactive-map">
         <header class="page-header" style="background-image: url('<?php print $headerImage; ?>');">

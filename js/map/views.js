@@ -238,8 +238,7 @@
                 var navTab = $('<li class="tab-nav tab-nav-' + category + '"><a href="#tab-' + category + '">' + settings.label + '</a></li>');
                 tabNav.append(navTab);
 
-                // now create teh content of the tab
-                // TODO: create template for this
+                // now create the content of the tab
                 var tabHTML = '<div class="category-tab category-' + category + '" id="tab-' + category + '">';
                 //tabHTML += '<h3>' + settings.label + '</h3>';
                 tabHTML += '<ul>';
@@ -265,7 +264,6 @@
             this.$el.tabs();
 
             // for each disabled category, hide visibility manually
-            // TODO: revisit this
             _.each(categories, function(category) {
                 var settings = app.categorySettings[category] || {};
                 if (!settings.enabled) {

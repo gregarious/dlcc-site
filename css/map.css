@@ -142,6 +142,10 @@ background: url(../images/map/hotels.png) no-repeat center;
 margin: 0;
 padding: 0 0 1em 0;
 border: .1em solid #819578;
+float: left;
+
+height: 375px;
+width: 60%;
 }
 
 #directory-list {
@@ -149,11 +153,16 @@ margin: 2em;
 padding: 1em 0 0 0;
 background: #ffffff;
 width: 71%;
+clear: both;
 }
 
 #detail-container {
 margin: 0 2em 0 0;
 padding: 0;
+float: right;
+
+height: 400px;
+width: 30%;
 }
 
 .place-detail {
@@ -357,6 +366,12 @@ padding: 0;
 margin: 0;
 }
 
+.selected {
+    background-color: #EEDD82;
+}
+.active {
+    background-color: #fffacd;
+}
 
 
 

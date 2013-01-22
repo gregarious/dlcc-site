@@ -18,20 +18,21 @@
             <iframe class="vimeo-frame" src="http://player.vimeo.com/hubnut/user/user14968871/uploaded_videos?color=58585b&amp;background=d8ddd4&amp;slideshow=1&amp;video_title=1&amp;video_byline=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
         </div>
     </div>
-    <div class="home-inner-row home-section-events">
+
+<!--
+    Currently disabled
+     <div class="home-inner-row home-section-events">
         <h2>Upcoming Events</h2>
         <div class="upcoming-event">
-            <a href="#">ISAAC Bienniel Conference</a>
+            <a href="#">Event 1</a>
             <p>July 28 – August 4, 2012</p>
         </div>
         <div class="upcoming-event">
-            <a href="#">IEE International Symp. on Electromagnetic Compatibility</a>
+            <a href="#">Event 2</a>
             <p>August 5 – 10, 2012</p>
         </div>
     </div>
-
-    <!-- TODO: insert events -->
-
+ -->
     <div class="home-inner-row">
         <div class="home-inner-col home-inner-col-1 home-section home-section-app">
             <h2>Try Our Mobile App!</h2>
