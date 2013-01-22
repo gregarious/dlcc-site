@@ -13,9 +13,9 @@
         </div>
         <div class="home-inner-col home-inner-col-2 home-section home-section-videos">
             <h2>Video Highlights</h2>
-            <!-- <iframe class="vimeo-frame" src="http://player.vimeo.com/video/54565607?title=0&amp;byline=0&amp;portrait=0&amp;color=819578&amp;loop=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
-            <!-- "Hubnut" widget -->
-            <iframe class="vimeo-frame" src="http://player.vimeo.com/hubnut/user/user14968871/uploaded_videos?color=58585b&amp;background=d8ddd4&amp;slideshow=1&amp;video_title=1&amp;video_byline=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <iframe class="vimeo-frame" src="http://player.vimeo.com/video/54565607?title=0&amp;byline=0&amp;portrait=0&amp;color=819578&amp;loop=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <!-- "Hubnut" widget
+            <iframe class="vimeo-frame" src="http://player.vimeo.com/hubnut/user/user14968871/uploaded_videos?color=58585b&amp;background=d8ddd4&amp;slideshow=1&amp;video_title=1&amp;video_byline=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
         </div>
     </div>
     <div class="home-inner-row home-section-events">
