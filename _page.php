@@ -100,15 +100,15 @@ $isHomepage = ($page == "home");
                     <aside class="page-column page-column-secondary">
                         <nav id="site-nav" class="site-nav">
                             <ul class="clearfix">
-                                <li class="item-1"><a href="/building/" title="Our Building"><img src="/images/nav/Nav_Building.png"></a></li>
-                                <li class="item-2"><a href="/services.php" title="Our Services"><img src="/images/nav/Nav_Services.png"></a></li>
-                                <li class="item-3"><a href="/explore.php" title="Explore Pittsburgh"><img src="/images/nav/Nav_ExplorePGH.png"></a></li>
-                                <li class="item-4"><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/images/nav/Nav_DLCCneighborhood.png"></a></li>
-                                <li class="item-5"><a href="/directions.php" title="Directions &amp; Parking"><img src="/images/nav/Nav_DirectionsParking.png"></a></li>
-                                <li class="item-6"><a href="/events.php" title="Events"><img src="/images/nav/Nav_Events.png"></a></li>
-                                <li class="item-7"><a href="/aboutus.php" title="About Us"><img src="/images/nav/Nav_About.png"></a></li>
-                                <li class="item-8"><a href="/contactus.php" title="Contact Us"><img src="/images/nav/Nav_Contact.png"></a></li>
-                                <li class="item-9"><a href="/index.php" class="nav-btn-home" title="Home"><img src="/images/nav/Nav_Home.png"></a></li>
+                                <li class="item-1"><a href="/building/" title="Our Building"><img src="/images/nav/Nav_Building.png" alt="Building Icon"></a></li>
+                                <li class="item-2"><a href="/services.php" title="Our Services"><img src="/images/nav/Nav_Services.png" alt="Services Icon"></a></li>
+                                <li class="item-3"><a href="/explore.php" title="Explore Pittsburgh"><img src="/images/nav/Nav_ExplorePGH.png" alt="Explore Pittsburgh Icon"></a></li>
+                                <li class="item-4"><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/images/nav/Nav_DLCCneighborhood.png" alt="Neighborhood Icon"></a></li>
+                                <li class="item-5"><a href="/directions.php" title="Directions &amp; Parking"><img src="/images/nav/Nav_DirectionsParking.png" alt="Directions Icon"></a></li>
+                                <li class="item-6"><a href="/events.php" title="Events"><img src="/images/nav/Nav_Events.png" alt="Events Icon"></a></li>
+                                <li class="item-7"><a href="/aboutus.php" title="About Us"><img src="/images/nav/Nav_About.png" alt="About Icon"></a></li>
+                                <li class="item-8"><a href="/contactus.php" title="Contact Us"><img src="/images/nav/Nav_Contact.png" alt="Contact Icon"></a></li>
+                                <li class="item-9"><a href="/index.php" class="nav-btn-home" title="Home"><img src="/images/nav/Nav_Home.png" alt="Home Icon"></a></li>
                             </ul>
                         </nav>
                         <?php

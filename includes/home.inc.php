@@ -9,7 +9,7 @@
     <div class="home-inner-row">
         <div class="home-inner-col home-inner-col-1 home-section home-section-map">
             <h2>Interactive Map</h2>
-            <a href="/map.php" target="_blank"><img class="interactive-map-img" src="/images/Map_home.jpg" /></a>
+            <a href="/map.php" target="_blank"><img class="interactive-map-img" src="/images/Map_home.jpg" alt="DLCC Interactive Map"/></a>
         </div>
         <div class="home-inner-col home-inner-col-2 home-section home-section-videos">
             <h2>Video Highlights</h2>
@@ -44,7 +44,7 @@
                 your Market or App Store by searching <i>Pittsburgh Convention</i>.</p>
 
             <div class="app-links">
-                <a href="https://itunes.apple.com/us/app/pittsburgh-convention-center/id519070355?ls=1&mt=8" title="DLCC App in App Store" target="_blank"><img alt="Download on the App Store" src="/images/app-store.svg" /></a>
+                <a href="https://itunes.apple.com/us/app/pittsburgh-convention-center/id519070355?ls=1&amp;mt=8" title="DLCC App in App Store" target="_blank"><img alt="Download on the App Store" src="/images/app-store.svg" /></a>
                 <!-- OK for this to be an SVG: no need for Android 2.3 to see App Store link -->
                 <a href="http://play.google.com/store/apps/details?id=com.imswift.pittsburgh" title="DLCC App in Google Play" target="_blank"><img alt="Android app on Google Play" src="http://developer.android.com/images/brand/en_app_rgb_wo_45.png" /></a>
             </div>

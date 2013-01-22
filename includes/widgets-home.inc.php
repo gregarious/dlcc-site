@@ -1,7 +1,7 @@
 <div class="widget widget-upcoming-events">
     <h2>Upcoming Events</h2>
     <div class="upcoming-event">
-    
+
         <a href="http://www.autorama.com/" target="_blank">2013 World of Wheels </a>
         <p>Jan. 25 &ndash; 27, 2013</p>
     </div>
@@ -58,17 +58,17 @@
         <p>Mar. 22 &ndash; 23, 2013</p>
     </div>
     <div class="upcoming-event">
-        <a href="http://farmtotablepa.com/" target="_blank">Farm to Table Pittsburgh/a>
+        <a href="http://farmtotablepa.com/" target="_blank">Farm to Table Pittsburgh</a>
         <p>Mar. 22 &ndash; 23, 2013</p>
     </div>
     <div class="upcoming-event">
-        <a href="http://www.professional-events.com/Magic/GrandPrix/Pittsburgh2013/" target="_blank">Professional Events Services - Magic the Gathering Grand Prix/a>
+        <a href="http://www.professional-events.com/Magic/GrandPrix/Pittsburgh2013/" target="_blank">Professional Events Services - Magic the Gathering Grand Prix</a>
         <p>Mar. 22 &ndash; 24, 2013</p>
     </div>
     <a href="/events.php" class="more-link">MORE &raquo;</a>
 </div>
 <div class="widget widget-flickr">
-    <h2 class="flickr-heading"><img title="DLCC Flickr Page" src="/images/placeholders/flickr.png" /></h2>
+    <h2 class="flickr-heading"><img alt="DLCC Flickr Page" src="/images/placeholders/flickr.png"/></h2>
     <div class="flickr-badge">
         <!-- Start of Flickr Badge -->
         <style type="text/css">

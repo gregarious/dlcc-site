@@ -4,7 +4,7 @@
 <p><a href="http://www.levyrestaurants.com/convention-centers/david-l.-lawrence-center" target="_blank">Levy Restaurants</a>, the exclusive food and beverage provider at the David L. Lawrence Convention Center, will meet every culinary desire from full-course dinners to afternoon snacks.</p>
 
 <h2>Audio and Visual</h2>
-<p><a href="http://www.threeriversentertainment.com/index.cfm?CFID=13769451&CFTOKEN=57741883" target="_blank">Three Rivers Entertainment & Production</a> has a highly skilled staff of event producers and managers that create a dynamic impression during your time at the David L. Lawrence Convention Center . As the in house company of choice, they offer the following outstanding equipment and services:</p>
+<p><a href="http://www.threeriversentertainment.com/index.cfm?CFID=13769451&amp;CFTOKEN=57741883" target="_blank">Three Rivers Entertainment & Production</a> has a highly skilled staff of event producers and managers that create a dynamic impression during your time at the David L. Lawrence Convention Center . As the in house company of choice, they offer the following outstanding equipment and services:</p>
 <ul>
     <li>cutting edge, pristine AV and lighting equipment rentals</li>
     <li>world class event production techniques and designs</li>

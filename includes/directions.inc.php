@@ -9,7 +9,7 @@
         <li><a href="http://www.flypittsburgh.com/" target="_blank">Flight Info</a></li>
     </ul>
 
-    <h2>Driving Directions</h2> 
+    <h2>Driving Directions</h2>
     <p class="daddr">To David L. Lawrence Convention Center<br>1000 Fort Duquesne Blvd<br>Pittsburgh, PA 15222</p>
 
     <h3>From the Airport</h3>
@@ -27,7 +27,7 @@
     <h3>From the South</h3>
     <p>I-79 N to Exit 59 A Pittsburgh to I-279 N through Ft. Pitt Tunnels and across the Ft. Pitt Bridge. Take Ft. Duquesne Blvd Exit 6C. Follow sign to Convention/Strip District on 10th Street Bypass. Convention Center located on the right.</p>
 
-    <p>Or use <a href="http://www.mapquest.com/directions/main.adp?1sb=revise&2v=ADDRESS&2y=US&2pl=412%2d565%2d6000&2pn=David%20L%20Lawrence%20Convention&2l=ygGoGyoGD6b5IMG3pIat4Q%3d%3d&2g=hYARWzE1mg6Ru41IlO0kRw%3d%3d&2a=1000%20Fort%20Duquesne%20Blvd&2c=Pittsburgh&2s=PA&2z=15222&2ffi=1&q=David%20L%2e%20Lawrence%20Convention%20Center&qc=Convention%20%26%20Meeting%20Facilities%20%26%20Svc" target="_blank">MapQuest</a></p>
+    <p>Or use <a href="http://www.mapquest.com/directions/main.adp?1sb=revise&amp;2v=ADDRESS&amp;2y=US&amp;2pl=412%2d565%2d6000&amp;2pn=David%20L%20Lawrence%20Convention&amp;2l=ygGoGyoGD6b5IMG3pIat4Q%3d%3d&amp;2g=hYARWzE1mg6Ru41IlO0kRw%3d%3d&amp;2a=1000%20Fort%20Duquesne%20Blvd&amp;2c=Pittsburgh&amp;2s=PA&amp;2z=15222&amp;2ffi=1&amp;q=David%20L%2e%20Lawrence%20Convention%20Center&amp;qc=Convention%20%26%20Meeting%20Facilities%20%26%20Svc" target="_blank">MapQuest</a></p>
 
     <h2>Parking</h2>
     <p>A 700-car parking garage with an 8' clearance is available in the Convention Center. The entrances and exists are located on 10th Street and 11st Street on the eastside of the David L. Lawrence Convention Center. For more information, click  to <a href="http://www.alcoparking.com/parking/DLCC.html" target="_blank">Alco Parking Corporation</a>.</p>

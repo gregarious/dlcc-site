@@ -2,7 +2,7 @@
 
 <p>The David L. Lawrence Convention Center is managed by <a href="http://www.smgworld.com/" target="_blank">SMG</a>, the world leader in venue management, marketing and development. SMG's staff works closely with the hotel industry, Convention and Visitor Bureau, vendors/suppliers, and labor unions to help facilitate events and deliver the best environment for planners and attendees.</p>
 
-<img src="images/RAD_logo.gif" align="left" />
+<img src="images/RAD_logo.gif" alt="RAD logo" />
 <a href="http://www.radworkshere.org/" target="_blank">RAD Works Here</a>
- 
+
 <p>RAD Supports finances and regional assets in the areas of libraries, parks &amp; recreation, cultural, sports and civic facilities and programs</p>
