@@ -24,8 +24,7 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         <!-- load this ASAP to avoid FLOC -->
         <script src="js/vendor/respond.min.js"></script>
 
-        <!-- Junk CSS for development. Only one that matters is the #directiory-map having
-        a specified height. -->
+        <!-- TODO: Move to map.css -->
         <style type="text/css">
             #directory-map { height: 375px; width: 60%; float: left }
             #detail-container { height: 400px; width: 30%; float: right; }
@@ -92,12 +91,12 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         <script src="js/map/test-data.js"></script>
         <script src="js/map/main.js"></script>
 
-        <!--<script>
+        <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>-->
+        </script>
 
         <!-- Dynamic templates -->
 

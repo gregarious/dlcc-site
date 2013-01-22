@@ -24,11 +24,15 @@ $isHomepage = ($page == "home");
 
         <link rel="stylesheet" href="/css/main.css">
 
-        <!-- No need for modernizr at the moment -->
-        <!-- TODO: reenable external hosting link to shiv and jQuery
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
-        <!-- TODO: link to minimized scripts -->
-        <!-- TODO: if not including modernizr, get rid of no-js class manually -->
+        <!--
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        No need for modernizr at the moment, just html5shiv. Inline script here manually removes no-js.
+        -->
+        <script>
+        var docEl = document.documentElement;
+        docEl.className = docEl.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + 'js';
+        </script>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
         <script src="/js/vendor/respond.min.js"></script>
     </head>
@@ -96,7 +100,6 @@ $isHomepage = ($page == "home");
                     <aside class="page-column page-column-secondary">
                         <nav id="site-nav" class="site-nav">
                             <ul class="clearfix">
-                                <!-- TODO: fix links when in building subdir -->
                                 <li class="item-1"><a href="/building/" title="Our Building"><img src="/images/nav/Nav_Building.png"></a></li>
                                 <li class="item-2"><a href="/services.php" title="Our Services"><img src="/images/nav/Nav_Services.png"></a></li>
                                 <li class="item-3"><a href="/explore.php" title="Explore Pittsburgh"><img src="/images/nav/Nav_ExplorePGH.png"></a></li>
@@ -128,9 +131,7 @@ $isHomepage = ($page == "home");
             </footer>
         </div>  <!-- end .page-wrap -->
 
-        <!-- TODO: reenable external hosting link to shiv and jQuery
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
-        <!-- TODO: remove jQuery if not using it -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
 
         <script src="/js/vendor/matchmedia.js"></script>
@@ -139,14 +140,12 @@ $isHomepage = ($page == "home");
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
 
-        <!-- TODO: reenable
         <script>
             var _gaq=[['_setAccount','UA-9185606-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-        -->
 
     </body>
 </html>

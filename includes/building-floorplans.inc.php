@@ -1,4 +1,3 @@
-<!-- TODO: include Photo Gallery? -->
 <nav class="subnav building-links">
     <a href="history.php">History</a> |
     <a href="http://www.greenfirst.us/">Greenfirst</a> |
@@ -19,5 +18,5 @@
 <p><a href="../images/PDFs/FlexibleWorkbook.pdf" target="_blank">Download</a> Detailed Specifications (PDF)</p>
 <p><a href="../images/PDFs/Remarkable_Brochure.pdf" target="_blank">Download</a> Sales Brochure (PDF)</p>
 
-<!-- TODO: fix this links -->
+<!-- TODO: include MM? If so, fix link -->
 <p><img src="../images/mm_graphic.gif" /><a href="meetingmatrix.html">Download</a> MeetingMatrix Certified Room Diagrams</p>

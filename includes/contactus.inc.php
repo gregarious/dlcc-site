@@ -22,18 +22,15 @@
         <dt>Audio/Visual</dt>
         <dd><a class="tel-link" href="tel:+14123256115">412-325-6115</a></dd>
 
-        <!-- TODO: test/research extension format -->
         <dt>Billing/Accounting</dt>
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 5</a></dd>
 
-        <!-- TODO: test/research extension format -->
         <dt>Events</dt>
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 1</a></dd>
 
         <dt>Food/Beverage</dt>
         <dd><a class="tel-link" href="tel:+14123256120">412-325-6120</a></dd>
 
-        <!-- TODO: test/research extension format -->
         <dt>Operations</dt>
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 4</a></dd>
 
@@ -44,7 +41,6 @@
         <dt>Telecommunications</dt>
         <dd><a class="tel-link" href="tel:+14123256142">412-325-6142</a></dd>
 
-        <!-- TODO: test/research extension format -->
         <dt>Human Resources</dt>
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 3</a></dd>
     </dl>
