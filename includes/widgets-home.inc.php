@@ -1,12 +1,69 @@
 <div class="widget widget-upcoming-events">
     <h2>Upcoming Events</h2>
     <div class="upcoming-event">
-        <a href="#">ISAAC Bienniel Conference</a>
-        <p>July 28 – August 4, 2012</p>
+    
+        <a href="http://www.autorama.com/" target="_blank">2013 World of Wheels </a>
+        <p>Jan. 25 &ndash; 27, 2013</p>
     </div>
     <div class="upcoming-event">
-        <a href="#">IEE International Symp. on Electromagnetic Compatibility</a>
-        <p>August 5 – 10, 2012</p>
+        <a href="http://www.cheerlebrity.com/index.php/events/" target="_blank">Cheerlebrity</a>
+        <p>Jan. 26, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.marcellusmidstream.com/" target="_blank">Hart Energy Marcellus-Utica Midstream Conference &amp; Exhibition</a>
+        <p>Jan. 29 &ndash; 31, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.nacacnet.org/college-fairs/SpringNCF/Pages/PIttsburgh.aspx" target="_blank">2013 College Fair</a>
+        <p>Feb. 6 &ndash; 7, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.jamlive.com/Shows/Pittsburgh.php" target="_blank">JAMLIVE!</a>
+        <p>Feb. 9 &ndash; 10, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.pittautoshow.com/AutoShow/" target="_blank">2013 Auto Show</a>
+        <p>Feb. 15 &ndash; 18, 2013</p>
+    </div>
+     <div class="upcoming-event">
+        <a href="http://www.jubileeconference.com/" target="_blank">2013 Annual Jubilee Conference</a>
+        <p>Feb. 15 &ndash; 17, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.assetinc.org/contact.aspx" target="_blank">Asset STEM Education Vision Conference</a>
+        <p>Feb. 18, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://pittsburgh.cbslocal.com/join-us-for-kid-a-palooza/" target="_blank">Kidapalooza</a>
+        <p>Feb. 23, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://beadshows.com/" target="_blank">Intergalactic Bead &amp; Jewelry Shows - Bead and Jewelry Show </a>
+        <p>Feb. 23 &ndash; 24, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.pghhome.com/attend-the-show.aspx" target="_blank">Pittsburgh Home and Garden Show</a>
+        <p>Mar. 1 &ndash; 10, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.wsfcheer.com/" target="_blank">World Spirit Federation - Encore</a>
+        <p>Mar. 16, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="#" target="_blank">PASBO Annual Meeting</a>
+        <p>Mar. 19 &ndash; 21, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.marykay.com/default.aspx" target="_blank">Mary Kay, Inc. 2013 Career Conference</a>
+        <p>Mar. 22 &ndash; 23, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://farmtotablepa.com/" target="_blank">Farm to Table Pittsburgh/a>
+        <p>Mar. 22 &ndash; 23, 2013</p>
+    </div>
+    <div class="upcoming-event">
+        <a href="http://www.professional-events.com/Magic/GrandPrix/Pittsburgh2013/" target="_blank">Professional Events Services - Magic the Gathering Grand Prix/a>
+        <p>Mar. 22 &ndash; 24, 2013</p>
     </div>
     <a href="/events.php" class="more-link">MORE &raquo;</a>
 </div>
