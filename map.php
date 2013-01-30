@@ -87,7 +87,7 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         <script src="js/map/views.js"></script>
         <script src="js/map/controller.js"></script>
 
-        <script src="js/map/test-data.js"></script>
+        <script src="js/map/data.js"></script>
         <script src="js/map/main.js"></script>
 
         <script>
