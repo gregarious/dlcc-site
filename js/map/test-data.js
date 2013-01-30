@@ -146,10 +146,7 @@ app.data = [
         "category": "restaurant", 
         "name": "Brown Bag Deli", 
         "price": "$", 
-        "location": {
-            "lat": 40.4540255, 
-            "lng": -79.91240499999999
-        }, 
+        "location": null, 
         "address": "Liberty Center, 1001 Liberty Ave", 
         "type": "Sandwich Shop"
     }, 
@@ -1480,10 +1477,7 @@ app.data = [
         "category": "attraction", 
         "name": "Allegheny County Courthouse", 
         "phone": "412-350-5313", 
-        "location": {
-            "lat": 40.5172457, 
-            "lng": -80.1636441
-        }, 
+        "location": null, 
         "address": "5th Ave. and Grant St."
     }, 
     {
@@ -1700,10 +1694,7 @@ app.data = [
         "category": "attraction", 
         "name": "O\u2019Reilly Theater", 
         "phone": "412-316-1600", 
-        "location": {
-            "lat": 40.44396589999999, 
-            "lng": -79.8850734
-        }, 
+        "location": null, 
         "address": "621 Penn Avenue"
     }, 
     {
