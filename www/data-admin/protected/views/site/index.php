@@ -8,7 +8,7 @@ $this->pageTitle=Yii::app()->name;
 <?php 
 if (Yii::app()->user->isGuest) {
 ?>
-Please log in to continue.
+Please <a href="?r=site/login">log in</a> to continue.
 <?php 
 }
 else {
