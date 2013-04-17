@@ -5,9 +5,16 @@ $(function() {
 
 	// PlaceCollection: a ViewModel class to handle obejcts of a particular category
 	var PlaceCollection = function(instances, settings) {
+		var self = this;
 		this.isVisible = ko.observable(settings.enabled || false);
+
 		this.toggleVisibility = _.bind(function() {
 			this.isVisible(!this.isVisible());
+			_.each(this.objects(), function(obj) {
+				if (obj.marker) {
+					obj.marker.setMap(app.map);
+				}
+			});
 		}, this);
 
 		this.objects = ko.observableArray(_.map(instances, function(inst) {
@@ -20,7 +27,7 @@ $(function() {
 			if (obj.lat && obj.lng) {
 				obj.marker = new google.maps.Marker({
 					position: new google.maps.LatLng(obj.lat, obj.lng),
-					map: app.map,
+					map: this.isVisible() ? app.map : null,
 					title: obj.name,
 					icon: settings.markerImage || null
 				});
@@ -38,10 +45,7 @@ $(function() {
 			};
 
 			return obj;
-		}));
-
-
-		
+		}, this));
 	};
 
 	app.viewModel = {

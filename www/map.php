@@ -78,27 +78,47 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
 
             <div id="directory-list">
                 <ul>
-                    <li data-bind="visible: restaurants.isVisible()" href="#tab-restaurants">Restaurants</li>
-                    <li data-bind="visible: parking.isVisible()" href="#tab-parking">Parking</li>
-                    <li data-bind="visible: hotels.isVisible()" href="#tab-hotels">Hotels</li>
-                    <li data-bind="visible: attractions.isVisible()" href="#tab-attractions">Attractions</li>
+                    <li class="tab-nav tab-nav-restaurant" 
+                        data-bind="visible: restaurants.isVisible()">
+                        <a href="#tab-restaurant">Restaurants</a>
+                    </li>
+                    <li class="tab-nav tab-nav-parking"
+                        data-bind="visible: parking.isVisible()">
+                        <a href="#tab-parking">Parking</a>
+                    </li>
+                    <li class="tab-nav tab-nav-hotel"
+                        data-bind="visible: hotels.isVisible()">
+                        <a href="#tab-hotel">Hotels</a>
+                    </li>
+                    <li class="tab-nav tab-nav-attraction"
+                        data-bind="visible: attractions.isVisible()">
+                        <a href="#tab-attraction">Attractions</a>
+                    </li>
                 </ul>
-                <div id="tab-restaurants" data-bind="visible: restaurants.isVisible()">
+                <div class="category-tab category-restaurant"
+                     id="tab-restaurant"
+                     data-bind="visible: restaurants.isVisible()">
                     <ul data-bind="foreach: restaurants.objects">
                         <li data-bind="text: name, click: markerClicked"></li>
                     </ul>
                 </div>
-                <div id="tab-parking" data-bind="visible: parking.isVisible()">
+                <div class="category-tab category-parking"
+                     id="tab-parking"
+                     data-bind="visible: parking.isVisible()">
                     <ul data-bind="foreach: parking.objects">
                         <li data-bind="text: name, click: markerClicked"></li>
                     </ul>
                 </div>
-                <div id="tab-hotels" data-bind="visible: hotels.isVisible()">
+                <div class="category-tab category-hotel"
+                     id="tab-hotel"
+                     data-bind="visible: hotels.isVisible()">
                     <ul data-bind="foreach: hotels.objects">
                         <li data-bind="text: name, click: markerClicked"></li>
                     </ul>
                 </div>
-                <div id="tab-attractions" data-bind="visible: attractions.isVisible()">
+                <div class="category-tab category-attraction"
+                     id="tab-attraction"
+                     data-bind="visible: attractions.isVisible()">
                     <ul data-bind="foreach: attractions.objects">
                         <li data-bind="text: name, click: markerClicked"></li>
                     </ul>
@@ -112,6 +132,14 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         <!-- Scripts to run app -->
         <script src="js/vendor/jquery-1.8.2.min.js"></script>
         <script src="js/vendor/jquery-ui-1.8.24.custom.min.js"></script>
+
+        <script>
+        $(function() {
+            $( "#directory-list" ).tabs();
+        });
+        </script>
+
+
 
         <script src="js/vendor/underscore-min.js"></script>
 
@@ -155,12 +183,6 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
 
         <!-- Dynamic templates -->
 
-        <!-- Map InfoWindow template
-
-             Variables:
-             - name
-             - address
-         -->
         <script type="text/html" id="tpl-infowindow-restaurant">
         <div class="map-popup place-detail">
             <h2 class="restaurantdetail"><%= name %></h2>
@@ -208,11 +230,5 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
             </dl>
         </div>
         </script>
-
-        <!-- TODO: impl this with native templating
-        <script type="text/html" id="tpl-listitem">
-            <li data-cid="{{cid}}">{{name}}</li>
-        </script>
-
     </body>
 </html>
