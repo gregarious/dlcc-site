@@ -139,8 +139,6 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         });
         </script>
 
-
-
         <script src="js/vendor/underscore-min.js"></script>
 
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC7INTXYluYDoz0yZRX89jLORKJEGeQeCY&sensor=false"></script>
