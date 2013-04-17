@@ -12,9 +12,9 @@ $(function() {
 			this.isVisible(!this.isVisible());
 			_.each(this.objects(), function(obj) {
 				if (obj.marker) {
-					obj.marker.setMap(app.map);
+					obj.marker.setMap(this.isVisible() ? app.map : null);
 				}
-			});
+			}, this);
 		}, this);
 
 		this.objects = ko.observableArray(_.map(instances, function(inst) {
