@@ -1,0 +1,82 @@
+$(function() {
+	app.map = new google.maps.Map(
+		document.getElementById('directory-map'),
+		app.mapOptions);
+
+	// PlaceCollection: a ViewModel class to handle obejcts of a particular category
+	var PlaceCollection = function(instances, settings) {
+		this.isVisible = ko.observable(settings.enabled || false);
+		this.objects = _.map(instances, function(inst) {
+			var obj = _.clone(inst);
+			obj.iwTemplate = settings.iwTemplate || null;
+			if (obj.lat && obj.lng) {
+				obj.marker = new google.maps.Marker({
+					position: new google.maps.LatLng(obj.lat, obj.lng),
+					map: app.map,
+					title: obj.name,
+					icon: settings.markerImage || null
+				});
+
+				google.maps.event.addListener(obj.marker, 'click', function() {
+					app.viewModel.markerClicked(obj);
+				});
+			}
+			else {
+				obj.marker = null;
+			}
+			return obj;
+		});
+
+		this.toggleVisibility = _.bind(function() {
+			this.isVisible(!this.isVisible());
+		}, this);
+	};
+
+	app.viewModel = {
+		restaurants: new PlaceCollection(
+			app.data.restaurantObjs, 
+			app.categorySettings.restaurant),
+		hotels: new PlaceCollection(
+			app.data.hotelObjs, 
+			app.categorySettings.hotel),
+		parking: new PlaceCollection(
+			app.data.parkingObjs, 
+			app.categorySettings.parking),
+		attractions: new PlaceCollection(
+			app.data.attractionObjs, 
+			app.categorySettings.attraction),
+
+		// Singleton object to wrap a google maps info window
+		infoWindow: { 
+			_iw: null,
+			
+			// should be called with a place object
+			open: function(object) {
+				this.close();
+				console.log('open');
+				var opts = {
+                    map: app.map,
+					content: vm.renderInfoWindow(),
+					position: new google.maps.LatLng(object.lat, object.lng)
+                };
+                // add the styles from settings.js
+                this._iw = new InfoBubble(_.extend(opts, app.infoWindowStyle));
+				this._iw.open(app.map);
+            },
+            close: function() {
+				if (this._iw) {
+					this._iw.close();
+				}
+				this._iw = null;
+            }
+		},
+
+		markerClicked: function(obj) {
+			this.infoWindow.open(obj);
+		}
+	};
+
+	google.maps.event.addListener(app.map, 'click', app.viewModel.infoWindow.close());
+
+	ko.applyBindings(app.viewModel);
+});

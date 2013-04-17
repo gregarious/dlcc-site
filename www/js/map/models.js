@@ -18,9 +18,10 @@
             this.on('reset', function() {
                 // reset the categoryPlacesMap
                 this.categoryPlacesMap = {};
+                
                 this.each(function(model) {
                     var cat = model.get('category');
-                    
+
                     // first add the model to the appropriate bucket
                     var pmap = this.categoryPlacesMap[cat];
                     if (_.isUndefined(pmap)) {

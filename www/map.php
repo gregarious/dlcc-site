@@ -54,10 +54,22 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
             <div id="category-filter">
                 <h3>Click to View:</h3>
                 <ul>
-                    <li data-category="restaurant" class="restaurants"></li>
-                    <li data-category="parking" class="parking"></li>
-                    <li data-category="hotel" class="hotels"></li>
-                    <li data-category="attraction" class="attractions"></li>
+                    <li class="restaurants" 
+                        data-bind="css: { active: restaurants.isVisible() }, 
+                                   click: restaurants.toggleVisibility">
+                    </li>
+                    <li class="parking" 
+                        data-bind="css: { active: parking.isVisible() }, 
+                                   click: parking.toggleVisibility">
+                    </li>
+                    <li class="hotels" 
+                        data-bind="css: { active: hotels.isVisible() }, 
+                                   click: hotels.toggleVisibility">
+                    </li>
+                    <li class="attractions" 
+                        data-bind="css: { active: attractions.isVisible() }, 
+                                   click: attractions.toggleVisibility">
+                    </li>
                 </ul>
             </div>
             <h3 class="walk">within a 15-minute walk from the DLCC:</h3>
@@ -73,25 +85,42 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         <!-- Scripts to run app -->
         <script src="js/vendor/jquery-1.8.2.min.js"></script>
         <script src="js/vendor/jquery-ui-1.8.24.custom.min.js"></script>
+
         <script src="js/vendor/underscore-min.js"></script>
-        <script src="js/vendor/backbone-min.js"></script>
-        <script src="js/vendor/handlebars-1.0.rc.1.js"></script>
 
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC7INTXYluYDoz0yZRX89jLORKJEGeQeCY&sensor=false"></script>
         <script src="js/vendor/infobubble.min.js"></script>
 
-        <!-- TODO: minify and condense scripts -->
-        <script src="js/map/init.js"></script>
-        <script src="js/map/settings.js"></script>
-        <script src="js/map/models.js"></script>
-        <script src="js/map/views.js"></script>
-        <script src="js/map/controller.js"></script>
+        <script src="js/vendor/knockout-2.2.1.js"></script>
 
-        <script src="js/map/data.js"></script>
-        <script src="js/map/main.js"></script>
+        <!-- TODO: minify and condense scripts -->
+
+        <script src="js/map/init.js"></script>
+
+        <?php
+        # generate JSON from DB place data
+        print "<script>app.data={};";
+        $categories = array('restaurant', 'parking', 'hotel', 'attraction');
+        try {
+            $dbh = new PDO('mysql:host=localhost;dbname=dlcc', 'root', '');
+            foreach ($categories as $category) {
+                $statement = $dbh->prepare("SELECT * from $category");
+                $statement->execute();
+                $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+                print "app.data.${category}Objs=" . json_encode($results) . ";";
+            }
+            print "</script>";
+        } catch (PDOException $e) {
+            print "</script>";
+            print "Error!: " . $e->getMessage() . "<br/>";
+        }
+        $dbh = null;
+        ?>
+
+        <script src="js/map/main-ko.js"></script>
 
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            var _gaq=[['_setAccount','UA-9185606-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
@@ -107,52 +136,53 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
          -->
         <script type="text/html" id="tpl-infowindow-restaurant">
         <div class="map-popup place-detail">
-            <h2 class="restaurantdetail">{{name}}</h2>
+            <h2 class="restaurantdetail"><%= name %></h2>
             <dl>
                 <dt>Address</dt>
-                <dd>{{address}}</dd>
+                <dd><%= address %></dd>
 
                 <dt>Type</dt>
-                <dd>{{type}}</dd>
+                <dd><%= type %></dd>
 
                 <dt>Price</dt>
-                <dd>{{price}}</dd>
+                <dd><%= price %></dd>
             </dl>
         </div>
         </script>
 
         <script type="text/html" id="tpl-infowindow-hotel">
         <div class="map-popup place-detail">
-            <h2 class="hoteldetail">{{name}}</h2>
+            <h2 class="hoteldetail"><%= name %></h2>
             <dl>
                 <dt>Address</dt>
-                <dd>{{address}}</dd>
+                <dd><%= address %></dd>
                 <dt>Phone</dt>
-                <dd>{{phone}}</dd>
+                <dd><%= phone %></dd>
             </dl>
         </div>
         </script>
 
         <script type="text/html" id="tpl-infowindow-parking">
         <div class="map-popup place-detail">
-            <h2 class="parkingdetail">{{name}}</h2>
+            <h2 class="parkingdetail"><%= name %></h2>
             <dl>
                 <dt>Address</dt>
-                <dd>{{address}}</dd>
+                <dd><%= address %></dd>
             </dl>
         </div>
         </script>
 
         <script type="text/html" id="tpl-infowindow-attraction">
         <div class="map-popup place-detail">
-            <h2 class="attractiondetail">{{name}}</h2>
+            <h2 class="attractiondetail"><%= name %></h2>
             <dl>
                 <dt>Address</dt>
-                <dd>{{address}}</dd>
+                <dd><%= address %></dd>
             </dl>
         </div>
         </script>
 
+        <!-- TODO: impl this with native templating
         <script type="text/html" id="tpl-listitem">
             <li data-cid="{{cid}}">{{name}}</li>
         </script>

@@ -102,13 +102,13 @@
 
 .page-interactive-map > #main {
     display: none;
-    @media only screen and (min-width: $w-narrow) {
+    @media only screen and (min-width: $w-mobile) {
         display: block;
     }
 }
 .page-interactive-map > #mobile-notice {
     display: block;
-    @media only screen and (min-width: $w-narrow) {
+    @media only screen and (min-width: $w-mobile) {
         display: none;
     }
 }

@@ -3,41 +3,58 @@
 (function(){
     app = {};
 
-    app.markerGenerator = (function() {
-        var cachedMarkers = {};
-        var cachedShadow = null;
+    app.categorySettings = {
+        restaurant: {
+            label: 'Restaurants',
+            enabled: false,
+            mapMarkerImage: 'images/map/restaurant_marker.png'
+        },
+        hotel: {
+            label: 'Hotels',
+            enabled: false,
+            mapMarkerImage: 'images/map/hotel_marker.png'
+        },
+        parking: {
+            label: 'Parking',
+            enabled: false,
+            mapMarkerImage: 'images/map/parking_marker.png'
+        },
+        attraction: {
+            label: 'Attractions',
+            enabled: false,
+            mapMarkerImage: 'images/map/attraction_marker.png'
+        }
+    };
 
-        var generator = {};
+    app.infoWindowStyle = {
+        padding: 0,
 
-        generator.getMarker = function(color) {
-            var cached = cachedMarkers[color];
-            if (cached) {
-                return cached;
-            }
+        backgroundColor: '#fff',
 
-            var marker = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + color,
-                        new google.maps.Size(21, 34),
-                        new google.maps.Point(0,0),
-                        new google.maps.Point(10, 34));
-            if (marker) {
-                cachedMarkers[color] = marker;
-            }
-            return marker;
-        };
+        borderRadius: 3,
+        borderWidth: 1,
+        borderColor: '#2c2c2c',
+        shadowStyle: 1,
 
-        generator.getShadow = function() {
-            if (cachedShadow) {
-                return cachedShadow;
-            }
+        hideCloseButton: false,
 
-            var markerShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-                                new google.maps.Size(40, 37),
-                                new google.maps.Point(0, 0),
-                                new google.maps.Point(12, 35));
-            cachedShadow = markerShadow;
-            return markerShadow;
-        };
+        arrowSize: 10,
+        arrowPosition: 30,
+        arrowStyle: 2
+    };
 
-        return generator;
-    })();
+    app.mapOptions = {
+        center: new google.maps.LatLng(40.4449716, -80.000145),
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    app.hubSettings = {
+        title: 'David L. Lawrence Convention Center',
+        markerImage: 'images/map/star.png',
+        location: {      // location of the DLCC
+            lat: 40.4453790,
+            lng: -79.99593999999999
+        }
+    };
 })();
