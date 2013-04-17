@@ -56,19 +56,19 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
                 <ul>
                     <li class="restaurants" 
                         data-bind="css: { active: restaurants.isVisible() }, 
-                                   click: restaurants.toggleVisibility">
+                                   click: function(){categoryClicked('restaurants');}">
                     </li>
                     <li class="parking" 
                         data-bind="css: { active: parking.isVisible() }, 
-                                   click: parking.toggleVisibility">
+                                   click: function(){categoryClicked('parking');}">
                     </li>
                     <li class="hotels" 
                         data-bind="css: { active: hotels.isVisible() }, 
-                                   click: hotels.toggleVisibility">
+                                   click: function(){categoryClicked('hotels');}">
                     </li>
                     <li class="attractions" 
                         data-bind="css: { active: attractions.isVisible() }, 
-                                   click: attractions.toggleVisibility">
+                                   click: function(){categoryClicked('attractions');}">
                     </li>
                 </ul>
             </div>
@@ -78,25 +78,25 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
 
             <div id="directory-list">
                 <ul>
-                    <li class="tab-nav tab-nav-restaurant" 
+                    <li class="tab-nav tab-nav-restaurants" 
                         data-bind="visible: restaurants.isVisible()">
-                        <a href="#tab-restaurant">Restaurants</a>
+                        <a href="#tab-restaurants">Restaurants</a>
                     </li>
                     <li class="tab-nav tab-nav-parking"
                         data-bind="visible: parking.isVisible()">
                         <a href="#tab-parking">Parking</a>
                     </li>
-                    <li class="tab-nav tab-nav-hotel"
+                    <li class="tab-nav tab-nav-hotels"
                         data-bind="visible: hotels.isVisible()">
-                        <a href="#tab-hotel">Hotels</a>
+                        <a href="#tab-hotels">Hotels</a>
                     </li>
-                    <li class="tab-nav tab-nav-attraction"
+                    <li class="tab-nav tab-nav-attractions"
                         data-bind="visible: attractions.isVisible()">
-                        <a href="#tab-attraction">Attractions</a>
+                        <a href="#tab-attractions">Attractions</a>
                     </li>
                 </ul>
                 <div class="category-tab category-restaurant"
-                     id="tab-restaurant"
+                     id="tab-restaurants"
                      data-bind="visible: restaurants.isVisible()">
                     <ul data-bind="foreach: restaurants.objects">
                         <li data-bind="text: name, click: markerClicked"></li>
@@ -110,14 +110,14 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
                     </ul>
                 </div>
                 <div class="category-tab category-hotel"
-                     id="tab-hotel"
+                     id="tab-hotels"
                      data-bind="visible: hotels.isVisible()">
                     <ul data-bind="foreach: hotels.objects">
                         <li data-bind="text: name, click: markerClicked"></li>
                     </ul>
                 </div>
                 <div class="category-tab category-attraction"
-                     id="tab-attraction"
+                     id="tab-attractions"
                      data-bind="visible: attractions.isVisible()">
                     <ul data-bind="foreach: attractions.objects">
                         <li data-bind="text: name, click: markerClicked"></li>

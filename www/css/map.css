@@ -265,7 +265,7 @@ line-height: .75em;
 
 
 
-li.tab-nav-attraction a, li.tab-nav-parking a, li.tab-nav-hotel a, li.tab-nav-restaurant a {
+li.tab-nav-attractions a, li.tab-nav-parking a, li.tab-nav-hotels a, li.tab-nav-restaurants a {
 color: #ffffff;
 }
 
@@ -282,11 +282,11 @@ background: #2a6d93;
 	padding: 1em;
 }
 
-#directory-list li.tab-nav-hotel {
+#directory-list li.tab-nav-hotels {
 background: #cb6c4a;
 }
 
-#tab-hotel {
+#tab-hotels {
 	border-top: .5em solid #cb6c4a;
 	border-right: .1em solid #cb6c4a;
 	border-left: .1em solid #cb6c4a;
@@ -295,11 +295,11 @@ background: #cb6c4a;
 	padding: 1em;
 }
 
-#directory-list li.tab-nav-restaurant {
+#directory-list li.tab-nav-restaurants {
 background: #9a8478;
 }
 
-#tab-restaurant {
+#tab-restaurants {
 	border-top: .5em solid #9a8478;
 	border-left: .1em solid #9a8478;
 	border-right: .1em solid #9a8478;
@@ -308,11 +308,11 @@ background: #9a8478;
 	padding: 1em;
 }
 
-#directory-list li.tab-nav-attraction {
+#directory-list li.tab-nav-attractions {
 background: #8dae61;
 }
 
-#tab-attraction {
+#tab-attractions {
 	border-top: .5em solid #8dae61;
 	border-bottom: .1em solid #8dae61;
 	border-left: .1em solid #8dae61;

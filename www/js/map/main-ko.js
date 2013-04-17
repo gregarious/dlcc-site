@@ -4,9 +4,9 @@ $(function() {
 		app.mapOptions);
 
 	// PlaceCollection: a ViewModel class to handle obejcts of a particular category
-	var PlaceCollection = function(instances, settings) {
-		var self = this;
+	var PlaceCollection = function(instances, settings, category) {
 		this.isVisible = ko.observable(settings.enabled || false);
+		this.category = category;
 
 		this.toggleVisibility = _.bind(function() {
 			this.isVisible(!this.isVisible());
@@ -85,9 +85,27 @@ $(function() {
 				}
 				this._iw = null;
             }
+		},
+
+		categoryClicked: function(category) {
+			var placesCollection = app.viewModel[category];
+			placesCollection.toggleVisibility();
+
+			// activate the recently enabled tab. jQuery selector kind of sucks, but it'll do.
+			if (placesCollection.isVisible()) {
+				$('.tab-nav-' + category + ' a').click();
+			}
 		}
 	};
 
+	if (app.hubSettings) {
+        new google.maps.Marker({
+            position: new google.maps.LatLng(app.hubSettings.location.lat, app.hubSettings.location.lng),
+            map: app.map,
+            title: app.hubSettings.title,
+            icon: app.hubSettings.markerImage
+        });
+    }
 	google.maps.event.addListener(app.map, 'click', app.viewModel.infoWindow.close());
 
 	ko.applyBindings(app.viewModel);
