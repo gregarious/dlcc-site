@@ -6,9 +6,17 @@ $(function() {
 	// PlaceCollection: a ViewModel class to handle obejcts of a particular category
 	var PlaceCollection = function(instances, settings) {
 		this.isVisible = ko.observable(settings.enabled || false);
-		this.objects = _.map(instances, function(inst) {
+		this.toggleVisibility = _.bind(function() {
+			this.isVisible(!this.isVisible());
+		}, this);
+
+		this.objects = ko.observableArray(_.map(instances, function(inst) {
 			var obj = _.clone(inst);
-			obj.iwTemplate = settings.iwTemplate || null;
+			obj.iwTemplate = null;
+			if (settings.iwTemplate) {
+				obj.iwTemplate = _.template($(settings.iwTemplate).html());
+			}
+
 			if (obj.lat && obj.lng) {
 				obj.marker = new google.maps.Marker({
 					position: new google.maps.LatLng(obj.lat, obj.lng),
@@ -18,18 +26,22 @@ $(function() {
 				});
 
 				google.maps.event.addListener(obj.marker, 'click', function() {
-					app.viewModel.markerClicked(obj);
+					obj.markerClicked();
 				});
 			}
 			else {
 				obj.marker = null;
 			}
-			return obj;
-		});
+		
+			obj.markerClicked = function() {
+				app.viewModel.infoWindow.open(obj);
+			};
 
-		this.toggleVisibility = _.bind(function() {
-			this.isVisible(!this.isVisible());
-		}, this);
+			return obj;
+		}));
+
+
+		
 	};
 
 	app.viewModel = {
@@ -56,7 +68,7 @@ $(function() {
 				console.log('open');
 				var opts = {
                     map: app.map,
-					content: vm.renderInfoWindow(),
+					content: object.iwTemplate ? object.iwTemplate(object) : 'error: no template found',
 					position: new google.maps.LatLng(object.lat, object.lng)
                 };
                 // add the styles from settings.js
@@ -69,10 +81,6 @@ $(function() {
 				}
 				this._iw = null;
             }
-		},
-
-		markerClicked: function(obj) {
-			this.infoWindow.open(obj);
 		}
 	};
 

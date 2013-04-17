@@ -76,7 +76,34 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
             <div id="directory-map"></div>
 
 
-            <div id="directory-list"></div>
+            <div id="directory-list">
+                <ul>
+                    <li data-bind="visible: restaurants.isVisible()" href="#tab-restaurants">Restaurants</li>
+                    <li data-bind="visible: parking.isVisible()" href="#tab-parking">Parking</li>
+                    <li data-bind="visible: hotels.isVisible()" href="#tab-hotels">Hotels</li>
+                    <li data-bind="visible: attractions.isVisible()" href="#tab-attractions">Attractions</li>
+                </ul>
+                <div id="tab-restaurants" data-bind="visible: restaurants.isVisible()">
+                    <ul data-bind="foreach: restaurants.objects">
+                        <li data-bind="text: name, click: markerClicked"></li>
+                    </ul>
+                </div>
+                <div id="tab-parking" data-bind="visible: parking.isVisible()">
+                    <ul data-bind="foreach: parking.objects">
+                        <li data-bind="text: name, click: markerClicked"></li>
+                    </ul>
+                </div>
+                <div id="tab-hotels" data-bind="visible: hotels.isVisible()">
+                    <ul data-bind="foreach: hotels.objects">
+                        <li data-bind="text: name, click: markerClicked"></li>
+                    </ul>
+                </div>
+                <div id="tab-attractions" data-bind="visible: attractions.isVisible()">
+                    <ul data-bind="foreach: attractions.objects">
+                        <li data-bind="text: name, click: markerClicked"></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div id="mobile-notice">
             <p>We're sorry, but the interactive map is not supported for mobile devices.</p>

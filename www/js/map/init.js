@@ -7,22 +7,26 @@
         restaurant: {
             label: 'Restaurants',
             enabled: false,
-            mapMarkerImage: 'images/map/restaurant_marker.png'
+            markerImage: 'images/map/restaurant_marker.png',
+            iwTemplate: '#tpl-infowindow-restaurant'
         },
         hotel: {
             label: 'Hotels',
             enabled: false,
-            mapMarkerImage: 'images/map/hotel_marker.png'
+            markerImage: 'images/map/hotel_marker.png',
+            iwTemplate: '#tpl-infowindow-hotel'
         },
         parking: {
             label: 'Parking',
             enabled: false,
-            mapMarkerImage: 'images/map/parking_marker.png'
+            markerImage: 'images/map/parking_marker.png',
+            iwTemplate: '#tpl-infowindow-parking'
         },
         attraction: {
             label: 'Attractions',
             enabled: false,
-            mapMarkerImage: 'images/map/attraction_marker.png'
+            markerImage: 'images/map/attraction_marker.png',
+            iwTemplate: '#tpl-infowindow-attraction'
         }
     };
 
