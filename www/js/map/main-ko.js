@@ -4,10 +4,10 @@ $(function() {
 		app.mapOptions);
 
 	// PlaceCollection: a ViewModel class to handle obejcts of a particular category
-	var PlaceCollection = function(instances, settings, category) {
+	var PlaceCollection = function(instances, settings) {
+		
+		// visibility observable and related toggle behavior function
 		this.isVisible = ko.observable(settings.enabled || false);
-		this.category = category;
-
 		this.toggleVisibility = _.bind(function() {
 			this.isVisible(!this.isVisible());
 			_.each(this.objects(), function(obj) {
@@ -17,6 +17,8 @@ $(function() {
 			}, this);
 		}, this);
 
+		// observable array of objects, each holding the data for the place, 
+		// the compiled InfoWindow template, and marker
 		this.objects = ko.observableArray(_.map(instances, function(inst) {
 			var obj = _.clone(inst);
 			obj.iwTemplate = null;
@@ -48,7 +50,9 @@ $(function() {
 		}, this));
 	};
 
+	// main page ViewModel
 	app.viewModel = {
+		// 4 PlaceCollection VMs
 		restaurants: new PlaceCollection(
 			app.data.restaurantObjs, 
 			app.categorySettings.restaurant),
@@ -69,15 +73,18 @@ $(function() {
 			// should be called with a place object
 			open: function(object) {
 				this.close();
-				console.log('open');
-				var opts = {
-                    map: app.map,
-					content: object.iwTemplate ? object.iwTemplate(object) : 'error: no template found',
-					position: new google.maps.LatLng(object.lat, object.lng)
-                };
-                // add the styles from settings.js
-                this._iw = new InfoBubble(_.extend(opts, app.infoWindowStyle));
-				this._iw.open(app.map);
+
+				// only display if coordinates are valid
+				if (object.lat && object.lng) {
+					var opts = {
+						map: app.map,
+						content: object.iwTemplate ? object.iwTemplate(object) : 'error: no template found',
+						position: new google.maps.LatLng(object.lat, object.lng)
+					};
+					// add the styles from settings.js
+					this._iw = new InfoBubble(_.extend(opts, app.infoWindowStyle));
+					this._iw.open(app.map);
+				}
             },
             close: function() {
 				if (this._iw) {
@@ -87,6 +94,9 @@ $(function() {
             }
 		},
 
+		/* Page-level behavior */
+
+		// sidebar category toggled: change visibility for places with this category
 		categoryClicked: function(category) {
 			var placesCollection = app.viewModel[category];
 			placesCollection.toggleVisibility();
@@ -106,7 +116,9 @@ $(function() {
             icon: app.hubSettings.markerImage
         });
     }
-	google.maps.event.addListener(app.map, 'click', app.viewModel.infoWindow.close());
+	google.maps.event.addListener(app.map, 'click', function() {
+		app.viewModel.infoWindow.close();
+	});
 
 	ko.applyBindings(app.viewModel);
 });
