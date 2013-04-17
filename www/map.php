@@ -170,7 +170,7 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         $dbh = null;
         ?>
 
-        <script src="js/map/main-ko.js"></script>
+        <script src="js/map/main.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-9185606-2'],['_trackPageview']];
