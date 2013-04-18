@@ -54,6 +54,8 @@ return array(
 		// ),
 		// uncomment the following to use a MySQL database
 		
+		// TODO: remove before deploy
+		// dev creds
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=dlcc',
 			'emulatePrepare' => true,
@@ -61,6 +63,18 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+
+		// TODO: remove before deploy
+		// webfaction creds
+		// 'db'=>array(
+		// 	'connectionString' => 'mysql:host=localhost;dbname=gregarious_dlcc',
+		// 	'emulatePrepare' => true,
+		// 	'username' => 'gregarious_dlcc',
+		// 	'password' => 'gregarious_dlcc',
+		// 	'charset' => 'utf8',
+		// ),
+
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
