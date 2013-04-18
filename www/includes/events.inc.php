@@ -65,7 +65,7 @@ $month_0_label = reset($monthly_event_groups)['label'];
 $month_n_label = end($monthly_event_groups)['label'];
 ?>
 
-<p><?php print $month_0_label; ?> through <?php print $month_n_label; ?></p>
+<p class="event-span-text">Events from <?php print $month_0_label; ?> through <?php print $month_n_label; ?></p>
 <p>
 <?php 
 	reset($monthly_event_groups);
@@ -82,29 +82,31 @@ $month_n_label = end($monthly_event_groups)['label'];
 ?>
 <table class="table-events">
 	<thead>
-		<tr>
+	<!--<tr>
 			<th class="col-date col-date-header">Date</th>
 			<th class="col-event col-event-header">Event</th>
-		</tr>
+		</tr>-->
 	</thead>
 	<tbody>
 
 <?php
     foreach ($monthly_event_groups as $month_id => $event_group) {
 ?>
-		<tr class="row-month-label">
-			<td colspan="2">
+		<tr>
+			<td class="month-label" colspan="2">
 				<a name="<?php print $month_id; ?>"><?php print $event_group['label']; ?></a>
 			</td>
 		</tr>
 <?php
 		if (count($event_group['events'])) {
+			$iter = 0;
 	    	foreach ($event_group['events'] as $event) {
+
 	    		$start_date = new DateTime($event['start_date']);
 				$end_date = new DateTime($event['end_date']);
 				$date_str = $start_date->format('D j');
 				if ($start_date != $end_date) {
-					$date_str = $date_str . ' - ' . $end_date->format('D j');
+					$date_str = $date_str . ' &mdash; ' . $end_date->format('D j');
 				}
 		
 				$name = $event['name'];
@@ -112,17 +114,18 @@ $month_n_label = end($monthly_event_groups)['label'];
 					$name = "<a href='${event['website']}' target='_blank'>$name</a>";
 				}
 ?>
-		<tr class="row-event">
+		<tr class="row-event row-<?php print $iter % 2 ? 'odd' : 'even'; ?>">
 			<td class="col-date"><?php print $date_str; ?></td>
 			<td class="col-event"><?php print $name; ?></td>
 		</tr>
 <?php
+			$iter++;
 			}
 		}
 		else {
 ?>
 			<tr class="row-noevents">
-				<td class="col-noevents" colspan="2">No events this month</td>
+				<td class="col-noevents row-even" colspan="2">No events this month</td>
 			</tr>
 <?php
 		}

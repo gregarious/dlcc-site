@@ -21,6 +21,36 @@
     }
 }
 
+/* Classes in Event page */
+.event-span-text {
+    font-weight: bold;
+}
+
+.table-events {
+    background-color: $light-green4;
+    width: 100%;
+}
+
+.row-even {
+    background-color: $light-green3;   
+}
+.row-odd {
+    background-color: $light-green2;   
+}
+
+.month-label {
+    padding: 0.5em;
+}
+.col-event, .col-date, .col-noevents {
+    padding: 0.5em 1em;
+}
+.col-date {
+    width: 30%;
+}
+.col-event {
+    width: 70%;
+}
+
 /* Classes in Contact page */
 .admin-office-label {
     margin-bottom: 0;

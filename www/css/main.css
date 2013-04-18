@@ -829,10 +829,10 @@ textarea {
  *
  * Handles the most basic gloabl style rules
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /*** Base styles ***/
 /* line 11, ../sass/_base.scss */
@@ -845,7 +845,7 @@ html {
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #58585b;
-  background: #e6ebe4 url('/images/BG_repeat.png?1354067851') repeat-x;
+  background: #e6ebe4 url('/images/BG_repeat.png?1360114935') repeat-x;
 }
 
 /* line 23, ../sass/_base.scss */
@@ -904,10 +904,10 @@ dd {
  * Styles for main page layout. Layout specific to a module (e.g. home page
  * content) lives in a file specific to that module.
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /* line 22, ../sass/_page_layout.scss */
 * {
@@ -1059,10 +1059,10 @@ dd {
  *
  * Styles for sidebar navigation area
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /* line 9, ../sass/_sidebar_nav.scss */
 .site-nav {
@@ -1153,10 +1153,10 @@ dd {
  *
  * Styles for sidebar widgets
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /* line 9, ../sass/_sidebar_widgets.scss */
 .widget {
@@ -1276,10 +1276,10 @@ dd {
  *
  * Mostly header and footer styles
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 /*********************
  * Header styles
@@ -1401,10 +1401,10 @@ dd {
  *
  * Styles related to any primary content on the homepage
  */
-/* 
+/*
  * constants.scss
- * 
- * Constants for DLCC site 
+ *
+ * Constants for DLCC site
  */
 @media only screen and (min-width: 1200px) {
   /* line 11, ../sass/_home.scss */
@@ -1540,7 +1540,7 @@ dd {
 /* line 130, ../sass/_home.scss */
 .home-section-green {
   padding-top: 2em;
-  background: url('/images/recycling_bg_290.png?1354570278') no-repeat center;
+  background: url('/images/recycling_bg_290.png?1360114936') no-repeat center;
   min-height: 148px;
   text-align: center;
 }
@@ -1563,14 +1563,14 @@ dd {
 @media only screen and (min-width: 960px) {
   /* line 155, ../sass/_home.scss */
   .home-section-green {
-    background: url('/images/recycling_bg_320.png?1354570278') no-repeat center;
+    background: url('/images/recycling_bg_320.png?1360114936') no-repeat center;
     min-height: 163px;
   }
 }
 @media only screen and (min-width: 1200px) {
   /* line 163, ../sass/_home.scss */
   .home-section-green {
-    background: url('/images/recycling_bg_450.png?1354570278') no-repeat center;
+    background: url('/images/recycling_bg_450.png?1360114936') no-repeat center;
     min-height: 230px;
     padding-top: 3em;
   }
@@ -1746,20 +1746,62 @@ dd {
   }
 }
 
-/* Classes in Contact page */
+/* Classes in Event page */
 /* line 25, ../sass/_subpages.scss */
+.event-span-text {
+  font-weight: bold;
+}
+
+/* line 29, ../sass/_subpages.scss */
+.table-events {
+  background-color: #f2f3ef;
+  width: 100%;
+}
+
+/* line 34, ../sass/_subpages.scss */
+.row-even {
+  background-color: #e6ebe4;
+}
+
+/* line 37, ../sass/_subpages.scss */
+.row-odd {
+  background-color: #d8ddd4;
+}
+
+/* line 41, ../sass/_subpages.scss */
+.month-label {
+  padding: 0.5em;
+}
+
+/* line 44, ../sass/_subpages.scss */
+.col-event, .col-date, .col-noevents {
+  padding: 0.5em 1em;
+}
+
+/* line 47, ../sass/_subpages.scss */
+.col-date {
+  width: 30%;
+}
+
+/* line 50, ../sass/_subpages.scss */
+.col-event {
+  width: 70%;
+}
+
+/* Classes in Contact page */
+/* line 55, ../sass/_subpages.scss */
 .admin-office-label {
   margin-bottom: 0;
 }
 
-/* line 29, ../sass/_subpages.scss */
+/* line 59, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
 /* Classes in Directions page */
-/* line 35, ../sass/_subpages.scss */
+/* line 65, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
@@ -1767,7 +1809,7 @@ dd {
 }
 
 /* Classes in Explore Pgh page */
-/* line 43, ../sass/_subpages.scss */
+/* line 73, ../sass/_subpages.scss */
 .image-link {
   display: none;
   margin-bottom: 2em;
@@ -1775,24 +1817,24 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 768px) {
-  /* line 43, ../sass/_subpages.scss */
+  /* line 73, ../sass/_subpages.scss */
   .image-link {
     display: inherit;
     float: left;
   }
 }
 
-/* line 54, ../sass/_subpages.scss */
+/* line 84, ../sass/_subpages.scss */
 .explore-item {
   margin-bottom: 1em;
 }
 
-/* line 58, ../sass/_subpages.scss */
+/* line 88, ../sass/_subpages.scss */
 .explore-description > h2 {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 57, ../sass/_subpages.scss */
+  /* line 87, ../sass/_subpages.scss */
   .explore-description {
     float: left;
     width: 75%;
@@ -1800,57 +1842,57 @@ dd {
   }
 }
 
-/* line 68, ../sass/_subpages.scss */
+/* line 98, ../sass/_subpages.scss */
 .explore-link {
   font-size: 1.25em;
 }
 
-/* line 72, ../sass/_subpages.scss */
+/* line 102, ../sass/_subpages.scss */
 .events-iframe {
   width: 100%;
   height: 100%;
   margin: -1.25em -2em;
 }
 
-/* line 82, ../sass/_subpages.scss */
+/* line 112, ../sass/_subpages.scss */
 .contact-address {
   font-size: 1.1em;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 88, ../sass/_subpages.scss */
+  /* line 118, ../sass/_subpages.scss */
   .page-contactus dt {
     float: left;
     display: inline;
     clear: both;
   }
-  /* line 93, ../sass/_subpages.scss */
+  /* line 123, ../sass/_subpages.scss */
   .page-contactus dd {
     margin-left: 15em;
   }
 }
-/* line 99, ../sass/_subpages.scss */
+/* line 129, ../sass/_subpages.scss */
 .page-interactive-map > header {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-/* line 103, ../sass/_subpages.scss */
+/* line 133, ../sass/_subpages.scss */
 .page-interactive-map > #main {
   display: none;
 }
-@media only screen and (min-width: 768px) {
-  /* line 103, ../sass/_subpages.scss */
+@media only screen and (min-width: 320px) {
+  /* line 133, ../sass/_subpages.scss */
   .page-interactive-map > #main {
     display: block;
   }
 }
 
-/* line 109, ../sass/_subpages.scss */
+/* line 139, ../sass/_subpages.scss */
 .page-interactive-map > #mobile-notice {
   display: block;
 }
-@media only screen and (min-width: 768px) {
-  /* line 109, ../sass/_subpages.scss */
+@media only screen and (min-width: 320px) {
+  /* line 139, ../sass/_subpages.scss */
   .page-interactive-map > #mobile-notice {
     display: none;
   }
