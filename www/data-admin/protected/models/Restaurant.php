@@ -44,7 +44,8 @@ class Restaurant extends CActiveRecord
 			array('lat, lng', 'numerical'),
 			array('name', 'length', 'max'=>128),
 			array('address', 'length', 'max'=>256),
-			array('price, type', 'length', 'max'=>15),
+			array('price', 'length', 'max'=>15),
+			array('type', 'length', 'max'=>63),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, address, lat, lng, price, type', 'safe', 'on'=>'search'),

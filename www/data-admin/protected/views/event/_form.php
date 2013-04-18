@@ -23,12 +23,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'start_date'); ?>
+		<p class="hint">(in YYYY-MM-DD format)</p>
 		<?php echo $form->textField($model,'start_date'); ?>
 		<?php echo $form->error($model,'start_date'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'end_date'); ?>
+		<p class="hint">(in YYYY-MM-DD format)</p>
 		<?php echo $form->textField($model,'end_date'); ?>
 		<?php echo $form->error($model,'end_date'); ?>
 	</div>
@@ -37,12 +39,6 @@
 		<?php echo $form->labelEx($model,'website'); ?>
 		<?php echo $form->textField($model,'website',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'website'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'description'); ?>
 	</div>
 
 	<div class="row buttons">

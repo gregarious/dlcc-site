@@ -9,7 +9,6 @@
  * @property string $start_date
  * @property string $end_date
  * @property string $website
- * @property string $description
  */
 class Event extends CActiveRecord
 {
@@ -39,13 +38,12 @@ class Event extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('start_date, description', 'required'),
+			array('name, start_date, end_date', 'required'),
 			array('name', 'length', 'max'=>127),
 			array('website', 'length', 'max'=>255),
-			array('end_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, start_date, end_date, website, description', 'safe', 'on'=>'search'),
+			array('id, name, start_date, end_date, website', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,7 +69,6 @@ class Event extends CActiveRecord
 			'start_date' => 'Start Date',
 			'end_date' => 'End Date',
 			'website' => 'Website',
-			'description' => 'Description',
 		);
 	}
 
@@ -91,7 +88,6 @@ class Event extends CActiveRecord
 		$criteria->compare('start_date',$this->start_date,true);
 		$criteria->compare('end_date',$this->end_date,true);
 		$criteria->compare('website',$this->website,true);
-		$criteria->compare('description',$this->description,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

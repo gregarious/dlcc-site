@@ -26,6 +26,5 @@ $this->menu=array(
 		'start_date',
 		'end_date',
 		'website',
-		'description',
 	),
 )); ?>
