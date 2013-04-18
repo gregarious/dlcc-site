@@ -1,5 +1,6 @@
 <?php
 $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
+$YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
 ?>
 
 <!DOCTYPE html>
@@ -153,9 +154,12 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
         <?php
         # generate JSON from DB place data
         print "<script>app.data={};";
+
         $categories = array('restaurant', 'parking', 'hotel', 'attraction');
         try {
-            $dbh = new PDO('mysql:host=localhost;dbname=dlcc', 'root', '');
+            $yii_config = require_once($YII_CONFIG_FILE);
+            $db_config = $yii_config['components']['db'];
+            $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
             foreach ($categories as $category) {
                 $statement = $dbh->prepare("SELECT * from $category");
                 $statement->execute();
