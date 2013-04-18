@@ -1,12 +1,13 @@
 <?php
 date_default_timezone_set('US/Eastern');
 $NUM_MONTHS = 4;
-
 /******************
   Functions
   ****************/
 
 function generateEvents($num_months) {
+	$YII_CONFIG_FILE = dirname(__FILE__) . '/../data-admin/protected/config/main.php';
+	
 	// initialize to first of the month
 	$cur_month_dt = new DateTime(date('Y-m') . '-01');
 
@@ -26,8 +27,11 @@ function generateEvents($num_months) {
 	// now cur_month_dt is the first of the month after we're interested in. use this in query
 	$date_now_str = date('Y-m-d');
 	$date_cutoff_str = $cur_month_dt->format('Y-m-d');
+
+	$yii_config = require_once($YII_CONFIG_FILE);
+	$db_config = $yii_config['components']['db'];
 	try {
-	    $dbh = new PDO('mysql:host=localhost;dbname=dlcc', 'root', '');
+	    $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
 	    $statement = $dbh->prepare("
 	    	SELECT name, start_date, end_date, website 
 	    	FROM `event` 
