@@ -49,20 +49,20 @@ return array(
 			),
 		),
 		*/
-		// 'db'=>array(
-		// 	'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		// ),
+		'db'=>array(
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/dlcc.sqlite',
+		),
 		// uncomment the following to use a MySQL database
 		
 		// TODO: remove before deploy
 		// dev creds
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dlcc',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
-		),
+		// 'db'=>array(
+		// 	'connectionString' => 'mysql:host=localhost;dbname=dlcc',
+		// 	'emulatePrepare' => true,
+		// 	'username' => 'root',
+		// 	'password' => '',
+		// 	'charset' => 'utf8',
+		// ),
 
 		// TODO: remove before deploy
 		// webfaction creds

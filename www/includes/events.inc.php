@@ -31,7 +31,9 @@ function generateEvents($num_months) {
 	$yii_config = require_once($YII_CONFIG_FILE);
 	$db_config = $yii_config['components']['db'];
 	try {
-	    $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
+		$dbh = new PDO($db_config['connectionString']);
+		// disabled for sqllite
+	    // $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
 	    $statement = $dbh->prepare("
 	    	SELECT name, start_date, end_date, website 
 	    	FROM `event` 

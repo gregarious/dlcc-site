@@ -159,7 +159,8 @@ $YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
         try {
             $yii_config = require_once($YII_CONFIG_FILE);
             $db_config = $yii_config['components']['db'];
-            $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
+            $dbh = new PDO($db_config['connectionString']);
+            // $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
             foreach ($categories as $category) {
                 $statement = $dbh->prepare("SELECT * from $category");
                 $statement->execute();

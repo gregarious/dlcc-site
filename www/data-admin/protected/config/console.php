@@ -16,11 +16,7 @@ return array(
 		// TODO: remove before deploy
 		// dev creds
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dlcc',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/dlcc.sqlite',
 		),
 
 		// TODO: remove before deploy
