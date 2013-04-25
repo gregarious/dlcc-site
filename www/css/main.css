@@ -1112,40 +1112,31 @@ dd {
   .item-7, .item-8, .item-9 {
     margin-bottom: 8px;
   }
-
-  /* line 58, ../sass/_sidebar_nav.scss */
-  .item-9 {
-    display: none;
-  }
 }
 /*** standard and wide sizes ***/
 @media only screen and (min-width: 960px) {
-  /* line 65, ../sass/_sidebar_nav.scss */
+  /* line 61, ../sass/_sidebar_nav.scss */
   .site-nav {
     padding: 12px;
   }
 
-  /* line 72, ../sass/_sidebar_nav.scss */
+  /* line 68, ../sass/_sidebar_nav.scss */
   .item-1, .item-2, .item-3,
   .item-4, .item-5, .item-6,
   .item-7, .item-8, .item-9 {
     margin: 0;
   }
 
-  /* line 78, ../sass/_sidebar_nav.scss */
+  /* line 75, ../sass/_sidebar_nav.scss */
   .item-1, .item-2, .item-3,
-  .item-4, .item-5, .item-6 {
+  .item-4, .item-5, .item-6,
+  .item-7, .item-8 {
     margin-bottom: 8px;
   }
 
-  /* line 83, ../sass/_sidebar_nav.scss */
-  .item-1, .item-3, .item-5, .item-7 {
+  /* line 80, ../sass/_sidebar_nav.scss */
+  .item-1, .item-3, .item-5, .item-7, .item-9 {
     margin-right: 12px;
-  }
-
-  /* line 88, ../sass/_sidebar_nav.scss */
-  .item-9 {
-    display: none;
   }
 }
 /*
@@ -1728,16 +1719,21 @@ dd {
  *
  * Miscellaneous styles for primary content area on any subpage
  */
+/*
+ * constants.scss
+ *
+ * Constants for DLCC site
+ */
 /* sub-navigation link styles. both homepage and building page subnavs
  * have a lot in common, but their media-query positions are set at different
  * breakpoints */
-/* line 11, ../sass/_subpages.scss */
+/* line 13, ../sass/_subpages.scss */
 .building-links {
   text-align: center;
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 960px) {
-  /* line 11, ../sass/_subpages.scss */
+  /* line 13, ../sass/_subpages.scss */
   .building-links {
     position: absolute;
     top: -1.25em;
@@ -1746,31 +1742,99 @@ dd {
   }
 }
 
+/* building history timeline styles */
+/* line 27, ../sass/_subpages.scss */
+h3.timelineheader {
+  background: url(../images/timeline/timeline-header-bg.png) no-repeat;
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  padding-left: 80px;
+  height: 35px;
+  padding-top: 0.2em;
+}
+
+/* line 37, ../sass/_subpages.scss */
+ul.timeline {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: .9em;
+  line-height: 1.3em;
+  font-style: italic;
+}
+/* line 45, ../sass/_subpages.scss */
+ul.timeline li {
+  list-style: none;
+  display: inline-block;
+  width: 30%;
+  margin: 1em 2% 1em 0;
+  padding: 0;
+  vertical-align: top;
+}
+@media only screen and (max-width: 768px) {
+  /* line 45, ../sass/_subpages.scss */
+  ul.timeline li {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 58, ../sass/_subpages.scss */
+ul.timeline li img {
+  width: 100%;
+  padding-bottom: .5em;
+  vertical-align: top;
+}
+
+/* line 66, ../sass/_subpages.scss */
+img.inline {
+  padding-right: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* line 70, ../sass/_subpages.scss */
+  h3.timelineheader {
+    background: url(../images/timeline/timeline-header-bg-660.png) no-repeat;
+  }
+}
+@media only screen and (max-width: 960px) {
+  /* line 70, ../sass/_subpages.scss */
+  h3.timelineheader {
+    background: url(../images/timeline/timeline-header-bg-610.png) no-repeat;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 70, ../sass/_subpages.scss */
+  h3.timelineheader {
+    background: url(../images/timeline/timeline-header-bg-295.png) no-repeat;
+  }
+}
+
 /* Classes in Event page */
-/* line 25, ../sass/_subpages.scss */
+/* line 83, ../sass/_subpages.scss */
 .event-span-text {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.85em;
 }
 
-/* line 31, ../sass/_subpages.scss */
+/* line 89, ../sass/_subpages.scss */
 .table-events {
   background-color: #f2f3ef;
   width: 100%;
 }
 
-/* line 36, ../sass/_subpages.scss */
+/* line 94, ../sass/_subpages.scss */
 .row-even {
   background-color: #f7f0c4;
 }
 
-/* line 39, ../sass/_subpages.scss */
+/* line 97, ../sass/_subpages.scss */
 .row-odd {
   background-color: #fcf9ea;
 }
 
-/* line 43, ../sass/_subpages.scss */
+/* line 101, ../sass/_subpages.scss */
 .month-label {
   background-color: #819578;
   color: white;
@@ -1778,57 +1842,57 @@ dd {
   text-transform: uppercase;
 }
 
-/* line 51, ../sass/_subpages.scss */
+/* line 109, ../sass/_subpages.scss */
 .table-events td, .table-events th {
   padding: 0.5em;
 }
 
-/* line 56, ../sass/_subpages.scss */
+/* line 114, ../sass/_subpages.scss */
 .col-date {
   width: 35%;
 }
 
-/* line 59, ../sass/_subpages.scss */
+/* line 117, ../sass/_subpages.scss */
 .col-event {
   width: 65%;
 }
 
-/* line 62, ../sass/_subpages.scss */
+/* line 120, ../sass/_subpages.scss */
 .col-noevents {
   font-style: italic;
 }
 
-/* line 66, ../sass/_subpages.scss */
+/* line 124, ../sass/_subpages.scss */
 .event-date-long {
   display: none;
 }
 @media only screen and (min-width: 960px) {
-  /* line 66, ../sass/_subpages.scss */
+  /* line 124, ../sass/_subpages.scss */
   .event-date-long {
     display: inline;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  /* line 75, ../sass/_subpages.scss */
+  /* line 133, ../sass/_subpages.scss */
   .event-date-short {
     display: none;
   }
 }
 /* Classes in Contact page */
-/* line 82, ../sass/_subpages.scss */
+/* line 140, ../sass/_subpages.scss */
 .admin-office-label {
   margin-bottom: 0;
 }
 
-/* line 86, ../sass/_subpages.scss */
+/* line 144, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
 /* Classes in Directions page */
-/* line 92, ../sass/_subpages.scss */
+/* line 150, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
@@ -1836,7 +1900,7 @@ dd {
 }
 
 /* Classes in Explore Pgh page */
-/* line 100, ../sass/_subpages.scss */
+/* line 158, ../sass/_subpages.scss */
 .image-link {
   display: none;
   margin-bottom: 2em;
@@ -1844,24 +1908,24 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 768px) {
-  /* line 100, ../sass/_subpages.scss */
+  /* line 158, ../sass/_subpages.scss */
   .image-link {
     display: inherit;
     float: left;
   }
 }
 
-/* line 111, ../sass/_subpages.scss */
+/* line 169, ../sass/_subpages.scss */
 .explore-item {
   margin-bottom: 1em;
 }
 
-/* line 115, ../sass/_subpages.scss */
+/* line 173, ../sass/_subpages.scss */
 .explore-description > h2 {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 114, ../sass/_subpages.scss */
+  /* line 172, ../sass/_subpages.scss */
   .explore-description {
     float: left;
     width: 75%;
@@ -1869,57 +1933,57 @@ dd {
   }
 }
 
-/* line 125, ../sass/_subpages.scss */
+/* line 183, ../sass/_subpages.scss */
 .explore-link {
   font-size: 1.25em;
 }
 
-/* line 129, ../sass/_subpages.scss */
+/* line 187, ../sass/_subpages.scss */
 .events-iframe {
   width: 100%;
   height: 100%;
   margin: -1.25em -2em;
 }
 
-/* line 139, ../sass/_subpages.scss */
+/* line 197, ../sass/_subpages.scss */
 .contact-address {
   font-size: 1.1em;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 145, ../sass/_subpages.scss */
+  /* line 203, ../sass/_subpages.scss */
   .page-contactus dt {
     float: left;
     display: inline;
     clear: both;
   }
-  /* line 150, ../sass/_subpages.scss */
+  /* line 208, ../sass/_subpages.scss */
   .page-contactus dd {
     margin-left: 15em;
   }
 }
-/* line 156, ../sass/_subpages.scss */
+/* line 214, ../sass/_subpages.scss */
 .page-interactive-map > header {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-/* line 160, ../sass/_subpages.scss */
+/* line 218, ../sass/_subpages.scss */
 .page-interactive-map > #main {
   display: none;
 }
 @media only screen and (min-width: 320px) {
-  /* line 160, ../sass/_subpages.scss */
+  /* line 218, ../sass/_subpages.scss */
   .page-interactive-map > #main {
     display: block;
   }
 }
 
-/* line 166, ../sass/_subpages.scss */
+/* line 224, ../sass/_subpages.scss */
 .page-interactive-map > #mobile-notice {
   display: block;
 }
 @media only screen and (min-width: 320px) {
-  /* line 166, ../sass/_subpages.scss */
+  /* line 224, ../sass/_subpages.scss */
   .page-interactive-map > #mobile-notice {
     display: none;
   }

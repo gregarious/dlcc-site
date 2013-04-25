@@ -54,10 +54,6 @@
         margin-bottom: 8px;
     }
 
-    // hide the nav on non-mobile devices
-    .item-9 {
-        display: none;
-    }
 }
 
 /*** standard and wide sizes ***/
@@ -75,17 +71,13 @@
 
     // margin between each row
     .item-1, .item-2, .item-3,
-    .item-4, .item-5, .item-6 {
+    .item-4, .item-5, .item-6,
+    .item-7, .item-8 {
         margin-bottom: 8px;
     }
 
     // margin between each column
-    .item-1, .item-3, .item-5, .item-7 {
+    .item-1, .item-3, .item-5, .item-7, .item-9 {
         margin-right: $nav-button-padding;
-    }
-
-    // hide the nav on non-mobile devices
-    .item-9 {
-        display: none;
     }
 }

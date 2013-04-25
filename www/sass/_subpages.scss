@@ -4,6 +4,8 @@
  * Miscellaneous styles for primary content area on any subpage
  */
 
+@import "constants.scss";
+
 /* sub-navigation link styles. both homepage and building page subnavs
  * have a lot in common, but their media-query positions are set at different
  * breakpoints */
@@ -18,6 +20,62 @@
         top: -1.25em;
         right: 1em;
         text-align: right;
+    }
+}
+
+/* building history timeline styles */
+h3.timelineheader {
+    background: url(../images/timeline/timeline-header-bg.png) no-repeat;
+    color: white;
+    font-size: 2em;
+    width: 100%;
+    padding-left: 80px;
+    height: 35px;
+    padding-top: 0.2em;
+}
+
+ul.timeline {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: .9em;
+    line-height: 1.3em;
+    font-style: italic;
+    
+    li {
+        list-style: none;
+        display: inline-block;
+        width: 30%;
+        margin: 1em 2% 1em 0;
+        padding: 0;
+        vertical-align: top;
+
+        @media only screen and (max-width: $w-narrow) {
+            display: block;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            padding-bottom: .5em;
+            vertical-align: top;
+        }
+    }
+}
+
+img.inline {
+    padding-right: 1em;
+}
+
+h3.timelineheader {
+    @media only screen and (max-width: $w-wide) {
+        background: url(../images/timeline/timeline-header-bg-660.png) no-repeat;
+    }
+    @media only screen and (max-width: $w-standard) {
+        background: url(../images/timeline/timeline-header-bg-610.png) no-repeat;
+    }
+    @media only screen and (max-width: $w-narrow) {
+        background: url(../images/timeline/timeline-header-bg-295.png) no-repeat;
     }
 }
 
