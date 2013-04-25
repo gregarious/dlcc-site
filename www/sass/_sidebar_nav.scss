@@ -41,6 +41,11 @@
     margin-right: $nav-button-padding;
 }
 
+.item-10 {
+    margin-top: $nav-button-padding;
+    margin-left: $nav-button-width + $nav-button-padding;
+}
+
 /*** narrow size ***/
 @media only screen and (min-width: $w-narrow) {    
     .site-nav {
@@ -54,6 +59,11 @@
         margin-bottom: 8px;
     }
 
+    .item-10 {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
 }
 
 /*** standard and wide sizes ***/
@@ -65,7 +75,7 @@
     // reset all margins to 0
     .item-1, .item-2, .item-3,
     .item-4, .item-5, .item-6,
-    .item-7, .item-8, .item-9 {
+    .item-7, .item-8, .item-9, .item-10 {
         margin: 0;
     }
 
