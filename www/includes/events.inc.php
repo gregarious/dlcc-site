@@ -66,12 +66,9 @@ function generateEvents($num_months) {
   ****************/
 
 $monthly_event_groups = generateEvents($NUM_MONTHS);
-
-$month_0_label = reset($monthly_event_groups)['label'];
-$month_n_label = end($monthly_event_groups)['label'];
 ?>
 
-<p class="event-span-text">Events from <?php print $month_0_label; ?> through <?php print $month_n_label; ?></p>
+<p class="event-span-text">Jump to:</p>
 <p>
 <?php 
 	reset($monthly_event_groups);
@@ -100,7 +97,8 @@ $month_n_label = end($monthly_event_groups)['label'];
 ?>
 		<tr>
 			<td class="month-label" colspan="2">
-				<a name="<?php print $month_id; ?>"><?php print $event_group['label']; ?></a>
+				<a name="<?php print $month_id; ?>"></a>
+				<?php print $event_group['label']; ?>
 			</td>
 		</tr>
 <?php
@@ -110,9 +108,11 @@ $month_n_label = end($monthly_event_groups)['label'];
 
 	    		$start_date = new DateTime($event['start_date']);
 				$end_date = new DateTime($event['end_date']);
-				$date_str = $start_date->format('D j');
+				$date_str_long = $start_date->format('D., M j');
+				$date_str_short = $start_date->format('n/j');
 				if ($start_date != $end_date) {
-					$date_str = $date_str . ' &mdash; ' . $end_date->format('D j');
+					$date_str_long = $date_str_long . ' &mdash; ' . $end_date->format('D., M j');
+					$date_str_short = $date_str_short . ' &mdash; ' . $end_date->format('n/j');
 				}
 		
 				$name = $event['name'];
@@ -121,7 +121,10 @@ $month_n_label = end($monthly_event_groups)['label'];
 				}
 ?>
 		<tr class="row-event row-<?php print $iter % 2 ? 'odd' : 'even'; ?>">
-			<td class="col-date"><?php print $date_str; ?></td>
+			<td class="col-date">
+				<span class="event-date-long"><?php print $date_str_long; ?></span>
+				<span class="event-date-short"><?php print $date_str_short; ?></span>
+			</td>
 			<td class="col-event"><?php print $name; ?></td>
 		</tr>
 <?php

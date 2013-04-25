@@ -24,6 +24,8 @@
 /* Classes in Event page */
 .event-span-text {
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85em;
 }
 
 .table-events {
@@ -32,24 +34,46 @@
 }
 
 .row-even {
-    background-color: $light-green3;   
+    background-color: $dark-yellow;
 }
 .row-odd {
-    background-color: $light-green2;   
+    background-color: $light-yellow;   
 }
 
 .month-label {
+    background-color: $green;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     padding: 0.5em;
 }
 .col-event, .col-date, .col-noevents {
-    padding: 0.5em 1em;
+    padding: 0.5em;
 }
 .col-date {
-    width: 30%;
+    width: 35%;
 }
 .col-event {
-    width: 70%;
+    width: 65%;
 }
+.col-noevents {
+    font-style: italic;
+} 
+
+.event-date-long {
+    display: none;
+    @media only screen and (min-width: $w-standard) {
+        display: inline;
+    }
+}
+
+
+@media only screen and (min-width: $w-standard) {
+    .event-date-short {
+        display: none;
+    }
+}
+
 
 /* Classes in Contact page */
 .admin-office-label {

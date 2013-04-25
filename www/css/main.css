@@ -1750,58 +1750,86 @@ dd {
 /* line 25, ../sass/_subpages.scss */
 .event-span-text {
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85em;
 }
 
-/* line 29, ../sass/_subpages.scss */
+/* line 31, ../sass/_subpages.scss */
 .table-events {
   background-color: #f2f3ef;
   width: 100%;
 }
 
-/* line 34, ../sass/_subpages.scss */
+/* line 36, ../sass/_subpages.scss */
 .row-even {
-  background-color: #e6ebe4;
+  background-color: #f7f0c4;
 }
 
-/* line 37, ../sass/_subpages.scss */
+/* line 39, ../sass/_subpages.scss */
 .row-odd {
-  background-color: #d8ddd4;
+  background-color: #fcf9ea;
 }
 
-/* line 41, ../sass/_subpages.scss */
+/* line 43, ../sass/_subpages.scss */
 .month-label {
+  background-color: #819578;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   padding: 0.5em;
 }
 
-/* line 44, ../sass/_subpages.scss */
-.col-event, .col-date, .col-noevents {
-  padding: 0.5em 1em;
-}
-
-/* line 47, ../sass/_subpages.scss */
-.col-date {
-  width: 30%;
-}
-
 /* line 50, ../sass/_subpages.scss */
-.col-event {
-  width: 70%;
+.col-event, .col-date, .col-noevents {
+  padding: 0.5em;
 }
 
+/* line 53, ../sass/_subpages.scss */
+.col-date {
+  width: 35%;
+}
+
+/* line 56, ../sass/_subpages.scss */
+.col-event {
+  width: 65%;
+}
+
+/* line 59, ../sass/_subpages.scss */
+.col-noevents {
+  font-style: italic;
+}
+
+/* line 63, ../sass/_subpages.scss */
+.event-date-long {
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  /* line 63, ../sass/_subpages.scss */
+  .event-date-long {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  /* line 72, ../sass/_subpages.scss */
+  .event-date-short {
+    display: none;
+  }
+}
 /* Classes in Contact page */
-/* line 55, ../sass/_subpages.scss */
+/* line 79, ../sass/_subpages.scss */
 .admin-office-label {
   margin-bottom: 0;
 }
 
-/* line 59, ../sass/_subpages.scss */
+/* line 83, ../sass/_subpages.scss */
 .office-hours {
   font-style: italic;
   font-size: 0.9em;
 }
 
 /* Classes in Directions page */
-/* line 65, ../sass/_subpages.scss */
+/* line 89, ../sass/_subpages.scss */
 .daddr {
   font-style: italic;
   font-size: 14px;
@@ -1809,7 +1837,7 @@ dd {
 }
 
 /* Classes in Explore Pgh page */
-/* line 73, ../sass/_subpages.scss */
+/* line 97, ../sass/_subpages.scss */
 .image-link {
   display: none;
   margin-bottom: 2em;
@@ -1817,24 +1845,24 @@ dd {
   text-align: right;
 }
 @media only screen and (min-width: 768px) {
-  /* line 73, ../sass/_subpages.scss */
+  /* line 97, ../sass/_subpages.scss */
   .image-link {
     display: inherit;
     float: left;
   }
 }
 
-/* line 84, ../sass/_subpages.scss */
+/* line 108, ../sass/_subpages.scss */
 .explore-item {
   margin-bottom: 1em;
 }
 
-/* line 88, ../sass/_subpages.scss */
+/* line 112, ../sass/_subpages.scss */
 .explore-description > h2 {
   margin-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 87, ../sass/_subpages.scss */
+  /* line 111, ../sass/_subpages.scss */
   .explore-description {
     float: left;
     width: 75%;
@@ -1842,57 +1870,57 @@ dd {
   }
 }
 
-/* line 98, ../sass/_subpages.scss */
+/* line 122, ../sass/_subpages.scss */
 .explore-link {
   font-size: 1.25em;
 }
 
-/* line 102, ../sass/_subpages.scss */
+/* line 126, ../sass/_subpages.scss */
 .events-iframe {
   width: 100%;
   height: 100%;
   margin: -1.25em -2em;
 }
 
-/* line 112, ../sass/_subpages.scss */
+/* line 136, ../sass/_subpages.scss */
 .contact-address {
   font-size: 1.1em;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 118, ../sass/_subpages.scss */
+  /* line 142, ../sass/_subpages.scss */
   .page-contactus dt {
     float: left;
     display: inline;
     clear: both;
   }
-  /* line 123, ../sass/_subpages.scss */
+  /* line 147, ../sass/_subpages.scss */
   .page-contactus dd {
     margin-left: 15em;
   }
 }
-/* line 129, ../sass/_subpages.scss */
+/* line 153, ../sass/_subpages.scss */
 .page-interactive-map > header {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-/* line 133, ../sass/_subpages.scss */
+/* line 157, ../sass/_subpages.scss */
 .page-interactive-map > #main {
   display: none;
 }
 @media only screen and (min-width: 320px) {
-  /* line 133, ../sass/_subpages.scss */
+  /* line 157, ../sass/_subpages.scss */
   .page-interactive-map > #main {
     display: block;
   }
 }
 
-/* line 139, ../sass/_subpages.scss */
+/* line 163, ../sass/_subpages.scss */
 .page-interactive-map > #mobile-notice {
   display: block;
 }
 @media only screen and (min-width: 320px) {
-  /* line 139, ../sass/_subpages.scss */
+  /* line 163, ../sass/_subpages.scss */
   .page-interactive-map > #mobile-notice {
     display: none;
   }
