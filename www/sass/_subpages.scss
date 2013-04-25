@@ -45,11 +45,14 @@
     color: white;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 0.5em;
 }
-.col-event, .col-date, .col-noevents {
-    padding: 0.5em;
+
+.table-events {
+    td, th {
+        padding: 0.5em;
+    }
 }
+
 .col-date {
     width: 35%;
 }
