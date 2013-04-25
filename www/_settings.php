@@ -52,11 +52,17 @@ switch($page) {
         $pageClass = "page-neighborhood";
         $panoramaFileBase = "/images/headers/neighborhood";
         break;
-    case "services":
-        $includeFile = "includes/services.inc.php";
-        $pageTitle = $headingText = "Our Services";
-        $pageClass = "page-services";
+    case "planning-an-event":
+        $includeFile = "includes/planning-an-event.inc.php";
+        $pageTitle = $headingText = "Planning An Event";
+        $pageClass = "page-planning-an-event";
         $panoramaFileBase = "/images/headers/services";
+        break;
+    case "visiting":
+        $includeFile = "includes/visiting.inc.php";
+        $pageTitle = $headingText = "Visiting the DLCC";
+        $pageClass = "page-visiting";
+        $panoramaFileBase = "/images/headers/visiting";
         break;
 
     case "building":
@@ -66,15 +72,29 @@ switch($page) {
     case "building:features":
         $includeFile = "includes/building-features.inc.php";
         $pageTitle = "Building Features";
-        $headingText = "Our Building: <strong>Building Features</strong>";
+        $headingText = "Our Building: <strong>Building Overview</strong>";
         $pageClass = "page-building page-building-features";
         $panoramaFileBase = "/images/headers/buildingfeatures";
         break;
+	case "building:artwithinart":
+        $includeFile = "includes/building-artwithinart.inc.php";
+        $pageTitle = "Building Features: Art Within Art";
+        $headingText = "Our Building: <strong>Building Features</strong>";
+        $pageClass = "page-building page-building-artwithinart";
+        $panoramaFileBase = "/images/headers/buildingfeatures";
+        break;		
     case "building:floorplans":
         $includeFile = "includes/building-floorplans.inc.php";
         $pageTitle = "Building Floor Plans";
         $headingText = "Our Building: <strong>Floor Plans</strong>";
         $pageClass = "page-building page-building-floorplans";
+        $panoramaFileBase = "/images/headers/floorplans";
+        break;
+	case "building:meetingmatrix":
+        $includeFile = "includes/building-meetingmatrix.inc.php";
+        $pageTitle = "Building Floor Plans: Meeting Matrix";
+        $headingText = "Our Building: <strong>Floor Plans</strong>";
+        $pageClass = "page-building page-building-meetingmatrix";
         $panoramaFileBase = "/images/headers/floorplans";
         break;
     case "building:history":
@@ -84,6 +104,7 @@ switch($page) {
         $pageClass = "page-building page-building-history";
         $panoramaFileBase = "/images/headers/history";
         break;
+		
 }
 
 $baseSiteTitle = 'The David L. Lawrence Convention Center';

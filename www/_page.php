@@ -101,14 +101,15 @@ $isHomepage = ($page == "home");
                         <nav id="site-nav" class="site-nav">
                             <ul class="clearfix">
                                 <li class="item-1"><a href="/building/" title="Our Building"><img src="/images/nav/Nav_Building.png" alt="Building Icon"></a></li>
-                                <li class="item-2"><a href="/services.php" title="Our Services"><img src="/images/nav/Nav_Services.png" alt="Services Icon"></a></li>
+                                <li class="item-2"><a href="/visiting.php" title="Our Services"><img src="/images/nav/Nav_Visiting.png" alt="Visiting the DLCC Icon"></a></li>
                                 <li class="item-3"><a href="/explore.php" title="Explore Pittsburgh"><img src="/images/nav/Nav_ExplorePGH.png" alt="Explore Pittsburgh Icon"></a></li>
-                                <li class="item-4"><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/images/nav/Nav_DLCCneighborhood.png" alt="Neighborhood Icon"></a></li>
+                                <li class="item-4"><a href="/events.php" title="Events"><img src="/images/nav/Nav_Events.png" alt="Events Icon"></a></li>
                                 <li class="item-5"><a href="/directions.php" title="Directions &amp; Parking"><img src="/images/nav/Nav_DirectionsParking.png" alt="Directions Icon"></a></li>
-                                <li class="item-6"><a href="/events.php" title="Events"><img src="/images/nav/Nav_Events.png" alt="Events Icon"></a></li>
+                                <li class="item-6"><a href="/neighborhood.php" title="The DLCC Neighborhood"><img src="/images/nav/Nav_DLCCneighborhood.png" alt="Neighborhood Icon"></a></li>
                                 <li class="item-7"><a href="/aboutus.php" title="About Us"><img src="/images/nav/Nav_About.png" alt="About Icon"></a></li>
                                 <li class="item-8"><a href="/contactus.php" title="Contact Us"><img src="/images/nav/Nav_Contact.png" alt="Contact Icon"></a></li>
-                                <li class="item-9"><a href="/index.php" class="nav-btn-home" title="Home"><img src="/images/nav/Nav_Home.png" alt="Home Icon"></a></li>
+                                <li class="item-9"><a href="/index.php" title="Home"><img src="/images/nav/Nav_Home.png" alt="Home Icon"></a></li>
+                                <li class="item-10"><a href="/planning-an-event.php" title="Planning an Event"><img src="/images/nav/Nav_PlanningAnEvent.png" alt="Planning an Event Icon"></a></li>
                             </ul>
                         </nav>
                         <?php
@@ -125,9 +126,10 @@ $isHomepage = ($page == "home");
             </div>  <!-- end .page-column-background-secondary -->
 
             <footer class="page-footer">
-                <p>&copy; Copyright David L. Lawrence Convention Center</p>
+                <p>&copy; Copyright 2013 David L. Lawrence Convention Center</p>
                 <p>1000 Ft. Duquesne Blvd., Pittsburgh, PA 15222 <br/>
                        (412) 565-6000 | <a href="mailto:info@pittsburghcc.com" title="Contact us" class="mailto">info@pittsburghcc.com</a></p>
+                       <p><a href="https://www.facebook.com/pages/David-L-Lawrence-Convention-Center/91131171198" target="_blank"><img src="/images/footer/facebook.png" alt="Facbook Icon"></a><a href="http://www.greenfirst.us/greenfirst/" target="_blank"><img src="/images/footer/g1.png" alt="g1 Icon"></a><a href="http://new.usgbc.org/leed" target="_blank"><img src="/images/footer/LEED_Gold.png" alt="LEED Gold Icon"></a><a href="http://new.usgbc.org/leed" target="_blank"><img src="/images/footer/LEED_Platinum.png" alt="LEED Platinum Icon"></a></p>
             </footer>
         </div>  <!-- end .page-wrap -->
 

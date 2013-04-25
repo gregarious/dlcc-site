@@ -3,24 +3,17 @@
     1000 Fort Duquesne Boulevard<br />
     Pittsburgh, PA 15222</p>
 
-    <dl>
-        <dt>Phone</dt>
-        <dd><a class="tel-link" href="tel:+14125656000">412-565-6000</a></dd>
-
-        <dt>Fax</dt>
-        <dd><a class="fax-link" href="fax:+14125656008">412-565-6008</a></dd>
-
-        <dt>Email</dt>
-        <dd><a class="mailto" href="mailto:info@pittsburghcc.com">info@pittsburghcc.com</a></dd>
-    </dl>
-
-    <h2 class="admin-office-label">Administrative Offices</h2>
+	<h2 class="admin-office-label">Administrative Offices</h2>
     <p class="office-hours">Monday &ndash; Friday: 8:30 AM &ndash; 5:00 PM</p>
+    <p><strong>Phone:</strong> <a class="tel-link" href="tel:+14125656000">412-565-6000</a>, <strong>Fax:</strong> <a class="fax-link" href="fax:+14125656008">412-565-6008</a>, 
+<strong>Email:</strong> <a class="mailto" href="mailto:info@pittsburghcc.com">info@pittsburghcc.com</a></p>
 
+    
+<h2 class="admin-office-label">DLCC Departments</h2>
     <dl>
 
         <dt>Audio/Visual</dt>
-        <dd><a class="tel-link" href="tel:+14123256115">412-325-6115</a></dd>
+        <dd><a class="tel-link" href="tel:+14123256115">412-325-6115</a> (Three Rivers Entertainment)</dd>
 
         <dt>Billing/Accounting</dt>
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 5</a></dd>
@@ -29,7 +22,7 @@
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 1</a></dd>
 
         <dt>Food/Beverage</dt>
-        <dd><a class="tel-link" href="tel:+14123256120">412-325-6120</a></dd>
+        <dd><a class="tel-link" href="tel:+14123256120">412-325-6120</a> (Levy Restaurants)</dd>
 
         <dt>Operations</dt>
         <dd><a class="tel-link" href="tel:+14125656000">412-565-6000 ext. 4</a></dd>

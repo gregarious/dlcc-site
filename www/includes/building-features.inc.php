@@ -2,68 +2,54 @@
     <a href="history.php">History</a> | 
     <a href="http://www.greenfirst.us/">Greenfirst</a> |
     <a href="floorplans.php">Floor Plans</a> |
-    <a class="current" href="features.php">Building Features</a>
+    <a class="current" href="features.php">Building Overview</a>
 </nav>
 
-<p>Pittsburgh is a city known for its diverse architectural styles such as the “Romanesque” Allegheny County Courthouse (H.H. Richardson 1888), Phillip Johnson’s glass castle PPG Place (1988) and the city’s most recent addition to the downtown skyline and riverscape, the David L. Lawrence Convention Center, designed by Rafael Vinoly Architects (2003). Pittsburgh also enjoys an international reputation for its world-class art collections at The Carnegie Museum of Art, the Andy Warhol Museum and the Frick Art Museum. While at the David L. Lawrence Convention Center, enjoy the twenty-five works of art which celebrates the City’s diversity - <a href="artwithinart.html">Art within Art</a>.</p>
-<dl>
-    <dt>Owner</dt>
-    <dd><a href="http://www.pgh-sea.com/index.aspx" target="_blank">Sports & Exhibition Authority of Pittsburgh and Allegheny County</a></dd>
+<p>Pittsburgh is a city known for its diverse architectural styles such as the “Romanesque” Allegheny County Courthouse (H.H. Richardson 1888), Phillip Johnson’s glass castle PPG Place (1988) and the city’s most recent addition to the downtown skyline and riverscape, the David L. Lawrence Convention Center, designed by Rafael Vinoly Architects (2003). Pittsburgh also enjoys an international reputation for its world-class art collections at The Carnegie Museum of Art, the Andy Warhol Museum and the Frick Art Museum. While at the David L. Lawrence Convention Center, enjoy the twenty-five works of art which celebrates the City’s diversity - <a href="artwithinart.php">Art within Art</a>.</p>
+
+    <p><strong>Owner:</strong> <a href="http://www.pgh-sea.com/index.aspx" target="_blank">Sports & Exhibition Authority of Pittsburgh and Allegheny County</a></p>
     
-    <dt>Management</dt>
-    <dd><a href="http://www.smgworld.com/" target="_blank">SMG</a></dd>
+    <p><strong>Management:</strong> <a href="http://www.smgworld.com/" target="_blank">SMG</a></p>
     
-    <dt>Architect</dt>
-    <dd><a href="http://www.rvapc.com/" target="_blank">Rafael Vinoly Architects, P.C.</a></dd>
+    <p><strong>Architect:</strong> <a href="http://www.rvapc.com/" target="_blank">Rafael Vinoly Architects, P.C.</a></p>
     
-    <dt>Project Cost</dt>
-    <dd>$375 million</dd>
+    <p><strong>Project Cost:</strong> $375 million</p>
     
-    <dt>Public Art</dt>
-    <dd>$2 million &ndash; 25 works</dd>
+    <p><strong>Public Art:</strong> $2 million &ndash; 25 works</p>
     
-    <dt>Land Size</dt>
-    <dd>7.9 acres</dd>
+    <p><strong>Land Size:</strong> 7.9 acres</p>
     
-    <dt>Building Size</dt>
-    <dd>1.5 million square feet</dd>
+    <p><strong>Building Size:</strong> 1.5 million square feet</p>
     
-    <dt>Total Exhibit Space</dt>
-    <dd>313,400 square feet</dd>
+    <p><strong>Total Exhibit Space:</strong> 313,400 square feet</p>
     
-    <dt>Column-Free Exhibit Space</dt>
-    <dd>236,900 square feet</dd>
+    <p><strong>Column-Free Exhibit Space:</strong> 236,900 square feet</p>
     
-    <dt>Number of Meeting Rooms</dt>
-    <dd>53 (51 meeting rooms; two 250-seat lecture halls)</dd>
+    <p><strong>Number of Meeting Rooms:</strong> 53 (51 meeting rooms; two 250-seat lecture halls)</p>
     
-    <dt>Total Meeting Room Space</dt>
-    <dd>77,952 square feet</dd>
+    <p><strong>Total Meeting Room Space:</strong> 77,952 square feet</p>
     
-    <dt>Spirit of Pittsburgh Ballroom Space</dt>
-    <dd>31,610 square feet (32-foot high ceiling)</dd>
+    <p><strong>Spirit of Pittsburgh Ballroom Space:</strong> 31,610 square feet (32-foot high ceiling)</p>
     
-    <dt>Internet Access</dt>
-    <dd>1G (1024MB) &mdash; wired/wireless Internet throughout the Convention Center &mdash; maintained through <a href="http://www.smartcity.com" target="_blank">Smart City.</a></dd>
+    <p><strong>Internet Access:</strong> 1G (1024MB) &mdash; wired/wireless Internet throughout the Convention Center &mdash; maintained through <a href="http://www.smartcity.com" target="_blank">Smart City.</a></p>
     
-    <dt>Preferred A/V</dt>
-    <dd>Three Rivers Entertainment</dd>
+    <p><strong>Preferred A/V:</strong> <a href="http://www.threeriversentertainment.com/index.cfm?CFID=46350592&CFTOKEN=81785737" target="_blank">Three Rivers Entertainment</a></p>
     
-    <dt>Lighting</dt>
-    <dd>75% natural daylight</dd>
+    <p><strong>Lighting:</strong> 75% natural daylight</p>
     
-    <dt>Ventilation</dt>
-    <dd>Naturally ventilated halls, individually controlled thermostats</dd>
+    <p><strong>Ventilation:</strong> Naturally ventilated halls, individually controlled thermostats</p>
     
-    <dt>Loading Docks</dt>
-    <dd>37</dd>
+    <p><strong>Loading Docks:</strong> 37</p>
     
-    <dt>Parking Garage</dt>
-    <dd>700 &ndash; 8'1" clearance</dd>
+    <p><strong>Parking Garage:</strong> 700 &ndash; 8'1" clearance</p>
     
-    <dt>Food Service Provider</dt>
-    <dd>Levy Restaurants</dd>
+    <p><strong>Food Service Provider:</strong> <a href="http://www.levyrestaurants.com/convention-centers/david-l.-lawrence-center" target="_blank">Levy Restaurants</a></p>
     
-    <dt>Distinctive Features</dt>
-    <dd><a href="http://www.usgbc.org/DisplayPage.aspx?CMSPageID=220" target="_blank">Gold LEED &reg;</a> certified green convention center; riverfront location; outdoor terraces; circular glass elevator; contemporary water feature; stainless sloping steel roof; downtown and home to ‘g1 (greenfirst)’</dd>
-</dl>
+    <p><strong>Distinctive Features:</strong> <a href="http://www.greenfirst.us/greenfirst/when-buildinghistory.html" target="_blank">LEED &reg; Certification</a>: Gold LEED&reg;, new construction (NC) and Platinum LEED&reg;, existing building (EBOM).</p>
+    <p><strong>Outdoor Space:</strong> </p>
+    <ul>
+    <li><a href="http://www.greenfirst.us/greenfirst/fun-outdoor.html" target="_blank">Riverfront Plaza:</a> 1,300 ft of the Three Rivers Heritage Trail featuring over 2,000 trees, shrubs, grasses and perennials.</li>
+    <li><a href="http://www.greenfirst.us/greenfirst/fun-outdoor.html" target="_blank">Green Roof, South Terrace:</a> 20,000 sqft of living roof located on the third floor, cityside, featuring over 7,000 perennial, grasses, and sedum.</li>
+    <li><a href="http://www.greenfirst.us/greenfirst/fun-outdoor.html" target="_blank">North Terrace:</a> 60,000 sqft of open outdoor space located on the fourth floor, riverside, featuring Levy Restaurants' herb and vegetable gardens, Monarch Waystation, Edible Plants, Medicinal plants and Pollinator plants.</li>
+    </ul>
+    <p>Download our brochures to find out more: <a href="/images/PDFs/Remarkable_Brochure.pdf" target="_blank">Remarkable Sales Brochure</a> and <a href="/images/PDFs/DLCC_FlexWkbk.pdf" target="_blank">Flexible Workbook</a>.
