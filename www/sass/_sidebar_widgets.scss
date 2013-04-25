@@ -40,7 +40,7 @@
 
 .upcoming-event {
     text-align: left;
-    a {
+    a, .event-name {
         font-weight: bold;
         color: $grey;
     }

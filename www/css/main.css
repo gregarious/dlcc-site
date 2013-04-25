@@ -1189,7 +1189,7 @@ dd {
   margin-bottom: 1em;
 }
 /* line 43, ../sass/_sidebar_widgets.scss */
-.upcoming-event a {
+.upcoming-event a, .upcoming-event .event-name {
   font-weight: bold;
   color: #58585b;
 }

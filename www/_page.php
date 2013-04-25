@@ -142,6 +142,17 @@ $isHomepage = ($page == "home");
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
 
+        <?php
+        // load the events into the upcoming events widget on the sidebar
+        // (this is done post page load via AJAX in case db query is slow)
+        if($isHomepage) {
+        ?>
+            <script src="js/events-widget.js"></script>
+        <?php
+        }
+        ?>
+
+
         <script>
             var _gaq=[['_setAccount','UA-9185606-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
