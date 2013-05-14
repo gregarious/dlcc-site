@@ -1,44 +1,50 @@
-// DOM requirements:
-// 
-// <input name='lat'>
-// <input name='lng'>
-// <input name='address'>
-// clickable .btn-geocode element
-// .geocoding-status element 
-// div.gmap element
-
+/*
+	Plug-in that connects latitude/longitude input fields to
+	an interactive map. Totally fixed to DOM and geography of current
+	project, but could be generalized fairly easily.
+ */
 $(function(){
-	var latitude = null, 
-		longitude = null,
+	// constants
+	var centerLat = 40.444972,
+		centerLng = -80.000145,
+		boundsSW = "40.418724,-80.043983",
+		boundsNE = "40.474636,-79.946823";
+
+	// state
+	var location = {
+			latitude: null,
+			longitude: null
+		},
 		map = null,
 		marker = null;
 
-	var inputLat = $('input[name="Restaurant[lat]"]'),
-		inputLng = $('input[name="Restaurant[lng]"]'),
-		inputAddress = $('input[name="Restaurant[address]"]'),
+	// jQuery/DOM elements
+	var inputLat = $('.input-lat'),
+		inputLng = $('.input-lng'),
+		inputAddress = $('.input-address'),
 		buttonGeocode = $('.btn-geocode'),
 		labelGeocodingStatus = $('.geocoding-status');
 
 	var mapEl = document.getElementById('gmap');
 
-
 	function init() {
-		latitude = inputLat.val();
-		longitude = inputLng.val();
+		location.latitude = inputLat.val();
+		location.longitude = inputLng.val();
 
-		if (latitude && longitude) {
-			center = new google.maps.LatLng(latitude, longitude);
+		if (location.latitude && location.longitude) {
+			center = new google.maps.LatLng(location.latitude, location.longitude);
 			marker = new google.maps.Marker({position: center});
 		}
 		else {
-			center = new google.maps.LatLng(40.444972, -80.000145);
+			center = new google.maps.LatLng(centerLat, centerLng);
 			marker = new google.maps.Marker({position: null});
 		}
 
 		map = new google.maps.Map(mapEl, {
 			center: center,
 			zoom: 14,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			streetViewControl: false
 		});
 		marker.setMap(map);
 
@@ -56,9 +62,9 @@ $(function(){
 		inputLng.on(inputEventName, lngInputChange);
 	}
 
-	function updateMarker() {
-		if (latitude && longitude) {
-			position = new google.maps.LatLng(latitude, longitude);
+	function syncMarker() {
+		if (location.latitude && location.longitude) {
+			position = new google.maps.LatLng(location.latitude, location.longitude);
 		}
 		else {
 			position = null;
@@ -70,15 +76,29 @@ $(function(){
 		}
 	}
 
-	function updateLatInput() {
-		inputLat.val(latitude);
+	function syncLatLngInputs() {
+		if (inputLat.val() != location.latitude) {
+			inputLat.val(location.latitude);
+			inputLat.stop()
+					.animate({ backgroundColor: "#5bc0de"}, 50)
+					.animate({ backgroundColor: "#ffffff"}, 900);
+		}
+
+		if (inputLng.val() != location.longitude) {
+			inputLng.val(location.longitude);
+			inputLng.stop()
+					.animate({ backgroundColor: "#5bc0de"}, 50)
+					.animate({ backgroundColor: "#ffffff"}, 900);
+		}
 	}
-	function updateLngInput() {
-		inputLng.val(longitude);
+
+	function syncAll() {
+		syncMarker();
+		syncLatLngInputs();
 	}
 
 	var mapUpdateTimeoutID = null;
-	function updateMarkerWithDelay(delay) {
+	function syncMarkerWithDelay(delay) {
 		if (typeof delay === 'undefined') {
 			delay = 400;
 		}
@@ -88,71 +108,115 @@ $(function(){
 		}
 
 		mapUpdateTimeoutID = setTimeout(function(){
-			updateMarker();
+			syncMarker();
 			mapUpdateTimeoutID = null;
 		}, delay);
 	}
 
 	// UI binding functions
 	function latInputChange(lat) {
-		latitude = inputLat.val();
+		location.latitude = inputLat.val();
 		// Need to update marker position, but if one is
 		// already there, give it a second before updating
 		// to avoid thrashing on rapid text input changes
 		if (marker.getPosition()) {
-			updateMarkerWithDelay();
+			syncMarkerWithDelay();
 		}
 		else {
-			updateMarker();
+			syncMarker();
 		}
 	}
 
 	function lngInputChange(lat) {
-		longitude = inputLng.val();
+		location.longitude = inputLng.val();
 		// Need to update marker position, but if one is
 		// already there, give it a second before updating
 		// to avoid thrashing on rapid text input changes
 
 		if (marker.getPosition()) {
-			updateMarkerWithDelay();
+			syncMarkerWithDelay();
 		}
 		else {
-			updateMarker();
+			syncMarker();
 		}
 	}
 
 	function mapClick(lat, lng) {
-		latitude = lat.toFixed(6);
-		longitude = lng.toFixed(6);
-		// set latitude/longitude from click
-		updateMarker();
-		updateLngInput();
-		updateLatInput();
+		clearStatus();
+		location.latitude = lat.toFixed(6);
+		location.longitude = lng.toFixed(6);
+		syncAll();
+	}
+
+	function displaySuccessfulStatus(text) {
+		labelGeocodingStatus.text(text)
+							.removeClass('status-error')
+							.addClass('status-success');
+	}
+
+	function displayErrorStatus(text) {
+		labelGeocodingStatus.text(text)
+		labelGeocodingStatus.removeClass('status-success')
+							.addClass('status-error');
+	}
+
+	function clearStatus() {
+		labelGeocodingStatus.text('')
+							.removeClass('status-error status-success');
+	}
+
+	function clearLocation() {
+		location.latitude = null;
+		location.longitude = null;
+		syncAll();
+
+		return false;
 	}
 
 	function geocodeAddress() {
 		var address = inputAddress.val();
-		var statusLabel = labelGeocodingStatus;
 		if (!address) {
-			statusLabel.text('Invalid address');
+			displayErrorStatus('Invalid address');
 			return false;
 		}
 
-		var geocoding = $.getJSON();	// add url
-		geocoding.done(function(data) {
-			if (data.results && data.results.length > 0) {
-				// set lat/lng from data
-				updateMarker();
-				updateLngInput();
-				updateLatInput();
-			}
-			else {
-				// set statusLabel text
-			}
-		});
-		geocoding.fail(function(err) {
-			// set statusLabel text
-		});
+		var url = "http://maps.googleapis.com/maps/api/geocode/json?sensor=false" +
+					"&bounds=" + boundsSW + "|" + boundsNE +
+					"&address=" + encodeURIComponent(address);
+
+		clearStatus();
+
+		// TODO: flesh out AJAX response handling (fix try/catch, better error display perhaps)
+		var geocoding = $.getJSON(url);
+		$.getJSON(url)
+			.done(function(data, textStatus, jqXHR) {
+				if (data.status === 'OK') {
+					var resultLat, resultLng;
+					try {
+						resultLat = data.results[0].geometry.location.lat.toFixed(6);
+						resultLng = data.results[0].geometry.location.lng.toFixed(6);
+					}
+					catch(e) {
+						displayErrorStatus('Unexpected API response format');
+						return;
+					}
+
+					location.latitude = resultLat;
+					location.longitude = resultLng;
+					syncAll();
+
+					displaySuccessfulStatus('Address successfully geolocated!')
+				}
+				else if(data.status === 'ZERO_RESULTS') {
+					displayErrorStatus('Could not geolocate the given address');
+				}
+				else {
+					displayErrorStatus('Geolocation service refused the request (status: ' + data.status + ')');
+				}
+			})
+			.fail(function(jqXHR, textStatus, errorThrown) {
+				displayErrorStatus('Error contacting geocoding service (' + textStatus + ').');
+			});
 
 		return false;
 	}
