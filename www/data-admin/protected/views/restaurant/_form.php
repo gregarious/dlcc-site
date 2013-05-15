@@ -8,8 +8,6 @@
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC7INTXYluYDoz0yZRX89jLORKJEGeQeCY&sensor=false"></script>
 <script src="/js/vendor/jquery.color.js"></script>
 <script src="/js/map-admin.js"></script>
-<script src="/js/map-admin.js"></script>
-
 
 <div class="form">
 
