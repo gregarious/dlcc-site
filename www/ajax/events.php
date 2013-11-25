@@ -41,9 +41,9 @@ $db_config = $yii_config['components']['db'];
 $date_now_str = date('Y-m-d');
 
 try {
-	$dbh = new PDO($db_config['connectionString']);
-	// disabled for sqllite
-    // $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
+	// TODO-greg: set username/password for deployment
+	$dbh = new PDO($db_config['connectionString'], 'root', '');
+
     $statement = $dbh->prepare("
     	SELECT name, start_date, end_date, website 
     	FROM `event` 

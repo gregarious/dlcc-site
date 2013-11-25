@@ -159,9 +159,10 @@ $YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
         try {
             $yii_config = require_once($YII_CONFIG_FILE);
             $db_config = $yii_config['components']['db'];
-            $dbh = new PDO($db_config['connectionString']);
-            // disabled for sqllite
-            // $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
+            
+            // TODO-greg: set username/password for deployment
+            $dbh = new PDO($db_config['connectionString'], 'root', '');
+            
             foreach ($categories as $category) {
                 $statement = $dbh->prepare("SELECT * from $category");
                 $statement->execute();

@@ -186,7 +186,6 @@ $(function(){
 
 		clearStatus();
 
-		// TODO-greg: flesh out AJAX response handling (fix try/catch, better error display perhaps)
 		var geocoding = $.getJSON(url);
 		$.getJSON(url)
 			.done(function(data, textStatus, jqXHR) {
@@ -205,7 +204,7 @@ $(function(){
 					location.longitude = resultLng;
 					syncAll();
 
-					displaySuccessfulStatus('Address successfully geolocated!')
+					displaySuccessfulStatus('Address successfully geolocated!');
 				}
 				else if(data.status === 'ZERO_RESULTS') {
 					displayErrorStatus('Could not geolocate the given address');
