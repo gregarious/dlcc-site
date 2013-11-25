@@ -18,6 +18,7 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$users=array(
+			// TODO-greg: adjust before deploy
 			// username => password
 			'demo'=>'demo',
 			'admin'=>'admin',

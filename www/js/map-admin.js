@@ -55,7 +55,7 @@ $(function(){
 			mapClick(e.latLng.lat(), e.latLng.lng());
 		});
 
-		// TODO: test IE
+		// TODO-greg: test IE
 		var inputEventName = ('oninput' in inputLat[0]) ? 'input' : 'propertychange';
 		console.log('using input event: ' + inputEventName);
 		inputLat.on(inputEventName, latInputChange);
@@ -186,7 +186,7 @@ $(function(){
 
 		clearStatus();
 
-		// TODO: flesh out AJAX response handling (fix try/catch, better error display perhaps)
+		// TODO-greg: flesh out AJAX response handling (fix try/catch, better error display perhaps)
 		var geocoding = $.getJSON(url);
 		$.getJSON(url)
 			.done(function(data, textStatus, jqXHR) {

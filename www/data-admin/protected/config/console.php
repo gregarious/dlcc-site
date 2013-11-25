@@ -13,23 +13,16 @@ return array(
 
 	// application components
 	'components'=>array(
-		// TODO: remove before deploy
+		// TODO-greg: adjust before deploy
 		// dev creds
 		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/dlcc.sqlite',
+			'connectionString' => 'mysql:host=localhost;dbname=dlcc_data',
+			'emulatePrepare' => true,
+			'username' => 'root',
+			'password' => '',
+			'charset' => 'utf8',
 		),
 
-		// TODO: remove before deploy
-		// webfaction creds
-		// 'db'=>array(
-		// 	'connectionString' => 'mysql:host=localhost;dbname=gregarious_dlcc',
-		// 	'emulatePrepare' => true,
-		// 	'username' => 'gregarious_dlcc',
-		// 	'password' => 'gregarious_dlcc',
-		// 	'charset' => 'utf8',
-		// ),
-
-		
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(

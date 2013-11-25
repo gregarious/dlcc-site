@@ -147,7 +147,7 @@ $YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
 
         <script src="js/vendor/knockout-2.2.1.js"></script>
 
-        <!-- TODO: minify and condense scripts -->
+        <!-- TODO-greg: minify and condense scripts -->
 
         <script src="js/map/init.js"></script>
 
