@@ -160,8 +160,8 @@ $YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
             $yii_config = require_once($YII_CONFIG_FILE);
             $db_config = $yii_config['components']['db'];
             
-            // TODO-greg: set username/password for deployment
-            $dbh = new PDO($db_config['connectionString'], 'root', '');
+            // TODO-greg: compile all connection info in master file
+            $dbh = new PDO($db_config['connectionString'], 'dlccreadonly', 'DllccRead1!');
             
             foreach ($categories as $category) {
                 $statement = $dbh->prepare("SELECT * from $category");

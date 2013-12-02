@@ -52,13 +52,13 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		
-		// TODO-greg: adjust before deploy
+        // TODO-greg: compile all connection info in master file
 		// dev creds
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dlcc_data',
+			'connectionString' => 'mysql:host=dllccpittsburgh.db.12020684.hostedresource.com;dbname=dllccpittsburgh',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'dllccpittsburgh',
+			'password' => 'D11ccMuffin!',
 			'charset' => 'utf8',
 		),
 

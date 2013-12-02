@@ -1,9 +1,10 @@
 Left to do:
 
-1. Import dump `data/dlcc_data_2013-11-25.sql` into DLCC's database (blocking on invalid phpmyadmin credentials)
-2. Fix all DB connection info (search for "TODO-greg" tags)
+x. Import dump `data/dlcc_data_2013-11-25.sql` into DLCC's database (blocking on invalid phpmyadmin credentials)
+x. Fix all DB connection info (search for "TODO-greg" tags)
 3. Fix admin username/password in UserIdentity.php
 4. Other misc. "TODO-greg" tags
+5. Compile all credentials into master PHP file? Then the following notes are unnecessary.
 
 Some notes to leave Hilary/Steve/whoever with regarding future maintenance:
 

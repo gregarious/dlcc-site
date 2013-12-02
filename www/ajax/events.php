@@ -41,8 +41,8 @@ $db_config = $yii_config['components']['db'];
 $date_now_str = date('Y-m-d');
 
 try {
-	// TODO-greg: set username/password for deployment
-	$dbh = new PDO($db_config['connectionString'], 'root', '');
+    // TODO-greg: compile all connection info in master file
+	$dbh = new PDO($db_config['connectionString'], 'dlccreadonly', 'DllccRead1!');
 
     $statement = $dbh->prepare("
     	SELECT name, start_date, end_date, website 

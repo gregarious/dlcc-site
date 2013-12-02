@@ -21,7 +21,6 @@ class UserIdentity extends CUserIdentity
 			// TODO-greg: adjust before deploy
 			// username => password
 			'demo'=>'demo',
-			'admin'=>'admin',
 		);
 		if(!isset($users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
