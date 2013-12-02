@@ -10,7 +10,7 @@ date_default_timezone_set('US/Eastern');
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'DLCC Site Admin',
+	'name'=>'David L. Lawrence Convention Center Admin',
 
 	// preloading 'log' component
 	'preload'=>array('log'),

@@ -1,10 +1,13 @@
 Left to do:
 
-x. Import dump `data/dlcc_data_2013-11-25.sql` into DLCC's database (blocking on invalid phpmyadmin credentials)
-x. Fix all DB connection info (search for "TODO-greg" tags)
-3. Fix admin username/password in UserIdentity.php
-4. Other misc. "TODO-greg" tags
-5. Compile all credentials into master PHP file? Then the following notes are unnecessary.
+- Ask Steve to:
+	1. Make the `data-admin\protected\runtime\` folder writable by the web server
+	2. Restart the server
+- Look into DB connection errors
+- Test on test site (/muffintest/)
+- Create master credential file with DB and admin names. Ensure this doesn't get served.
+- Connect DB/admin to credential file
+- Other misc. "TODO-greg" tags
 
 Some notes to leave Hilary/Steve/whoever with regarding future maintenance:
 
