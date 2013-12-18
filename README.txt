@@ -2,8 +2,8 @@ Left to do:
 
 - Ask Steve to:
 	1. Make the `data-admin\protected\runtime\` folder writable by the web server
-	2. Restart the server
-- Look into DB connection errors
+	2. Install MySQL PDO driver
+	3. Restart the server
 - Test on test site (/muffintest/)
 - Create master credential file with DB and admin names. Ensure this doesn't get served.
 - Connect DB/admin to credential file
