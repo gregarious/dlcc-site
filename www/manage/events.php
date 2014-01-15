@@ -1,13 +1,17 @@
 <?php
+require_once("_common.php");
+
 session_start();
 
+// sets 'alerts' and 'csrftoken' values
+initializeSession();
+
 if (!sessionIsAuthenticated()) {
+	array_push($_SESSION['alerts'], 'You must log in to access this page.');
 	header("Location: /manage/login.php");
 	exit;
 }
 
-// sets 'alerts' and 'csrftoken' values
-initializeSession();
 
 $requestArgs = parseRequest();
 
@@ -56,28 +60,9 @@ else {
 ?>
 
 <?php
-function initializeSession() {
-	if (!array_key_exists('alerts', $_SESSION) || !is_array($_SESSION['alerts'])) {
-		$_SESSION['alerts'] = array();
-	}
-	if (!array_key_exists('csrftoken', $_SESSION)) {
-		$_SESSION['csrftoken'] = md5(uniqid(rand(), true));
-	}
-}
-
-function sessionIsAuthenticated() {
-	return TRUE;
-}
-
 function parseRequest() {
 	return array('id' => 	 getValue($_GET, 'id'),
 				 'action' => getValue($_GET, 'action'));
-}
-
-function csrfTokenIsValid() {
-	return array_key_exists('csrftoken', $_SESSION) &&
-		   array_key_exists('csrftoken', $_POST) &&
-		   $_SESSION['csrftoken'] === $_POST['csrftoken'];
 }
 
 function createEvent() {
@@ -86,10 +71,6 @@ function createEvent() {
 
 function saveEvent() {
 	return TRUE;
-}
-
-function getValue($ar, $key, $defaultVal=NULL) {
-	return array_key_exists($key, $ar) ? $ar[$key] : $defaultVal;
 }
 
 function showCreationForm() {
@@ -136,29 +117,6 @@ function showList() {
 	renderPageFooter();
 }
 
-function renderPageHeader() {
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Events Demo</title>
-	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="/js/vendor/html5shiv.js"></script>
-	<![endif]-->
-</head>
-<body>
-<div class="container">
-<?php
-	foreach ($_SESSION['alerts'] as $alert) {
-?>
-	<div class="alert alert-warning"><?php echo $alert;?></div>
-<?php
-}
-	// clear alerts
-	$_SESSION['alerts'] = array();
-}
-
 function renderForm($actionUrl, $initialValues=array()) {
 ?>
 	<form role="form" method="POST" action="<?php echo $actionUrl; ?>">
@@ -196,25 +154,16 @@ function renderDeleteForm() {
 	<form class="hidden" method="POST" id="hiddenDeleteForm">
 		<input type="hidden" name="csrftoken" value="<?php echo getValue($_SESSION, 'csrftoken', ''); ?>">
 	</form>
-<?php
-}
-
-function renderPageFooter() {
-?>
-</div> <!-- .container -->
-
-<script type="text/javascript">
-	// confirms deletion of an item with user, and if confirmed, submits the hidden
-	// delete form at the correct URL, which results in a full page load
-	function confirmDelete(itemId) {
-		if (confirm('Are you sure you want to delete this item? This cannot be undone.')) {
-			var form = document.getElementById('hiddenDeleteForm');
-			form.setAttribute("action", "/manage/events.php?action=delete&id=" + itemId);
-			form.submit();
+	<script type="text/javascript">
+		// confirms deletion of an item with user, and if confirmed, submits the hidden
+		// delete form at the correct URL, which results in a full page load
+		function confirmDelete(itemId) {
+			if (confirm('Are you sure you want to delete this item? This cannot be undone.')) {
+				var form = document.getElementById('hiddenDeleteForm');
+				form.setAttribute("action", "/manage/events.php?action=delete&id=" + itemId);
+				form.submit();
+			}
 		}
-	}
-</script>
-</body>
-</html>
+	</script>
 <?php
 }
