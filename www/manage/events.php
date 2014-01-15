@@ -17,8 +17,11 @@ $requestArgs = parseRequest();
 
 if (is_null($requestArgs['id'])) {
 	// list processing branch
+
+	
 	if ($requestArgs['action'] === 'new') { 
-		showCreationForm();
+		renderPageHeader();
+		renderCreationForm();
 	} 
 	else { 		// action expected to be 'list' or '', but really its the default case
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -27,32 +30,54 @@ if (is_null($requestArgs['id'])) {
 			}
 			else {
 				array_push($_SESSION['alerts'], 'Problem creating event');
-				showCreationForm();
+				renderPageHeader();
+				renderCreationForm();
+				renderPageFooter();
 				exit;
 			}
 		}
-		showList();
+		renderPageHeader();
+		renderList();
 	}
+	renderPageFooter();
 }
 else {
+	// detail processing branch
+
 	if ($requestArgs['action'] === 'delete') { 
 		if (csrfTokenIsValid()) {
-			array_push($_SESSION['alerts'], 'Event deleted');
+			if (deleteEvent($requestArgs['id'])) {
+				array_push($_SESSION['alerts'], 'Event deleted');
+			}
+			else {
+				array_push($_SESSION['alerts'], 'Problem deleting event');
+			}
 			header("Location: /manage/events.php");
 			exit;
 		}
 	} 
 	else { 		// action expected to be 'update' or '', but really its the default case
+		$event = getEvent($requestArgs['id']);
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-			if (csrfTokenIsValid() && saveEvent()) {
+			if (csrfTokenIsValid() && saveEvent($requestArgs['id'], $_POST)) {
 				array_push($_SESSION['alerts'], 'Successfully saved event');
 			}
 			else {
 				array_push($_SESSION['alerts'], 'Problem saving event');				
 			}
 		}
+
+		$event = getEvent($requestArgs['id']);
+		if (!$event) {
+			array_push($_SESSION['alerts'], 'Could not find requested event');
+			header("Location: /manage/events.php");
+			exit;
+		}
+
 		// all branches show edit form in the end
-		showEditForm(NULL);
+		renderPageHeader();
+		renderEditForm($event);
+		renderPageFooter();
 	}
 	// item processing branch
 }
@@ -65,56 +90,45 @@ function parseRequest() {
 				 'action' => getValue($_GET, 'action'));
 }
 
-function createEvent() {
-	return TRUE;
-}
-
-function saveEvent() {
-	return TRUE;
-}
-
-function showCreationForm() {
-	renderPageHeader();
+function renderCreationForm() {
 ?>
-	<a href="/manage/events.php" class="btn">Back to Event List</a>
+	<a href="/manage/events.php" class="btn btn-default">&larr; Back to Event List</a>
 	<h3>Create new event</h3>
 <?php
 	renderForm('/manage/events.php', $_POST);
 }
 
-function showEditForm($object) {
-	renderPageHeader();
-	$values = array('id' => 2,
-					'name' => 'Test event',
-					'start_date' => '2014-02-03',
-					'end_date' => '2014-02-04',
-					'website' => 'http://www.example.com');
+function renderEditForm($object) {
 ?>
-	<a href="/manage/events.php" class="btn btn-default">Back to Event List</a>
+	<a href="/manage/events.php" class="btn btn-default">&larr; Back to Event List</a>
 	<button class="btn btn-danger" onclick="confirmDelete(<?php echo $values['id'] ?>)">Delete Event</button>
 	<h3>Edit event</h3>
 <?php
-	renderForm('/manage/events.php?id=' . $values['id'], $values);
-
-	renderDeleteForm();
+	renderForm('/manage/events.php?id=' . $object['id'], $object);
+	renderHiddenDeleteForm();
 ?>
 <?php
-	renderPageFooter();
 }
 
-function showList() {
-	renderPageHeader();
+function renderList() {
 ?>
 	<ul>
-		<li><a href="events.php?id=1">Event 1</a> <button class="btn btn-danger" onclick="confirmDelete(1)">Delete</button></li>
-		<li><a href="events.php?id=2">Event 2</a> <button class="btn btn-danger" onclick="confirmDelete(2)">Delete</button></li>
-		<li><a href="events.php?id=3">Event 3</a> <button class="btn btn-danger" onclick="confirmDelete(3)">Delete</button></li>
+<?php
+	$results = getEventList();
+	foreach ($results as $result) {
+		$id = $result['id'];
+		$name = $result['name'];
+		$start_date = $result['start_date'];
+		$end_date = $result['end_date'];
+		$website = $result['website'];
+		echo "<li><a href='events.php?id=$id'>$name</a> <button class='btn btn-danger' onclick='confirmDelete($id)'>Delete</button></li>";
+	}
+?>
 	</ul>
 
 	<a class="btn btn-info" href="/manage/events.php?action=new">Create new event</a>
 <?php
-	renderDeleteForm();
-	renderPageFooter();
+	renderHiddenDeleteForm();
 }
 
 function renderForm($actionUrl, $initialValues=array()) {
@@ -141,13 +155,24 @@ function renderForm($actionUrl, $initialValues=array()) {
 				   placeholder="Website" value="<?php echo getValue($initialValues, 'website', ''); ?>">
 		</div>
 		<input type="hidden" name="csrftoken" value="<?php echo getValue($_SESSION, 'csrftoken', ''); ?>">
-		<input type="submit" class="btn btn-primary" value="Submit"></input>
+		
+		<?php
+		if (count($initialValues) > 0) {
+		?>
+			<input type="submit" class="btn btn-primary" value="Save"></input>
+		<?php
+		} else {
+		?>
+			<input type="submit" class="btn btn-primary" value="Submit"></input>
+		<?php
+		}
+		?>
 	</form>
 <?php
 	renderPageFooter();
 }
 
-function renderDeleteForm() {
+function renderHiddenDeleteForm() {
 ?>
 	<!-- hidden form that gets used when a delete button is used on the 
 	 page. see `confirmDelete` function in script. -->
@@ -166,4 +191,56 @@ function renderDeleteForm() {
 		}
 	</script>
 <?php
+}
+
+function getEventList() {
+	$conn = connectDB();
+
+	$cursor = mysql_query("SELECT * FROM event");
+	$results = array();
+	while ($row = mysql_fetch_array($cursor, MYSQL_ASSOC)) {
+	    array_push($results, $row);
+	}
+
+	mysql_free_result($cursor);
+	return $results;
+}
+
+function createEvent() {
+	// TODO
+	return TRUE;
+}
+
+function saveEvent($id, $object) {
+	// TODO
+	return TRUE;
+}
+
+function deleteEvent($id) {
+	$conn = connectDB();
+
+	$query = sprintf("DELETE FROM event WHERE id = %s",
+					 mysql_real_escape_string($id));
+	
+	$cursor = mysql_query($query);
+
+	return mysql_affected_rows() > 0;
+}
+
+function getEvent($id) {
+	$conn = connectDB();
+
+	$query = sprintf("SELECT * FROM event WHERE id = %s",
+					 mysql_real_escape_string($id));
+	
+	$cursor = mysql_query($query);
+
+	$result = NULL;
+	while ($row = mysql_fetch_array($cursor, MYSQL_ASSOC)) {
+	    $result = $row;
+	}
+
+	mysql_free_result($cursor);
+
+	return $result;
 }
