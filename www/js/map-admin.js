@@ -55,7 +55,6 @@ $(function(){
 			mapClick(e.latLng.lat(), e.latLng.lng());
 		});
 
-		// TODO-greg: test IE
 		var inputEventName = ('oninput' in inputLat[0]) ? 'input' : 'propertychange';
 		console.log('using input event: ' + inputEventName);
 		inputLat.on(inputEventName, latInputChange);
