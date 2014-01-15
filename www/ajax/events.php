@@ -34,32 +34,24 @@ function format_event_datespan($start_date, $end_date) {
 	}
 }
 
-$YII_CONFIG_FILE = dirname(__FILE__) . '/../data-admin/protected/config/main.php';
-$yii_config = require_once($YII_CONFIG_FILE);
-$db_config = $yii_config['components']['db'];
 
 $date_now_str = date('Y-m-d');
 
-try {
-    // TODO-greg: compile all connection info in master file
-	$dbh = new PDO($db_config['connectionString'], 'dlccreadonly', 'DllccRead1!');
+// query DB
+$dbopts = require(dirname(__FILE__) . '/../_private/db.php');
+$conn = mysql_connect($dbopts['host'], $dbopts['user'], $dbopts['password']) or die('Could not connect: ' . mysql_error());
+mysql_select_db('dlcc') or die('Could not select database');;
 
-    $statement = $dbh->prepare("
-    	SELECT name, start_date, end_date, website 
-    	FROM `event` 
-    	WHERE end_date >= ?
-    	ORDER BY start_date
-    	LIMIT ?");
-    $statement->execute(array($date_now_str, $NUM_EVENTS));    
-    $events = $statement->fetchAll(PDO::FETCH_ASSOC);
-    $dbh = null;
-}
-catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
+$query = sprintf("
+		  SELECT name, start_date, end_date, website 
+    	  FROM `event` 
+    	  WHERE end_date >= '%s'
+    	  ORDER BY start_date
+    	  LIMIT %d", $date_now_str, $NUM_EVENTS);
+$cursor = mysql_query($query);
 
-foreach ($events as $event) {
+// add the queried results to the correct group
+while ($event = mysql_fetch_array($cursor, MYSQL_ASSOC)) {
 	$name = $event['name'];
 	if ($event['website']) {
 		$name = "<a href='${event['website']}' target='_blank'>$name</a>";
@@ -75,3 +67,5 @@ foreach ($events as $event) {
     </div>
 <?php	
 }
+
+mysql_close();

@@ -6,8 +6,6 @@ $NUM_MONTHS = 4;
   ****************/
 
 function generateEvents($num_months) {
-	$YII_CONFIG_FILE = dirname(__FILE__) . '/../data-admin/protected/config/main.php';
-	
 	// initialize to first of the month
 	$cur_month_dt = new DateTime(date('Y-m') . '-01');
 
@@ -28,31 +26,28 @@ function generateEvents($num_months) {
 	$date_now_str = date('Y-m-d');
 	$date_cutoff_str = $cur_month_dt->format('Y-m-d');
 
-	$yii_config = require_once($YII_CONFIG_FILE);
-	$db_config = $yii_config['components']['db'];
-	try {
-	    $dbh = new PDO($db_config['connectionString'], $db_config['username'], $db_config['password']);
-	    $statement = $dbh->prepare("
-	    	SELECT name, start_date, end_date, website 
-	    	FROM `event` 
-	    	WHERE end_date >= ? AND start_date < ?
-	    	ORDER BY start_date");
-	    $statement->execute(array($date_now_str, $date_cutoff_str));    
-	    $events = $statement->fetchAll(PDO::FETCH_ASSOC);
-	    $dbh = null;
-	}
-	catch (PDOException $e) {
-	    print "Error!: " . $e->getMessage() . "<br/>";
-	    die();
-	}
+	// query database
+	$dbopts = require(dirname(__FILE__) . '/../_private/db.php');
+
+	$conn = mysql_connect($dbopts['host'], $dbopts['user'], $dbopts['password']) or die('Could not connect: ' . mysql_error());
+	mysql_select_db('dlcc') or die('Could not select database');;
+
+	$query = sprintf("
+			  SELECT name, start_date, end_date, website 
+	    	  FROM `event` 
+	    	  WHERE end_date >= '%s' AND start_date < '%s'
+	    	  ORDER BY start_date", $date_now_str, $date_cutoff_str);
+	$cursor = mysql_query($query);
 
 	// add the queried results to the correct group
-	foreach ($events as $event) {
+	while ($event = mysql_fetch_array($cursor, MYSQL_ASSOC)) {
 		$month_id = (new DateTime($event['start_date']))->format('MY');
 		if (array_key_exists($month_id, $monthly_groups)) {
 			array_push($monthly_groups[$month_id]['events'], $event);
 		}
 	}
+
+	mysql_close();
 	return $monthly_groups;
 }
 ?>

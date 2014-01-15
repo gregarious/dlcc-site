@@ -151,31 +151,30 @@ $YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
 
         <script src="js/map/init.js"></script>
 
-        <?php
-        # generate JSON from DB place data
-        print "<script>app.data={};";
+        <script type="text/javascript">
+            app.data={};
+            <?php
+            $categories = array('restaurant', 'parking', 'hotel', 'attraction');
 
-        $categories = array('restaurant', 'parking', 'hotel', 'attraction');
-        try {
-            $yii_config = require_once($YII_CONFIG_FILE);
-            $db_config = $yii_config['components']['db'];
-            
-            // TODO-greg: compile all connection info in master file
-            $dbh = new PDO($db_config['connectionString'], 'dlccreadonly', 'DllccRead1!');
-            
+            // set up DB connection
+            $dbopts = require(dirname(__FILE__) . '/_private/db.php');
+            $conn = mysql_connect($dbopts['host'], $dbopts['user'], $dbopts['password']) or die('Could not connect: ' . mysql_error());
+            mysql_select_db('dlcc') or die('Could not select database');;
+                
             foreach ($categories as $category) {
-                $statement = $dbh->prepare("SELECT * from $category");
-                $statement->execute();
-                $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+                $query = sprintf('SELECT * FROM `%s`', $category);
+                $cursor = mysql_query($query);
+
+                // add the queried results to the correct group
+                $results = array();
+                while ($obj = mysql_fetch_array($cursor, MYSQL_ASSOC)) {
+                    array_push($results, $obj);
+                }
                 print "app.data.${category}Objs=" . json_encode($results) . ";";
             }
-            print "</script>";
-        } catch (PDOException $e) {
-            print "</script>";
-            print "Error!: " . $e->getMessage() . "<br/>";
-        }
-        $dbh = null;
-        ?>
+            mysql_close();
+            ?>
+        </script>
 
         <script src="js/map/main.js"></script>
 
