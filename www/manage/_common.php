@@ -1,6 +1,7 @@
 <?php
 
 function initializeSession() {
+	session_start();
 	if (!array_key_exists('alerts', $_SESSION) || !is_array($_SESSION['alerts'])) {
 		$_SESSION['alerts'] = array();
 	}
@@ -79,4 +80,33 @@ function connectDB() {
 	    or die('Could not connect: ' . mysql_error());
 	mysql_select_db('dlcc') or die('Could not select database');;
 	return $conn;
+}
+
+// could return bool or results array, depending on query type
+function runQuery($query) {
+	$conn = connectDB();
+
+	$paramCount = func_num_args() - 1;
+	$cleanParams = array();
+	
+	for ($i=1; $i <= $paramCount; $i++) { 
+		array_push($cleanParams, mysql_real_escape_string(func_get_arg($i)));
+	}
+
+	$query = vsprintf($query, $cleanParams);
+	$cursor = mysql_query($query);
+
+	// if bool response, return immediately
+	if (is_bool($cursor)) {
+		return $cursor;
+	}
+
+	// otherwise, process the results array
+	$results = array();
+	while ($row = mysql_fetch_array($cursor, MYSQL_ASSOC)) {
+	    array_push($results, $row);
+	}
+
+	mysql_close();
+	return $results;
 }

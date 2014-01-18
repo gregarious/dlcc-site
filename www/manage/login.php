@@ -1,7 +1,8 @@
 <?php
-session_start();
-
 require_once("_common.php");
+
+// starts session, sets default values for 'alerts' and 'csrftoken' if necessary
+initializeSession();
 
 if (sessionIsAuthenticated()) {
 	renderPageHeader();
@@ -9,9 +10,6 @@ if (sessionIsAuthenticated()) {
 	renderPageFooter();
 	exit;
 }
-
-// sets 'alerts' and 'csrftoken' values
-initializeSession();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if (csrfTokenIsValid()) {

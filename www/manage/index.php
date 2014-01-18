@@ -1,7 +1,8 @@
 <?php
 require_once("_common.php");
 
-session_start();
+// starts session, sets default values for 'alerts' and 'csrftoken' if necessary
+initializeSession();
 
 renderPageHeader();
 ?>
