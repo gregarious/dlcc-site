@@ -1,4 +1,15 @@
 <?php
+
+/** Event vbl names **/
+$typeName = 'event';
+$typeNameUpper = 'Event';
+$typeUrl = 'events.php';
+$fieldKeys = array('name', 'start_date', 'end_date', 'website');
+$fieldNames = array('Name', 'Starts', 'Ends', 'Site');
+$labelKey = 'name';
+$labelKeyName = 'Name';
+$typeDbName = 'event';
+
 require_once("_common.php");
 
 // starts session, sets default values for 'alerts' and 'csrftoken' if necessary
@@ -26,10 +37,10 @@ if (is_null($requestArgs['id'])) {
 	else { 		// action expected to be 'list' or '', but really its the default case
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			if (csrfTokenIsValid() && createEvent()) {
-				array_push($_SESSION['alerts'], 'Event created');
+				array_push($_SESSION['alerts'], "$typeNameUpper created");
 			}
 			else {
-				array_push($_SESSION['alerts'], 'Event not created');
+				array_push($_SESSION['alerts'], "$typeNameUpper not created");
 				renderPageHeader();
 				renderCreationForm();
 				renderPageFooter();
@@ -47,29 +58,29 @@ else {
 	if ($requestArgs['action'] === 'delete') { 
 		if (csrfTokenIsValid()) {
 			if (deleteEvent($requestArgs['id'])) {
-				array_push($_SESSION['alerts'], 'Event deleted');
+				array_push($_SESSION['alerts'], "$typeNameUpper deleted");
 			}
 			else {
-				array_push($_SESSION['alerts'], 'Problem deleting event');
+				array_push($_SESSION['alerts'], "Problem deleting $typeName");
 			}
-			header("Location: /manage/events.php");
+			header("Location: $typeUrl");
 			exit;
 		}
 	} 
 	else { 		// action expected to be 'update' or '', but really its the default case
 		$event = getEvent($requestArgs['id']);
 		if (!$event) {
-			array_push($_SESSION['alerts'], 'Could not find requested event');
-			header("Location: /manage/events.php");
+			array_push($_SESSION['alerts'], "Could not find requested $typeName");
+			header("Location: $typeUrl");
 			exit;
 		}
 
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			if (csrfTokenIsValid() && saveEvent($requestArgs['id'], $_POST)) {
-				array_push($_SESSION['alerts'], 'Successfully saved event');
+				array_push($_SESSION['alerts'], "Successfully saved $typeName");
 			}
 			else {
-				array_push($_SESSION['alerts'], 'Problem saving event');				
+				array_push($_SESSION['alerts'], 'Problem saving $typeName');				
 			}
 		}
 
@@ -91,19 +102,19 @@ function parseRequest() {
 
 function renderCreationForm() {
 ?>
-	<a href="/manage/events.php" class="btn btn-default">&larr; Back to Event List</a>
-	<h3>Create new event</h3>
+	<a href="<?php echo $GLOBALS['typeUrl'] ?>" class="btn btn-default">&larr; Back to <?php echo $GLOBALS['typeNameUpper']; ?> List</a>
+	<h3>Create new <?php echo $GLOBALS['typeName']; ?></h3>
 <?php
-	renderForm('/manage/events.php', $_POST);
+	renderForm($GLOBALS['typeUrl'], $_POST);
 }
 
 function renderEditForm($object) {
 	// replace all single quotes since they will be used to enclose the string in the js function call
 	$jsLabel = preg_replace("/'/", "\'", $object['name']);
 ?>
-	<a href="/manage/events.php" class="btn btn-default">&larr; Back to Event List</a>
-	<button class="btn btn-danger" onclick="confirmDelete(<?php echo $object['id'] ?>, '<?php echo htmlspecialchars($jsLabel) ?>')">Delete Event</button>
-	<h3>Edit event</h3>
+	<a href="<?php echo $GLOBALS['typeUrl'] ?>" class="btn btn-default">&larr; Back to <?php echo $GLOBALS['typeNameUpper']; ?> List</a>
+	<button class="btn btn-danger" onclick="confirmDelete(<?php echo $object['id'] ?>, '<?php echo htmlspecialchars($jsLabel) ?>')">Delete <?php echo $GLOBALS['typeNameUpper']; ?></button>
+	<h3>Edit <?php echo $GLOBALS['typeName']; ?></h3>
 <?php
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$initialValues = $_POST;
@@ -111,7 +122,7 @@ function renderEditForm($object) {
 	else {
 		$initialValues = $object;
 	}
-	renderForm('/manage/events.php?id=' . $object['id'], $initialValues);
+	renderForm($GLOBALS['typeUrl'] . "?id=" . $object['id'], $initialValues);
 	renderHiddenDeleteForm();
 ?>
 <?php
@@ -119,28 +130,47 @@ function renderEditForm($object) {
 
 function renderList() {
 ?>
-	<ul>
+	<table>
+		<tr>
+<?php
+		echo "<th>{$GLOBALS['labelKeyName']}</th>";
+		foreach ($GLOBALS['fieldNames'] as $fieldLabel) {
+			if ($fieldLabel == $GLOBALS['labelKeyName']) {
+				// we already handled the label field
+				continue;
+			}
+			echo "<th>$fieldLabel</th>";
+		}
+?>
+		</tr>
+
 <?php
 	$results = getEventList();
 	foreach ($results as $result) {
 		$id = $result['id'];
-		$name = $result['name'];
-		$start_date = $result['start_date'];
-		$end_date = $result['end_date'];
-		$website = $result['website'];
-
-		$jsLabel = preg_replace("/'/", "\'", $result['name']);
+		$label = $result[$GLOBALS['labelKey']];
+		$jsLabel = preg_replace("/'/", "\'", $label);
 ?>
-		<li>
-			<a href="events.php?id=$id"><?php echo $name; ?></a>
-			<button class="btn btn-danger" onclick="confirmDelete(<?php echo $id; ?>, '<?php echo htmlspecialchars($jsLabel); ?>')">Delete</button>
-		</li>
+		<tr>
+			<td><a href="events.php?id=<?php echo $id; ?>"><?php echo $label; ?></a></td>
+<?php
+			foreach ($GLOBALS['fieldKeys'] as $key) {
+				if ($key == $GLOBALS['labelKey']) {
+					// we already handled the label field
+					continue;
+				}
+				$value = $result[$key];
+				echo "<td>$value</td>";
+			}
+?>
+			<td><button class="btn btn-danger" onclick="confirmDelete(<?php echo $id; ?>, '<?php echo htmlspecialchars($jsLabel); ?>')">Delete</button></td>
+		</tr>
 <?php
 	}
 ?>
-	</ul>
+	</table>
 
-	<a class="btn btn-info" href="/manage/events.php?action=new">Create new event</a>
+	<a class="btn btn-info" href="<?php echo $GLOBALS['typeUrl'] ?>?action=new">Create new <?php echo $GLOBALS['typeName']; ?></a>
 <?php
 	renderHiddenDeleteForm();
 }
@@ -170,7 +200,7 @@ function renderForm($actionUrl, $initialValues=array()) {
 		</div>
 		<input type="hidden" name="csrftoken" value="<?php echo getValue($_SESSION, 'csrftoken', ''); ?>">
 		
-		<a href="/manage/events.php" class="btn btn-default">Cancel</a>
+		<a href="<?php echo $GLOBALS['typeUrl'] ?>" class="btn btn-default">Cancel</a>
 		<?php
 		if (count($initialValues) > 0) {
 		?>
@@ -201,7 +231,7 @@ function renderHiddenDeleteForm() {
 			var label = itemName || 'this item';
 			if (confirm('Are you sure you want to delete "' + itemName + '"? This cannot be undone.')) {
 				var form = document.getElementById('hiddenDeleteForm');
-				form.setAttribute("action", "/manage/events.php?action=delete&id=" + itemId);
+				form.setAttribute("action", "<?php echo $GLOBALS['typeUrl'] ?>?action=delete&id=" + itemId);
 				form.submit();
 			}
 		}
@@ -210,7 +240,7 @@ function renderHiddenDeleteForm() {
 }
 
 function getEventList() {
-	return runQuery("SELECT * FROM event");
+	return runQuery("SELECT * FROM `{$GLOBALS['typeDbName']}`");
 }
 
 function createEvent() {
@@ -225,7 +255,7 @@ function createEvent() {
 		return FALSE;
 	}
 
-	$tpl = "INSERT INTO event (name, start_date, end_date, website) VALUES ('%s', '%s', '%s', '%s')";
+	$tpl = "INSERT INTO `{$GLOBALS['typeDbName']}` (name, start_date, end_date, website) VALUES ('%s', '%s', '%s', '%s')";
 	return runQuery($tpl,
 					$_POST['name'], 
 					strftime('%Y-%m-%d', strtotime($_POST['start_date'])),
@@ -245,7 +275,7 @@ function saveEvent($id, $object) {
 		return FALSE;
 	}
 
-	$tpl = "UPDATE event SET name = '%s', start_date = '%s', end_date = '%s', website = '%s' WHERE id = %s";
+	$tpl = "UPDATE `{$GLOBALS['typeDbName']}` SET name = '%s', start_date = '%s', end_date = '%s', website = '%s' WHERE id = %s";
 	return runQuery($tpl,
 					$_POST['name'], 
 					strftime('%Y-%m-%d', strtotime($_POST['start_date'])),
@@ -259,7 +289,7 @@ function deleteEvent($id) {
 	// run manually so we can look at mysql_affected_rows
 	$conn = connectDB();
 
-	$query = sprintf("DELETE FROM event WHERE id = %s",
+	$query = sprintf("DELETE FROM `{$GLOBALS['typeDbName']}` WHERE id = %s",
 					 mysql_real_escape_string($id));
 
 	$cursor = mysql_query($query);
@@ -271,7 +301,7 @@ function deleteEvent($id) {
 }
 
 function getEvent($id) {
-	$results = runQuery("SELECT * FROM event WHERE id = %s", $id);
+	$results = runQuery("SELECT * FROM `{$GLOBALS['typeDbName']}` WHERE id = %s", $id);
 	if (count($results) > 0) {
 		return $results[0];
 	}
