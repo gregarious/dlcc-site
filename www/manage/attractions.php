@@ -1,7 +1,7 @@
 <?php
 
 require_once("_common.php");
-require_once("processors/event_processor.php");
+require_once("processors/attraction_processor.php");
 
 // starts session, sets default values for 'alerts' and 'csrftoken' if necessary
 initializeSession();
@@ -16,7 +16,7 @@ if (!sessionIsAuthenticated()) {
 
 $requestArgs = parseRequest();
 
-$processor = new EventProcessor("events.php");
+$processor = new EventProcessor("attractions.php");
 
 if (is_null($requestArgs['id'])) {
 	$processor->processListRequest(getValue($requestArgs, 'action'));

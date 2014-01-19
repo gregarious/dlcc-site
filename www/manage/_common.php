@@ -29,7 +29,16 @@ function getValue($ar, $key, $defaultVal=NULL) {
 	return array_key_exists($key, $ar) ? $ar[$key] : $defaultVal;
 }
 
-function renderPageHeader() {
+function parseRequest() {
+	return array('id' => 	 getValue($_GET, 'id'),
+				 'action' => getValue($_GET, 'action'));
+}
+
+/**
+ * Print page header and nav bar
+ * @param  [type] $navItems		Array of {label: <str>, url: <str>, active: <bool>} maps
+ */
+function renderPageHeader($navItems) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,7 +54,11 @@ function renderPageHeader() {
 	<nav class="navbar" role="navigation">
 <?php if (sessionIsAuthenticated()) { ?>
 		<ul class="nav navbar-nav navbar-left">
-			<li><a href="events.php">Events</a></li>
+<?php foreach ($navItems as $navItem) { ?>
+			<li>
+				<a href="<?php echo $navItem['url']; ?>"><?php echo $navItem['label']; ?></a>
+			</li>
+<?php } ?>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="logout.php">Logout</a></li>
@@ -56,11 +69,9 @@ function renderPageHeader() {
 		</ul>
 <?php } ?>
 	</nav>
-<?php
-	foreach ($_SESSION['alerts'] as $alert) {
-?>
+<?php foreach ($_SESSION['alerts'] as $alert) { ?>
 		<div class="alert alert-warning"><?php echo $alert;?></div>
-<?php
+<?php 
 	}
 	// clear alerts
 	$_SESSION['alerts'] = array();
