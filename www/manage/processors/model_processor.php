@@ -35,7 +35,7 @@ class ModelProcessor
 	
 	function processListRequest($action) {
 		if ($action === 'new') { 
-			renderPageHeader($this->navItems);
+			renderPageHeader($this->navItems, 'Create new ' . $this->typeName);
 			$this->renderCreationForm();
 		} 
 		else { 		// action expected to be 'list' or '', but really its the default case
@@ -45,13 +45,13 @@ class ModelProcessor
 				}
 				else {
 					array_push($_SESSION['alerts'], ucfirst($this->typeName) . " not created");
-					renderPageHeader($this->navItems);
+					renderPageHeader($this->navItems, 'Create new ' . $this->typeName);
 					$this->renderCreationForm();
 					renderPageFooter();
 					exit;
 				}
 			}
-			renderPageHeader($this->navItems);
+			renderPageHeader($this->navItems, ucfirst($this->typeName) . ' list');
 			$this->renderList();
 		}
 		renderPageFooter();
@@ -88,7 +88,7 @@ class ModelProcessor
 			}
 
 			// all branches show edit form in the end
-			renderPageHeader($this->navItems);
+			renderPageHeader($this->navItems, 'Edit ' . $this->typeName);
 			$this->renderEditForm($object);
 			renderPageFooter();
 		}
@@ -96,8 +96,9 @@ class ModelProcessor
 
 	function renderCreationForm() {
 	?>
-		<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
-		<h3>Create new <?php echo $this->typeName; ?></h3>
+		<div class="row action-buttons">
+			<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
+		</div>
 	<?php
 		$this->renderModelForm($this->typeUrl, $_POST);
 		renderPageFooter();
@@ -107,11 +108,12 @@ class ModelProcessor
 		// replace all single quotes since they will be used to enclose the string in the js function call
 		$jsLabel = preg_replace("/'/", "\'", $object['name']);
 	?>
-		<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
-		<button class="btn btn-danger" onclick="confirmDelete(<?php echo $object['id'] ?>, '<?php echo htmlspecialchars($jsLabel) ?>')">
-			Delete <?php echo ucfirst($this->typeName); ?>
-		</button>
-		<h3>Edit <?php echo $this->typeName; ?></h3>
+		<div class="row action-buttons">
+			<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
+			<button class="btn btn-danger" onclick="confirmDelete(<?php echo $object['id'] ?>, '<?php echo htmlspecialchars($jsLabel) ?>')">
+				Delete <?php echo ucfirst($this->typeName); ?>
+			</button>
+		</div>
 	<?php
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$initialValues = $_POST;
@@ -150,7 +152,8 @@ class ModelProcessor
 
 	function renderList() {
 	?>
-		<table>
+		<a class="btn btn-info btn-create" href="<?php echo $this->typeUrl; ?>?action=new">Create new <?php echo $this->typeName; ?></a>
+		<table style="width: 100%">
 			<tr>
 				<th>Name</th>
 	<?php
@@ -190,8 +193,6 @@ class ModelProcessor
 		}
 	?>
 		</table>
-
-		<a class="btn btn-info" href="<?php echo $this->typeUrl; ?>?action=new">Create new <?php echo $this->typeName; ?></a>
 	<?php
 		$this->renderHiddenDeleteForm();
 	}

@@ -38,37 +38,48 @@ function parseRequest() {
  * Print page header and nav bar
  * @param  [type] $navItems		Array of {label: <str>, url: <str>, active: <bool>} maps
  */
-function renderPageHeader($navItems) {
+function renderPageHeader($navItems, $title='') {
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Events Demo</title>
+	<title>DLCC Data Management</title>
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="manage.css">
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="/js/vendor/html5shiv.js"></script>
 	<![endif]-->
 </head>
 <body>
-<div class="container">
-	<nav class="navbar" role="navigation">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/manage/">DLCC Data Management</a>
+			</div>
 <?php if (sessionIsAuthenticated()) { ?>
-		<ul class="nav navbar-nav navbar-left">
+			<ul class="nav navbar-nav navbar-left">
 <?php foreach ($navItems as $navItem) { ?>
-			<li>
-				<a href="<?php echo $navItem['url']; ?>"><?php echo $navItem['label']; ?></a>
-			</li>
+				<li>
+					<a href="<?php echo $navItem['url']; ?>"><?php echo $navItem['label']; ?></a>
+				</li>
 <?php } ?>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="logout.php">Logout</a></li>
-		</ul>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="logout.php">Logout</a></li>
+			</ul>
 <?php } else { ?>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="login.php">Login</a></li>
-		</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="login.php">Login</a></li>
+			</ul>
 <?php } ?>
+		</div>
 	</nav>
+
+	<div class="container">
+		<div class="page-header">
+			<h1><?php echo $title; ?></h1>
+		</div>
+
 <?php foreach ($_SESSION['alerts'] as $alert) { ?>
 		<div class="alert alert-warning"><?php echo $alert;?></div>
 <?php 
@@ -80,6 +91,12 @@ function renderPageHeader($navItems) {
 function renderPageFooter() {
 ?>
 </div> <!-- .container -->
+
+<div class="footer">
+	<div class="container">
+
+	</div>
+</div>
 
 </body>
 </html>

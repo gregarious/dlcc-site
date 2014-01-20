@@ -11,42 +11,46 @@ class EventProcessor extends ModelProcessor {
 
 	function renderModelForm($actionUrl, $initialValues=array()) {
 	?>
-		<form role="form" method="POST" action="<?php echo $actionUrl; ?>">
-			<div class="form-group">
-				<label for="name">Name</label>
-				<input type="text" class="form-control" id="name" name="name" 
-					   placeholder="Event name" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'name', '')); ?>">
+		<div class="row">
+			<div class="col-md-6">
+				<form role="form" method="POST" action="<?php echo $actionUrl; ?>">
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" id="name" name="name" 
+							   placeholder="Event name" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'name', '')); ?>">
+					</div>
+					<div class="form-group">
+						<label for="start_date">Start date</label>
+						<input type="date" class="form-control" id="start_date" name="start_date" 
+						       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'start_date', '')); ?>">
+					</div>
+					<div class="form-group">
+						<label for="end_date">End date</label>
+						<input type="date" class="form-control" id="end_date" name="end_date" 
+						       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'end_date', '')); ?>">
+					</div>
+					<div class="form-group">
+						<label for="website">Website</label>
+						<input type="url" class="form-control" id="website" name="website" 
+							   placeholder="Website" value="<?php echo htmlspecialchars(getValue($initialValues, 'website', '')); ?>">
+					</div>
+					<input type="hidden" name="csrftoken" value="<?php echo getValue($_SESSION, 'csrftoken', ''); ?>">
+					
+					<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">Cancel</a>
+					<?php
+					if (count($initialValues) > 0) {
+					?>
+						<input type="submit" class="btn btn-primary" value="Save"></input>
+					<?php
+					} else {
+					?>
+						<input type="submit" class="btn btn-primary" value="Submit"></input>			
+					<?php
+					}
+					?>
+				</form>
 			</div>
-			<div class="form-group">
-				<label for="start_date">Start date</label>
-				<input type="date" class="form-control" id="start_date" name="start_date" 
-				       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'start_date', '')); ?>">
-			</div>
-			<div class="form-group">
-				<label for="end_date">End date</label>
-				<input type="date" class="form-control" id="end_date" name="end_date" 
-				       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'end_date', '')); ?>">
-			</div>
-			<div class="form-group">
-				<label for="website">Website</label>
-				<input type="url" class="form-control" id="website" name="website" 
-					   placeholder="Website" value="<?php echo htmlspecialchars(getValue($initialValues, 'website', '')); ?>">
-			</div>
-			<input type="hidden" name="csrftoken" value="<?php echo getValue($_SESSION, 'csrftoken', ''); ?>">
-			
-			<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">Cancel</a>
-			<?php
-			if (count($initialValues) > 0) {
-			?>
-				<input type="submit" class="btn btn-primary" value="Save"></input>
-			<?php
-			} else {
-			?>
-				<input type="submit" class="btn btn-primary" value="Submit"></input>			
-			<?php
-			}
-			?>
-		</form>
+		</div>
 	<?php
 	}
 
@@ -89,5 +93,62 @@ class EventProcessor extends ModelProcessor {
 						strftime('%Y-%m-%d', strtotime($_POST['end_date'])),
 						getValue($_POST, 'website', ''),
 						$id);
+	}
+
+	function renderList() {
+		$results = $this->getModelList();
+		$upcoming = array();
+		$past = array();
+
+		// split events into buckets based on end date
+		foreach ($results as $eventObj) {
+			if(strtotime($eventObj['end_date']) - time() > 0) {
+				array_push($upcoming, $eventObj);
+			}
+			else {
+				array_push($past, $eventObj);
+			}
+		}
+
+	?>
+		<a class="btn btn-info btn-create" href="<?php echo $this->typeUrl; ?>?action=new">Create new <?php echo $this->typeName; ?></a>
+		<h3>Upcoming events</h3>
+		<?php $this->renderEventTable($upcoming); ?>
+		<hr>
+		<h3>Past events</h3>
+		<?php $this->renderEventTable($past); ?>	
+
+	<?php
+		$this->renderHiddenDeleteForm();
+	}
+
+	function renderEventTable($events) {
+?>
+		<table style="width: 100%">
+			<tr>
+				<th>Name</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Website</th>
+			</tr>
+
+	<?php
+		foreach ($events as $event) {
+			$id = $event['id'];
+			$label = $event['name'];		// hard coded constraint of 'name' field
+			$jsLabel = preg_replace("/'/", "\'", $label);
+	?>
+			<tr>
+				<td><a href="<?php echo $this->typeUrl; ?>?id=<?php echo $id; ?>"><?php echo $label; ?></a></td>
+				<td><?php echo strftime("%m/%d/%Y", strtotime($event['start_date'])); ?></td>
+				<td><?php echo strftime("%m/%d/%Y", strtotime($event['end_date'])); ?></td>
+				<td><?php echo $event['website']; ?></td>
+				<td><button class="btn btn-danger" onclick="confirmDelete(<?php echo $id; ?>, '<?php echo htmlspecialchars($jsLabel); ?>')">Delete</button></td>
+			</tr>
+	<?php
+		}
+	?>
+		</table>
+	<?php
 	}
 }
