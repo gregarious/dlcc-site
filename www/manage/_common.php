@@ -11,7 +11,7 @@ function initializeSession() {
 }
 
 function authenticateUser($username, $password) {
-	return $username === 'admin' && $password === 'admin';
+	return $username === 'demo' && $password === 'demo';
 }
 
 function sessionIsAuthenticated() {
