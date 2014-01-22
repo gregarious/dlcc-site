@@ -12,6 +12,9 @@ function initializeSession() {
 
 function getConfig() {
 	$path = realpath('../_private/config.ini');
+	if (!$path) {
+		die ('Unable to access configuration settings');
+	}
 	return parse_ini_file($path, true);
 }
 
