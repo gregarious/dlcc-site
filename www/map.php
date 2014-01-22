@@ -1,6 +1,5 @@
 <?php
 $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
-$YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
 ?>
 
 <!DOCTYPE html>
