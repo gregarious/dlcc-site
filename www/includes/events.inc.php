@@ -47,7 +47,8 @@ function generateEvents($num_months) {
 
 	// add the queried results to the correct group
 	while ($event = mysql_fetch_array($cursor, MYSQL_ASSOC)) {
-		$month_id = (new DateTime($event['start_date']))->format('MY');
+		$event_dt = new DateTime($event['start_date']);
+		$month_id = $event_dt->format('MY');
 		if (array_key_exists($month_id, $monthly_groups)) {
 			array_push($monthly_groups[$month_id]['events'], $event);
 		}
