@@ -6,6 +6,7 @@ require_once("processors/parking_processor.php");
 // starts session, sets default values for 'alerts' and 'csrftoken' if necessary
 initializeSession();
 
+header('Content-type: text/html; charset=UTF-8');
 date_default_timezone_set('US/Eastern');
 
 if (!sessionIsAuthenticated()) {
