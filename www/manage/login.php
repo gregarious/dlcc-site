@@ -3,6 +3,7 @@ require_once("_common.php");
 
 // starts session, sets default values for 'alerts' and 'csrftoken' if necessary
 initializeSession();
+header('Content-type: text/html; charset=UTF-8');
 
 if (sessionIsAuthenticated()) {
 	renderPageHeader('DLCC Data Management Login', array());

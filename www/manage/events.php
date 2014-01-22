@@ -7,6 +7,7 @@ require_once("processors/event_processor.php");
 initializeSession();
 
 date_default_timezone_set('US/Eastern');
+header('Content-type: text/html; charset=UTF-8');
 
 if (!sessionIsAuthenticated()) {
 	array_push($_SESSION['alerts'], 'You must log in to access this page.');
