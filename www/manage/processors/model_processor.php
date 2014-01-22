@@ -2,30 +2,6 @@
 
 class ModelProcessor
 {
-	public $navItems = array(
-		array(
-			'url' => 'events.php',
-			'label' => 'Events'
-			),
-		array(
-			'url' => 'restaurants.php',
-			'label' => 'Restaurants'
-			),
-		array(
-			'url' => 'hotels.php',
-			'label' => 'Hotels'
-			),
-		array(
-			'url' => 'parking.php',
-			'label' => 'Parking'
-			),
-		array(
-			'url' => 'attractions.php',
-			'label' => 'Attraction'
-			),
-		
-		);
-
 	/** override these for subclasses **/
 	public $typeName = '';
 	public $typeUrl;
@@ -35,7 +11,7 @@ class ModelProcessor
 	
 	function processListRequest($action) {
 		if ($action === 'new') { 
-			renderPageHeader($this->navItems, 'Create new ' . $this->typeName);
+			renderPageHeader('Create new ' . $this->typeName);
 			$this->renderCreationForm();
 		} 
 		else { 		// action expected to be 'list' or '', but really its the default case
@@ -45,13 +21,13 @@ class ModelProcessor
 				}
 				else {
 					array_push($_SESSION['alerts'], ucfirst($this->typeName) . " not created");
-					renderPageHeader($this->navItems, 'Create new ' . $this->typeName);
+					renderPageHeader('Create new ' . $this->typeName);
 					$this->renderCreationForm();
 					renderPageFooter();
 					exit;
 				}
 			}
-			renderPageHeader($this->navItems, ucfirst($this->typeName) . ' list');
+			renderPageHeader(ucfirst($this->typeName) . ' list');
 			$this->renderList();
 		}
 		renderPageFooter();
@@ -81,6 +57,8 @@ class ModelProcessor
 			if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				if (csrfTokenIsValid() && $this->saveModel($itemId, $_POST)) {
 					array_push($_SESSION['alerts'], "Successfully saved " . $this->typeName);
+					header("Location: " . $this->typeUrl);
+					exit;
 				}
 				else {
 					array_push($_SESSION['alerts'], "Problem saving " . $this->typeName);
@@ -88,7 +66,7 @@ class ModelProcessor
 			}
 
 			// all branches show edit form in the end
-			renderPageHeader($this->navItems, 'Edit ' . $this->typeName);
+			renderPageHeader('Edit ' . $this->typeName);
 			$this->renderEditForm($object);
 			renderPageFooter();
 		}
@@ -96,11 +74,17 @@ class ModelProcessor
 
 	function renderCreationForm() {
 	?>
-		<div class="row action-buttons">
-			<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
-		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="action-buttons">
+					<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
+				</div>
 	<?php
 		$this->renderModelForm($this->typeUrl, $_POST);
+	?>
+			</div>
+		</div>
+	<?php
 		renderPageFooter();
 	}
 
@@ -108,12 +92,14 @@ class ModelProcessor
 		// replace all single quotes since they will be used to enclose the string in the js function call
 		$jsLabel = preg_replace("/'/", "\'", $object['name']);
 	?>
-		<div class="row action-buttons">
-			<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
-			<button class="btn btn-danger" onclick="confirmDelete(<?php echo $object['id'] ?>, '<?php echo htmlspecialchars($jsLabel) ?>')">
-				Delete <?php echo ucfirst($this->typeName); ?>
-			</button>
-		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="action-buttons">
+					<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
+					<button class="btn btn-danger pull-right" onclick="confirmDelete(<?php echo $object['id'] ?>, '<?php echo htmlspecialchars($jsLabel) ?>')">
+						Delete <?php echo ucfirst($this->typeName); ?>
+					</button>
+				</div>
 	<?php
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$initialValues = $_POST;
@@ -122,6 +108,11 @@ class ModelProcessor
 			$initialValues = $object;
 		}
 		$this->renderModelForm($this->typeUrl . "?id=" . $object['id'], $initialValues);
+	?>
+			</div>
+		</div>
+	<?php
+
 		$this->renderHiddenDeleteForm();
 		renderPageFooter();
 	?>
@@ -152,7 +143,7 @@ class ModelProcessor
 
 	function renderList() {
 	?>
-		<a class="btn btn-info btn-create" href="<?php echo $this->typeUrl; ?>?action=new">Create new <?php echo $this->typeName; ?></a>
+		<a class="btn btn-info btn-create" href="<?php echo $this->typeUrl; ?>?action=new">Add new <?php echo $this->typeName; ?></a>
 		<table style="width: 100%">
 			<tr>
 				<th>Name</th>

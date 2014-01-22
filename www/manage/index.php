@@ -4,31 +4,17 @@ require_once("_common.php");
 // starts session, sets default values for 'alerts' and 'csrftoken' if necessary
 initializeSession();
 
-$navItems = array(
-	array(
-		'url' => 'events.php',
-		'label' => 'Events'
-		),
-	array(
-		'url' => 'restaurants.php',
-		'label' => 'Restaurants'
-		),
-	array(
-		'url' => 'hotels.php',
-		'label' => 'Hotels'
-		),
-	array(
-		'url' => 'parking.php',
-		'label' => 'Parking'
-		),
-	array(
-		'url' => 'attractions.php',
-		'label' => 'Attraction'
-		),
+date_default_timezone_set('US/Eastern');
 
-	);
+getConfig();
 
-renderPageHeader($navItems, 'DLCC Data Management Console');
+if (!sessionIsAuthenticated()) {
+	array_push($_SESSION['alerts'], 'You must log in to access this page.');
+	header("Location: /manage/login.php");
+	exit;
+}
+
+renderPageHeader('DLCC Data Management');
 ?>
 
 	<h3>Choose a data type to edit:</h3>

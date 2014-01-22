@@ -11,46 +11,42 @@ class EventProcessor extends ModelProcessor {
 
 	function renderModelForm($actionUrl, $initialValues=array()) {
 	?>
-		<div class="row">
-			<div class="col-md-6">
-				<form role="form" method="POST" action="<?php echo $actionUrl; ?>">
-					<div class="form-group">
-						<label for="name">Name</label>
-						<input type="text" class="form-control" id="name" name="name" 
-							   placeholder="Event name" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'name', '')); ?>">
-					</div>
-					<div class="form-group">
-						<label for="start_date">Start date</label>
-						<input type="date" class="form-control" id="start_date" name="start_date" 
-						       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'start_date', '')); ?>">
-					</div>
-					<div class="form-group">
-						<label for="end_date">End date</label>
-						<input type="date" class="form-control" id="end_date" name="end_date" 
-						       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'end_date', '')); ?>">
-					</div>
-					<div class="form-group">
-						<label for="website">Website</label>
-						<input type="url" class="form-control" id="website" name="website" 
-							   placeholder="Website" value="<?php echo htmlspecialchars(getValue($initialValues, 'website', '')); ?>">
-					</div>
-					<input type="hidden" name="csrftoken" value="<?php echo getValue($_SESSION, 'csrftoken', ''); ?>">
-					
-					<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">Cancel</a>
-					<?php
-					if (count($initialValues) > 0) {
-					?>
-						<input type="submit" class="btn btn-primary" value="Save"></input>
-					<?php
-					} else {
-					?>
-						<input type="submit" class="btn btn-primary" value="Submit"></input>			
-					<?php
-					}
-					?>
-				</form>
+		<form role="form" method="POST" action="<?php echo $actionUrl; ?>">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" name="name" 
+					   placeholder="Event name" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'name', '')); ?>">
 			</div>
-		</div>
+			<div class="form-group">
+				<label for="start_date">Start date</label>
+				<input type="date" class="form-control" id="start_date" name="start_date" 
+				       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'start_date', '')); ?>">
+			</div>
+			<div class="form-group">
+				<label for="end_date">End date</label>
+				<input type="date" class="form-control" id="end_date" name="end_date" 
+				       placeholder="YYYY-MM-DD" required="required" value="<?php echo htmlspecialchars(getValue($initialValues, 'end_date', '')); ?>">
+			</div>
+			<div class="form-group">
+				<label for="website">Website</label>
+				<input type="url" class="form-control" id="website" name="website" 
+					   placeholder="Website" value="<?php echo htmlspecialchars(getValue($initialValues, 'website', '')); ?>">
+			</div>
+			<input type="hidden" name="csrftoken" value="<?php echo getValue($_SESSION, 'csrftoken', ''); ?>">
+			
+			<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">Cancel</a>
+			<?php
+			if (count($initialValues) > 0) {
+			?>
+				<input type="submit" class="btn btn-primary" value="Save"></input>
+			<?php
+			} else {
+			?>
+				<input type="submit" class="btn btn-primary" value="Submit"></input>			
+			<?php
+			}
+			?>
+		</form>
 	<?php
 	}
 
@@ -111,7 +107,7 @@ class EventProcessor extends ModelProcessor {
 		}
 
 	?>
-		<a class="btn btn-info btn-create" href="<?php echo $this->typeUrl; ?>?action=new">Create new <?php echo $this->typeName; ?></a>
+		<a class="btn btn-info btn-create" href="<?php echo $this->typeUrl; ?>?action=new">Add new <?php echo $this->typeName; ?></a>
 		<h3>Upcoming events</h3>
 		<?php $this->renderEventTable($upcoming); ?>
 		<hr>

@@ -1,0 +1,10 @@
+; sample config.ini file. Edit the values below to match the deployment configuration.
+
+[webuser]
+username = demo
+password = demo
+
+[database]
+username = root
+password = ""
+host = localhost

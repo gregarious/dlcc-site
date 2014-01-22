@@ -10,8 +10,16 @@ function initializeSession() {
 	}
 }
 
+function getConfig() {
+	$path = realpath('../_private/config.ini');
+	return parse_ini_file($path, true);
+}
+
 function authenticateUser($username, $password) {
-	return $username === 'demo' && $password === 'demo';
+	$config = getConfig();
+	$authSettings = $config['webuser'];
+	return $username === $authSettings['username'] &&
+		   $password === $authSettings['password'];
 }
 
 function sessionIsAuthenticated() {
@@ -34,11 +42,38 @@ function parseRequest() {
 				 'action' => getValue($_GET, 'action'));
 }
 
+$defaultNavItems = array(
+	array(
+		'url' => 'events.php',
+		'label' => 'Events'
+		),
+	array(
+		'url' => 'restaurants.php',
+		'label' => 'Restaurants'
+		),
+	array(
+		'url' => 'hotels.php',
+		'label' => 'Hotels'
+		),
+	array(
+		'url' => 'parking.php',
+		'label' => 'Parking'
+		),
+	array(
+		'url' => 'attractions.php',
+		'label' => 'Attraction'
+		),
+	);
+
 /**
  * Print page header and nav bar
  * @param  [type] $navItems		Array of {label: <str>, url: <str>, active: <bool>} maps
  */
-function renderPageHeader($navItems, $title='') {
+function renderPageHeader($title='', $navItems=null) {
+	if ($navItems == null) {
+		global $defaultNavItems;
+		$navItems = $defaultNavItems;
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -104,7 +139,10 @@ function renderPageFooter() {
 }
 
 function connectDB() {
-	$conn = mysql_connect('localhost', 'root', '')
+	$config = getConfig();
+	$dbSettings = $config['database'];
+	
+	$conn = mysql_connect($dbSettings['host'], $dbSettings['username'], $dbSettings['password'])
 	    or die('Could not connect: ' . mysql_error());
 	mysql_select_db('dlcc') or die('Could not select database');;
 	return $conn;

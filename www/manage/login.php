@@ -5,7 +5,7 @@ require_once("_common.php");
 initializeSession();
 
 if (sessionIsAuthenticated()) {
-	renderPageHeader();
+	renderPageHeader('DLCC Data Management Login', array());
 	showAlreadyLoggedInMessage();
 	renderPageFooter();
 	exit;
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
 }
 
-renderPageHeader();
+renderPageHeader('DLCC Data Management Login', array());
 renderLoginForm();
 renderPageFooter();
 ?>
