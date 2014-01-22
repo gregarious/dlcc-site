@@ -147,7 +147,7 @@ function connectDB() {
 	
 	$conn = mysql_connect($dbSettings['host'], $dbSettings['username'], $dbSettings['password'])
 	    or die('Could not connect: ' . mysql_error());
-	mysql_select_db('dlcc') or die('Could not select database');;
+	mysql_select_db($dbSettings['name']) or die('Could not select database');;
 	return $conn;
 }
 

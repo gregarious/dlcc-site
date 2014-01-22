@@ -8,3 +8,4 @@ password = demo
 username = root
 password = ""
 host = localhost
+name = dlcc

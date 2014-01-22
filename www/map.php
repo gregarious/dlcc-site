@@ -155,9 +155,15 @@ $YII_CONFIG_FILE = dirname(__FILE__) . '/data-admin/protected/config/main.php';
             $categories = array('restaurant', 'parking', 'hotel', 'attraction');
 
             // set up DB connection
-            $dbopts = require(dirname(__FILE__) . '/_private/db.php');
-            $conn = mysql_connect($dbopts['host'], $dbopts['user'], $dbopts['password']) or die('Could not connect: ' . mysql_error());
-            mysql_select_db('dlcc') or die('Could not select database');;
+            $path = realpath('_private/config.ini');
+            if (!$path) {
+                die ('Unable to access configuration settings');
+            }
+            $config = parse_ini_file($path, true);
+
+            $dbopts = $config['database'];
+            $conn = mysql_connect($dbopts['host'], $dbopts['username'], $dbopts['password']) or die('Could not connect: ' . mysql_error());
+            mysql_select_db($dbopts['name']) or die('Could not select database');
                 
             foreach ($categories as $category) {
                 $query = sprintf('SELECT * FROM `%s`', $category);

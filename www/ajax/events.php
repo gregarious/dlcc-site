@@ -38,9 +38,16 @@ function format_event_datespan($start_date, $end_date) {
 $date_now_str = date('Y-m-d');
 
 // query DB
-$dbopts = require(dirname(__FILE__) . '/../_private/db.php');
-$conn = mysql_connect($dbopts['host'], $dbopts['user'], $dbopts['password']) or die('Could not connect: ' . mysql_error());
-mysql_select_db('dlcc') or die('Could not select database');;
+$path = realpath('../_private/config.ini');
+if (!$path) {
+	die ('Unable to access configuration settings');
+}
+$config = parse_ini_file($path, true);
+$dbSettings = $config['database'];
+
+$conn = mysql_connect($dbSettings['host'], $dbSettings['username'], $dbSettings['password'])
+    or die('Could not connect: ' . mysql_error());
+mysql_select_db($dbSettings['name']) or die('Could not select database');;
 
 $query = sprintf("
 		  SELECT name, start_date, end_date, website 
