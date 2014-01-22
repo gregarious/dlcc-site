@@ -22,7 +22,7 @@ $isHomepage = ($page == "home");
         <meta name="description" content="">
         <meta name="viewport" content="initial-scale=1.0">
 
-        <link rel="stylesheet" href="/pittsburgcc/muffintest/css/main.css">
+        <link rel="stylesheet" href="/pittsburghcc/muffintest/css/main.css">
 
         <!--
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
