@@ -18,7 +18,7 @@
 		}
 	};
 
-	xhr.open('GET', '/ajax/events.php', true);
+	xhr.open('GET', '/pittsburghcc/muffintest/ajax/events.php', true);
 	xhr.setRequestHeader('Content-type', 'text/html');
 	xhr.send();
 })();

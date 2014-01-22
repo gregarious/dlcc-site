@@ -10,7 +10,7 @@ getConfig();
 
 if (!sessionIsAuthenticated()) {
 	array_push($_SESSION['alerts'], 'You must log in to access this page.');
-	header("Location: /manage/login.php");
+	header("Location: /pittsburghcc/muffintest/manage/login.php");
 	exit;
 }
 

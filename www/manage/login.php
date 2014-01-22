@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		
 		if (authenticateUser($username, $password)) {
 			$_SESSION['username'] = $username;
-			header("Location: /manage/index.php");
+			header("Location: /pittsburghcc/muffintest/manage/index.php");
 			exit;
 		}
 		else {

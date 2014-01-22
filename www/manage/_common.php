@@ -92,7 +92,7 @@ function renderPageHeader($title='', $navItems=null) {
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/manage/">DLCC Data Management</a>
+				<a class="navbar-brand" href="/pittsburghcc/muffintest/manage/">DLCC Data Management</a>
 			</div>
 <?php if (sessionIsAuthenticated()) { ?>
 			<ul class="nav navbar-nav navbar-left">

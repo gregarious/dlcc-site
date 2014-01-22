@@ -3,5 +3,5 @@
 session_start();
 session_destroy();
 
-header("Location: /manage/login.php");
+header("Location: /pittsburghcc/muffintest/manage/login.php");
 exit;
