@@ -27,6 +27,12 @@ class EventProcessor extends ModelProcessor {
 				</div>
 
 				<div class="form-group">
+					<label for="price">Phone Number</label>
+					<input type="text" class="form-control" id="phone" name="phone" 
+						   placeholder="555-555-5555" value="<?php echo htmlspecialchars(getValue($initialValues, 'phone', '')); ?>">
+				</div>
+
+				<div class="form-group">
 					<label for="price">Price</label>
 					<input type="text" class="form-control" id="price" name="price" 
 						   value="<?php echo htmlspecialchars(getValue($initialValues, 'price', '')); ?>">
