@@ -104,14 +104,15 @@ class EventProcessor extends ModelProcessor {
 			return FALSE;
 		}
 		
-		$tpl = "INSERT INTO `$this->typeDbName` (name, address, lat, lng, price, type) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')";
+		$tpl = "INSERT INTO `$this->typeDbName` (name, address, lat, lng, price, type, phone) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')";
 		return runQuery($tpl,
 						$_POST['name'], 
 						$_POST['address'], 
 						$_POST['lat'], 
 						$_POST['lng'], 
 						$_POST['price'], 
-						$_POST['type']);
+						$_POST['type'],
+						$_POST['phone']);
 	}
 
 	function saveModel($id, $object) {
@@ -120,7 +121,7 @@ class EventProcessor extends ModelProcessor {
 			return FALSE;
 		}
 
-		$tpl = "UPDATE `$this->typeDbName` SET name = '%s', address = '%s', lat = '%s', lng = '%s', price = '%s', type = '%s' WHERE id = %s";
+		$tpl = "UPDATE `$this->typeDbName` SET name = '%s', address = '%s', lat = '%s', lng = '%s', price = '%s', type = '%s', phone = '%s' WHERE id = %s";
 		return runQuery($tpl,
 						$_POST['name'], 
 						$_POST['address'], 
@@ -128,6 +129,7 @@ class EventProcessor extends ModelProcessor {
 						$_POST['lng'], 
 						$_POST['price'], 
 						$_POST['type'],
+						$_POST['phone'],
 						$id);
 	}
 }
