@@ -197,6 +197,11 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
                 <dt>Address</dt>
                 <dd><%= address %></dd>
 
+                <% if (typeof(phone) !== "undefined") { %>
+                    <dt>Phone</dt>
+                    <dd><%= phone %></dd>
+                <% } %>
+
                 <dt>Type</dt>
                 <dd><%= type %></dd>
 
