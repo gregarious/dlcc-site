@@ -165,7 +165,7 @@ $headerImage = '/images/headers/' . 'header_' . rand(1,14) . '.jpg';
             mysql_select_db($dbopts['name']) or die('Could not select database');
                 
             foreach ($categories as $category) {
-                $query = sprintf('SELECT * FROM `%s`', $category);
+                $query = sprintf('SELECT * FROM `%s` ORDER BY `name`', $category);
                 $cursor = mysql_query($query);
 
                 // add the queried results to the correct group
