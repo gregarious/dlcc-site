@@ -13,8 +13,8 @@ class EventProcessor extends ModelProcessor {
 	?>
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC7INTXYluYDoz0yZRX89jLORKJEGeQeCY&sensor=false"></script>
-		<script src="/js/vendor/jquery.color.js"></script>
-		<script src="/js/map-admin.js"></script>
+		<script src="/pittsburghcc/muffintest/js/vendor/jquery.color.js"></script>
+		<script src="/pittsburghcc/muffintest/js/map-admin.js"></script>
 
 		<form role="form" method="POST" action="<?php echo $actionUrl; ?>">
 			<fieldset>

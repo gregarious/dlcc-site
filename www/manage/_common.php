@@ -85,7 +85,7 @@ function renderPageHeader($title='', $navItems=null) {
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="manage.css">
 	<!--[if lt IE 9]>
-	<script type="text/javascript" src="/js/vendor/html5shiv.js"></script>
+	<script type="text/javascript" src="/pittsburghcc/muffintest/js/vendor/html5shiv.js"></script>
 	<![endif]-->
 </head>
 <body>

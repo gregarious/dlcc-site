@@ -33,8 +33,8 @@ $isHomepage = ($page == "home");
         docEl.className = docEl.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') + 'js';
         </script>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
-        <script src="/js/vendor/respond.min.js"></script>
+        <script>window.html5 || document.write('<script src="/pittsburghcc/muffintest/js/vendor/html5shiv.js"><\/script>')</script>
+        <script src="/pittsburghcc/muffintest/js/vendor/respond.min.js"></script>
     </head>
     <body class="<?php print $pageClass; ?>">
         <header class="page-header" style="background-image: url('<?php print $headerImage; ?>');">
@@ -134,13 +134,13 @@ $isHomepage = ($page == "home");
         </div>  <!-- end .page-wrap -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="/pittsburghcc/muffintest/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
 
-        <script src="/js/vendor/matchmedia.js"></script>
-        <script src="/js/vendor/picturefill.js"></script>
+        <script src="/pittsburghcc/muffintest/js/vendor/matchmedia.js"></script>
+        <script src="/pittsburghcc/muffintest/js/vendor/picturefill.js"></script>
 
-        <script src="/js/plugins.js"></script>
-        <script src="/js/main.js"></script>
+        <script src="/pittsburghcc/muffintest/js/plugins.js"></script>
+        <script src="/pittsburghcc/muffintest/js/main.js"></script>
 
         <?php
         // load the events into the upcoming events widget on the sidebar
