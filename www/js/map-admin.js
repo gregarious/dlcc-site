@@ -56,7 +56,6 @@ $(function(){
 		});
 
 		var inputEventName = ('oninput' in inputLat[0]) ? 'input' : 'propertychange';
-		console.log('using input event: ' + inputEventName);
 		inputLat.on(inputEventName, latInputChange);
 		inputLng.on(inputEventName, lngInputChange);
 	}
@@ -153,8 +152,13 @@ $(function(){
 							.addClass('status-success');
 	}
 
-	function displayErrorStatus(text) {
-		labelGeocodingStatus.text(text)
+	function displayErrorStatus(text, useHTML) {
+		if (useHTML) {
+			labelGeocodingStatus.html(text)
+		}
+		else {
+			labelGeocodingStatus.text(text)
+		}
 		labelGeocodingStatus.removeClass('status-success')
 							.addClass('status-error');
 	}
@@ -206,7 +210,7 @@ $(function(){
 					displaySuccessfulStatus('Address successfully geolocated!');
 				}
 				else if(data.status === 'ZERO_RESULTS') {
-					displayErrorStatus('Could not geolocate the given address');
+					displayErrorStatus('Could not geolocate "<em>' + address + '</em>"', true);
 				}
 				else {
 					displayErrorStatus('Geolocation service refused the request (status: ' + data.status + ')');

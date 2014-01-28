@@ -13,3 +13,12 @@ form {
 .footer {
 	margin-top: 20px;
 }
+
+.gmap-canvas {
+	height: 250px;
+}
+
+.gmap-caption, .geocoding-status {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
