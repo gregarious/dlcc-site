@@ -93,7 +93,7 @@ class ModelProcessor
 		$jsLabel = preg_replace("/'/", "\'", $object['name']);
 	?>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-8">
 				<div class="action-buttons">
 					<a href="<?php echo $this->typeUrl; ?>" class="btn btn-default">&larr; Back to <?php echo ucfirst($this->typeName); ?> List</a>
 					<button class="btn btn-danger pull-right" onclick="confirmDelete(<?php echo $object['id'] ?>, '<?php echo htmlspecialchars($jsLabel) ?>')">
